@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>대출 중도상환 vs 주식·배당 투자 수익률 격돌 계산기</title>
+  <meta name="description" content="목돈이 생겼을 때 주택담보대출을 갚는 게 이득일까, 미국 배당주(SCHD, S&P500)에 투자하는 게 이득일까? 세후 실질 수익과 손익분기점을 완벽 비교합니다.">
+  <meta property="og:title" content="대출 갚을까? 주식 살까? 중도상환 vs 배당투자 시뮬레이터">
+  <meta property="og:description" content="확정 대출이자 절감액 vs 세후 투자 수익 비교. 내 손익분기 수익률을 3초 만에 계산해 보세요.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    input[type=number]::-webkit-inner-spin-button, 
+    input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+  </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q543DWEBBW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-Q543DWEBBW');
+</script>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=pub-1957248819245044" crossorigin="anonymous"></script>
+
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen p-4 flex flex-col items-center">
+
+  <main class="w-full max-w-lg bg-white rounded-2xl shadow-sm border border-slate-200 p-5 my-4">
+    <div class="border-b border-slate-100 pb-4 mb-5 text-center">
+      <span class="text-xs font-semibold px-2.5 py-1 bg-blue-50 text-blue-600 rounded-full">40대 자산 최적화 시뮬레이터</span>
+      <h1 class="text-xl font-bold mt-2 text-slate-900">대출 상환 vs 주식 투자 계산기</h1>
+      <p class="text-xs text-slate-500 mt-1">목돈이 생겼을 때, 빚을 갚는 게 속 편할까 투자가 남는 장사일까?</p>
+    </div>
+
+    <!-- 입력 폼 -->
+    <div class="space-y-4 text-sm">
+      <div>
+        <label class="block font-medium text-slate-700 mb-1">고민 중인 목돈 (원)</label>
+        <input type="number" id="lumpSum" value="30000000" step="1000000" class="w-full border border-slate-300 rounded-lg p-2.5 focus:ring-2 focus:ring-blue-500 outline-none">
+        <span id="lumpSumText" class="text-xs text-slate-400 mt-1 block">3,000만 원</span>
+      </div>
+
+      <div class="grid grid-cols-2 gap-3">
+        <div>
+          <label class="block font-medium text-slate-700 mb-1">현재 대출 금리 (%)</label>
+          <input type="number" id="loanRate" value="4.2" step="0.1" class="w-full border border-slate-300 rounded-lg p-2.5 focus:ring-2 focus:ring-blue-500 outline-none">
+        </div>
+        <div>
+          <label class="block font-medium text-slate-700 mb-1">비교 기간 (년)</label>
+          <select id="years" class="w-full border border-slate-300 rounded-lg p-2.5 bg-white focus:ring-2 focus:ring-blue-500 outline-none">
+            <option value="3">3년</option>
+            <option value="5" selected>5년</option>
+            <option value="10">10년</option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <label class="block font-medium text-slate-700 mb-1">목표 세전 투자 수익률 (연 %)</label>
+        <input type="number" id="investRate" value="7.0" step="0.5" class="w-full border border-slate-300 rounded-lg p-2.5 focus:ring-2 focus:ring-blue-500 outline-none">
+      </div>
+
+      <div>
+        <label class="block font-medium text-slate-700 mb-1">투자 대상 및 세금 유형</label>
+        <select id="taxType" class="w-full border border-slate-300 rounded-lg p-2.5 bg-white focus:ring-2 focus:ring-blue-500 outline-none">
+          <option value="dividend">국내/배당주 ETF (배당소득세 15.4%)</option>
+          <option value="us_stock">미국 직투/지수 ETF (양도세 22%)</option>
+          <option value="isa">ISA/비과세 계좌 (세금 0%)</option>
+        </select>
+      </div>
+
+      <button onclick="calculate()" class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-sm transition mt-2">
+        결과 비교하기
+      </button>
+    </div>
+
+    <!-- 결과 영역 -->
+    <div id="resultArea" class="mt-6 border-t border-slate-100 pt-5 space-y-4">
+      <div id="summaryBadge" class="p-3.5 rounded-xl text-center font-bold text-base"></div>
+
+      <div class="grid grid-cols-2 gap-3 text-center">
+        <div class="bg-slate-50 p-3 rounded-lg border border-slate-100">
+          <p class="text-xs text-slate-500 mb-1">대출 상환 시</p>
+          <p class="text-xs font-semibold text-slate-600">아낀 확정 이자</p>
+          <p id="savedInterest" class="text-base font-bold text-slate-800 mt-1">-</p>
+        </div>
+        <div class="bg-slate-50 p-3 rounded-lg border border-slate-100">
+          <p class="text-xs text-slate-500 mb-1">투자 시</p>
+          <p class="text-xs font-semibold text-slate-600">세후 실질 순이익</p>
+          <p id="netProfit" class="text-base font-bold text-slate-800 mt-1">-</p>
+        </div>
+      </div>
+
+      <div class="bg-blue-50/70 border border-blue-100 rounded-lg p-3 text-xs text-blue-900 space-y-1">
+        <p>💡 <strong>핵심 판정 요약:</strong></p>
+        <p id="breakEvenText">-</p>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const won = (n) => (Math.round(n)).toLocaleString('ko-KR') + '원';
+
+    document.getElementById('lumpSum').addEventListener('input', (e) => {
+      const v = Number(e.target.value) || 0;
+      document.getElementById('lumpSumText').innerText = (v / 10000).toLocaleString('ko-KR') + '만 원';
+    });
+
+    function calculate() {
+      const lump = parseFloat(document.getElementById('lumpSum').value) || 0;
+      const loanR = (parseFloat(document.getElementById('loanRate').value) || 0) / 100;
+      const invR = (parseFloat(document.getElementById('investRate').value) || 0) / 100;
+      const years = parseInt(document.getElementById('years').value, 10);
+      const taxType = document.getElementById('taxType').value;
+
+      // 세율
+      let taxRate = 0.154;
+      if (taxType === 'us_stock') taxRate = 0.22;
+      if (taxType === 'isa') taxRate = 0.0;
+
+      // 1. 대출 상환으로 아낀 총 이자 (복리 절감 효과 근사치)
+      const savedInterestVal = lump * (Math.pow(1 + loanR, years) - 1);
+
+      // 2. 투자 시 세후 순이익
+      const grossFuture = lump * Math.pow(1 + invR, years);
+      const grossProfit = grossFuture - lump;
+      const netProfitVal = grossProfit * (1 - taxRate);
+
+      // 3. 차액 및 손익분기 계산
+      const diff = netProfitVal - savedInterestVal;
+      const breakEvenRate = (loanR / (1 - taxRate)) * 100;
+
+      document.getElementById('savedInterest').innerText = won(savedInterestVal);
+      document.getElementById('netProfit').innerText = won(netProfitVal);
+
+      const badge = document.getElementById('summaryBadge');
+      if (diff > 0) {
+        badge.className = 'p-3.5 rounded-xl text-center font-bold text-base bg-emerald-100 text-emerald-800 border border-emerald-200';
+        badge.innerHTML = `투자가 <span class="underline underline-offset-4">${won(diff)}</span> 더 이득입니다`;
+      } else {
+        badge.className = 'p-3.5 rounded-xl text-center font-bold text-base bg-rose-100 text-rose-800 border border-rose-200';
+        badge.innerHTML = `대출 상환이 <span class="underline underline-offset-4">${won(Math.abs(diff))}</span> 더 이득입니다`;
+      }
+
+      document.getElementById('breakEvenText').innerHTML = 
+        `현재 대출금리(${ (loanR*100).toFixed(1) }%)를 이기려면, 투자가 <strong>최소 연 ${breakEvenRate.toFixed(2)}% 이상</strong>의 세전 수익을 내야 본전입니다.`;
+    }
+
+    calculate();
+  </script>
+</body>
+</html>
+
