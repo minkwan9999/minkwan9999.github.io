@@ -76,7 +76,7 @@
       <div class="bg-gradient-to-br from-amber-500/10 to-orange-500/10 border border-amber-500/30 rounded-xl p-4 text-center">
         <p class="text-xs font-semibold text-amber-400 tracking-wider">⚡ 투자 손익분기선 (Break-Even Rate)</p>
         <p id="breakEvenHero" class="text-3xl font-black text-amber-300 mt-1">-</p>
-        <p class="text-[11px] text-amber-400/80 mt-1">이 수익률을 밑돌면 빚 갚는 쪽이 무조건 돈을 법니다.</p>
+        <p class="text-[11px] text-amber-400/80 mt-1">이 수익률을 밑돌면 빚 갚는 쪽이 무조건 돈을 벌게 됩니다.</p>
       </div>
 
       <!-- 비교 비주얼 게이지 차트 -->
@@ -107,6 +107,32 @@
         📋 결과 텍스트 복사 (스레드/단톡 공유)
       </button>
     </div>
+
+    <!-- SEO 롱테일 알박기용 FAQ 섹션 -->
+    <section class="mt-8 pt-6 border-t border-slate-700 text-xs text-slate-300 space-y-3">
+      <h2 class="text-sm font-bold text-slate-100 mb-2">💡 자주 묻는 질문 및 절세 기준 (FAQ)</h2>
+      
+      <details class="bg-slate-900/70 border border-slate-700/80 rounded-lg p-3 cursor-pointer">
+        <summary class="font-semibold text-slate-200">대출 이자 절감은 왜 '확정 세후 수익'인가요?</summary>
+        <p class="mt-2 text-slate-400 leading-relaxed">
+          대출 상환으로 아끼는 이자는 세금을 원천징수하지 않는 100% 비과세 확정 수익과 같습니다. 반면 주식이나 ETF 투자는 배당소득세(15.4%) 또는 해외주식 양도소득세(22%)가 차감되므로 단순 금리 비교 시 착시가 발생합니다[span_4](start_span)[span_4](end_span).
+        </p>
+      </details>
+
+      <details class="bg-slate-900/70 border border-slate-700/80 rounded-lg p-3 cursor-pointer">
+        <summary class="font-semibold text-slate-200">투자 손익분기 수익률(Break-Even)의 계산 원리는?</summary>
+        <p class="mt-2 text-slate-400 leading-relaxed">
+          대출금리를 $(1 - \text{세율})$로 나눈 값입니다. 예를 들어 대출금리가 4.2%이고 배당세 15.4%가 적용된다면, 투자로 $4.2 \div (1 - 0.154) \approx 4.96\%$ 이상의 수익을 매년 안정적으로 내야 상환보다 유리해집니다[span_5](start_span)[span_5](end_span).
+        </p>
+      </details>
+
+      <details class="bg-slate-900/70 border border-slate-700/80 rounded-lg p-3 cursor-pointer">
+        <summary class="font-semibold text-slate-200">중도상환수수료는 고려해야 하나요?</summary>
+        <p class="mt-2 text-slate-400 leading-relaxed">
+          대출 실행 후 3년이 경과했다면 통상 중도상환수수료가 면제됩니다. 만약 3년 이내라면 약 0.5%~1.2% 수준의 슬라이딩 감면 수수료가 발생하므로 상환 이익에서 이를 차감해야 합니다.
+        </p>
+      </details>
+    </section>
   </main>
 
   <script>
@@ -143,7 +169,6 @@
       document.getElementById('netProfit').innerText = won(netProfitVal);
       document.getElementById('breakEvenHero').innerText = `최소 연 ${breakEvenRate.toFixed(2)}% 이상`;
 
-      // 게이지 바 계산 (최대치 대비 비율)
       const maxVal = Math.max(savedInterestVal, netProfitVal, 1);
       const loanWidth = Math.min(100, Math.max(10, (savedInterestVal / maxVal) * 100));
       const investWidth = Math.min(100, Math.max(10, (netProfitVal / maxVal) * 100));
