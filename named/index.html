@@ -3,27 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aged Like Milk - Swipe Reality Tracker</title>
-  <meta name="description" content="Swipe to explore iconic historical predictions and their brutal reality checks.">
+  <title>인사이트랩 - 역대급 흑역사 성지순례소 (Aged Like Milk)</title>
+  <meta name="description" content="산업혁명부터 닷컴, 스마트폰, AI 시대까지. 당대 최고 권위자들의 호언장담과 N년 뒤 참교육 성적표를 사진과 함께 박제합니다.">
+  <meta property="og:title" content="인사이트랩: 역대급 헛소리 박제소">
+  <meta property="og:description" content="사진으로 보는 과거 대가들의 오판 vs 냉정한 현실 성적표">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800;900&display=swap" rel="stylesheet">
-  <style>
-    body { font-family: 'Plus Jakarta Sans', -apple-system, sans-serif; }
-    /* 수평 스냅 캐러셀 설정 */
-    .snap-carousel {
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-    }
-    .snap-card {
-      scroll-snap-align: center;
-      scroll-snap-stop: always;
-    }
-    .no-scrollbar::-webkit-scrollbar { display: none; }
-    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-    .card-shadow { box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6); }
-  </style>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q543DWEBBW"></script>
@@ -37,59 +21,51 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=pub-1957248819245044" crossorigin="anonymous"></script>
 
 </head>
-<body class="bg-[#0b0e14] text-slate-100 min-h-screen py-5 flex flex-col items-center justify-between selection:bg-lime-400 selection:text-black overflow-x-hidden">
+<body class="bg-[#0e1117] text-slate-200 antialiased min-h-screen py-6 px-3 flex flex-col items-center selection:bg-orange-500 selection:text-white">
 
-  <!-- Main Mobile Shell Container -->
-  <main class="w-full max-w-[430px] flex flex-col h-full space-y-3 px-3">
-    
-    <!-- Top Header: Modern Pill Navigation -->
-    <header class="bg-[#151924] border border-slate-800/80 rounded-[28px] p-3.5 flex items-center justify-between shadow-lg mx-1">
-      <div class="flex items-center gap-2.5">
-        <div class="w-9 h-9 rounded-2xl bg-gradient-to-tr from-lime-400 to-emerald-500 p-0.5 shadow-md shadow-lime-500/20">
-          <div class="w-full h-full bg-[#0b0e14] rounded-[13px] flex items-center justify-center font-black text-lime-400 text-sm">
+  <main class="w-full max-w-md space-y-5">
+    <!-- 서브레딧 스타일 상단 헤더 -->
+    <header class="bg-[#161b22] border border-slate-800 rounded-2xl p-4 shadow-lg space-y-2">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-orange-600 to-amber-500 flex items-center justify-center font-black text-white text-sm shadow">
             🥛
           </div>
-        </div>
-        <div>
-          <div class="flex items-center gap-1.5">
-            <h1 class="text-xs font-black tracking-tight text-white" id="ui-title">AGED LIKE MILK</h1>
-            <span class="text-[10px] font-extrabold text-lime-400 bg-lime-400/10 px-1.5 py-0.5 rounded border border-lime-400/20">SWIPE</span>
+          <div>
+            <div class="flex items-center gap-1.5">
+              <span class="font-extrabold text-white text-sm tracking-tight" id="ui-subname">r/상해버린_예측들</span>
+              <span class="text-[10px] bg-orange-500/20 text-orange-400 font-bold px-1.5 py-0.5 rounded border border-orange-500/30" id="ui-subtag">성지순례</span>
+            </div>
+            <p class="text-[11px] text-slate-400" id="ui-subtitle">사진으로 보는 대가의 오판 & 빅마우스 성적표</p>
           </div>
-          <p class="text-[10px] font-bold text-slate-400" id="ui-sub">좌우로 넘겨서 참교육 성적표 보기</p>
+        </div>
+
+        <!-- 언어 전환 토글 -->
+        <div class="flex items-center gap-2">
+          <div class="flex items-center bg-slate-900 border border-slate-700 rounded-lg p-0.5 text-[11px] font-bold">
+            <button onclick="setLang('ko')" id="btn-ko" class="px-2 py-0.5 rounded bg-orange-500 text-white transition">KO</button>
+            <button onclick="setLang('en')" id="btn-en" class="px-2 py-0.5 rounded text-slate-400 hover:text-white transition">EN</button>
+          </div>
+          <a href="/" class="text-xs text-slate-400 hover:text-white transition" id="ui-home">홈</a>
         </div>
       </div>
 
-      <!-- Language & Home Actions -->
-      <div class="flex items-center gap-1 bg-[#0b0e14] p-1 rounded-2xl border border-slate-800">
-        <button onclick="setLang('ko')" id="btn-ko" class="px-2.5 py-1 rounded-xl text-[10px] font-black bg-lime-400 text-black shadow transition">KO</button>
-        <button onclick="setLang('en')" id="btn-en" class="px-2.5 py-1 rounded-xl text-[10px] font-black text-slate-400 hover:text-white transition">EN</button>
+      <!-- 카테고리 필터 -->
+      <div class="flex items-center gap-1.5 pt-2 border-t border-slate-800/80 text-xs font-semibold overflow-x-auto">
+        <button onclick="filterType('ALL')" class="filter-btn active px-3 py-1 rounded-lg bg-orange-500 text-white transition" data-type="ALL" id="filter-all">전체 피드</button>
+        <button onclick="filterType('LESSON')" class="filter-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition" data-type="LESSON" id="filter-lesson">🏛️ 역사의 참교육</button>
+        <button onclick="filterType('TRACK')" class="filter-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition" data-type="TRACK" id="filter-track">📈 빅마우스 성적표</button>
       </div>
     </header>
 
-    <!-- Results Counter Indicator (Nixtio Style) -->
-    <div class="flex items-center justify-between px-3 pt-1 text-xs">
-      <div class="flex items-center gap-1.5">
-        <span class="w-2 h-2 rounded-full bg-lime-400"></span>
-        <span class="font-black text-slate-300 text-[11px]" id="indicator-text">1 of 4 CASES</span>
-      </div>
-      <!-- Era Filters -->
-      <div class="flex gap-1 text-[11px] font-bold">
-        <button onclick="filterFeed('ALL')" class="era-tab active text-white bg-slate-800 px-2.5 py-1 rounded-xl transition" data-type="ALL" id="f-all">전체</button>
-        <button onclick="filterFeed('LESSON')" class="era-tab text-slate-400 px-2.5 py-1 rounded-xl hover:text-white transition" data-type="LESSON" id="f-lesson">과거</button>
-        <button onclick="filterFeed('TRACK')" class="era-tab text-slate-400 px-2.5 py-1 rounded-xl hover:text-white transition" data-type="TRACK" id="f-track">최근</button>
-      </div>
-    </div>
+    <!-- 피드 컨테이너 -->
+    <div id="feed-container" class="space-y-5"></div>
 
-    <!-- Horizontal Swipe Carousel Track (좌우 스크롤 스냅) -->
-    <section id="carousel-track" class="snap-carousel flex overflow-x-auto gap-4 py-2 px-6 no-scrollbar w-full"></section>
-
-    <!-- Bottom Swipe Guide Hint -->
-    <div class="text-center pt-1 pb-3 space-y-1">
-      <p class="text-[11px] font-extrabold text-slate-500 tracking-wider flex items-center justify-center gap-1.5">
-        <span>←</span> <span id="swipe-hint">카드를 좌우로 밀어서 탐색하세요</span> <span>→</span>
-      </p>
-      <p class="text-[9px] text-slate-700">© 2026 InsightLab · Nixtio Swipe Canvas</p>
-    </div>
+    <!-- 하단 푸터 -->
+    <footer class="pt-6 pb-8 text-center text-xs text-slate-500 space-y-1">
+      <p id="ui-footer-note">역사적 문헌 아카이브, 보도 사진 및 시장 지표를 기반으로 기록되었습니다.</p>
+      <p>© 2026 인사이트랩 (InsightLab) · r/AgedLikeMilk Edition</p>
+    </footer>
   </main>
 
   <script>
@@ -98,366 +74,350 @@
 
     const I18N = {
       ko: {
-        title: "AGED LIKE MILK",
-        sub: "좌우로 넘겨서 참교육 성적표 보기",
-        hint: "카드를 좌우로 밀어서 탐색하세요",
-        all: "전체",
-        lesson: "과거",
-        track: "최근",
-        tagLesson: "역사의 참교육 ✕",
-        tagTrack: "빅마우스 성적표 ✓",
-        quoteLabel: "HISTORIC STATEMENT",
-        realityLabel: "REALITY VERDICT",
-        antidoteLabel: "ANTIDOTE (백신)",
-        btnFail: "🔥 역대급 헛소리",
-        btnPass: "🤔 당시엔 그럴듯",
-        caseWord: "사건"
+        subname: "r/상해버린_예측들",
+        subtag: "성지순례",
+        subtitle: "사진으로 보는 대가의 오판 & 빅마우스 성적표",
+        home: "홈으로",
+        filterAll: "전체 피드",
+        filterLesson: "🏛️ 역사의 참교육",
+        filterTrack: "📈 빅마우스 성적표",
+        tagLesson: "🏛️ 역사의 참교육",
+        tagTrack: "📈 빅마우스 성적표",
+        quoteLabel: "📌 당시 발언",
+        historyTitle: "⚖️ 역사의 실제 판결",
+        marketTitle: "📊 실제 시장 성적표",
+        takeawayLesson: "💡 우리가 배울 점:",
+        takeawayTrack: "💡 복기 인사이트:",
+        voteFail: "🔥 역대급 헛소리",
+        votePass: "🤔 그땐 그럴듯함",
+        votedBadge: "성지순례 완료",
+        footerNote: "역사적 문헌 아카이브, 보도 사진 및 시장 지표를 기반으로 기록되었습니다."
       },
       en: {
-        title: "AGED LIKE MILK",
-        sub: "Swipe left/right to check reality",
-        hint: "Swipe cards horizontally to explore",
-        all: "All",
-        lesson: "History",
-        track: "Recent",
-        tagLesson: "Aged Like Milk ✕",
-        tagTrack: "Verified Track Record ✓",
-        quoteLabel: "HISTORIC STATEMENT",
-        realityLabel: "REALITY VERDICT",
-        antidoteLabel: "ANTIDOTE (Lesson)",
-        btnFail: "🔥 Aged Like Milk",
-        btnPass: "🤔 Fair Point Then",
-        caseWord: "CASES"
+        subname: "r/AgedLikeMilk",
+        subtag: "RealityCheck",
+        subtitle: "Visual blunders & big-mouth track records in history",
+        home: "Home",
+        filterAll: "All Feeds",
+        filterLesson: "🏛️ Historical Blunders",
+        filterTrack: "📈 Track Records",
+        tagLesson: "🏛️ Historical Reality",
+        tagTrack: "📈 Market Verdict",
+        quoteLabel: "📌 Historical Quote",
+        historyTitle: "⚖️ Verdict of History",
+        marketTitle: "📊 Real Market Outcome",
+        takeawayLesson: "💡 Takeaway Lesson:",
+        takeawayTrack: "💡 Retrospective Insight:",
+        voteFail: "🔥 Aged Like Milk",
+        votePass: "🤔 Sounded Reasonable",
+        votedBadge: "Verified",
+        footerNote: "Documented based on historical photo archives, news records, and market data."
       }
     };
 
+    // Unsplash 고속 검증 CDN 이미지 데이터셋
     const POSTS = [
       {
         id: "p1",
         cardType: "LESSON",
-        accentLime: "#a3e635", // Nixtio Neon Lime
-        era: { ko: "1830년대 · 산업혁명", en: "1830s · Industrial Rev." },
+        eraTag: { ko: "1830년대 · 산업혁명", en: "1830s · Industrial Rev." },
+        badgeText: { ko: "역사의 참교육 ✕", en: "Aged Like Milk ✕" },
+        badgeClass: "bg-rose-500/10 text-rose-400 border-rose-500/20",
         author: { ko: "영국 왕립학회 학자단", en: "Royal Society Scholars" },
-        role: { ko: "당대 최고 과학 지식인단", en: "Top Scientific Minds" },
-        statMetric: "300+ km/h",
-        statLabel: { ko: "현재 고속철도 운행속도", en: "Modern High-Speed Rail" },
+        authorTitle: { ko: "당대 최고 과학 지식인들", en: "Leading Scientists of the Era" },
+        avatar: "🚂",
+        imageBeforeUrl: "https://images.unsplash.com/photo-1541447271487-09612b3f49f7?w=800&auto=format&fit=crop&q=80",
+        imageCaption: { ko: "1830년대 로버트 스티븐슨의 초기 증기기관차", en: "1830s early steam locomotive trials" },
         title: {
-          ko: "시속 40km로 달리면 승객들은 질식사한다",
-          en: "Passengers will die of asphyxiation at 30mph"
+          ko: "기차가 시속 40km로 달리면 승객들은 질식해서 즉사한다",
+          en: "Trains running at 30mph will cause passengers to die of asphyxiation"
         },
-        quote: {
-          ko: "인간의 신체는 시속 30마일(약 48km)의 속도를 견디도록 설계되지 않았다. 공기가 폐로 들어오지 않아 전원 질식사할 것이다.",
-          en: "The human body is not built for 30 mph. Air cannot enter the lungs, causing immediate asphyxiation."
+        quoteSource: { ko: "1830년대 증기기관차 개통 당시 언론 기고", en: "1830s Press Reports on Steam Locomotives" },
+        quoteText: {
+          ko: "인간의 신체는 시속 30마일(약 48km)의 속도를 견디도록 설계되지 않았다. 공기가 폐로 들어오지 않아 모든 승객이 질식사할 것이다.",
+          en: "The human body is not built to travel at 30 mph. Passengers will not be able to breathe and will die of asphyxiation."
         },
-        reality: {
-          ko: "철도는 영국 전역을 반나절 생활권으로 묶으며 1차 산업혁명의 심장이 되었습니다. 승객의 폐는 멀쩡했습니다.",
-          en: "Railroads connected Britain into a half-day radius, becoming the core engine of the Industrial Revolution."
+        timelineLabel: { ko: "⏳ 개통 직후 역사적 판결", en: "⏳ Verdict of History" },
+        realityStat: { ko: "현대 고속철도: 시속 300km+ 일상 운행", en: "Modern High-Speed Rail: 300km/h+ daily" },
+        realityText: {
+          ko: "승객의 폐는 멀쩡했고, 철도는 영국 전역을 반나절 생활권으로 묶으며 1차 산업혁명의 심장이자 물류의 표준이 되었습니다.",
+          en: "Passengers breathed normally. Railroads connected Britain into a half-day radius, becoming the backbone of the Industrial Revolution."
         },
-        antidote: {
-          ko: "새 기술이 태동할 때 인간은 언제나 '과학으로 포장된 원초적 공포'를 배설합니다. 근거 없는 공포 마케팅에 휘둘리지 마세요.",
-          en: "Breakthrough tools always trigger primal fear disguised as science. Never let fear delay your adoption."
+        actionHighlight: {
+          ko: "새로운 기술이 등장할 때 인간은 언제나 '과학으로 위장한 원초적 공포'를 표출합니다. 근거 없는 공포에 질려 신기술 수용을 거부하지 마세요.",
+          en: "When breakthrough tools appear, humanity often dresses primal fear as scientific reason. Never reject adoption out of irrational fear."
         },
-        // Nixtio Stylized Character Box (Vector Graphic)
-        visualSvg: `
-          <svg viewBox="0 0 320 180" class="w-full h-full object-cover">
-            <rect width="320" height="180" fill="#182017"/>
-            <circle cx="250" cy="50" r="45" fill="#a3e635" opacity="0.2"/>
-            <!-- Stylized Neon Steam Engine Art -->
-            <rect x="60" y="70" width="130" height="65" rx="14" fill="#a3e635"/>
-            <rect x="135" y="45" width="55" height="50" rx="8" fill="#bef264"/>
-            <rect x="75" y="40" width="20" height="35" rx="4" fill="#111827"/>
-            <!-- Steam Wheel Dots -->
-            <circle cx="85" cy="135" r="16" fill="#111827" stroke="#ffffff" stroke-width="3"/>
-            <circle cx="125" cy="135" r="16" fill="#111827" stroke="#ffffff" stroke-width="3"/>
-            <circle cx="165" cy="135" r="16" fill="#111827" stroke="#ffffff" stroke-width="3"/>
-            <!-- Speed Track lines -->
-            <line x1="10" y1="155" x2="310" y2="155" stroke="#a3e635" stroke-width="3"/>
-            <line x1="30" y1="162" x2="290" y2="162" stroke="#4d7c0f" stroke-width="2" stroke-dasharray="8 6"/>
-          </svg>
-        `,
         upvotes: 541,
         disagrees: 19
       },
       {
         id: "p2",
         cardType: "LESSON",
-        accentLime: "#38bdf8", // Sky Blue Neon
-        era: { ko: "1998 · 닷컴 태동기", en: "1998 · Dot-Com Era" },
+        eraTag: { ko: "1998년 · 인터넷 태동기", en: "1998 · Dot-com Era" },
+        badgeText: { ko: "역사의 참교육 ✕", en: "Aged Like Milk ✕" },
+        badgeClass: "bg-rose-500/10 text-rose-400 border-rose-500/20",
         author: { ko: "폴 크루그먼", en: "Paul Krugman" },
-        role: { ko: "노벨 경제학상 수상자", en: "Nobel Laureate in Economics" },
-        statMetric: "TOP 10",
-        statLabel: { ko: "빅테크 글로벌 시총 독식", en: "Tech Dominates Global Top 10" },
+        authorTitle: { ko: "노벨 경제학상 수상자", en: "Nobel Laureate in Economics" },
+        avatar: "🎓",
+        imageBeforeUrl: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&auto=format&fit=crop&q=80",
+        imageCaption: { ko: "1990년대 전통 경제학계의 월가 포럼", en: "1990s Wall Street economic summit" },
         title: {
-          ko: "인터넷 경제 효과는 팩스(Fax) 수준에 그칠 것",
-          en: "Internet's economic impact: no greater than a fax machine"
+          ko: "2005년쯤 되면 인터넷의 실체가 팩스(Fax) 수준이었음이 밝혀질 것",
+          en: "By 2005, Internet's impact will be no greater than the fax machine"
         },
-        quote: {
-          ko: "2005년쯤 되면 인터넷의 경제적 영향력은 팩스 기기보다 크지 않았음이 만천하에 드러날 것이다. 사람들은 서로 할 말이 많지 않다.",
-          en: "By 2005, it will be clear that the Internet's impact has been no greater than the fax machine's."
+        quoteSource: { ko: "The New York Times 칼럼 (1998)", en: "The New York Times Column (1998)" },
+        quoteText: {
+          ko: "2005년경이 되면, 경제에 미친 인터넷의 영향력은 팩스 기기보다 크지 않았다는 사실이 만천하에 드러날 것이다. 사람들은 서로에게 할 말이 그리 많지 않다.",
+          en: "By 2005 or so, it will become clear that the Internet's impact on the economy has been no greater than the fax machine's. People have nothing much to say."
         },
-        reality: {
-          ko: "인터넷은 통신 도구를 넘어 인류의 문명과 금융을 재편했습니다. 노벨상 석학조차 '네트워크 효과'의 기하급수 확장을 못 봤습니다.",
-          en: "The Internet swallowed global commerce. Even Nobel laureates severely underestimated exponential network effects."
+        timelineLabel: { ko: "⏳ 10년 뒤 역사적 판결", en: "⏳ 10 Years Later" },
+        realityStat: { ko: "글로벌 시총 TOP 10 빅테크 독식", en: "Tech firms dominate Global Top 10 Market Cap" },
+        realityText: {
+          ko: "인터넷은 통신 도구를 넘어 인류의 삶과 금융을 완전히 집어삼켰습니다. 노벨상 석학조차 기하급수적 '네트워크 효과'를 기존 전통 산업의 잣대로만 재단하다 평생의 흑역사를 남겼습니다.",
+          en: "The Internet reshaped human life and global finance. Even a Nobel laureate dismissed the exponential power of network effects."
         },
-        antidote: {
-          ko: "기존 분야의 최고 석학일수록 자신의 낡은 잣대로 새 패러다임을 폄하합니다. 권위자의 '거품론'에 안주하지 마세요.",
-          en: "Legacy domain experts make the worst forecasts on paradigm shifts. Don't hide behind their complacency."
+        actionHighlight: {
+          ko: "내 분야 최고 권위자라 해도 완전히 새로운 패러다임 앞에서는 가장 보수적인 오판을 내리기 쉽습니다. 권위자의 '거품' 소리에 안주하지 마세요.",
+          en: "Top authorities in legacy domains often make the most conservative blunders in the face of new paradigms. Don't fall complacent behind them."
         },
-        visualSvg: `
-          <svg viewBox="0 0 320 180" class="w-full h-full object-cover">
-            <rect width="320" height="180" fill="#0f1b29"/>
-            <circle cx="80" cy="70" r="40" fill="#38bdf8" opacity="0.2"/>
-            <!-- 90s CRT Monitor Vector -->
-            <rect x="105" y="35" width="110" height="85" rx="16" fill="#38bdf8"/>
-            <rect x="118" y="47" width="84" height="60" rx="10" fill="#0b0e14"/>
-            <circle cx="145" cy="72" r="6" fill="#38bdf8"/>
-            <circle cx="175" cy="72" r="6" fill="#38bdf8"/>
-            <path d="M 152 86 Q 160 92, 168 86" stroke="#38bdf8" stroke-width="2.5" fill="none"/>
-            <rect x="145" y="120" width="30" height="12" rx="3" fill="#0284c7"/>
-            <rect x="100" y="132" width="120" height="12" rx="4" fill="#38bdf8"/>
-          </svg>
-        `,
         upvotes: 428,
         disagrees: 12
       },
       {
         id: "p3",
-        cardType: "TRACK",
-        accentLime: "#a855f7", // Purple Neon
-        era: { ko: "2023 · 생성형 AI", en: "2023 · Generative AI" },
-        author: { ko: "샘 알트만", en: "Sam Altman" },
-        role: { ko: "OpenAI CEO", en: "CEO of OpenAI" },
-        statMetric: "o1 / GPT-4o",
-        statLabel: { ko: "추론 모델 연달아 장악 독주", en: "Successive Reasoning Releases" },
+        cardType: "LESSON",
+        eraTag: { ko: "2007년 · 스마트폰 혁명기", en: "2007 · Smartphone Era" },
+        badgeText: { ko: "역사의 참교육 ✕", en: "Aged Like Milk ✕" },
+        badgeClass: "bg-rose-500/10 text-rose-400 border-rose-500/20",
+        author: { ko: "스티브 발머", en: "Steve Ballmer" },
+        authorTitle: { ko: "마이크로소프트 전 CEO", en: "Former CEO of Microsoft" },
+        avatar: "💼",
+        imageBeforeUrl: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80",
+        imageCaption: { ko: "2007년 초기 터치스크린 스마트폰 출시 발표회", en: "2007 early touch smartphone reveal" },
         title: {
-          ko: "현재 LLM은 지능이 아니다. AGI는 아직 멀었다",
-          en: "LLMs are not thinking minds. Far from AGI"
+          ko: "500달러짜리 아이폰? 키보드가 없어서 비즈니스맨에겐 0%짜리 장난감",
+          en: "There's no chance that the iPhone is going to get any significant market share"
         },
-        quote: {
-          ko: "현재의 언어 모델들은 그저 유용한 도구일 뿐입니다. 우리는 여전히 진정한 AGI와는 꽤 거리가 멉니다.",
-          en: "Current LLMs are useful tools, not thinking minds. We are still quite far from true AGI."
+        quoteSource: { ko: "USA 투데이 공식 인터뷰 (2007)", en: "USA Today Interview (2007)" },
+        quoteText: {
+          ko: "아이폰이 시장 점유율을 유의미하게 가져갈 가능성은 0%입니다. 물리 자판이 없어서 이메일을 보낼 수 없기 때문에 비즈니스 고객에게 매력적인 기계가 아닙니다.",
+          en: "There's no chance that the iPhone is going to get any significant market share. No chance. It doesn't have a keyboard, which makes it not a very good email machine."
         },
-        reality: {
-          ko: "발언 직후 복합 추론 모델들을 전격 공개하며 시장을 집어삼켰습니다. 독점 비판과 정부 규제를 피하기 위한 고도의 연막이었습니다.",
-          en: "OpenAI aggressively launched advanced reasoning models, confirming that public humility was regulatory sandbagging."
+        timelineLabel: { ko: "⏳ 5년 뒤 역사적 판결", en: "⏳ 5 Years Later" },
+        realityStat: { ko: "애플 스마트폰 시장 영업이익 80% 독점", en: "Apple captures 80%+ of global smartphone profits" },
+        realityText: {
+          ko: "스마트폰은 전 세계 오피스의 필수품이 되었고, 물리 키보드를 끝까지 고집하던 블랙베리와 윈도우 모바일은 시장에서 흔적도 없이 도태되었습니다.",
+          en: "Touchscreen smartphones became standard everywhere. Physical keyboard phones like BlackBerry and Windows Mobile completely vanished."
         },
-        antidote: {
-          ko: "빅테크 파운더가 '우린 아직 부족하다'고 겸손을 떨 때는, 규제 당국의 방심과 경쟁자의 늑장 대응을 유도하는 전략입니다.",
-          en: "When founders perform strategic humility, it is calculated to buy time against antitrust regulations."
+        actionHighlight: {
+          ko: "기존 주력 제품을 지키려는 방어 본능은 경쟁자의 파괴적 혁신을 '치명적 결함'으로 착각하게 만듭니다. 고객 경험의 거대한 물결을 거스르지 마세요.",
+          en: "The instinct to defend existing core products tricks incumbents into viewing disruption as a flaw. Never fight tidal waves in UX."
         },
-        visualSvg: `
-          <svg viewBox="0 0 320 180" class="w-full h-full object-cover">
-            <rect width="320" height="180" fill="#1b1229"/>
-            <circle cx="240" cy="80" r="50" fill="#a855f7" opacity="0.25"/>
-            <!-- AI Bot Art -->
-            <rect x="110" y="45" width="100" height="85" rx="20" fill="#a855f7"/>
-            <rect x="122" y="58" width="76" height="55" rx="12" fill="#0b0e14"/>
-            <circle cx="145" cy="80" r="7" fill="#f43f5e"/>
-            <circle cx="175" cy="80" r="7" fill="#f43f5e"/>
-            <line x1="148" y1="98" x2="172" y2="98" stroke="#f43f5e" stroke-width="3" stroke-linecap="round"/>
-            <line x1="160" y1="45" x2="160" y2="28" stroke="#a855f7" stroke-width="4"/>
-            <circle cx="160" cy="24" r="6" fill="#fbbf24"/>
-          </svg>
-        `,
-        upvotes: 380,
-        disagrees: 28
+        upvotes: 689,
+        disagrees: 14
       },
       {
         id: "p4",
         cardType: "TRACK",
-        accentLime: "#fbbf24", // Amber Neon
-        era: { ko: "2022 · 크립토 하락장", en: "2022 · Crypto Bear" },
-        author: { ko: "마이클 세일러", en: "Michael Saylor" },
-        role: { ko: "마이크로스트래티지 의장", en: "Chairman, MicroStrategy" },
-        statMetric: "$100K+",
-        statLabel: { ko: "비트코인 전고점 돌파 폭등", en: "Bitcoin All-Time High" },
+        eraTag: { ko: "2023년 · AI 태동기", en: "2023 · AI Boom" },
+        badgeText: { ko: "빅마우스 성적표 ✓", en: "Verified Track Record ✓" },
+        badgeClass: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
+        author: { ko: "샘 알트만", en: "Sam Altman" },
+        authorTitle: { ko: "OpenAI CEO", en: "CEO of OpenAI" },
+        avatar: "🤖",
+        imageBeforeUrl: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&auto=format&fit=crop&q=80",
+        imageCaption: { ko: "생성형 AI 초거대 모델 데이터센터 인프라", en: "Generative AI cluster infrastructure" },
         title: {
-          ko: "비트코인이 2만 불 밑으로 떨어져도 절대 안 판다",
-          en: "We will not sell even below $20,000"
+          ko: "현재의 LLM은 스스로 생각하는 지능이 아니다. AGI는 아직 멀었다",
+          en: "Current LLMs are useful tools, not thinking minds. Far from AGI"
         },
-        quote: {
-          ko: "우리는 단 1사토시도 팔지 않습니다. 회사의 모든 자금과 무이자 전환사채를 동원해 계속 매수할 것입니다.",
-          en: "We will not sell. We will continue acquiring Bitcoin with corporate cash and debt structures."
+        quoteSource: { ko: "공식 X 포스팅 (2023.02)", en: "Official Post on X (2023.02)" },
+        quoteText: {
+          ko: "현재의 대규모 언어 모델들은 유용한 도구일 뿐 생각하는 마음이 아닙니다. 우리는 여전히 진정한 AGI와는 꽤 거리가 멉니다.",
+          en: "Current LLMs are useful tools, not thinking minds. We are still quite far from true AGI."
         },
-        reality: {
-          ko: "청산 루머를 버텨내고 비트코인이 10만 달러를 돌파하며 수조 원의 평가익과 나스닥 최상위권 상승률을 기록했습니다.",
-          en: "MicroStrategy survived margin calls and surged into an S&P outperformer backed by multi-billion dollar unrealized gains."
+        timelineLabel: { ko: "📊 1~2년 뒤 실제 성적표", en: "📊 1-2 Years Later" },
+        realityStat: { ko: "GPT-4o, o1 추론 모델 연달아 장악", en: "Dominance with GPT-4o and o1 reasoning models" },
+        realityText: {
+          ko: "이 겸손한 발언 직후 복합 추론 모델들을 쏟아내며 시장을 장악했습니다. 업계에서는 독점 비판과 정부 규제를 피하기 위해 일부러 눈높이를 낮춘 정무적 전략으로 평가합니다.",
+          en: "Immediately after, OpenAI rolled out aggressive reasoning models, securing market leadership. Analysts view this as deliberate regulatory sandbagging."
         },
-        antidote: {
-          ko: "조롱받는 하락장에서도 '만기 압박이 없는 자금 조달 구조'를 짜둔 집착은 사이클 전환 시 파괴적인 비대칭 보상을 낳습니다.",
-          en: "Conviction engineered with zero liquidation pressure yields massive asymmetric payoff upon macro reversal."
+        actionHighlight: {
+          ko: "빅테크 파운더가 대중 앞에서 '우린 아직 부족하다'고 겸손을 떨 때는, 규제 당국의 방심과 경쟁자의 방심을 유도하는 전략적 연막일 수 있습니다.",
+          en: "When tech founders publicly practice humility, it is often a strategic smokescreen to buy time against regulators and competitors."
         },
-        visualSvg: `
-          <svg viewBox="0 0 320 180" class="w-full h-full object-cover">
-            <rect width="320" height="180" fill="#241d0f"/>
-            <circle cx="160" cy="90" r="60" fill="#fbbf24" opacity="0.2"/>
-            <polygon points="160,35 205,75 160,145 115,75" fill="#fbbf24"/>
-            <polygon points="160,35 205,75 160,105 115,75" fill="#fde68a"/>
-            <!-- Cool Sunglasses -->
-            <rect x="135" y="68" width="24" height="12" rx="2" fill="#0b0e14"/>
-            <rect x="165" y="68" width="24" height="12" rx="2" fill="#0b0e14"/>
-            <line x1="155" y1="73" x2="168" y2="73" stroke="#0b0e14" stroke-width="2.5"/>
-          </svg>
-        `,
-        upvotes: 492,
-        disagrees: 45
+        upvotes: 380,
+        disagrees: 28
       }
     ];
 
     function updateUiLabels() {
       const t = I18N[currentLang];
-      document.getElementById('ui-title').innerText = t.title;
-      document.getElementById('ui-sub').innerText = t.sub;
-      document.getElementById('swipe-hint').innerText = t.hint;
-      document.getElementById('f-all').innerText = t.all;
-      document.getElementById('f-lesson').innerText = t.lesson;
-      document.getElementById('f-track').innerText = t.track;
+      document.getElementById('ui-subname').innerText = t.subname;
+      document.getElementById('ui-subtag').innerText = t.subtag;
+      document.getElementById('ui-subtitle').innerText = t.subtitle;
+      document.getElementById('ui-home').innerText = t.home;
+      document.getElementById('filter-all').innerText = t.filterAll;
+      document.getElementById('filter-lesson').innerText = t.filterLesson;
+      document.getElementById('filter-track').innerText = t.filterTrack;
+      document.getElementById('ui-footer-note').innerText = t.footerNote;
 
       const btnKo = document.getElementById('btn-ko');
       const btnEn = document.getElementById('btn-en');
       if (currentLang === 'ko') {
-        btnKo.className = "px-2.5 py-1 rounded-xl text-[10px] font-black bg-lime-400 text-black shadow transition";
-        btnEn.className = "px-2.5 py-1 rounded-xl text-[10px] font-black text-slate-400 hover:text-white transition";
+        btnKo.className = "px-2 py-0.5 rounded bg-orange-500 text-white transition";
+        btnEn.className = "px-2 py-0.5 rounded text-slate-400 hover:text-white transition";
       } else {
-        btnEn.className = "px-2.5 py-1 rounded-xl text-[10px] font-black bg-lime-400 text-black shadow transition";
-        btnKo.className = "px-2.5 py-1 rounded-xl text-[10px] font-black text-slate-400 hover:text-white transition";
+        btnEn.className = "px-2 py-0.5 rounded bg-orange-500 text-white transition";
+        btnKo.className = "px-2 py-0.5 rounded text-slate-400 hover:text-white transition";
       }
     }
 
-    function renderCarousel(filter = 'ALL') {
-      const track = document.getElementById('carousel-track');
-      track.innerHTML = '';
+    function renderFeed(filter = 'ALL') {
+      const container = document.getElementById('feed-container');
+      container.innerHTML = '';
       const t = I18N[currentLang];
 
       const filtered = filter === 'ALL' ? POSTS : POSTS.filter(item => item.cardType === filter);
-      document.getElementById('indicator-text').innerText = `1 of ${filtered.length} ${t.caseWord.toUpperCase()}`;
 
-      filtered.forEach((item, index) => {
-        const votedKey = `swipe_voted_${item.id}`;
+      filtered.forEach(item => {
+        const votedKey = `voted_${item.id}`;
         const userVoted = localStorage.getItem(votedKey);
         const isPastLesson = item.cardType === 'LESSON';
 
-        // 85% 너비로 좌우 카드가 살짝 보이는 Nixtio 비율
+        const typeHeaderTag = isPastLesson 
+          ? `<span class="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/30">${t.tagLesson}</span>`
+          : `<span class="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-500/10 text-blue-300 border border-blue-500/30">${t.tagTrack}</span>`;
+
         const card = document.createElement('article');
-        card.className = "snap-card flex-shrink-0 w-[84%] sm:w-[340px] card-shadow bg-[#141824] border-2 border-slate-800 rounded-[32px] p-5 space-y-3.5 relative flex flex-col justify-between";
+        card.className = "bg-[#161b22] border border-slate-800 rounded-2xl overflow-hidden shadow-xl";
 
         card.innerHTML = `
-          <!-- Top Row: Avatar & Era Pill -->
-          <div>
-            <div class="flex items-center justify-between mb-3">
-              <div class="flex items-center gap-2.5">
-                <div class="w-10 h-10 rounded-2xl flex items-center justify-center font-black text-black text-base shadow" style="background-color: ${item.accentLime};">
-                  ${item.author[currentLang].charAt(0)}
-                </div>
-                <div>
-                  <h2 class="font-extrabold text-sm text-white tracking-tight leading-tight">${item.author[currentLang]}</h2>
-                  <p class="text-[10px] font-bold text-slate-400">${item.role[currentLang]}</p>
-                </div>
+          <!-- 헤더: 인물 & 시대 -->
+          <div class="p-3.5 pb-2.5 flex items-center justify-between border-b border-slate-800/60 bg-slate-900/40 text-xs">
+            <div class="flex items-center gap-2">
+              <span class="text-base">${item.avatar}</span>
+              <div>
+                <span class="font-bold text-slate-200">${item.author[currentLang]}</span>
+                <span class="text-[11px] text-slate-400">· ${item.authorTitle[currentLang]}</span>
               </div>
-              <span class="text-[10px] font-black px-2 py-0.5 rounded-full border bg-slate-900 border-slate-700 text-slate-300">
-                ${item.era[currentLang]}
+            </div>
+            <div class="flex items-center gap-1.5">
+              ${typeHeaderTag}
+              <span class="text-[10px] font-mono text-slate-400">${item.eraTag[currentLang]}</span>
+            </div>
+          </div>
+
+          <!-- 상단 실제 사진 (Unsplash 검증 CDN + onerror 엑박 방지 Fallback) -->
+          <div class="relative w-full h-44 bg-slate-950 overflow-hidden border-b border-slate-800">
+            <img src="${item.imageBeforeUrl}" alt="${item.author[currentLang]}" class="w-full h-full object-cover object-center filter grayscale contrast-110 hover:grayscale-0 transition duration-500" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop&q=80';">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#161b22] via-transparent to-black/30"></div>
+            <span class="absolute bottom-2 left-3 text-[11px] font-mono text-slate-300 bg-black/60 px-2 py-0.5 rounded backdrop-blur border border-white/10">
+              📷 ${item.imageCaption[currentLang]}
+            </span>
+          </div>
+
+          <!-- 카드 본문 -->
+          <div class="p-4 space-y-3">
+            <div class="flex items-start justify-between gap-2">
+              <h2 class="text-base font-extrabold text-white leading-snug tracking-tight">
+                ${item.title[currentLang]}
+              </h2>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded whitespace-nowrap border ${item.badgeClass}">
+                ${item.badgeText[currentLang]}
               </span>
             </div>
 
-            <!-- Nixtio Cut-corner Artwork Canvas -->
-            <div class="w-full h-36 rounded-[22px] overflow-hidden border border-slate-800 shadow-inner bg-slate-950 relative mb-3">
-              ${item.visualSvg}
-              <div class="absolute bottom-2 right-2 bg-black/70 backdrop-blur px-2.5 py-1 rounded-xl border border-white/10 text-right">
-                <span class="text-[8px] font-black uppercase tracking-widest text-slate-400 block">${item.statLabel[currentLang]}</span>
-                <span class="text-xs font-black text-lime-400 font-mono">${item.statMetric}</span>
+            <!-- 발언 인용구 박스 -->
+            <div class="bg-[#1c2128] border-l-4 border-amber-500/80 rounded-r-xl p-3.5 space-y-1 shadow-inner">
+              <div class="flex items-center justify-between text-[11px] text-amber-400 font-mono font-bold">
+                <span>${t.quoteLabel}</span>
+                <span class="text-slate-500">${item.quoteSource[currentLang]}</span>
               </div>
-            </div>
-
-            <!-- Headline -->
-            <h3 class="text-sm sm:text-base font-black text-white tracking-tight leading-snug mb-2">
-              ${item.title[currentLang]}
-            </h3>
-
-            <!-- Quote Box (Nixtio Lime Accent Bar) -->
-            <div class="bg-[#0e121a] border-l-4 rounded-r-2xl p-3 space-y-1 mb-2.5 shadow-sm" style="border-color: ${item.accentLime};">
-              <span class="text-[9px] font-black tracking-widest uppercase block" style="color: ${item.accentLime};">
-                ${t.quoteLabel}
-              </span>
-              <p class="text-xs font-semibold text-slate-100 italic leading-relaxed">
-                "${item.quote[currentLang]}"
+              <p class="text-xs sm:text-sm text-slate-300 italic leading-relaxed">
+                "${item.quoteText[currentLang]}"
               </p>
             </div>
 
-            <!-- Reality Outcome -->
-            <div class="bg-[#0b0e14] border border-slate-800/80 rounded-2xl p-3 space-y-1 mb-2">
-              <span class="text-[10px] font-black text-emerald-400 uppercase tracking-wider block">
-                ⚡ ${t.realityLabel}
+            <!-- 대비 화살표 -->
+            <div class="relative flex py-0.5 items-center justify-center">
+              <div class="flex-grow border-t border-slate-800"></div>
+              <span class="flex-shrink mx-2 text-[10px] font-mono font-bold text-slate-400 bg-[#161b22] px-2 py-0.5 rounded border border-slate-800">
+                ${item.timelineLabel[currentLang]}
               </span>
-              <p class="text-[11px] text-slate-300 font-medium leading-relaxed">
-                ${item.reality[currentLang]}
+              <div class="flex-grow border-t border-slate-800"></div>
+            </div>
+
+            <!-- 하단 팩트/결과 박스 -->
+            <div class="bg-[#0e1117] border border-slate-800 rounded-xl p-3.5 space-y-1.5">
+              <div class="flex items-center justify-between text-[11px] font-bold text-emerald-400">
+                <span>${isPastLesson ? t.historyTitle : t.marketTitle}</span>
+                <span class="text-[10px] text-slate-400 font-mono">${item.realityStat[currentLang]}</span>
+              </div>
+              <p class="text-xs text-slate-300 leading-relaxed font-medium">
+                ${item.realityText[currentLang]}
               </p>
             </div>
 
-            <!-- Antidote (Core Lesson) -->
-            <div class="bg-white/5 border border-white/10 rounded-xl p-2.5 flex items-start gap-2">
-              <span class="text-xs mt-0.5">💡</span>
-              <p class="text-[11px] font-bold text-slate-200 leading-relaxed">
-                <strong class="text-amber-300 mr-1">${t.antidoteLabel}:</strong> ${item.antidote[currentLang]}
+            <!-- 팩폭 교훈 박스 -->
+            <div class="bg-gradient-to-r from-orange-950/20 to-amber-950/10 border border-orange-500/20 rounded-xl p-3">
+              <p class="text-xs text-orange-200/90 leading-relaxed">
+                <strong class="text-orange-400 font-extrabold mr-1">${isPastLesson ? t.takeawayLesson : t.takeawayTrack}</strong> ${item.actionHighlight[currentLang]}
               </p>
             </div>
           </div>
 
-          <!-- Bottom Voting Pill (Interactive Feedback) -->
-          <div class="pt-2 flex items-center justify-between gap-2 border-t border-slate-800/60">
-            <button onclick="castVote('${item.id}', 'fail')" class="flex-1 py-2 rounded-xl text-[11px] font-black flex items-center justify-center gap-1 border transition active:scale-95 ${userVoted === 'fail' ? 'bg-rose-500 border-rose-400 text-white shadow-md shadow-rose-500/30' : 'bg-[#0b0e14] border-slate-800 text-slate-300 hover:border-slate-700'}">
-              <span>${t.btnFail}</span>
-              <span class="font-mono text-[10px] opacity-80">${item.upvotes + (userVoted === 'fail' ? 1 : 0)}</span>
-            </button>
-            <button onclick="castVote('${item.id}', 'pass')" class="flex-1 py-2 rounded-xl text-[11px] font-black flex items-center justify-center gap-1 border transition active:scale-95 ${userVoted === 'pass' ? 'bg-slate-700 border-slate-600 text-white' : 'bg-[#0b0e14] border-slate-800 text-slate-400 hover:border-slate-700'}">
-              <span>${t.btnPass}</span>
-              <span class="font-mono text-[10px] opacity-80">${item.disagrees + (userVoted === 'pass' ? 1 : 0)}</span>
-            </button>
+          <!-- 1클릭 성지순례 인터랙션 바 -->
+          <div class="px-4 py-2.5 bg-slate-900/60 border-t border-slate-800/80 flex items-center justify-between text-xs">
+            <div class="flex items-center gap-2">
+              <button onclick="castVote('${item.id}', 'up')" class="vote-btn flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-700 hover:border-orange-500 hover:text-orange-400 transition ${userVoted === 'up' ? 'bg-orange-500 text-white font-bold border-orange-500' : 'bg-slate-800/80 text-slate-300'}">
+                <span>${t.voteFail}</span>
+                <span class="font-mono font-bold">${item.upvotes + (userVoted === 'up' ? 1 : 0)}</span>
+              </button>
+              <button onclick="castVote('${item.id}', 'down')" class="vote-btn flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-700 hover:border-slate-500 transition ${userVoted === 'down' ? 'bg-slate-700 text-white font-bold' : 'bg-slate-800/80 text-slate-400'}">
+                <span>${t.votePass}</span>
+                <span class="font-mono">${item.disagrees + (userVoted === 'down' ? 1 : 0)}</span>
+              </button>
+            </div>
+            <span class="text-[11px] text-slate-500 font-mono">${t.votedBadge}</span>
           </div>
         `;
-        track.appendChild(card);
+        container.appendChild(card);
       });
-
-      // 스크롤 시 상단 인디케이터 인덱스 실시간 갱신
-      track.addEventListener('scroll', () => {
-        const cardWidth = track.firstElementChild?.offsetWidth || 300;
-        const activeIdx = Math.round(track.scrollLeft / cardWidth) + 1;
-        const total = filtered.length;
-        document.getElementById('indicator-text').innerText = `${Math.min(activeIdx, total)} of ${total} ${t.caseWord.toUpperCase()}`;
-      }, { passive: true });
     }
 
     function castVote(id, type) {
-      const votedKey = `swipe_voted_${id}`;
+      const votedKey = `voted_${id}`;
       const prev = localStorage.getItem(votedKey);
       if (prev) {
-        alert(currentLang === 'ko' ? "이미 투표에 참여하셨습니다!" : "You have already voted!");
+        alert(currentLang === 'ko' ? "이미 성지순례 투표를 완료하셨습니다!" : "You have already verified this record!");
         return;
       }
       localStorage.setItem(votedKey, type);
-      renderCarousel(currentFilter);
+      renderFeed(currentFilter);
     }
 
-    function filterFeed(type) {
+    function filterType(type) {
       currentFilter = type;
-      document.querySelectorAll('.era-tab').forEach(btn => {
+      document.querySelectorAll('.filter-btn').forEach(btn => {
         if (btn.dataset.type === type) {
-          btn.className = "era-tab active text-white bg-slate-800 px-2.5 py-1 rounded-xl transition font-black";
+          btn.className = "filter-btn active px-3 py-1 rounded-lg bg-orange-500 text-white font-bold transition";
         } else {
-          btn.className = "era-tab text-slate-400 px-2.5 py-1 rounded-xl hover:text-white transition font-medium";
+          btn.className = "filter-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition";
         }
       });
-      renderCarousel(type);
+      renderFeed(type);
     }
 
     function setLang(lang) {
       currentLang = lang;
-      localStorage.setItem('swipe_lang', lang);
+      localStorage.setItem('user_lang', lang);
       document.documentElement.lang = lang;
       updateUiLabels();
-      renderCarousel(currentFilter);
+      renderFeed(currentFilter);
     }
 
-    const savedLang = localStorage.getItem('swipe_lang');
+    const savedLang = localStorage.getItem('user_lang');
     if (savedLang) {
       currentLang = savedLang;
     } else if (!navigator.language.startsWith('ko')) {
@@ -466,7 +426,7 @@
 
     document.documentElement.lang = currentLang;
     updateUiLabels();
-    renderCarousel();
+    renderFeed();
   </script>
 </body>
 </html>
