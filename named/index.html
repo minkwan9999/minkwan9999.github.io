@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>인사이트랩 - SNS 네임드 결정적 한마디 아카이브</title>
+  <meta name="description" content="일론 머스크, 샘 알트만 등 빅마우스들의 과거 SNS 발언과 그 후 실제 시장 결과, 데이터 기반 인사이트를 사후 검증합니다.">
+  <meta property="og:title" content="인사이트랩: 유명인 SNS 발언 사후 검증소">
+  <meta property="og:description" content="그때 그들의 예측은 맞았을까? 과거 발언과 현재 결과를 한눈에 대조해 보세요.">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q543DWEBBW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-Q543DWEBBW');
+</script>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=pub-1957248819245044" crossorigin="anonymous"></script>
+
+</head>
+<body class="bg-slate-900 text-slate-100 antialiased min-h-screen p-4 flex flex-col items-center">
+
+  <main class="w-full max-w-xl my-4 space-y-6">
+    <!-- 브랜드 헤더 -->
+    <header class="text-center space-y-2 pt-2">
+      <span class="text-[11px] font-bold tracking-widest px-3 py-1 bg-indigo-500/20 text-indigo-400 border border-indigo-500/30 rounded-full">INSIGHT LAB #1</span>
+      <h1 class="text-2xl font-black text-white tracking-tight mt-2">네임드 발언 사후 검증소</h1>
+      <p class="text-xs text-slate-400 leading-relaxed">
+        빅마우스들의 과거 SNS 선언과 N년 뒤 실제 시장 성적표를 복기합니다.
+      </p>
+    </header>
+
+    <!-- 카테고리 필터 태그 -->
+    <div class="flex items-center justify-center gap-2 text-xs" id="filter-container">
+      <button onclick="filterCategory('ALL')" class="filter-btn active px-3 py-1.5 rounded-lg bg-indigo-600 text-white font-semibold transition" data-category="ALL">전체</button>
+      <button onclick="filterCategory('테크/AI')" class="filter-btn px-3 py-1.5 rounded-lg bg-slate-800 text-slate-400 hover:text-white border border-slate-700 transition" data-category="테크/AI">테크·AI</button>
+      <button onclick="filterCategory('금융/크립토')" class="filter-btn px-3 py-1.5 rounded-lg bg-slate-800 text-slate-400 hover:text-white border border-slate-700 transition" data-category="금융/크립토">금융·크립토</button>
+      <button onclick="filterCategory('기업/경영')" class="filter-btn px-3 py-1.5 rounded-lg bg-slate-800 text-slate-400 hover:text-white border border-slate-700 transition" data-category="기업/경영">기업·경영</button>
+    </div>
+
+    <!-- 카드 리스트 컨테이너 -->
+    <div id="cards-container" class="space-y-4 text-sm"></div>
+
+    <!-- 신뢰도 안내 및 면책 -->
+    <section class="border-t border-slate-800 pt-5 text-xs text-slate-500 space-y-1 text-center">
+      <p>공개 SNS 게시물 및 당시 시장 지표를 기반으로 기록되었습니다.</p>
+      <p>© 2026 인사이트랩 (InsightLab). All rights reserved.</p>
+    </section>
+  </main>
+
+  <script>
+    // 1. 아카이브 데이터셋 (수동 갱신 가능)
+    const DATA = [
+      {
+        id: 1,
+        author: "일론 머스크",
+        role: "테슬라 CEO",
+        platform: "X (구 Twitter)",
+        date: "2018년 8월",
+        category: "기업/경영",
+        statement: "테슬라를 주당 420달러에 비상장사로 전환하는 방안을 고려 중이다. 자금은 확보되었다(Funding secured).",
+        verifiedResult: "실제 자금 확보는 사실이 아닌 것으로 밝혀져 SEC(미 증권거래위원회)로부터 4,000만 달러 벌금형 및 이사회 의장직 사임 합의 처분을 받음. 다만 테슬라 주가는 이후 실적 개선과 함께 액면분할을 거치며 10배 이상 폭등함.",
+        resultType: "mixed", // success, fail, mixed
+        insight: "CEO의 충동적 발언 리스크와 기업 펀더멘털의 괴리를 보여주는 대표적 사례. 단기 규제 리스크는 치명적이었으나 장기 제품 혁신을 꺾지는 못했음."
+      },
+      {
+        id: 2,
+        author: "샘 알트만",
+        role: "OpenAI CEO",
+        platform: "X (구 Twitter)",
+        date: "2023년 2월",
+        category: "테크/AI",
+        statement: "우리는 여전히 AGI(범용인공지능)와 거리가 멀다. 현재의 LLM은 유용한 도구일 뿐 스스로 생각하는 지능이 아니다.",
+        verifiedResult: "발언 이후 GPT-4, 멀티모달, 추론 모델(o1 등)이 잇따라 출시되며 지식 노동 대체 속도가 예상보다 3배 이상 빨라짐. 업계에서는 과도한 규제와 독점 비판을 피하기 위한 일종의 '기대치 낮추기(Sandbagging)' 화법이었다는 평가가 지배적.",
+        resultType: "success",
+        insight: "빅테크 파운더의 '겸손한 발언'은 규제 당국의 시선을 피하고 제품 출시 충격을 극대화하기 위한 정무적 발언일 가능성을 항상 염두에 두어야 함."
+      },
+      {
+        id: 3,
+        author: "마이클 세일러",
+        role: "마이크로스트래티지 의장",
+        platform: "X (구 Twitter)",
+        date: "2022년 6월",
+        category: "금융/크립토",
+        statement: "비트코인이 2만 달러 밑으로 폭락해도 우리는 절대 팔지 않는다. 기업의 모든 잉여 현금과 회사채를 동원해 계속 매수할 것이다.",
+        verifiedResult: "당시 주주들의 거센 비판과 마진콜 위기설에 시달렸으나, 2024~2025년 비트코인이 10만 달러를 돌파하며 기업 가치가 나스닥 최상위권 상승률을 기록. 비트코인 레버리지 지주회사로 전환 성공.",
+        resultType: "success",
+        insight: "시장의 조롱을 받는 극단적 하락장에서도 확고한 단일 논리와 자금 조달 구조를 가진 베팅은 상상을 초월하는 레버리지 보상을 가져옴."
+      }
+    ];
+
+    // 2. 렌더링 함수
+    function renderCards(filter = 'ALL') {
+      const container = document.getElementById('cards-container');
+      container.innerHTML = '';
+
+      const filtered = filter === 'ALL' ? DATA : DATA.filter(item => item.category === filter);
+
+      filtered.forEach(item => {
+        const badgeColor = item.resultType === 'success' 
+          ? 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20' 
+          : item.resultType === 'fail' 
+          ? 'text-rose-400 bg-rose-500/10 border-rose-500/20' 
+          : 'text-amber-400 bg-amber-500/10 border-amber-500/20';
+
+        const badgeText = item.resultType === 'success' ? '결과 적중' : item.resultType === 'fail' ? '예측 빗나감' : '복합적 결과';
+
+        const card = document.createElement('article');
+        card.className = "bg-slate-800/90 border border-slate-700 rounded-2xl p-5 shadow-lg space-y-4";
+        card.innerHTML = `
+          <!-- 상단 인물 정보 및 메타 -->
+          <div class="flex items-start justify-between border-b border-slate-700/60 pb-3">
+            <div>
+              <div class="flex items-center gap-2">
+                <h2 class="text-base font-bold text-white tracking-tight">${item.author}</h2>
+                <span class="text-[11px] text-slate-400">· ${item.role}</span>
+              </div>
+              <span class="text-[11px] text-slate-500">${item.platform} · ${item.date}</span>
+            </div>
+            <span class="text-[11px] font-semibold px-2 py-0.5 rounded border ${badgeColor}">
+              ${badgeText}
+            </span>
+          </div>
+
+          <!-- 과거 발언 원문 -->
+          <div class="space-y-1">
+            <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">당시 발언</span>
+            <blockquote class="text-sm font-medium text-slate-100 bg-slate-900/60 p-3 rounded-xl border border-slate-800 leading-relaxed italic">
+              "${item.statement}"
+            </blockquote>
+          </div>
+
+          <!-- N년 뒤 실제 결과 -->
+          <div class="space-y-1">
+            <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">사후 검증 결과</span>
+            <p class="text-xs text-slate-300 leading-relaxed pl-1">
+              ${item.verifiedResult}
+            </p>
+          </div>
+
+          <!-- 인사이트 박스 -->
+          <div class="bg-indigo-950/40 border border-indigo-500/20 rounded-xl p-3.5 space-y-1">
+            <div class="flex items-center gap-1.5">
+              <span class="text-indigo-400 text-xs">💡</span>
+              <span class="text-xs font-bold text-indigo-300">복기 인사이트</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              ${item.insight}
+            </p>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    // 3. 필터 제어 함수
+    function filterCategory(category) {
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        if (btn.dataset.category === category) {
+          btn.className = "filter-btn active px-3 py-1.5 rounded-lg bg-indigo-600 text-white font-semibold transition";
+        } else {
+          btn.className = "filter-btn px-3 py-1.5 rounded-lg bg-slate-800 text-slate-400 hover:text-white border border-slate-700 transition";
+        }
+      });
+      renderCards(category);
+    }
+
+    // 초기 실행
+    renderCards();
+  </script>
+</body>
+</html>
