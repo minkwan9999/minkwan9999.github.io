@@ -3,17 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>인사이트랩 - 빅마우스 호언장담 사후 검증소</title>
-  <meta name="description" content="일론 머스크, 샘 알트만 등 네임드들의 과거 SNS 발언과 N년 뒤 실제 성적표. 말과 현실의 괴리를 복기합니다.">
-  <meta property="og:title" content="인사이트랩: 네임드 발언 사후 검증">
-  <meta property="og:description" content="그때 그 장담은 어떻게 끝났을까? 과거 발언 vs 현재 성적표 팩트체크.">
+  <title>인사이트랩 - 역대급 흑역사 성지순례소 (Aged Like Milk)</title>
+  <meta name="description" content="산업혁명부터 닷컴, AI 시대까지. 당대 최고 권위자들의 호언장담과 N년 뒤 참교육 성적표를 박제합니다.">
+  <meta property="og:title" content="인사이트랩: 역대급 헛소리 박제소">
+  <meta property="og:description" content="그 시절 대가들의 당당했던 오판 vs 냉정한 현실 성적표">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;800;900&display=swap" rel="stylesheet">
-  <style>
-    body { font-family: 'Pretendard', -apple-system, sans-serif; }
-  </style>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q543DWEBBW"></script>
@@ -27,236 +21,261 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=pub-1957248819245044" crossorigin="anonymous"></script>
 
 </head>
-<body class="bg-[#0b0f17] text-slate-100 antialiased min-h-screen py-8 px-4 flex flex-col items-center selection:bg-rose-500 selection:text-white">
+<body class="bg-[#0e1117] text-slate-200 antialiased min-h-screen py-6 px-3 flex flex-col items-center selection:bg-orange-500 selection:text-white">
 
-  <main class="w-full max-w-lg space-y-6">
-    <!-- 헤더: 매거진 타이포 스타일 -->
-    <header class="space-y-3 pb-2 border-b border-slate-800">
-      <div class="flex items-center justify-between text-[11px] font-mono tracking-wider text-slate-400">
-        <span class="text-rose-400 font-black tracking-widest">● FACT-CHECK ARCHIVE</span>
-        <span>INSIGHT LAB VOL.01</span>
+  <main class="w-full max-w-lg space-y-5">
+    <!-- Reddit 스타일 서브레딧 헤더 -->
+    <header class="bg-[#161b22] border border-slate-800 rounded-2xl p-4 shadow-lg space-y-2">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-orange-600 to-amber-500 flex items-center justify-center font-black text-white text-sm shadow">
+            🥛
+          </div>
+          <div>
+            <div class="flex items-center gap-1.5">
+              <span class="font-extrabold text-white text-sm tracking-tight">r/상해버린_예측들</span>
+              <span class="text-[10px] bg-orange-500/20 text-orange-400 font-bold px-1.5 py-0.5 rounded border border-orange-500/30">성지순례</span>
+            </div>
+            <p class="text-[11px] text-slate-400">말할 땐 천재였으나 역사가 박제해 버린 순간들</p>
+          </div>
+        </div>
+        <a href="/" class="text-xs text-slate-400 hover:text-white transition">홈으로</a>
       </div>
-      <h1 class="text-3xl font-black text-white tracking-tight leading-tight">
-        그때 그 호언장담,<br>
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-amber-300 to-emerald-400">지금 어떻게 됐을까?</span>
-      </h1>
-      <p class="text-xs text-slate-400 leading-relaxed font-medium">
-        빅마우스들이 남긴 결정적 한마디와 N년 뒤 냉정한 성적표. 말의 무게를 복기합니다.
-      </p>
 
-      <!-- 탭 필터 -->
-      <div class="flex items-center gap-1.5 pt-2 text-xs font-semibold overflow-x-auto pb-1" id="filter-container">
-        <button onclick="filterCategory('ALL')" class="filter-btn active px-3 py-1.5 rounded-full bg-white text-black transition" data-category="ALL">전체</button>
-        <button onclick="filterCategory('테크/AI')" class="filter-btn px-3 py-1.5 rounded-full bg-slate-800/80 text-slate-400 border border-slate-700/60 transition hover:text-white" data-category="테크/AI">테크·AI</button>
-        <button onclick="filterCategory('금융/크립토')" class="filter-btn px-3 py-1.5 rounded-full bg-slate-800/80 text-slate-400 border border-slate-700/60 transition hover:text-white" data-category="금융/크립토">금융·크립토</button>
-        <button onclick="filterCategory('기업/경영')" class="filter-btn px-3 py-1.5 rounded-full bg-slate-800/80 text-slate-400 border border-slate-700/60 transition hover:text-white" data-category="기업/경영">기업·경영</button>
+      <!-- 정렬/필터 탭 -->
+      <div class="flex items-center gap-1.5 pt-2 border-t border-slate-800/80 text-xs font-semibold overflow-x-auto">
+        <button onclick="filterEra('ALL')" class="era-btn active px-3 py-1 rounded-lg bg-orange-500 text-white transition" data-era="ALL">전체</button>
+        <button onclick="filterEra('산업/기계')" class="era-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition" data-era="산업/기계">산업·기계 (1800s)</button>
+        <button onclick="filterEra('인터넷/IT')" class="era-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition" data-era="인터넷/IT">인터넷·모바일 (1990s~)</button>
+        <button onclick="filterEra('AI/현대')" class="era-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition" data-era="AI/현대">AI·현대 (2020s~)</button>
       </div>
     </header>
 
     <!-- 피드 리스트 -->
-    <div id="cards-container" class="space-y-6"></div>
+    <div id="feed-container" class="space-y-4"></div>
 
     <!-- 푸터 -->
-    <footer class="pt-8 pb-4 text-center text-xs text-slate-600 border-t border-slate-900 space-y-1">
-      <p>공개 기록 및 공시·시장 지표에 근거하여 작성되었습니다.</p>
-      <p>© 2026 인사이트랩 (InsightLab)</p>
+    <footer class="pt-6 pb-8 text-center text-xs text-slate-500 space-y-1">
+      <p>역사적 문헌, 신문 아카이브 및 공시 지표를 기반으로 기록되었습니다.</p>
+      <p>© 2026 인사이트랩 (InsightLab) · r/AgedLikeMilk Edition</p>
     </footer>
   </main>
 
   <script>
-    const DATA = [
+    const POSTS = [
       {
-        id: 1,
-        author: "일론 머스크",
-        handle: "@elonmusk",
-        avatarBg: "bg-blue-600",
-        role: "테슬라 CEO",
-        platform: "X (구 Twitter)",
-        date: "2018년 8월",
-        category: "기업/경영",
-        punchline: "테슬라를 주당 420달러에 비상장사로 전환하겠다. 자금은 확보되었다.",
-        originalQuote: "Am considering taking Tesla private at $420. Funding secured.",
-        verdict: "벌금 4,000만 달러 & 이후 주가 10배 폭등",
-        resultType: "mixed", // fail, success, mixed
-        realityText: "실제 확보된 자금은 없었으며 SEC로부터 사기 혐의로 4,000만 달러 벌금과 의장직 박탈 처분을 당했습니다. 그러나 이 소동 이후 테슬라는 대량 양산에 안착하며 주가가 1,000% 넘게 폭등했습니다.",
-        takeaway: "리더의 입은 가벼웠으나 공장의 실행력은 진짜였다. 노이즈와 펀더멘털을 구분하지 못한 쇼트(공매도) 세력만 궤멸당한 사건."
+        id: "p1",
+        era: "인터넷/IT",
+        year: "1998년",
+        author: "폴 크루그먼",
+        authorTitle: "노벨 경제학상 수상자",
+        avatar: "🎓",
+        title: "2005년쯤 되면 인터넷의 실체가 팩스(Fax) 수준이었음이 밝혀질 것",
+        quoteText: "2005년경이 되면, 경제에 미친 인터넷의 영향력은 팩스 기기보다 크지 않았다는 사실이 만천하에 드러날 것이다. 대부분의 사람들은 서로에게 할 말이 그리 많지 않다.",
+        quoteSource: "The New York Times 칼럼 (1998)",
+        verdictTime: "10년 뒤 현실 (참교육 결과)",
+        realityText: "전 세계 시가총액 1위부터 10위까지 인터넷·소프트웨어 빅테크가 전부 장악함. 무선 인터넷과 스마트폰으로 인류의 생활 양식이 완전히 재편됨.",
+        realityStat: "인터넷 경제 규모: 팩스 시장의 수만 배 초과 독식",
+        verdictStatus: "역대급 흑역사 ✕",
+        lesson: "기존 학문과 낡은 잣대에 갇힌 최고 권위자일수록 기하급수적 '네트워크 파급력'을 가장 처참하게 과소평가한다.",
+        upvotes: 428,
+        disagrees: 12
       },
       {
-        id: 2,
-        author: "샘 알트만",
-        handle: "@sama",
-        avatarBg: "bg-emerald-600",
-        role: "OpenAI CEO",
-        platform: "X (구 Twitter)",
-        date: "2023년 2월",
-        category: "테크/AI",
-        punchline: "현재의 LLM은 스스로 생각하는 지능이 아니다. AGI는 아직 멀었다.",
-        originalQuote: "Current LLMs are useful tools, not thinking minds. We are still far from AGI.",
-        verdict: "엄살 작전 (규제 회피용 샌드배깅)",
-        resultType: "success",
-        realityText: "이 말을 남긴 직후 GPT-4와 추론 전용 모델(o1)을 쏟아내며 시장을 충격에 빠뜨렸습니다. 정부와 규제 당국의 사전 검열을 피하기 위해 일부러 기술 수준을 낮춰 부르는 전형적인 '기대치 낮추기'였습니다.",
-        takeaway: "빅테크 파운더가 '우린 아직 멀었다'며 겸손을 떨 때는 경쟁자의 안도와 규제 당국의 방심을 유도하는 전략적 연막일 확률이 높다."
+        id: "p2",
+        era: "인터넷/IT",
+        year: "1995년",
+        author: "클리포드 스톨",
+        authorTitle: "천문학자 & 베스트셀러 작가",
+        avatar: "📚",
+        title: "인터넷으로 쇼핑을 하고 책을 산다고? 세상에 그런 바보는 없다",
+        quoteText: "인터넷 쇼핑몰? 컴퓨터 화면으로 책을 주문하고 비행기 표를 산다고? 지역 서점의 따뜻함과 실제 사람을 대신할 수 없다. 사이버 경제는 공허한 헛소리다.",
+        quoteSource: "Newsweek 칼럼 '왜 인터넷은 실패할 것인가' (1995)",
+        verdictTime: "현재 현실 (참교육 결과)",
+        realityText: "아마존이 글로벌 유통 제국으로 성장하며 오프라인 서점과 대형 마트 체인을 집어삼킴. 이 칼럼을 쓴 잡지 뉴스위크조차 인쇄판을 중단하고 디지털 구독으로 전환함.",
+        realityStat: "아마존 글로벌 유통 점유율 1위 안착",
+        verdictStatus: "역대급 흑역사 ✕",
+        lesson: "'인간적인 감성'을 핑계로 효율성과 편리함을 거부하는 논리는 기술 발전의 속도를 단 한 번도 막아내지 못했다.",
+        upvotes: 312,
+        disagrees: 8
       },
       {
-        id: 3,
+        id: "p3",
+        era: "산업/기계",
+        year: "1830년대",
+        author: "영국 왕립협회 의사 & 학자문",
+        authorTitle: "당대 최고 과학 지식인들",
+        avatar: "🚂",
+        title: "기차가 시속 40km로 달리면 승객들은 질식해서 즉사한다",
+        quoteText: "인간의 신체는 시속 30마일(약 48km)의 속도를 견디도록 설계되지 않았다. 열차가 그 속도로 달리면 공기가 폐로 들어오지 않아 모든 승객이 질식사할 것이다.",
+        quoteSource: "1830년대 증기 기관차 개통 당시 언론 기고문",
+        verdictTime: "개통 직후 현실 (참교육 결과)",
+        realityText: "승객들의 폐는 멀쩡했고, 철도는 런던과 리버풀을 반나절 생활권으로 묶으며 1차 산업혁명의 심장이자 대량 물류의 표준이 됨.",
+        realityStat: "현대 고속철도 속도: 시속 300km 이상 일상 운행",
+        verdictStatus: "역대급 흑역사 ✕",
+        lesson: "새로운 이동 수단이나 생산 도구가 등장할 때 인간은 언제나 '과학적 근거로 위장한 원초적 공포'를 배설한다.",
+        upvotes: 541,
+        disagrees: 19
+      },
+      {
+        id: "p4",
+        era: "인터넷/IT",
+        year: "2007년",
+        author: "스티브 발머",
+        authorTitle: "마이크로소프트 전 CEO",
+        avatar: "💼",
+        title: "500달러짜리 아이폰? 키보드도 없어서 비즈니스맨에겐 0%짜리 장난감",
+        quoteText: "아이폰이 시장 점유율을 유의미하게 가져갈 가능성은 0%다. 물리 키보드가 없어서 이메일을 보낼 수 없기 때문에 비즈니스 고객에게 절대 매력적인 기계가 아니다.",
+        quoteSource: "USA 투데이 인터뷰 영상 (2007)",
+        verdictTime: "5년 뒤 현실 (참교육 결과)",
+        realityText: "스마트폰은 전 세계 오피스와 일상을 독점했고, 물리 키보드를 고집하던 블랙베리와 윈도우 모바일은 시장에서 흔적도 없이 사라짐.",
+        realityStat: "애플 전 세계 스마트폰 영업이익 80% 이상 독점",
+        verdictStatus: "역대급 흑역사 ✕",
+        lesson: "내 기존 주력 제품(쿼티 자판/윈도우)을 지키려는 방어 본능은 경쟁자의 파괴적 혁신을 '결함'으로 착각하게 만든다.",
+        upvotes: 689,
+        disagrees: 14
+      },
+      {
+        id: "p5",
+        era: "AI/현대",
+        year: "2023년",
         author: "마이클 버리",
-        handle: "@michaeljburry",
-        avatarBg: "bg-purple-600",
-        role: "빅쇼트 실제 주인공",
-        platform: "X (구 Twitter)",
-        date: "2023년 1월",
-        category: "금융/크립토",
-        punchline: "Sell. (팔아라)",
-        originalQuote: "Sell.",
-        verdict: "역대급 상승장 직전 매도 경고 (대실패)",
-        resultType: "fail",
-        realityText: "단 한 단어의 트윗을 남기고 시장 폭락에 베팅했으나, 나스닥은 엔비디아를 필두로 한 생성형 AI 랠리를 시작하며 역사적 신고가를 갈아치웠습니다. 버리는 결국 두 달 뒤 '틀렸다'고 인정했습니다.",
-        takeaway: "거시 지표상 침체가 확실해 보여도, 시장의 탐욕과 새로운 기술 테마가 만드는 유동성 관성은 비관론자를 먼저 파산시킨다."
-      },
-      {
-        id: 4,
-        author: "마이클 세일러",
-        handle: "@saylor",
-        avatarBg: "bg-amber-600",
-        role: "마이크로스트래티지 의장",
-        platform: "X (구 Twitter)",
-        date: "2022년 6월",
-        category: "금융/크립토",
-        punchline: "비트코인이 2만 달러 밑으로 곤두박질쳐도 우리는 1사토시도 안 판다.",
-        originalQuote: "We will not sell. MicroStrategy will continue to acquire bitcoin.",
-        verdict: "평가손실 수천억 ➔ 조 단위 평가익 전환",
-        resultType: "success",
-        realityText: "당시 기업 파산설과 주주들의 거센 비난에 직면했으나 만기가 긴 무이자 전환사채로 버텼습니다. 이후 비트코인이 10만 달러를 돌파하며 회사는 S&P500 최상위권 상승률을 기록했습니다.",
-        takeaway: "조롱받는 하락장에서 자금 조달 구조(만기 압박 없는 빚)를 버틸 수 있게 짜둔 집착은 비대칭적 보상을 낳는다."
-      },
-      {
-        id: 5,
-        author: "캐시 우드",
-        handle: "@CathieDWood",
-        avatarBg: "bg-rose-600",
-        role: "ARK 인베스트 대표",
-        platform: "X / 인터뷰",
-        date: "2021년 2월",
-        category: "금융/크립토",
-        punchline: "전통 가치주의 시대는 끝났다. 파괴적 혁신 기업만 연 40% 복리를 낸다.",
-        originalQuote: "Traditional value stocks are value traps. Disruptive innovation will dominate.",
-        verdict: "편입 종목 -80% 대폭락 (기술주 거품 붕괴)",
-        resultType: "fail",
-        realityText: "발언 직후 연준의 급격한 금리 인상이 시작되자 ARKK 펀드의 혁신 성장주들이 70~80% 이상 폭락했습니다. 반면 버림받았던 원유, 금융, 방산 등 전통 가치주들은 사상 최고가를 경신했습니다.",
-        takeaway: "초저금리 유동성이 만든 주가 급등을 자신의 선구안으로 착각하면 사이클 반전 때 원금 복구가 불가능해진다."
-      },
-      {
-        id: 6,
-        author: "마크 저커버그",
-        handle: "@zuck",
-        avatarBg: "bg-sky-600",
-        role: "메타 CEO",
-        platform: "Facebook 발표",
-        date: "2021년 10월",
-        category: "테크/AI",
-        punchline: "사명을 메타로 바꾼다. 모바일 다음은 100% 메타버스다.",
-        originalQuote: "From now on, we're going to be metaverse first, not Facebook first.",
-        verdict: "수십조 적자 ➔ 2년 뒤 AI(LLaMA)로 긴급 피벗",
-        resultType: "fail",
-        realityText: "리얼리티 랩스에 분기 수조 원씩 쏟아부었으나 대중의 외면을 받고 주가가 1/3 토막 났습니다. 결국 메타버스를 뒤로 미루고 '효율의 해' 선언과 함께 오픈소스 AI에 올인하며 극적으로 부활했습니다.",
-        takeaway: "기술적 완성도와 고객의 실제 소비 욕구 사이의 시차를 무시한 올인은 빅테크 1위 천재도 휘청이게 만든다."
+        authorTitle: "영화 '빅쇼트' 실제 주인공",
+        avatar: "📉",
+        title: "Sell. (모든 주식을 팔아 치워라)",
+        quoteText: "Sell.",
+        quoteSource: "트위터 단 한 단어 경고 (2023년 1월)",
+        verdictTime: "3개월 뒤 현실 (참교육 결과)",
+        realityText: "발언 직후 엔비디아와 빅테크 주도의 생성형 AI 대세 상승장이 폭발하며 역사적 신고가를 경신. 버리는 결국 '내가 틀렸다(I was wrong)'고 자인함.",
+        realityStat: "경고 직후 S&P500·나스닥 사상 최고치 랠리",
+        verdictStatus: "예측 대실패 ✕",
+        lesson: "거시 지표상 위험 신호가 맞아떨어지더라도, 새로운 기술 테마가 이끄는 탐욕과 유동성의 파도는 비관론자를 먼저 쓸어버린다.",
+        upvotes: 410,
+        disagrees: 33
       }
     ];
 
-    function renderCards(filter = 'ALL') {
-      const container = document.getElementById('cards-container');
+    function renderFeed(filter = 'ALL') {
+      const container = document.getElementById('feed-container');
       container.innerHTML = '';
 
-      const filtered = filter === 'ALL' ? DATA : DATA.filter(item => item.category === filter);
+      const filtered = filter === 'ALL' ? POSTS : POSTS.filter(item => item.era === filter);
 
       filtered.forEach(item => {
-        // 결과 뱃지 색상 및 태그
-        let badgeBg, badgeBorder, badgeText, statusIcon;
-        if (item.resultType === 'success') {
-          badgeBg = 'bg-emerald-500/10 text-emerald-400 border-emerald-500/30';
-          badgeText = '적중 / 성공';
-          statusIcon = '✓';
-        } else if (item.resultType === 'fail') {
-          badgeBg = 'bg-rose-500/10 text-rose-400 border-rose-500/30';
-          badgeText = '예측 빗나감';
-          statusIcon = '✕';
-        } else {
-          badgeBg = 'bg-amber-500/10 text-amber-400 border-amber-500/30';
-          badgeText = '반전 / 복합';
-          statusIcon = '△';
-        }
+        // 로컬스토리지 기반 투표 상태 기억
+        const votedKey = `voted_${item.id}`;
+        const userVoted = localStorage.getItem(votedKey);
 
         const card = document.createElement('article');
-        card.className = "bg-[#131926] border border-slate-800 rounded-2xl p-5 shadow-2xl relative overflow-hidden transition hover:border-slate-700";
+        card.className = "bg-[#161b22] border border-slate-800 rounded-2xl overflow-hidden shadow-xl";
 
         card.innerHTML = `
-          <!-- 1. 소셜 프로필 헤더 -->
-          <div class="flex items-center justify-between gap-3 mb-4">
-            <div class="flex items-center gap-2.5">
-              <div class="w-10 h-10 rounded-full ${item.avatarBg} flex items-center justify-center font-black text-white text-base shadow-inner">
-                ${item.author.charAt(0)}
-              </div>
+          <!-- 1. 레딧 스타일 헤더: 서브태그 & 인물 -->
+          <div class="p-3.5 pb-2 flex items-center justify-between border-b border-slate-800/60 bg-slate-900/40 text-xs">
+            <div class="flex items-center gap-2">
+              <span class="text-base">${item.avatar}</span>
               <div>
-                <div class="flex items-center gap-1.5">
-                  <span class="font-extrabold text-white text-sm tracking-tight">${item.author}</span>
-                  <span class="text-[11px] text-slate-400">${item.handle}</span>
-                </div>
-                <div class="text-[11px] text-slate-500 flex items-center gap-1.5">
-                  <span>${item.role}</span>
-                  <span>·</span>
-                  <span>${item.date}</span>
-                </div>
+                <span class="font-bold text-slate-200">${item.author}</span>
+                <span class="text-[11px] text-slate-400">· ${item.authorTitle}</span>
               </div>
             </div>
-            <span class="text-[11px] font-mono font-bold px-2.5 py-1 rounded-full border ${badgeBg} flex items-center gap-1">
-              <span>${statusIcon}</span> ${badgeText}
-            </span>
-          </div>
-
-          <!-- 2. 핵심 펀치라인 (크고 강렬하게) -->
-          <div class="mb-4 pl-3.5 border-l-2 border-rose-500/80 space-y-1">
-            <p class="text-base sm:text-lg font-black text-white tracking-tight leading-snug">
-              "${item.punchline}"
-            </p>
-            <p class="text-[11px] text-slate-400 font-mono italic">
-              ${item.originalQuote}
-            </p>
-          </div>
-
-          <!-- 3. N년 뒤 현실 성적표 (고대비 박스) -->
-          <div class="bg-[#0b0f17] rounded-xl p-3.5 border border-slate-800/80 mb-3 space-y-1.5">
-            <div class="flex items-center gap-1.5 text-[11px] font-bold text-slate-400 uppercase tracking-wider">
-              <span class="text-amber-400">📊</span>
-              <span>현실 성적표: <strong class="text-slate-200">${item.verdict}</strong></span>
+            <div class="flex items-center gap-1.5">
+              <span class="text-[11px] font-mono text-slate-400">${item.year}</span>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-rose-500/10 text-rose-400 border border-rose-500/20">
+                ${item.verdictStatus}
+              </span>
             </div>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              ${item.realityText}
-            </p>
           </div>
 
-          <!-- 4. 팩폭 인사이트 (형광 하이라이트 느낌) -->
-          <div class="bg-gradient-to-r from-rose-950/30 to-amber-950/20 border-l-2 border-amber-400/80 rounded-r-xl p-3">
-            <p class="text-xs font-semibold text-amber-200/90 leading-relaxed">
-              <span class="font-black text-amber-400 mr-1">💡 복기:</span> ${item.takeaway}
-            </p>
+          <!-- 2. 게시글 헤드라인 -->
+          <div class="p-4 space-y-3">
+            <h2 class="text-base font-extrabold text-white leading-snug tracking-tight">
+              ${item.title}
+            </h2>
+
+            <!-- 상단 박제: 당시 원문 캡처 스타일 (빛바랜 느낌) -->
+            <div class="bg-[#1c2128] border-l-4 border-amber-500/80 rounded-r-xl p-3.5 space-y-1.5 shadow-inner">
+              <div class="flex items-center justify-between text-[11px] text-amber-400 font-mono font-bold">
+                <span>📌 당시 발언 원문</span>
+                <span class="text-slate-500">${item.quoteSource}</span>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-300 italic leading-relaxed">
+                "${item.quoteText}"
+              </p>
+            </div>
+
+            <!-- 중앙 Reddit식 대비선 -->
+            <div class="relative flex py-1 items-center justify-center">
+              <div class="flex-grow border-t border-slate-800"></div>
+              <span class="flex-shrink mx-3 text-[10px] font-mono font-black uppercase tracking-widest text-slate-500 bg-[#161b22] px-2 py-0.5 rounded border border-slate-800">
+                ⬇️ ${item.verdictTime} ⬇️
+              </span>
+              <div class="flex-grow border-t border-slate-800"></div>
+            </div>
+
+            <!-- 하단 박제: 냉정한 현실 참교육 결과 (고대비) -->
+            <div class="bg-[#0e1117] border border-slate-800 rounded-xl p-3.5 space-y-1.5">
+              <div class="flex items-center justify-between text-[11px] font-bold text-emerald-400">
+                <span>⚖️ 역사의 실제 판결</span>
+                <span class="text-[10px] text-slate-400 font-mono">${item.realityStat}</span>
+              </div>
+              <p class="text-xs text-slate-300 leading-relaxed font-medium">
+                ${item.realityText}
+              </p>
+            </div>
+
+            <!-- 3. 실전 오판 방지 교훈 (Actionable Insight) -->
+            <div class="bg-gradient-to-r from-orange-950/20 to-amber-950/10 border border-orange-500/20 rounded-xl p-3">
+              <p class="text-xs text-orange-200/90 leading-relaxed">
+                <strong class="text-orange-400 font-extrabold mr-1">💡 팩폭 교훈:</strong> ${item.lesson}
+              </p>
+            </div>
+          </div>
+
+          <!-- 4. 레딧식 1클릭 추천/박제 반응 바 -->
+          <div class="px-4 py-2.5 bg-slate-900/60 border-t border-slate-800/80 flex items-center justify-between text-xs">
+            <div class="flex items-center gap-2">
+              <button onclick="castVote('${item.id}', 'up')" class="vote-btn flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-700 hover:border-orange-500 hover:text-orange-400 transition ${userVoted === 'up' ? 'bg-orange-500 text-white font-bold border-orange-500' : 'bg-slate-800/80 text-slate-300'}">
+                <span>🔥 역대급 헛소리</span>
+                <span id="up-count-${item.id}" class="font-mono font-bold">${item.upvotes + (userVoted === 'up' ? 1 : 0)}</span>
+              </button>
+              <button onclick="castVote('${item.id}', 'down')" class="vote-btn flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-700 hover:border-slate-500 transition ${userVoted === 'down' ? 'bg-slate-700 text-white font-bold' : 'bg-slate-800/80 text-slate-400'}">
+                <span>🤔 당시엔 그럴듯함</span>
+                <span id="down-count-${item.id}" class="font-mono">${item.disagrees + (userVoted === 'down' ? 1 : 0)}</span>
+              </button>
+            </div>
+            <span class="text-[11px] text-slate-500 font-mono">성지순례 완료</span>
           </div>
         `;
         container.appendChild(card);
       });
     }
 
-    function filterCategory(category) {
-      document.querySelectorAll('.filter-btn').forEach(btn => {
-        if (btn.dataset.category === category) {
-          btn.className = "filter-btn active px-3 py-1.5 rounded-full bg-white text-black transition";
-        } else {
-          btn.className = "filter-btn px-3 py-1.5 rounded-full bg-slate-800/80 text-slate-400 border border-slate-700/60 transition hover:text-white";
-        }
-      });
-      renderCards(category);
+    function castVote(id, type) {
+      const votedKey = `voted_${id}`;
+      const prev = localStorage.getItem(votedKey);
+      if (prev) {
+        alert("이미 이 사건에 성지순례 투표를 완료하셨습니다!");
+        return;
+      }
+      localStorage.setItem(votedKey, type);
+      renderFeed(currentEra);
     }
 
-    renderCards();
+    let currentEra = 'ALL';
+    function filterEra(era) {
+      currentEra = era;
+      document.querySelectorAll('.era-btn').forEach(btn => {
+        if (btn.dataset.era === era) {
+          btn.className = "era-btn active px-3 py-1 rounded-lg bg-orange-500 text-white font-bold transition";
+        } else {
+          btn.className = "era-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition";
+        }
+      });
+      renderFeed(era);
+    }
+
+    renderFeed();
   </script>
 </body>
 </html>
