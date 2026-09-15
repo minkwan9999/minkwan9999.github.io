@@ -6,7 +6,7 @@
   <title>인사이트랩 - 역대급 흑역사 성지순례소 (Aged Like Milk)</title>
   <meta name="description" content="산업혁명부터 닷컴, AI 시대까지. 당대 최고 권위자들의 호언장담과 N년 뒤 참교육 성적표를 박제합니다.">
   <meta property="og:title" content="인사이트랩: 역대급 헛소리 박제소">
-  <meta property="og:description" content="그 시절 대가들의 당당했던 오판 vs 냉정한 현실 성적표">
+  <meta property="og:description" content="과거 대가들의 오판 교훈 vs 최근 빅마우스들의 냉정한 성적표">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-[#0e1117] text-slate-200 antialiased min-h-screen py-6 px-3 flex flex-col items-center selection:bg-orange-500 selection:text-white">
@@ -24,7 +24,7 @@
               <span class="font-extrabold text-white text-sm tracking-tight">r/상해버린_예측들</span>
               <span class="text-[10px] bg-orange-500/20 text-orange-400 font-bold px-1.5 py-0.5 rounded border border-orange-500/30">성지순례</span>
             </div>
-            <p class="text-[11px] text-slate-400">말할 땐 천재였으나 역사가 박제해 버린 순간들</p>
+            <p class="text-[11px] text-slate-400">과거 대가의 오판 교훈 & 최근 빅마우스의 성적표</p>
           </div>
         </div>
         <a href="/" class="text-xs text-slate-400 hover:text-white transition">홈으로</a>
@@ -32,10 +32,9 @@
 
       <!-- 정렬/필터 탭 -->
       <div class="flex items-center gap-1.5 pt-2 border-t border-slate-800/80 text-xs font-semibold overflow-x-auto">
-        <button onclick="filterEra('ALL')" class="era-btn active px-3 py-1 rounded-lg bg-orange-500 text-white transition" data-era="ALL">전체</button>
-        <button onclick="filterEra('산업/기계')" class="era-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition" data-era="산업/기계">산업·기계 (1800s)</button>
-        <button onclick="filterEra('인터넷/IT')" class="era-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition" data-era="인터넷/IT">인터넷·모바일 (1990s~)</button>
-        <button onclick="filterEra('AI/현대')" class="era-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition" data-era="AI/현대">AI·현대 (2020s~)</button>
+        <button onclick="filterType('ALL')" class="filter-btn active px-3 py-1 rounded-lg bg-orange-500 text-white transition" data-type="ALL">전체 피드</button>
+        <button onclick="filterType('LESSON')" class="filter-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition" data-type="LESSON">🏛️ 역사의 참교육 (과거)</button>
+        <button onclick="filterType('TRACK')" class="filter-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition" data-type="TRACK">📈 빅마우스 성적표 (최근)</button>
       </div>
     </header>
 
@@ -51,115 +50,152 @@
 
   <script>
     const POSTS = [
+      // [과거 1: 산업혁명 - 역사의 참교육 & 교훈]
       {
         id: "p1",
-        era: "인터넷/IT",
-        year: "1998년",
+        cardType: "LESSON", // 과거: 참교육 & 교훈
+        eraTag: "1830년대 · 산업혁명",
+        badgeText: "역사의 참교육 ✕",
+        badgeClass: "bg-rose-500/10 text-rose-400 border-rose-500/20",
+        author: "영국 왕립협회 학자단",
+        authorTitle: "당대 최고 과학 지식인들",
+        avatar: "🚂",
+        title: "기차가 시속 40km로 달리면 승객들은 질식해서 즉사한다",
+        quoteSource: "1830년대 증기 기관차 개통 당시 언론 기고",
+        quoteText: "인간의 신체는 시속 30마일(약 48km)의 속도를 견디도록 설계되지 않았다. 열차가 그 속도로 달리면 공기가 폐로 들어오지 않아 모든 승객이 질식사할 것이다.",
+        timelineLabel: "⏳ 개통 직후 역사적 판결",
+        realityStat: "현대 고속철도 속도: 시속 300km 이상 일상 운행",
+        realityText: "승객의 폐는 멀쩡했고, 철도는 영국 전역을 반나절 생활권으로 묶으며 1차 산업혁명의 심장이자 물류의 표준이 되었습니다.",
+        actionHighlight: "새로운 기술과 도구가 등장할 때 인간은 언제나 '과학적 근거로 위장한 원초적 공포'를 배설합니다. 근거 없는 공포에 질려 신기술 수용을 거부하지 마세요.",
+        upvotes: 541,
+        disagrees: 19
+      },
+      // [과거 2: 닷컴 - 역사의 참교육 & 교훈]
+      {
+        id: "p2",
+        cardType: "LESSON",
+        eraTag: "1998년 · 인터넷 태동기",
+        badgeText: "역사의 참교육 ✕",
+        badgeClass: "bg-rose-500/10 text-rose-400 border-rose-500/20",
         author: "폴 크루그먼",
         authorTitle: "노벨 경제학상 수상자",
         avatar: "🎓",
         title: "2005년쯤 되면 인터넷의 실체가 팩스(Fax) 수준이었음이 밝혀질 것",
-        quoteText: "2005년경이 되면, 경제에 미친 인터넷의 영향력은 팩스 기기보다 크지 않았다는 사실이 만천하에 드러날 것이다. 대부분의 사람들은 서로에게 할 말이 그리 많지 않다.",
         quoteSource: "The New York Times 칼럼 (1998)",
-        verdictTime: "10년 뒤 현실 (참교육 결과)",
-        realityText: "전 세계 시가총액 1위부터 10위까지 인터넷·소프트웨어 빅테크가 전부 장악함. 무선 인터넷과 스마트폰으로 인류의 생활 양식이 완전히 재편됨.",
-        realityStat: "인터넷 경제 규모: 팩스 시장의 수만 배 초과 독식",
-        verdictStatus: "역대급 흑역사 ✕",
-        lesson: "기존 학문과 낡은 잣대에 갇힌 최고 권위자일수록 기하급수적 '네트워크 파급력'을 가장 처참하게 과소평가한다.",
+        quoteText: "2005년경이 되면, 경제에 미친 인터넷의 영향력은 팩스 기기보다 크지 않았다는 사실이 만천하에 드러날 것이다. 사람들은 서로에게 할 말이 그리 많지 않다.",
+        timelineLabel: "⏳ 10년 뒤 역사적 판결",
+        realityStat: "글로벌 시총 TOP 10 빅테크 독식",
+        realityText: "인터넷은 통신 도구를 넘어 인류의 삶과 금융을 완전히 집어삼켰습니다. 노벨상 석학조차 기하급수적인 '네트워크 효과'를 기존 전통 제조업의 잣대로만 재단하다 평생의 흑역사를 남겼습니다.",
+        actionHighlight: "내 분야 최고 권위자라 해도 완전히 새로운 패러다임 앞에서는 가장 보수적인 오판을 내리기 쉽습니다. 권위자의 '거품' 소리에 안주하지 마세요.",
         upvotes: 428,
         disagrees: 12
       },
-      {
-        id: "p2",
-        era: "인터넷/IT",
-        year: "1995년",
-        author: "클리포드 스톨",
-        authorTitle: "천문학자 & 베스트셀러 작가",
-        avatar: "📚",
-        title: "인터넷으로 쇼핑을 하고 책을 산다고? 세상에 그런 바보는 없다",
-        quoteText: "인터넷 쇼핑몰? 컴퓨터 화면으로 책을 주문하고 비행기 표를 산다고? 지역 서점의 따뜻함과 실제 사람을 대신할 수 없다. 사이버 경제는 공허한 헛소리다.",
-        quoteSource: "Newsweek 칼럼 '왜 인터넷은 실패할 것인가' (1995)",
-        verdictTime: "현재 현실 (참교육 결과)",
-        realityText: "아마존이 글로벌 유통 제국으로 성장하며 오프라인 서점과 대형 마트 체인을 집어삼킴. 이 칼럼을 쓴 잡지 뉴스위크조차 인쇄판을 중단하고 디지털 구독으로 전환함.",
-        realityStat: "아마존 글로벌 유통 점유율 1위 안착",
-        verdictStatus: "역대급 흑역사 ✕",
-        lesson: "'인간적인 감성'을 핑계로 효율성과 편리함을 거부하는 논리는 기술 발전의 속도를 단 한 번도 막아내지 못했다.",
-        upvotes: 312,
-        disagrees: 8
-      },
+      // [과거 3: 모바일 - 역사의 참교육 & 교훈]
       {
         id: "p3",
-        era: "산업/기계",
-        year: "1830년대",
-        author: "영국 왕립협회 의사 & 학자문",
-        authorTitle: "당대 최고 과학 지식인들",
-        avatar: "🚂",
-        title: "기차가 시속 40km로 달리면 승객들은 질식해서 즉사한다",
-        quoteText: "인간의 신체는 시속 30마일(약 48km)의 속도를 견디도록 설계되지 않았다. 열차가 그 속도로 달리면 공기가 폐로 들어오지 않아 모든 승객이 질식사할 것이다.",
-        quoteSource: "1830년대 증기 기관차 개통 당시 언론 기고문",
-        verdictTime: "개통 직후 현실 (참교육 결과)",
-        realityText: "승객들의 폐는 멀쩡했고, 철도는 런던과 리버풀을 반나절 생활권으로 묶으며 1차 산업혁명의 심장이자 대량 물류의 표준이 됨.",
-        realityStat: "현대 고속철도 속도: 시속 300km 이상 일상 운행",
-        verdictStatus: "역대급 흑역사 ✕",
-        lesson: "새로운 이동 수단이나 생산 도구가 등장할 때 인간은 언제나 '과학적 근거로 위장한 원초적 공포'를 배설한다.",
-        upvotes: 541,
-        disagrees: 19
-      },
-      {
-        id: "p4",
-        era: "인터넷/IT",
-        year: "2007년",
+        cardType: "LESSON",
+        eraTag: "2007년 · 스마트폰 혁명기",
+        badgeText: "역사의 참교육 ✕",
+        badgeClass: "bg-rose-500/10 text-rose-400 border-rose-500/20",
         author: "스티브 발머",
         authorTitle: "마이크로소프트 전 CEO",
         avatar: "💼",
-        title: "500달러짜리 아이폰? 키보드도 없어서 비즈니스맨에겐 0%짜리 장난감",
-        quoteText: "아이폰이 시장 점유율을 유의미하게 가져갈 가능성은 0%다. 물리 키보드가 없어서 이메일을 보낼 수 없기 때문에 비즈니스 고객에게 절대 매력적인 기계가 아니다.",
-        quoteSource: "USA 투데이 인터뷰 영상 (2007)",
-        verdictTime: "5년 뒤 현실 (참교육 결과)",
-        realityText: "스마트폰은 전 세계 오피스와 일상을 독점했고, 물리 키보드를 고집하던 블랙베리와 윈도우 모바일은 시장에서 흔적도 없이 사라짐.",
-        realityStat: "애플 전 세계 스마트폰 영업이익 80% 이상 독점",
-        verdictStatus: "역대급 흑역사 ✕",
-        lesson: "내 기존 주력 제품(쿼티 자판/윈도우)을 지키려는 방어 본능은 경쟁자의 파괴적 혁신을 '결함'으로 착각하게 만든다.",
+        title: "500달러짜리 아이폰? 키보드가 없어서 비즈니스맨에겐 0%짜리 장난감",
+        quoteSource: "USA 투데이 공식 인터뷰 (2007)",
+        quoteText: "아이폰이 시장 점유율을 유의미하게 가져갈 가능성은 0%입니다. 물리 자판이 없어서 이메일을 보낼 수 없기 때문에 비즈니스 고객에게 매력적인 기계가 아닙니다.",
+        timelineLabel: "⏳ 5년 뒤 역사적 판결",
+        realityStat: "애플 스마트폰 시장 영업이익 80% 독점",
+        realityText: "스마트폰은 전 세계 오피스의 필수품이 되었고, 물리 키보드를 끝까지 고집하던 블랙베리와 윈도우 모바일은 시장에서 흔적도 없이 도태되었습니다.",
+        actionHighlight: "기존 주력 제품을 지키려는 방어 본능은 경쟁자의 파괴적 혁신을 '치명적 결함'으로 착각하게 만듭니다. 고객 경험의 거대한 물결을 거스르지 마세요.",
         upvotes: 689,
         disagrees: 14
       },
+      // [최근 1: AI 빅마우스 - 시장 성적표 추적]
+      {
+        id: "p4",
+        cardType: "TRACK", // 최근: 빅마우스 성적표
+        eraTag: "2023년 · AI 태동기",
+        badgeText: "빅마우스 성적표 ✓",
+        badgeClass: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
+        author: "샘 알트만",
+        authorTitle: "OpenAI CEO",
+        avatar: "🤖",
+        title: "현재의 LLM은 스스로 생각하는 지능이 아니다. AGI는 아직 멀었다",
+        quoteSource: "공식 X (구 Twitter) 포스팅 (2023.02)",
+        quoteText: "현재의 대규모 언어 모델들은 유용한 도구일 뿐 생각하는 마음이 아닙니다. 우리는 여전히 진정한 AGI와는 꽤 거리가 멉니다.",
+        timelineLabel: "📊 1~2년 뒤 실제 시장 성적표",
+        realityStat: "GPT-4o, o1 추론 모델 연달아 장악",
+        realityText: "이 겸손한 발언 직후 복합 추론 모델들을 쏟아내며 시장을 장악했습니다. 업계에서는 독점 비판과 정부 규제를 피하기 위해 일부러 눈높이를 낮춘 정무적 전략으로 평가합니다.",
+        actionHighlight: "빅테크 파운더가 대중 앞에서 '우린 아직 부족하다'고 겸손을 떨 때는, 규제 당국의 방심과 경쟁자의 방심을 유도하는 전략적 연막일 수 있습니다.",
+        upvotes: 380,
+        disagrees: 28
+      },
+      // [최근 2: 크립토 빅마우스 - 시장 성적표 추적]
       {
         id: "p5",
-        era: "AI/현대",
-        year: "2023년",
+        cardType: "TRACK",
+        eraTag: "2022년 · 크립토 하락장",
+        badgeText: "빅마우스 성적표 ✓",
+        badgeClass: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
+        author: "마이클 세일러",
+        authorTitle: "마이크로스트래티지 의장",
+        avatar: "⚡",
+        title: "비트코인이 2만 불 밑으로 떨어져도 우리는 절대 팔지 않는다",
+        quoteSource: "블룸버그 인터뷰 & X (2022.06)",
+        quoteText: "우리는 단 1사토시도 팔지 않을 것입니다. 비트코인이 2만 달러 밑으로 폭락해도 회사의 모든 잉여 자금과 전환사채를 동원해 계속 매수할 것입니다.",
+        timelineLabel: "📊 2~3년 뒤 실제 시장 성적표",
+        realityStat: "비트코인 10만 달러 돌파 · 나스닥 최상위 상승",
+        realityText: "당시 주주들의 거센 비판과 마진콜 청산설에 시달렸으나, 만기 압박이 없는 장기 무이자 전환사채 구조로 버텨내며 수조 원대 평가익을 기록했습니다.",
+        actionHighlight: "모두가 조롱하는 하락장이라도 '만기 압박이 없는 자금 조달 구조'가 뒷받침된 확신은 시장 사이클 반전 시 파괴적인 비대칭 보상을 안겨줍니다.",
+        upvotes: 492,
+        disagrees: 45
+      },
+      // [최근 3: 금융 쇼트 빅마우스 - 시장 성적표 추적]
+      {
+        id: "p6",
+        cardType: "TRACK",
+        eraTag: "2023년 · 침체 경고기",
+        badgeText: "빅마우스 성적표 ✕",
+        badgeClass: "bg-rose-500/10 text-rose-400 border-rose-500/20",
         author: "마이클 버리",
         authorTitle: "영화 '빅쇼트' 실제 주인공",
         avatar: "📉",
-        title: "Sell. (모든 주식을 팔아 치워라)",
+        title: "Sell. (모든 주식을 지금 당장 팔아 치워라)",
+        quoteSource: "X (구 Twitter) 단문 트윗 (2023.01)",
         quoteText: "Sell.",
-        quoteSource: "트위터 단 한 단어 경고 (2023년 1월)",
-        verdictTime: "3개월 뒤 현실 (참교육 결과)",
-        realityText: "발언 직후 엔비디아와 빅테크 주도의 생성형 AI 대세 상승장이 폭발하며 역사적 신고가를 경신. 버리는 결국 '내가 틀렸다(I was wrong)'고 자인함.",
-        realityStat: "경고 직후 S&P500·나스닥 사상 최고치 랠리",
-        verdictStatus: "예측 대실패 ✕",
-        lesson: "거시 지표상 위험 신호가 맞아떨어지더라도, 새로운 기술 테마가 이끄는 탐욕과 유동성의 파도는 비관론자를 먼저 쓸어버린다.",
+        timelineLabel: "📊 3개월 뒤 실제 시장 성적표",
+        realityStat: "나스닥 역사적 신고가 랠리 폭발",
+        realityText: "거액의 하락 풋옵션을 매수하며 침체를 경고했으나, 빅테크의 AI 랠리가 폭발하며 역사적 신고가를 갈아치웠습니다. 버리는 결국 두 달 뒤 '내가 틀렸다(I was wrong)'고 자인했습니다.",
+        actionHighlight: "거시경제 지표상 침체 신호가 명백하더라도, 새로운 기술 테마가 이끄는 시장의 유동성과 탐욕 모멘텀은 비관론자를 먼저 쓸어버립니다.",
         upvotes: 410,
         disagrees: 33
       }
     ];
 
+    let currentFilter = 'ALL';
+
     function renderFeed(filter = 'ALL') {
       const container = document.getElementById('feed-container');
       container.innerHTML = '';
 
-      const filtered = filter === 'ALL' ? POSTS : POSTS.filter(item => item.era === filter);
+      const filtered = filter === 'ALL' ? POSTS : POSTS.filter(item => item.cardType === filter);
 
       filtered.forEach(item => {
-        // 로컬스토리지 기반 투표 상태 기억
         const votedKey = `voted_${item.id}`;
         const userVoted = localStorage.getItem(votedKey);
+
+        // 카드 유형별 스타일 태그
+        const isPastLesson = item.cardType === 'LESSON';
+        const typeHeaderTag = isPastLesson 
+          ? '<span class="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/30">🏛️ 역사의 참교육</span>'
+          : '<span class="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-500/10 text-blue-300 border border-blue-500/30">📈 빅마우스 성적표</span>';
 
         const card = document.createElement('article');
         card.className = "bg-[#161b22] border border-slate-800 rounded-2xl overflow-hidden shadow-xl";
 
         card.innerHTML = `
-          <!-- 1. 레딧 스타일 헤더: 서브태그 & 인물 -->
-          <div class="p-3.5 pb-2 flex items-center justify-between border-b border-slate-800/60 bg-slate-900/40 text-xs">
+          <!-- 1. 헤더: 시대/성격 태그 및 인물 정보 -->
+          <div class="p-3.5 pb-2.5 flex items-center justify-between border-b border-slate-800/60 bg-slate-900/40 text-xs">
             <div class="flex items-center gap-2">
               <span class="text-base">${item.avatar}</span>
               <div>
@@ -168,23 +204,26 @@
               </div>
             </div>
             <div class="flex items-center gap-1.5">
-              <span class="text-[11px] font-mono text-slate-400">${item.year}</span>
-              <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-rose-500/10 text-rose-400 border border-rose-500/20">
-                ${item.verdictStatus}
-              </span>
+              ${typeHeaderTag}
+              <span class="text-[10px] font-mono text-slate-400">${item.eraTag}</span>
             </div>
           </div>
 
-          <!-- 2. 게시글 헤드라인 -->
+          <!-- 2. 헤드라인 & 당시 발언 박제 -->
           <div class="p-4 space-y-3">
-            <h2 class="text-base font-extrabold text-white leading-snug tracking-tight">
-              ${item.title}
-            </h2>
+            <div class="flex items-start justify-between gap-2">
+              <h2 class="text-base font-extrabold text-white leading-snug tracking-tight">
+                ${item.title}
+              </h2>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded whitespace-nowrap border ${item.badgeClass}">
+                ${item.badgeText}
+              </span>
+            </div>
 
-            <!-- 상단 박제: 당시 원문 캡처 스타일 (빛바랜 느낌) -->
-            <div class="bg-[#1c2128] border-l-4 border-amber-500/80 rounded-r-xl p-3.5 space-y-1.5 shadow-inner">
+            <!-- 발언 원문 박제 -->
+            <div class="bg-[#1c2128] border-l-4 border-amber-500/80 rounded-r-xl p-3.5 space-y-1 shadow-inner">
               <div class="flex items-center justify-between text-[11px] text-amber-400 font-mono font-bold">
-                <span>📌 당시 발언 원문</span>
+                <span>📌 당시 발언 기록</span>
                 <span class="text-slate-500">${item.quoteSource}</span>
               </div>
               <p class="text-xs sm:text-sm text-slate-300 italic leading-relaxed">
@@ -192,19 +231,19 @@
               </p>
             </div>
 
-            <!-- 중앙 Reddit식 대비선 -->
+            <!-- 시간 경과 화살표 -->
             <div class="relative flex py-1 items-center justify-center">
               <div class="flex-grow border-t border-slate-800"></div>
-              <span class="flex-shrink mx-3 text-[10px] font-mono font-black uppercase tracking-widest text-slate-500 bg-[#161b22] px-2 py-0.5 rounded border border-slate-800">
-                ⬇️ ${item.verdictTime} ⬇️
+              <span class="flex-shrink mx-2 text-[10px] font-mono font-bold text-slate-400 bg-[#161b22] px-2 py-0.5 rounded border border-slate-800">
+                ${item.timelineLabel}
               </span>
               <div class="flex-grow border-t border-slate-800"></div>
             </div>
 
-            <!-- 하단 박제: 냉정한 현실 참교육 결과 (고대비) -->
+            <!-- 현실 판결 및 성적표 -->
             <div class="bg-[#0e1117] border border-slate-800 rounded-xl p-3.5 space-y-1.5">
               <div class="flex items-center justify-between text-[11px] font-bold text-emerald-400">
-                <span>⚖️ 역사의 실제 판결</span>
+                <span>${isPastLesson ? '⚖️ 역사의 실제 판결' : '📊 실제 시장 성적표'}</span>
                 <span class="text-[10px] text-slate-400 font-mono">${item.realityStat}</span>
               </div>
               <p class="text-xs text-slate-300 leading-relaxed font-medium">
@@ -212,27 +251,27 @@
               </p>
             </div>
 
-            <!-- 3. 실전 오판 방지 교훈 (Actionable Insight) -->
+            <!-- 인사이트 & 행동 지침 -->
             <div class="bg-gradient-to-r from-orange-950/20 to-amber-950/10 border border-orange-500/20 rounded-xl p-3">
               <p class="text-xs text-orange-200/90 leading-relaxed">
-                <strong class="text-orange-400 font-extrabold mr-1">💡 팩폭 교훈:</strong> ${item.lesson}
+                <strong class="text-orange-400 font-extrabold mr-1">${isPastLesson ? '💡 우리가 배울 점:' : '💡 복기 인사이트:'}</strong> ${item.actionHighlight}
               </p>
             </div>
           </div>
 
-          <!-- 4. 레딧식 1클릭 추천/박제 반응 바 -->
+          <!-- 3. 레딧식 1클릭 성지순례 반응 바 -->
           <div class="px-4 py-2.5 bg-slate-900/60 border-t border-slate-800/80 flex items-center justify-between text-xs">
             <div class="flex items-center gap-2">
               <button onclick="castVote('${item.id}', 'up')" class="vote-btn flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-700 hover:border-orange-500 hover:text-orange-400 transition ${userVoted === 'up' ? 'bg-orange-500 text-white font-bold border-orange-500' : 'bg-slate-800/80 text-slate-300'}">
-                <span>🔥 역대급 헛소리</span>
+                <span>🔥 ${isPastLesson ? '역대급 헛소리' : '말과 현실의 괴리'}</span>
                 <span id="up-count-${item.id}" class="font-mono font-bold">${item.upvotes + (userVoted === 'up' ? 1 : 0)}</span>
               </button>
               <button onclick="castVote('${item.id}', 'down')" class="vote-btn flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-700 hover:border-slate-500 transition ${userVoted === 'down' ? 'bg-slate-700 text-white font-bold' : 'bg-slate-800/80 text-slate-400'}">
-                <span>🤔 당시엔 그럴듯함</span>
+                <span>🤔 그땐 그럴듯함</span>
                 <span id="down-count-${item.id}" class="font-mono">${item.disagrees + (userVoted === 'down' ? 1 : 0)}</span>
               </button>
             </div>
-            <span class="text-[11px] text-slate-500 font-mono">성지순례 완료</span>
+            <span class="text-[11px] text-slate-500 font-mono">성지순례</span>
           </div>
         `;
         container.appendChild(card);
@@ -247,20 +286,19 @@
         return;
       }
       localStorage.setItem(votedKey, type);
-      renderFeed(currentEra);
+      renderFeed(currentFilter);
     }
 
-    let currentEra = 'ALL';
-    function filterEra(era) {
-      currentEra = era;
-      document.querySelectorAll('.era-btn').forEach(btn => {
-        if (btn.dataset.era === era) {
-          btn.className = "era-btn active px-3 py-1 rounded-lg bg-orange-500 text-white font-bold transition";
+    function filterType(type) {
+      currentFilter = type;
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        if (btn.dataset.type === type) {
+          btn.className = "filter-btn active px-3 py-1 rounded-lg bg-orange-500 text-white font-bold transition";
         } else {
-          btn.className = "era-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition";
+          btn.className = "filter-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition";
         }
       });
-      renderFeed(era);
+      renderFeed(type);
     }
 
     renderFeed();
