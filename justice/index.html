@@ -6,7 +6,7 @@
   <title>인사이트랩 - 사이다·참교육 명예의 전당 (Justice Served)</title>
   <meta name="description" content="보배드림, 블라인드 등 인터넷을 달군 역대급 빌런과 사이다 참교육 실화 아카이브. 현실 법률/대응 팁까지 정리합니다.">
   <meta property="og:title" content="인사이트랩: 사이다·참교육 명예의 전당">
-  <meta property="og:description" content="선 넘은 빌런들의 결말과 실전 법적 대응 인사이트">
+  <meta property="og:description" content="선 넘은 빌런들의 인과응보 결말과 실전 법적 대응 인사이트">
   <script src="https://cdn.tailwindcss.com"></script>
 
 <!-- Google tag (gtag.js) -->
@@ -52,7 +52,7 @@
 
       <!-- 4개 카테고리 탭 -->
       <div class="flex items-center gap-1.5 pt-2 border-t border-slate-800/80 text-xs font-semibold overflow-x-auto whitespace-nowrap">
-        <button onclick="filterType('ALL')" class="filter-btn active px-3 py-1 rounded-lg bg-cyan-500 text-white transition" data-type="ALL" id="filter-all">전체 피드</button>
+        <button onclick="filterType('ALL')" class="filter-btn active px-3 py-1 rounded-lg bg-cyan-500 text-white font-bold transition" data-type="ALL" id="filter-all">전체 피드</button>
         <button onclick="filterType('PARKING')" class="filter-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition" data-type="PARKING" id="filter-parking">주차·교통</button>
         <button onclick="filterType('WORK')" class="filter-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition" data-type="WORK" id="filter-work">직장·갑질</button>
         <button onclick="filterType('COMMERCE')" class="filter-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition" data-type="COMMERCE" id="filter-commerce">사기·중고거래</button>
@@ -92,7 +92,7 @@
         footerNote: "실제 언론 보도 및 판례 아카이브를 바탕으로 재구성되었습니다."
       },
       en: {
-        subname: "Justice Served Hall",
+        subname: "Justice Served",
         subtag: "True Stories",
         subtitle: "Legendary instant karma & practical legal tips",
         home: "Home",
@@ -111,38 +111,40 @@
     };
 
     const POSTS = [
+      // 1. 송도 지하주차장 입구 봉쇄 (주차·교통)
       {
         id: "j1",
         cardType: "PARKING",
         categoryName: { ko: "주차 분쟁", en: "Parking Dispute" },
         statusBadge: { ko: "금융치료 엔딩 ✓", en: "Financial Therapy ✓" },
         statusColor: "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
-        target: { ko: "송도 지하주차장 입구 캠리 차주", en: "Songdo Apartment Gate Blocker" },
-        location: { ko: "인천 연수구", en: "Incheon, Korea" },
+        target: { ko: "송도 주차장 입구 봉쇄 차주", en: "Songdo Garage Blocker" },
+        location: { ko: "인천 연수구 송도", en: "Incheon, Korea" },
         avatar: "🚗",
         imageBeforeUrl: "https://images.unsplash.com/photo-1506521781263-d8422e82f27a?w=800&auto=format&fit=crop&q=80",
         imageCaption: { ko: "아파트 단지 진입로 봉쇄 사건 현장", en: "Blocked apartment driveway incident scene" },
         title: {
-          ko: "주차위반 스티커 뗐다고 아파트 지하주차장 입구 막고 잠적한 차주",
-          en: "Owner blocks apartment garage entrance over a single parking violation sticker"
+          ko: "주차위반 스티커 붙였다고 지하주차장 입구 막고 잠적한 차주",
+          en: "Owner blocks apartment garage entrance over a single parking sticker"
         },
         incidentDetail: {
-          ko: "불법주차 스티커가 붙자 격분하여 승용차를 지하주차장 진출입로 정중앙에 대각선으로 막아놓고 차 문을 잠근 뒤 며칠간 잠적. 주민 수백 명이 출퇴근길에 갇힘.",
-          en: "Furious over a violation sticker, the driver parked across the main entrance ramp of the complex, locked it, and went MIA for days, stranding hundreds of residents."
+          ko: "불법주차 스티커가 붙자 격분하여 승용차를 아파트 지하주차장 진출입로 정중앙에 대각선으로 막아놓고 차 문을 잠근 뒤 며칠간 잠적. 주민 수백 명이 출퇴근길에 갇힘.",
+          en: "Furious over a violation sticker, the driver parked diagonally across the garage entrance ramp, locked the car, and went MIA for days, stranding hundreds of residents."
         },
-        timelineLabel: { ko: "⏳ 주민 단합 및 경찰 수사 결과", en: "⏳ Residents Unite & Police Intervene" },
-        realityStat: { ko: "형사처벌(일반교통방해죄) 징역형 집행유예", en: "Convicted of Traffic Obstruction: Suspended Prison Sentence" },
+        timelineLabel: { ko: "⏳ 주민 연대 및 경찰 수사 착수", en: "⏳ Residents Unite & Police Intervene" },
+        realityStat: { ko: "형사처벌(일반교통방해죄) 징역형 집행유예", en: "Convicted: Suspended Prison Sentence" },
         verdictDetail: {
-          ko: "분노한 주민들이 바퀴에 휠락을 채우고 포스트잇 수백 장으로 도배. 경찰이 일반교통방해죄를 즉시 적용해 입건하였으며, 차주는 결국 공개 사과문 발표 및 차량 처분 후 도망치듯 이사.",
-          en: "Residents blocked the car with locks and sticky notes. Police charged the owner with obstruction of general traffic. The owner surrendered, apologized publicly, sold the car, and moved away."
+          ko: "분노한 주민들이 차를 손으로 밀어 인도로 치운 뒤 바퀴에 휠락을 걸고 포스트잇 수백 장으로 도배. 경찰이 일반교통방해죄로 기소하여 징역 6개월에 집행유예 2년 선고됨. 차주는 결국 이사.",
+          en: "Residents physically pushed the car, padlocked the wheels, and covered it in sticky notes. Police charged the driver with general traffic obstruction, resulting in a suspended prison sentence."
         },
         actionHighlight: {
-          ko: "사유지 주차 방해라도 불특정 다수의 통행을 원천 봉쇄하면 형법 제185조(일반교통방해죄)가 즉각 성립합니다. 감정 싸움 대신 사진 증거를 모아 경찰에 교통방해로 고발하는 것이 가장 빠릅니다.",
-          en: "Even on private property, blocking entry/exit to multiple users triggers criminal obstruction of traffic. Gather timestamped photos and file a police report instead of vandalizing."
+          ko: "아파트 단지 내 도로는 도로교통법상 도로가 아니더라도, 불특정 다수의 통행로를 원천 봉쇄하면 형법 제185조(일반교통방해죄)가 적용됩니다. 사적 응징보다 사진 증거 확보 후 즉시 형사 고발하는 것이 가장 강력합니다.",
+          en: "Even on private complex property, completely blocking passage triggers criminal obstruction under Penal Code Art. 185. Timestamped photos and an immediate police filing yield swift results."
         },
         upvotes: 894,
         disagrees: 23
       },
+      // 2. 새벽 카톡 폭언 부장 (직장·갑질)
       {
         id: "j2",
         cardType: "WORK",
@@ -150,59 +152,60 @@
         statusBadge: { ko: "참교육 합의금 ✓", en: "Settlement Karma ✓" },
         statusColor: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
         target: { ko: "새벽 카톡 폭언 부장", en: "Midnight Micromanaging Boss" },
-        location: { ko: "중견 IT 솔루션사", en: "Mid-sized Tech Firm" },
+        location: { ko: "판교 모 중견기업", en: "Tech Firm in Pangyo" },
         avatar: "📱",
         imageBeforeUrl: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&auto=format&fit=crop&q=80",
-        imageCaption: { ko: "직장 내 괴롭힘 디지털 포렌식 증거 수집", en: "Workplace dispute digital evidence collection" },
+        imageCaption: { ko: "직장 내 괴롭힘 디지털 증거 수집", en: "Workplace dispute digital logs" },
         title: {
           ko: "주말·새벽 폭언 카톡 날리다 6개월 치 녹취록에 털린 임원",
           en: "Executive demanding 3 AM replies gets crushed by 6 months of audio logs"
         },
         incidentDetail: {
-          ko: "주말과 새벽 2시에 업무 카톡을 보내며 '너 같은 놈은 받아주는 데 없다'며 인격 모독과 폭언을 일삼음. 항의하는 직원에게 '인사고과 최하점 주겠다'고 협박.",
-          en: "Routinely blasted abusive messages at 2 AM weekends: 'Nobody else would hire a loser like you.' Threatened bottom appraisal ratings when confronted."
+          ko: "주말과 새벽 2시에 업무 카톡을 보내며 '너 같은 놈은 어디 가도 적응 못 한다'며 인격 모독과 폭언을 일삼음. 항의하는 팀원에게 '인사고과 최하점 주겠다'고 지속적 협박.",
+          en: "Routinely sent abusive messages at 2 AM weekends: 'Nobody else would hire a loser like you.' Threatened bottom performance ratings whenever confronted."
         },
         timelineLabel: { ko: "⏳ 노동청 진정 및 노동위원회 제소", en: "⏳ Labor Office Investigation" },
-        realityStat: { ko: "가해 임원 해임 처분 + 위자료 2,500만 원 지급", en: "Perpetrator Fired + $20,000 Damages Paid" },
+        realityStat: { ko: "가해 임원 보직 해임 + 위자료 2,500만 원 지급", en: "Executive Demoted + $20,000 Damages Paid" },
         verdictDetail: {
-          ko: "피해 직원이 반년간 타임스탬프가 찍힌 메신저 캡처, 녹취록, 정신과 상담 진단서를 완벽히 정리해 고용노동부에 직장 내 괴롭힘 진정 접수. 회사는 과태료 위기에 임원을 해임하고 합의금 지급.",
-          en: "The employee filed a complaint with 6 months of timestamped screenshots, calls, and psychiatric records. Threatened with severe fines, the company terminated the executive and settled."
+          ko: "피해 직원이 반년간 타임스탬프 메신저 캡처, 통화 녹취록, 정신과 상담 진단서를 완벽히 정리해 고용노동부에 직장 내 괴롭힘 진정 접수. 회사는 과태료와 기업 이미지 실추를 피해 임원을 해임하고 합의금 지급.",
+          en: "The employee filed a complaint with 6 months of timestamped screenshots, calls, and psychiatric records. To avoid statutory penalties, the company terminated the executive and settled."
         },
         actionHighlight: {
-          ko: "폭언 현장에서 맞받아치지 마세요. 대화 당사자 간의 녹음은 통신비밀보호법상 합법입니다. 3개월 이상의 병원 진료 기록과 날짜별 녹취가 갖춰지면 노동청에서 100% 승기를 잡습니다.",
-          en: "Never argue back in real time. Recording conversations you are part of is legal in Korea. Consistent psychiatric visits combined with dated logs guarantee victory."
+          ko: "현장에서 감정적으로 맞서지 마세요. 대화 당사자 간의 녹음은 통신비밀보호법상 100% 합법입니다. 3개월 이상의 병원 상담 내역과 날짜별 녹취가 갖춰지면 노동청과 사측 모두 반박하지 못합니다.",
+          en: "Never argue back in anger. Recording conversations you participate in is legally admissible in Korea. Consistent clinical consultation records paired with dated logs ensure victory."
         },
         upvotes: 721,
         disagrees: 11
       },
+      // 3. 중고거래 벽돌 배송 상습범 (사기·거래)
       {
         id: "j3",
         cardType: "COMMERCE",
         categoryName: { ko: "중고 사기", en: "Secondhand Fraud" },
         statusBadge: { ko: "빨간줄 참교육 ✓", en: "Criminal Record ✓" },
         statusColor: "bg-rose-500/10 text-rose-400 border-rose-500/20",
-        target: { ko: "당근 벽돌 배송 상습 사기범", en: "Used Market Brick Scammer" },
+        target: { ko: "생수병 배송 상습 사기범", en: "Secondhand Water Bottle Scammer" },
         location: { ko: "온라인 중고 플랫폼", en: "Peer-to-Peer Marketplace" },
         avatar: "📦",
         imageBeforeUrl: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&auto=format&fit=crop&q=80",
-        imageCaption: { ko: "중고 거래 택배 포장 및 운송장 증거", en: "Fraudulent package & tracking receipt" },
+        imageCaption: { ko: "중고 거래 허위 배송 포장 증거물", en: "Fraudulent package & tracking receipt" },
         title: {
-          ko: "아이패드 보낸다더니 생수병 넣고 배째라던 20대 사기꾼의 최후",
-          en: "Sent water bottles instead of iPads, laughed at victims until the knock on the door"
+          ko: "아이패드 판다더니 생수병 넣고 배째라던 20대 사기꾼의 최후",
+          en: "Shipped bottled water instead of iPads, mocked victims until the arrest"
         },
         incidentDetail: {
-          ko: "중고 거래로 수십만 원을 선입금받고 박스 안에 생수병과 흙을 넣어 편의점 택배 발송. 구매자가 항의하자 '잡을 테면 잡아봐라, 초범이라 벌금 몇 십 나온다'며 능글맞게 조롱.",
-          en: "Took hundreds of dollars upfront and shipped bottled water in heavy boxes. Mocked victims: 'Try suing me, first offense is just a slap on the wrist!'"
+          ko: "중고 플랫폼에서 전자기기 대금을 선입금받고 박스 안에 생수병과 쓰레기를 넣어 택배 발송. 구매자가 항의하자 '잡을 테면 잡아봐라, 초범이라 벌금 몇 십 나온다'며 능글맞게 조롱.",
+          en: "Collected payments upfront and shipped bottled water in heavy boxes. Mocked victims: 'Try suing me, first offense is just a minor fine!'"
         },
-        timelineLabel: { ko: "⏳ 피해자 단톡방 개설 및 계좌 지급정지", en: "⏳ Victims United & Account Frozen" },
+        timelineLabel: { ko: "⏳ 피해자 단톡방 연대 및 병합 수사", en: "⏳ Victims United & Account Frozen" },
         realityStat: { ko: "피해액 전액 배상 명령 + 징역 10개월 실형", en: "Full Restitution Ordered + 10 Months Prison Time" },
         verdictDetail: {
-          ko: "피해자들이 단톡방을 만들어 사기 계좌 정보를 '더치트'에 등록하고, 각 관할 경찰서에 피해 사건을 병합 수사 의뢰. 상습 사기죄로 전환되어 영장 실질심사 후 구속 수감됨.",
-          en: "Victims networked via chat, coordinated multiple police filings, and merged cases into habitual fraud. The scammer was arrested, denied bail, and sentenced to 10 months in prison."
+          ko: "피해자들이 단톡방을 만들어 계좌 정보를 '더치트'에 등록하고, 각 관할 경찰서에 피해 사건을 병합 수사 의뢰. 단순 사기가 아닌 '상습 사기'로 죄명이 바뀌며 영장 실질심사 후 구속 수감됨.",
+          en: "Victims networked via chat, coordinated filings across police jurisdictions, and merged cases into habitual fraud. The scammer was denied bail and sentenced to 10 months in prison."
         },
         actionHighlight: {
-          ko: "소액 사기라도 '더치트' 등록 및 피해자 연대 병합 신고가 들어가면 단순 사기가 아닌 '상습사기'로 의율되어 실형 구속 대상이 됩니다. 입금 전 더치트 조회는 절대 필수입니다.",
-          en: "Small scam amounts elevate to serious habitual fraud when victims unite and merge filings. Always verify phone and bank accounts on fraud registries beforehand."
+          ko: "소액 사기범은 '피해자가 귀찮아서 안 잡겠지'를 악용합니다. 더치트 등록 후 피해자들과 단톡방을 만들어 사건 번호를 병합(병합수사 촉구)하면 상습사기죄로 실형 구속 수사가 가능해집니다.",
+          en: "Small-time scammers prey on apathy. Coordinating with fellow victims to combine police case numbers elevates charges to habitual fraud, leading directly to detention."
         },
         upvotes: 645,
         disagrees: 15
@@ -264,9 +267,9 @@
             </div>
           </div>
 
-          <!-- 2. 상단 보도/사건 사진 아카이브 -->
+          <!-- 2. 보도/사건 사진 아카이브 -->
           <div class="relative w-full h-40 bg-slate-950 overflow-hidden border-b border-slate-800">
-            <img src="${item.imageBeforeUrl}" alt="${item.title[currentLang]}" class="w-full h-full object-cover object-center filter contrast-110 hover:scale-105 transition duration-500" loading="lazy">
+            <img src="${item.imageBeforeUrl}" alt="${item.title[currentLang]}" class="w-full h-full object-cover object-center filter grayscale contrast-110 hover:grayscale-0 transition duration-500" loading="lazy">
             <div class="absolute inset-0 bg-gradient-to-t from-[#161b22] via-transparent to-black/30"></div>
             <span class="absolute bottom-2 left-3 text-[10px] font-mono text-slate-300 bg-black/60 px-2 py-0.5 rounded backdrop-blur border border-white/10 truncate max-w-[85%]">
               📷 ${item.imageCaption[currentLang]}
@@ -281,7 +284,7 @@
 
             <!-- 발단/만행 박스 -->
             <div class="bg-[#1c2128] border-l-4 border-rose-500/80 rounded-r-xl p-3 space-y-1 shadow-inner">
-              <div class="text-[11px] text-rose-400 font-mono font-bold">
+              <div class="text-[11px] text-rose-400 font-mono font-bold whitespace-nowrap">
                 ${t.incidentLabel}
               </div>
               <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
@@ -298,7 +301,7 @@
               <div class="flex-grow border-t border-slate-800"></div>
             </div>
 
-            <!-- 인과응보 결말 박스 -->
+            <!-- 인과응보 사이다 결말 박스 -->
             <div class="bg-[#0e1117] border border-slate-800 rounded-xl p-3 space-y-1">
               <div class="flex items-center justify-between text-[11px] font-bold text-cyan-400 whitespace-nowrap">
                 <span>${t.verdictTitle}</span>
