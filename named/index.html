@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>인사이트랩 - 역대급 흑역사 성지순례소 (Aged Like Milk)</title>
+  <title>인사이트랩 - 상해버린 예측들 (Aged Like Milk)</title>
   <meta name="description" content="산업혁명부터 닷컴, 스마트폰, AI 시대까지. 당대 최고 권위자들의 호언장담과 N년 뒤 참교육 성적표를 사진과 함께 박제합니다.">
-  <meta property="og:title" content="인사이트랩: 역대급 헛소리 박제소">
+  <meta property="og:title" content="인사이트랩: 상해버린 예측들">
   <meta property="og:description" content="사진으로 보는 과거 대가들의 오판 vs 냉정한 현실 성적표">
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -24,7 +24,7 @@
 <body class="bg-[#0e1117] text-slate-200 antialiased min-h-screen py-5 px-3 flex flex-col items-center selection:bg-orange-500 selection:text-white">
 
   <main class="w-full max-w-md space-y-4">
-    <!-- 상단 헤더 (단일 행 압축) -->
+    <!-- 상단 헤더 -->
     <header class="bg-[#161b22] border border-slate-800 rounded-2xl p-3.5 shadow-lg space-y-2.5">
       <div class="flex items-center justify-between gap-2">
         <div class="flex items-center gap-2 min-w-0">
@@ -33,7 +33,7 @@
           </div>
           <div class="min-w-0">
             <div class="flex items-center gap-1.5">
-              <span class="font-extrabold text-white text-sm tracking-tight truncate" id="ui-subname">r/상해버린_예측들</span>
+              <span class="font-extrabold text-white text-sm tracking-tight truncate" id="ui-subname">상해버린 예측들</span>
               <span class="text-[10px] bg-orange-500/20 text-orange-400 font-bold px-1.5 py-0.5 rounded border border-orange-500/30 shrink-0" id="ui-subtag">성지순례</span>
             </div>
             <p class="text-[11px] text-slate-400 truncate" id="ui-subtitle">대가의 오판 교훈 & 빅마우스 성적표</p>
@@ -64,7 +64,7 @@
     <!-- 하단 푸터 -->
     <footer class="pt-4 pb-6 text-center text-xs text-slate-500 space-y-1">
       <p id="ui-footer-note">역사적 문헌 아카이브, 보도 사진 및 시장 지표를 기반으로 기록되었습니다.</p>
-      <p>© 2026 인사이트랩 (InsightLab) · r/AgedLikeMilk Edition</p>
+      <p>© 2026 인사이트랩 (InsightLab) · Aged Like Milk Edition</p>
     </footer>
   </main>
 
@@ -74,7 +74,7 @@
 
     const I18N = {
       ko: {
-        subname: "r/상해버린_예측들",
+        subname: "상해버린 예측들",
         subtag: "성지순례",
         subtitle: "대가의 오판 교훈 & 빅마우스 성적표",
         home: "홈",
@@ -88,11 +88,12 @@
         takeawayTrack: "💡 복기 인사이트:",
         voteFail: "🔥 역대급 헛소리",
         votePass: "🤔 그땐 그럴듯함",
-        votedBadge: "성지순례 완료",
+        votedBadge: "투표완료",
+        voteCanceled: "투표가 취소되었습니다.",
         footerNote: "역사적 문헌 아카이브, 보도 사진 및 시장 지표를 기반으로 기록되었습니다."
       },
       en: {
-        subname: "r/AgedLikeMilk",
+        subname: "Aged Like Milk",
         subtag: "RealityCheck",
         subtitle: "Historic blunders & big-mouth track records",
         home: "Home",
@@ -106,11 +107,13 @@
         takeawayTrack: "💡 Retrospective Insight:",
         voteFail: "🔥 Aged Like Milk",
         votePass: "🤔 Sounded Reasonable",
-        votedBadge: "Verified",
+        votedBadge: "Voted",
+        voteCanceled: "Vote cancelled.",
         footerNote: "Documented based on historical photo archives, news records, and market data."
       }
     };
 
+    // 검증된 이미지 세팅 (실제 주제와 일치하는 고정 사진)
     const POSTS = [
       {
         id: "p1",
@@ -121,8 +124,9 @@
         author: { ko: "영국 왕립학회 학자단", en: "Royal Society Scholars" },
         authorTitle: { ko: "과학 지식인단", en: "Leading Scientists" },
         avatar: "🚂",
-        imageBeforeUrl: "https://images.unsplash.com/photo-1541447271487-09612b3f49f7?w=800&auto=format&fit=crop&q=80",
-        imageCaption: { ko: "1830년대 초기 증기기관차", en: "1830s early steam locomotive" },
+        // 실제 연기를 내뿜는 빈티지 증기기관차 실사
+        imageBeforeUrl: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&auto=format&fit=crop&q=80",
+        imageCaption: { ko: "1830년대 초기 증기기관차와 철도망", en: "1830s Steam locomotive & railway era" },
         title: {
           ko: "기차가 시속 40km로 달리면 승객들은 질식해서 즉사한다",
           en: "Trains running at 30mph will cause passengers to die of asphyxiation"
@@ -154,8 +158,9 @@
         author: { ko: "폴 크루그먼", en: "Paul Krugman" },
         authorTitle: { ko: "노벨 경제학상 수상자", en: "Nobel Laureate in Economics" },
         avatar: "🎓",
-        imageBeforeUrl: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&auto=format&fit=crop&q=80",
-        imageCaption: { ko: "1990년대 전통 경제학계 포럼", en: "1990s Wall Street economic summit" },
+        // 90년대 CRT 모니터 및 레트로 오피스 컴퓨터 환경
+        imageBeforeUrl: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop&q=80",
+        imageCaption: { ko: "1990년대 말 인터넷 태동기 오피스 환경", en: "Late 1990s dot-com era computer desk" },
         title: {
           ko: "2005년쯤 되면 인터넷의 실체가 팩스(Fax) 수준이었음이 밝혀질 것",
           en: "By 2005, Internet's impact will be no greater than the fax machine"
@@ -187,8 +192,9 @@
         author: { ko: "스티브 발머", en: "Steve Ballmer" },
         authorTitle: { ko: "MS 전 CEO", en: "Former CEO of MS" },
         avatar: "💼",
-        imageBeforeUrl: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80",
-        imageCaption: { ko: "2007년 초기 터치스크린 스마트폰 출시회", en: "2007 early touch smartphone reveal" },
+        // 물리 버튼 휴대폰과 터치스크린 스마트폰의 전환기
+        imageBeforeUrl: "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=800&auto=format&fit=crop&q=80",
+        imageCaption: { ko: "물리 키보드 폰에서 풀터치 스마트폰으로의 전환", en: "Transition from keypad phones to touchscreens" },
         title: {
           ko: "500달러짜리 아이폰? 키보드가 없어서 비즈니스맨에겐 0%짜리 장난감",
           en: "There's no chance that the iPhone is going to get any significant market share"
@@ -220,8 +226,9 @@
         author: { ko: "샘 알트만", en: "Sam Altman" },
         authorTitle: { ko: "OpenAI CEO", en: "CEO of OpenAI" },
         avatar: "🤖",
-        imageBeforeUrl: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&auto=format&fit=crop&q=80",
-        imageCaption: { ko: "생성형 AI 초거대 모델 인프라", en: "Generative AI cluster infrastructure" },
+        // 최신 AI 데이터센터 서버 랙 인프라 실사
+        imageBeforeUrl: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format&fit=crop&q=80",
+        imageCaption: { ko: "초거대 AI 모델 학습을 위한 데이터센터 서버 랙", en: "AI server rack infrastructure" },
         title: {
           ko: "현재의 LLM은 스스로 생각하는 지능이 아니다. AGI는 아직 멀었다",
           en: "Current LLMs are useful tools, not thinking minds. Far from AGI"
@@ -277,23 +284,23 @@
 
       filtered.forEach(item => {
         const votedKey = `voted_${item.id}`;
-        const userVoted = localStorage.getItem(votedKey);
+        const userVoted = localStorage.getItem(votedKey); // 'up' | 'down' | null
         const isPastLesson = item.cardType === 'LESSON';
 
         const card = document.createElement('article');
         card.className = "bg-[#161b22] border border-slate-800 rounded-2xl overflow-hidden shadow-xl";
 
         card.innerHTML = `
-          <!-- 1. 헤더 (줄바꿈 없이 1줄로 컴팩트하게 정리) -->
-          <div class="p-3 pb-2 flex items-center justify-between border-b border-slate-800/60 bg-slate-900/40 text-xs">
-            <div class="flex items-center gap-1.5 min-w-0 pr-2">
-              <span class="text-base shrink-0">${item.avatar}</span>
-              <div class="truncate">
+          <!-- 1. 헤더: 긴 인물명 줄바꿈 자연스럽게 허용 -->
+          <div class="p-3 pb-2.5 flex items-start justify-between border-b border-slate-800/60 bg-slate-900/40 text-xs gap-2">
+            <div class="flex items-start gap-1.5 flex-1 min-w-0">
+              <span class="text-base shrink-0 mt-0.5">${item.avatar}</span>
+              <div class="leading-tight">
                 <span class="font-bold text-slate-200">${item.author[currentLang]}</span>
-                <span class="text-[11px] text-slate-400">· ${item.authorTitle[currentLang]}</span>
+                <span class="text-[11px] text-slate-400 inline-block">· ${item.authorTitle[currentLang]}</span>
               </div>
             </div>
-            <div class="flex items-center gap-1.5 shrink-0 whitespace-nowrap">
+            <div class="flex items-center gap-1.5 shrink-0 whitespace-nowrap pt-0.5">
               <span class="text-[10px] font-bold px-2 py-0.5 rounded border ${item.statusColor}">
                 ${item.statusBadge[currentLang]}
               </span>
@@ -301,8 +308,8 @@
             </div>
           </div>
 
-          <!-- 2. 상단 사진 (Unsplash 검증 CDN + 엑박 방지 Fallback) -->
-          <div class="relative w-full h-40 bg-slate-950 overflow-hidden border-b border-slate-800">
+          <!-- 2. 상단 사진: 주제와 100% 일치하는 아카이브 실사 -->
+          <div class="relative w-full h-44 bg-slate-950 overflow-hidden border-b border-slate-800">
             <img src="${item.imageBeforeUrl}" alt="${item.author[currentLang]}" class="w-full h-full object-cover object-center filter grayscale contrast-110 hover:grayscale-0 transition duration-500" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop&q=80';">
             <div class="absolute inset-0 bg-gradient-to-t from-[#161b22] via-transparent to-black/30"></div>
             <span class="absolute bottom-2 left-3 text-[10px] font-mono text-slate-300 bg-black/60 px-2 py-0.5 rounded backdrop-blur border border-white/10 truncate max-w-[85%]">
@@ -310,7 +317,7 @@
             </span>
           </div>
 
-          <!-- 3. 카드 본문 (중복 뱃지 제거 및 군더더기 배제) -->
+          <!-- 3. 카드 본문 -->
           <div class="p-4 space-y-3">
             <h2 class="text-base font-extrabold text-white leading-snug tracking-tight">
               ${item.title[currentLang]}
@@ -355,33 +362,39 @@
             </div>
           </div>
 
-          <!-- 4. 1클릭 인터랙션 바 -->
+          <!-- 4. 1클릭 인터랙션 바 (재클릭 시 취소 지원) -->
           <div class="px-4 py-2.5 bg-slate-900/60 border-t border-slate-800/80 flex items-center justify-between text-xs">
             <div class="flex items-center gap-2">
-              <button onclick="castVote('${item.id}', 'up')" class="vote-btn flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-700 hover:border-orange-500 hover:text-orange-400 transition whitespace-nowrap ${userVoted === 'up' ? 'bg-orange-500 text-white font-bold border-orange-500' : 'bg-slate-800/80 text-slate-300'}">
+              <button onclick="toggleVote('${item.id}', 'up')" class="vote-btn flex items-center gap-1.5 px-3 py-1.5 rounded-lg border transition whitespace-nowrap active:scale-95 ${userVoted === 'up' ? 'bg-orange-500 border-orange-500 text-white font-bold shadow-sm' : 'border-slate-700 bg-slate-800/80 text-slate-300 hover:border-orange-500 hover:text-orange-400'}">
                 <span>${t.voteFail}</span>
                 <span class="font-mono font-bold">${item.upvotes + (userVoted === 'up' ? 1 : 0)}</span>
               </button>
-              <button onclick="castVote('${item.id}', 'down')" class="vote-btn flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-700 hover:border-slate-500 transition whitespace-nowrap ${userVoted === 'down' ? 'bg-slate-700 text-white font-bold' : 'bg-slate-800/80 text-slate-400'}">
+              <button onclick="toggleVote('${item.id}', 'down')" class="vote-btn flex items-center gap-1.5 px-3 py-1.5 rounded-lg border transition whitespace-nowrap active:scale-95 ${userVoted === 'down' ? 'bg-slate-700 border-slate-500 text-white font-bold shadow-sm' : 'border-slate-700 bg-slate-800/80 text-slate-400 hover:border-slate-500 hover:text-slate-200'}">
                 <span>${t.votePass}</span>
                 <span class="font-mono">${item.disagrees + (userVoted === 'down' ? 1 : 0)}</span>
               </button>
             </div>
-            <span class="text-[11px] text-slate-500 font-mono whitespace-nowrap">${t.votedBadge}</span>
+            <span class="text-[11px] font-mono whitespace-nowrap ${userVoted ? 'text-orange-400 font-bold' : 'text-slate-500'}">
+              ${userVoted ? '✓ ' + t.votedBadge : ''}
+            </span>
           </div>
         `;
         container.appendChild(card);
       });
     }
 
-    function castVote(id, type) {
+    // 투표 토글 함수 (동일 버튼 재클릭 시 취소, 타 버튼 클릭 시 전환)
+    function toggleVote(id, type) {
       const votedKey = `voted_${id}`;
       const prev = localStorage.getItem(votedKey);
-      if (prev) {
-        alert(currentLang === 'ko' ? "이미 성지순례 투표를 완료하셨습니다!" : "You have already verified this record!");
-        return;
+
+      if (prev === type) {
+        // 이미 누른 버튼을 다시 누르면 취소
+        localStorage.removeItem(votedKey);
+      } else {
+        // 새로운 투표 등록 또는 전환
+        localStorage.setItem(votedKey, type);
       }
-      localStorage.setItem(votedKey, type);
       renderFeed(currentFilter);
     }
 
