@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>인사이트랩 - 소셜 트렌드 리더보드 (Social Rank)</title>
-  <meta name="description" content="유튜브, 틱톡, 스레드, 인스타그램, X의 주간 급상승 크리에이터 및 바이럴 트렌드 한눈에 보는 고밀도 순위표.">
+  <meta name="description" content="유튜브, 틱톡, 스레드, 인스타그램, X의 매체별 TOP 5 주간 급상승 크리에이터 및 바이럴 트렌드 순위표.">
   <meta property="og:title" content="인사이트랩: 소셜 트렌드 리더보드">
-  <meta property="og:description" content="플랫폼별 주간 급상승 순위 및 떡상 요인 분석 리더보드">
+  <meta property="og:description" content="5대 플랫폼별 주간 TOP 5 떡상 크리에이터 및 지표 분석">
   <script src="https://cdn.tailwindcss.com"></script>
 
 <!-- Google tag (gtag.js) -->
@@ -34,7 +34,7 @@
           <div class="min-w-0">
             <div class="flex items-center gap-1.5">
               <span class="font-extrabold text-white text-sm tracking-tight truncate" id="ui-subname">소셜 트렌드 순위표</span>
-              <span class="text-[10px] bg-amber-500/20 text-amber-400 font-bold px-1.5 py-0.5 rounded border border-amber-500/30 shrink-0" id="ui-subtag">주간집계</span>
+              <span class="text-[10px] bg-amber-500/20 text-amber-400 font-bold px-1.5 py-0.5 rounded border border-amber-500/30 shrink-0" id="ui-subtag">매체별 TOP 5</span>
             </div>
             <p class="text-[11px] text-slate-400 truncate" id="ui-subtitle">터치하여 떡상 비결 & 바이럴 지표 확인</p>
           </div>
@@ -80,12 +80,12 @@
   <script>
     let currentLang = 'ko';
     let currentFilter = 'ALL';
-    let expandedId = 'r1'; // 기본 첫 번째 열림
+    let expandedId = 'yt1';
 
     const I18N = {
       ko: {
         subname: "소셜 트렌드 순위표",
-        subtag: "주간집계",
+        subtag: "매체별 TOP 5",
         subtitle: "터치하여 떡상 비결 & 바이럴 지표 확인",
         home: "홈",
         filterAll: "종합 순위",
@@ -105,7 +105,7 @@
       },
       en: {
         subname: "Social Leaderboard",
-        subtag: "Weekly",
+        subtag: "Top 5 by Media",
         subtitle: "Tap to view growth factors & viral drivers",
         home: "Home",
         filterAll: "Overall",
@@ -125,126 +125,291 @@
       }
     };
 
+    // 5대 매체 x 각 5개 = 총 25개 데이터셋
     const RANKS = [
+      /* ================= 1. YOUTUBE TOP 5 ================= */
       {
-        id: "r1",
-        rank: 1,
-        platform: "YOUTUBE",
-        platformBadge: "YouTube",
+        id: "yt1", overallRank: 1, platformRank: 1, platform: "YOUTUBE", platformBadge: "YouTube",
         platformColor: "bg-red-500/10 text-red-400 border-red-500/30",
-        creatorName: { ko: "침착맨 플러스", en: "CalmdownMan Plus" },
-        handle: "@chimplus",
-        categoryTag: { ko: "토크·라이브", en: "Talk & Live" },
-        rankChange: "▲1",
-        followers: { ko: "264만명", en: "2.64M" },
-        weeklyGrowth: { ko: "+4.8만", en: "+48K" },
-        headline: {
-          ko: "AI 딥페이크 눕방 월드컵 콘텐츠로 단일 영상 300만 뷰 폭발",
-          en: "Hits 3M views in 48h with interactive live AI parody stream"
-        },
+        creatorName: { ko: "침착맨 플러스", en: "CalmdownMan Plus" }, handle: "@chimplus",
+        categoryTag: { ko: "토크·라이브", en: "Talk & Live" }, rankChange: "▲1",
+        followers: { ko: "264만명", en: "2.64M" }, weeklyGrowth: { ko: "+4.8만", en: "+48K" },
+        headline: { ko: "AI 딥페이크 눕방 월드컵 콘텐츠로 단일 영상 300만 뷰 폭발", en: "Hits 3M views in 48h with interactive AI parody stream" },
         viralTopic: "#AI월드컵 #침착맨 #실시간30만",
-        growthFactor: {
-          ko: "실시간 시청자 도네이션과 AI 생성 이미지를 즉석 합성해 티키타카를 유도하는 롱폼 인터랙션이 쇼츠로 2차 복제되며 알고리즘 장악.",
-          en: "Live viewer prompts and instant AI images generated hundreds of high-retention viral shorts."
-        },
-        upvotes: 942,
-        disagrees: 38
+        growthFactor: { ko: "실시간 시청자 참여와 생성형 AI 이미지를 결합한 티키타카 롱폼이 쇼츠로 파생되며 알고리즘 장악.", en: "Live viewer prompts and AI-generated visuals created viral shorts loops." },
+        upvotes: 942, disagrees: 38
       },
       {
-        id: "r2",
-        rank: 2,
-        platform: "TIKTOK",
-        platformBadge: "TikTok",
+        id: "yt2", overallRank: 6, platformRank: 2, platform: "YOUTUBE", platformBadge: "YouTube",
+        platformColor: "bg-red-500/10 text-red-400 border-red-500/30",
+        creatorName: { ko: "슈카월드 코멧", en: "SyukaWorld Comet" }, handle: "@syukacomet",
+        categoryTag: { ko: "경제·시사", en: "Economy & Geopolitics" }, rankChange: "▲2",
+        followers: { ko: "348만명", en: "3.48M" }, weeklyGrowth: { ko: "+3.9만", en: "+39K" },
+        headline: { ko: "중동 에너지 위기 & 글로벌 반도체 지각변동 1시간 요약", en: "Middle East energy crisis & semiconductor deep-dive hits 2.5M" },
+        viralTopic: "#반도체지각변동 #유가급등 #슈카라이브",
+        growthFactor: { ko: "복잡한 글로벌 거시경제를 칠판식 썰 풀이로 쉽게 전달하며 주말 3040 직장인 시청 점유율 독식.", en: "Deconstructed complex macro events into accessible conversational summaries." },
+        upvotes: 812, disagrees: 24
+      },
+      {
+        id: "yt3", overallRank: 11, platformRank: 3, platform: "YOUTUBE", platformBadge: "YouTube",
+        platformColor: "bg-red-500/10 text-red-400 border-red-500/30",
+        creatorName: { ko: "공돌이 용달", en: "Engineer Yongdal" }, handle: "@yongdallab",
+        categoryTag: { ko: "과학·실험", en: "Science & Engineering" }, rankChange: "NEW",
+        followers: { ko: "145만명", en: "1.45M" }, weeklyGrowth: { ko: "+3.2만", en: "+32K" },
+        headline: { ko: "1000도 쇳물로 흑연 벽돌 녹이기 초근접 4K 슬로모션", en: "1000°C molten metal vs graphite brick in extreme 4K slow-mo" },
+        viralTopic: "#초고열실험 #4K슬로모 #과학쿠키",
+        growthFactor: { ko: "시각적 쾌감을 극대화한 고화질 슬로모션 쇼츠가 해외 유튜브 알고리즘에 동시 노출되며 글로벌 유입 폭증.", en: "Visual-first slow-motion engineering shorts reached global audiences." },
+        upvotes: 734, disagrees: 18
+      },
+      {
+        id: "yt4", overallRank: 16, platformRank: 4, platform: "YOUTUBE", platformBadge: "YouTube",
+        platformColor: "bg-red-500/10 text-red-400 border-red-500/30",
+        creatorName: { ko: "핏블리 문석기", en: "Fitvely" }, handle: "@fitvely_official",
+        categoryTag: { ko: "헬스·식단", en: "Fitness & Nutrition" }, rankChange: "▲1",
+        followers: { ko: "128만명", en: "1.28M" }, weeklyGrowth: { ko: "+2.5만", en: "+25K" },
+        headline: { ko: "'30대 직장인 뱃살 2주 컷' 10분 홈트 루틴 400만 뷰", en: "'Desk worker belly fat cut in 2 weeks' 10-min home workout hits 4M" },
+        viralTopic: "#직장인홈트 #뱃살순삭 #식단가이드",
+        growthFactor: { ko: "퇴근 후 장비 없이 따라 할 수 있는 10분 현실 루틴이 30대 다이어터들의 저장(플레이리스트) 유발.", en: "No-equipment 10-minute home routines triggered playlist saves by office workers." },
+        upvotes: 689, disagrees: 31
+      },
+      {
+        id: "yt5", overallRank: 21, platformRank: 5, platform: "YOUTUBE", platformBadge: "YouTube",
+        platformColor: "bg-red-500/10 text-red-400 border-red-500/30",
+        creatorName: { ko: "장사의 신 리부트", en: "God of Business Reboot" }, handle: "@biz_reboot",
+        categoryTag: { ko: "자영업·컨설팅", en: "Small Business Drama" }, rankChange: "▼2",
+        followers: { ko: "98만명", en: "980K" }, weeklyGrowth: { ko: "+2.1만", en: "+21K" },
+        headline: { ko: "월 매출 400만 원 골목 돈가스집 메뉴판 싹 갈아엎은 사이다 솔루션", en: "Overhauled struggling street diner menu with instant revenue surge" },
+        viralTopic: "#골목식당리얼 #사이다솔루션 #자영업구출",
+        growthFactor: { ko: "날것 그대로의 주방 위생 지적과 메뉴 다이어트라는 직관적 문제 해결 드라마가 높은 몰입감 유도.", en: "Raw operational critiques and immediate turnaround drama fueled high watch time." },
+        upvotes: 541, disagrees: 77
+      },
+
+      /* ================= 2. TIKTOK TOP 5 ================= */
+      {
+        id: "tt1", overallRank: 2, platformRank: 1, platform: "TIKTOK", platformBadge: "TikTok",
         platformColor: "bg-cyan-500/10 text-cyan-400 border-cyan-500/30",
-        creatorName: { ko: "숏폼 루프 마스터", en: "Shorts Master Z" },
-        handle: "@dance_loop_kr",
-        categoryTag: { ko: "댄스·챌린지", en: "Dance & Meme" },
-        rankChange: "NEW",
-        followers: { ko: "410만명", en: "4.10M" },
-        weeklyGrowth: { ko: "+18만", en: "+180K" },
-        headline: {
-          ko: "3초 도입부 컷편집 챌린지로 글로벌 누적 4,000만 뷰 달성",
-          en: "3-second hook dance challenge reaches 40M global views"
-        },
+        creatorName: { ko: "숏폼 루프 마스터", en: "Shorts Master Z" }, handle: "@dance_loop_kr",
+        categoryTag: { ko: "댄스·챌린지", en: "Dance & Meme" }, rankChange: "NEW",
+        followers: { ko: "410만명", en: "4.10M" }, weeklyGrowth: { ko: "+18만", en: "+180K" },
+        headline: { ko: "3초 도입부 컷편집 챌린지로 글로벌 누적 4,000만 뷰 달성", en: "3-second hook dance challenge reaches 40M global views" },
         viralTopic: "#삐끼삐끼후속 #0.5초훅 #음원역주행",
-        growthFactor: {
-          ko: "영상 시작 1초 만에 시선을 붙잡는 급제동 컷편집과 따라 하기 쉬운 손동작으로 1020 음원 사용 챌린지 복제율을 극대화함.",
-          en: "Hyper-fast jump cuts in the opening second led to massive user sound reuse."
-        },
-        upvotes: 789,
-        disagrees: 65
+        growthFactor: { ko: "영상 시작 1초 만에 시선을 붙잡는 급제동 컷편집과 따라 하기 쉬운 손동작으로 음원 복제율 극대화.", en: "Hyper-fast jump cuts and easily copyable hand choreo drove audio reuse." },
+        upvotes: 789, disagrees: 65
       },
       {
-        id: "r3",
-        rank: 3,
-        platform: "THREADS",
-        platformBadge: "Threads",
+        id: "tt2", overallRank: 7, platformRank: 2, platform: "TIKTOK", platformBadge: "TikTok",
+        platformColor: "bg-cyan-500/10 text-cyan-400 border-cyan-500/30",
+        creatorName: { ko: "15초 메이크업 랩", en: "15s Beauty Lab" }, handle: "@beauty_snap",
+        categoryTag: { ko: "뷰티·변신", en: "Beauty Transformation" }, rankChange: "▲1",
+        followers: { ko: "290만명", en: "2.90M" }, weeklyGrowth: { ko: "+12만", en: "+120K" },
+        headline: { ko: "박자 맞춰 렌즈·립스틱 바뀌는 비트 싱크 변신 영상 2,500만 뷰", en: "Beat-sync transition makeup transformation surpasses 25M" },
+        viralTopic: "#비트싱크메이크업 #트랜지션장인 #K뷰티",
+        growthFactor: { ko: "프레임 단위의 칼같은 비트 매칭 전환 효과로 무한 반복 재생(완청률 150%) 기록.", en: "Frame-perfect music sync transitions pushed loop completion rates to 150%." },
+        upvotes: 680, disagrees: 29
+      },
+      {
+        id: "tt3", overallRank: 12, platformRank: 3, platform: "TIKTOK", platformBadge: "TikTok",
+        platformColor: "bg-cyan-500/10 text-cyan-400 border-cyan-500/30",
+        creatorName: { ko: "극단적 실험실", en: "Extreme Lab KR" }, handle: "@crazy_press_kr",
+        categoryTag: { ko: "유압프레스·쾌감", en: "Oddly Satisfying" }, rankChange: "▲3",
+        followers: { ko: "195만명", en: "1.95M" }, weeklyGrowth: { ko: "+9.5만", en: "+95K" },
+        headline: { ko: "젤리 1,000개 유압프레스로 짓누르는 무언 영상 1,800만 뷰", en: "Hydraulic press crushing 1,000 gummy bears silently hits 18M" },
+        viralTopic: "#유압프레스 #팅글쾌감 #노토킹ASMR",
+        growthFactor: { ko: "언어가 필요 없는 시각적 카타르시스와 ASMR 사운드로 전 세계 10대 추천 피드 장악.", en: "Non-verbal visual catharsis and sound design captured global discovery feeds." },
+        upvotes: 615, disagrees: 33
+      },
+      {
+        id: "tt4", overallRank: 17, platformRank: 4, platform: "TIKTOK", platformBadge: "TikTok",
+        platformColor: "bg-cyan-500/10 text-cyan-400 border-cyan-500/30",
+        creatorName: { ko: "급식 코미디 김선생", en: "School Skit Teacher" }, handle: "@school_skit",
+        categoryTag: { ko: "상황극·공감", en: "Comedy Skit" }, rankChange: "▼2",
+        followers: { ko: "155만명", en: "1.55M" }, weeklyGrowth: { ko: "+6.8만", en: "+68K" },
+        headline: { ko: "'수행평가 제출 10초 전 조원들 표정' 1인 5역 연기 800만 뷰", en: "'10 seconds before team assignment due' 1-person 5-character skit" },
+        viralTopic: "#수행평가빌런 #조별과제공감 #1인극",
+        growthFactor: { ko: "10대 학생들의 격한 공감대를 저격한 초밀착 생활 연기로 댓글창에 경험담 폭발.", en: "Hyper-relatable student dilemmas sparked thousands of shared confessions." },
+        upvotes: 572, disagrees: 19
+      },
+      {
+        id: "tt5", overallRank: 22, platformRank: 5, platform: "TIKTOK", platformBadge: "TikTok",
+        platformColor: "bg-cyan-500/10 text-cyan-400 border-cyan-500/30",
+        creatorName: { ko: "스피드 쿠킹 민우", en: "Speed Cook Min" }, handle: "@speed_recipe",
+        categoryTag: { ko: "자취요리·1분", en: "1-Min Cooking" }, rankChange: "▲1",
+        followers: { ko: "110만명", en: "1.10M" }, weeklyGrowth: { ko: "+5.1만", en: "+51K" },
+        headline: { ko: "전자레인지 3분 완성 불닭 크림 우동 초간단 레시피", en: "3-minute microwave spicy cream udon recipe goes viral" },
+        viralTopic: "#불닭우동레시피 #3분자취요리 #자취생필수",
+        growthFactor: { ko: "불 사용 없이 편의점 재료만으로 만드는 초간단 레시피 영상으로 폭발적 공유 유발.", en: "Fire-free convenience store hacks drove massive bookmarking by solo diners." },
+        upvotes: 520, disagrees: 15
+      },
+
+      /* ================= 3. THREADS TOP 5 ================= */
+      {
+        id: "th1", overallRank: 3, platformRank: 1, platform: "THREADS", platformBadge: "Threads",
         platformColor: "bg-emerald-500/10 text-emerald-400 border-emerald-500/30",
-        creatorName: { ko: "익명 판교 개발자 P", en: "Pangyo Dev Anonymous" },
-        handle: "@pangyo_curator",
-        categoryTag: { ko: "직장·이직", en: "Career & Tech" },
-        rankChange: "▲3",
-        followers: { ko: "6.8만명", en: "68K" },
-        weeklyGrowth: { ko: "+1.2만", en: "+12.4K" },
-        headline: {
-          ko: "'연봉 8천에서 1.5억 점프한 3가지 콜드메일 템플릿' 좋아요 1.4만 개",
-          en: "'3 cold emails that doubled my tech salary' thread gains 14K likes"
-        },
+        creatorName: { ko: "익명 판교 개발자 P", en: "Pangyo Dev Anonymous" }, handle: "@pangyo_curator",
+        categoryTag: { ko: "직장·이직", en: "Career & Tech" }, rankChange: "▲3",
+        followers: { ko: "6.8만명", en: "68K" }, weeklyGrowth: { ko: "+1.2만", en: "+12.4K" },
+        headline: { ko: "'연봉 8천에서 1.5억 점프한 3가지 콜드메일 템플릿' 좋아요 1.4만 개", en: "'3 cold emails that doubled my tech salary' thread gains 14K likes" },
         viralTopic: "#이직치트키 #블라인드썰 #연봉협상",
-        growthFactor: {
-          ko: "첫 줄에 파격적인 숫자 대비(8천→1.5억)를 박고, 댓글 릴레이로 템플릿을 분할 제공해 체류 시간과 인용 공유 수를 폭발시킴.",
-          en: "Hooked readers with a drastic salary contrast in sentence one, teasing actionable templates."
-        },
-        upvotes: 832,
-        disagrees: 49
+        growthFactor: { ko: "첫 줄에 파격적인 숫자 대비(8천→1.5억)를 박고 댓글로 템플릿을 분할 제공해 체류 시간 폭발.", en: "Strong salary contrast in sentence one with actionable segmented follow-ups." },
+        upvotes: 832, disagrees: 49
       },
       {
-        id: "r4",
-        rank: 4,
-        platform: "INSTA",
-        platformBadge: "Instagram",
+        id: "th2", overallRank: 8, platformRank: 2, platform: "THREADS", platformBadge: "Threads",
+        platformColor: "bg-emerald-500/10 text-emerald-400 border-emerald-500/30",
+        creatorName: { ko: "스타트업 PO 생존기", en: "Startup PO Survival" }, handle: "@po_insight_kr",
+        categoryTag: { ko: "기획·비즈니스", en: "Product Management" }, rankChange: "▲2",
+        followers: { ko: "4.9만명", en: "49K" }, weeklyGrowth: { ko: "+8,800명", en: "+8.8K" },
+        headline: { ko: "'회의 시간 절반으로 줄인 6페이지 메모 문화' 실무 적용 가이드", en: "'6-page memo rule that cut meetings in half' operational playbook" },
+        viralTopic: "#아마존식회의 #기획자생존법 #생산성극대화",
+        growthFactor: { ko: "회의 피로도에 지친 테크 기업 직장인들의 공감대를 건드린 실무 팁으로 인용(Quote) 1,500회 돌파.", en: "Directly resonated with meeting-fatigued corporate managers, generating 1.5K quotes." },
+        upvotes: 704, disagrees: 26
+      },
+      {
+        id: "th3", overallRank: 13, platformRank: 3, platform: "THREADS", platformBadge: "Threads",
+        platformColor: "bg-emerald-500/10 text-emerald-400 border-emerald-500/30",
+        creatorName: { ko: "퇴사 후 1인 파운더", en: "Solo Founder Journey" }, handle: "@solopreneur_k",
+        categoryTag: { ko: "사이드프로젝트", en: "Solopreneur & SaaS" }, rankChange: "NEW",
+        followers: { ko: "3.7만명", en: "37K" }, weeklyGrowth: { ko: "+6,500명", en: "+6.5K" },
+        headline: { ko: "노코드 도구 3개로 만든 월 500만 원 자동화 파이프라인 공개", en: "How 3 no-code tools built a $4K/mo automated revenue stream" },
+        viralTopic: "#노코드수익화 #1인창업 #패시브인컴",
+        growthFactor: { ko: "실제 계좌 입금 캡처와 프롬프트 워크플로우를 투명하게 까발리는 '빌드 인 퍼블릭' 서사 적중.", en: "Transparent 'Build in Public' breakdown with revenue screenshots gained trust." },
+        upvotes: 649, disagrees: 35
+      },
+      {
+        id: "th4", overallRank: 18, platformRank: 4, platform: "THREADS", platformBadge: "Threads",
+        platformColor: "bg-emerald-500/10 text-emerald-400 border-emerald-500/30",
+        creatorName: { ko: "마케터의 영감 수집함", en: "Marketer's Swipe File" }, handle: "@brand_archive",
+        categoryTag: { ko: "브랜딩·카피", en: "Copywriting & Ads" }, rankChange: "▼1",
+        followers: { ko: "5.4만명", en: "54K" }, weeklyGrowth: { ko: "+4,900명", en: "+4.9K" },
+        headline: { ko: "클릭률 300% 올린 성수동 팝업스토어 도발적인 헤드카피 7선", en: "7 bold billboard headlines that tripled Seongsu pop-up CTR" },
+        viralTopic: "#카피라이팅 #성수팝업 #마케팅인사이트",
+        growthFactor: { ko: "현장 사진과 카피라이팅 분석을 묶어 2030 주니어 마케터들의 아카이브 북마크 쇄도.", en: "On-site photos paired with punchy copy analysis sparked widespread saves." },
+        upvotes: 590, disagrees: 16
+      },
+      {
+        id: "th5", overallRank: 23, platformRank: 5, platform: "THREADS", platformBadge: "Threads",
+        platformColor: "bg-emerald-500/10 text-emerald-400 border-emerald-500/30",
+        creatorName: { ko: "월급쟁이 부동산 노트", en: "Salaryman Real Estate" }, handle: "@apt_scouter",
+        categoryTag: { ko: "부동산·청약", en: "Apartment Trends" }, rankChange: "▲1",
+        followers: { ko: "4.1만명", en: "41K" }, weeklyGrowth: { ko: "+3,800명", en: "+3.8K" },
+        headline: { ko: "서울 마용성 vs 경기 신축 대단지 실수요자 갈아타기 현실 손익표", en: "Financial tradeoff table: Inner Seoul rebuild vs Gyeonggi new build" },
+        viralTopic: "#갈아타기전략 #내집마련 #부동산현실",
+        growthFactor: { ko: "세금과 대출 규제를 감안한 현실 시뮬레이션 표를 텍스트로 풀어내며 댓글 토론 장 형성.", en: "Real-world tax and mortgage calculations sparked active discussion threads." },
+        upvotes: 512, disagrees: 41
+      },
+
+      /* ================= 4. INSTAGRAM TOP 5 ================= */
+      {
+        id: "ig1", overallRank: 4, platformRank: 1, platform: "INSTA", platformBadge: "Instagram",
         platformColor: "bg-pink-500/10 text-pink-400 border-pink-500/30",
-        creatorName: { ko: "30초 살림 치트키", en: "Quick Home Hacks" },
-        handle: "@daily_life_hack",
-        categoryTag: { ko: "살림·라이프", en: "Lifestyle & Hacks" },
-        rankChange: "▼1",
-        followers: { ko: "45.2만명", en: "452K" },
-        weeklyGrowth: { ko: "+3.1만", en: "+31K" },
-        headline: {
-          ko: "다이소 1,000원짜리 자석 테이프로 싱크대 하부장 정리하는 릴스 500만 뷰",
-          en: "Dollar store magnetic strip kitchen hack hits 5M views on Reels"
-        },
+        creatorName: { ko: "30초 살림 치트키", en: "Quick Home Hacks" }, handle: "@daily_life_hack",
+        categoryTag: { ko: "살림·라이프", en: "Lifestyle & Hacks" }, rankChange: "▼1",
+        followers: { ko: "45.2만명", en: "452K" }, weeklyGrowth: { ko: "+3.1만", en: "+31K" },
+        headline: { ko: "다이소 1,000원짜리 자석 테이프로 싱크대 하부장 정리하는 릴스 500만 뷰", en: "Dollar store magnetic strip kitchen hack hits 5M views on Reels" },
         viralTopic: "#다이소꿀템 #싱크대정리 #주부구단",
-        growthFactor: {
-          ko: "비싼 수납장 대신 '단돈 천 원'이라는 극강의 가성비 호기심 자극과 북마크(저장) 유발형 실용 정보 제공.",
-          en: "Extreme cost contrast ($1 dollar store item) triggered viral bookmark saves on Reels."
-        },
-        upvotes: 710,
-        disagrees: 22
+        growthFactor: { ko: "단돈 천 원이라는 극강의 가성비 호기심 자극과 북마크(저장) 유발형 실용 정보 제공.", en: "Extreme cost contrast ($1 dollar store item) triggered viral bookmark saves." },
+        upvotes: 710, disagrees: 22
       },
       {
-        id: "r5",
-        rank: 5,
-        platform: "X",
-        platformBadge: "X",
+        id: "ig2", overallRank: 9, platformRank: 2, platform: "INSTA", platformBadge: "Instagram",
+        platformColor: "bg-pink-500/10 text-pink-400 border-pink-500/30",
+        creatorName: { ko: "성수 로컬 큐레이터", en: "Seongsu Local Curator" }, handle: "@seongsu_pick",
+        categoryTag: { ko: "핫플·데이트", en: "Hotspots & Travel" }, rankChange: "▲2",
+        followers: { ko: "28.5만명", en: "285K" }, weeklyGrowth: { ko: "+2.4만", en: "+24K" },
+        headline: { ko: "이번 주말 오픈하는 성수동 미공개 팝업스토어 5곳 위치 총정리", en: "Secret map of 5 unreleased pop-up stores opening in Seongsu this weekend" },
+        viralTopic: "#성수동핫플 #주말데이트 #팝업스토어일정",
+        growthFactor: { ko: "목요일 밤마다 주말 데이트족을 겨냥한 캐러셀 지도 포스팅으로 DM 공유율 폭증.", en: "Thursday night weekend date guides drove high DM share metrics." },
+        upvotes: 662, disagrees: 17
+      },
+      {
+        id: "ig3", overallRank: 14, platformRank: 3, platform: "INSTA", platformBadge: "Instagram",
+        platformColor: "bg-pink-500/10 text-pink-400 border-pink-500/30",
+        creatorName: { ko: "미니멀 데스크테리어", en: "Minimal Desk Setups" }, handle: "@desk_aesthetic",
+        categoryTag: { ko: "인테리어·테크", en: "Workspace Aesthetic" }, rankChange: "▲1",
+        followers: { ko: "39.1만명", en: "391K" }, weeklyGrowth: { ko: "+1.9만", en: "+19K" },
+        headline: { ko: "선 없는 깔끔한 무선 데스크 완성하는 5단계 케이블 정리법", en: "5-step invisible cable management routine for floating desk" },
+        viralTopic: "#데스크테리어 #선정리치트키 #서재인테리어",
+        growthFactor: { ko: "어둡고 차분한 감성 톤앤매너와 '비포/애프터' 쾌감 영상으로 저장수 8만 회 달성.", en: "Moody aesthetic tone and dramatic before/after contrast scored 80K saves." },
+        upvotes: 624, disagrees: 14
+      },
+      {
+        id: "ig4", overallRank: 19, platformRank: 4, platform: "INSTA", platformBadge: "Instagram",
+        platformColor: "bg-pink-500/10 text-pink-400 border-pink-500/30",
+        creatorName: { ko: "초간단 헬스레시피", en: "Easy Protein Eats" }, handle: "@protein_chef_kr",
+        categoryTag: { ko: "다이어트·식단", en: "Healthy Food Hacks" }, rankChange: "NEW",
+        followers: { ko: "21.3만명", en: "213K" }, weeklyGrowth: { ko: "+1.5만", en: "+15K" },
+        headline: { ko: "밀가루 0g 라이스페이퍼 바삭 초코칩 쿠키 3분 릴스", en: "Flour-free crispy rice paper chocolate chip cookie recipe" },
+        viralTopic: "#노밀가루디저트 #라이스페이퍼요리 #다이어트간식",
+        growthFactor: { ko: "다이어터들의 치팅 욕구를 충족하는 기발한 대체 레시피로 알고리즘 바이럴 지속.", en: "Guilt-free dessert alternatives satisfied dieters' sweet tooth." },
+        upvotes: 569, disagrees: 21
+      },
+      {
+        id: "ig5", overallRank: 24, platformRank: 5, platform: "INSTA", platformBadge: "Instagram",
+        platformColor: "bg-pink-500/10 text-pink-400 border-pink-500/30",
+        creatorName: { ko: "무드룩 오오티디", en: "Daily Mood Look" }, handle: "@ootd_menswear",
+        categoryTag: { ko: "패션·스타일링", en: "Men's Fashion" }, rankChange: "▼2",
+        followers: { ko: "32.4만명", en: "324K" }, weeklyGrowth: { ko: "+1.2만", en: "+12K" },
+        headline: { ko: "유니클로 기본 아이템 3개로 끝내는 실패 없는 남친룩 배색 4선", en: "4 foolproof color matching rules using 3 basic Uniqlo pieces" },
+        viralTopic: "#유니클로코디 #남친룩정석 #톤온톤배색",
+        growthFactor: { ko: "누구나 옷장에 있는 기본 아이템으로 체형 보완과 배색을 제안해 20대 남성 유입 집중.", en: "Styling accessible wardrobe basics solved daily clothing anxiety." },
+        upvotes: 498, disagrees: 25
+      },
+
+      /* ================= 5. X (TWITTER) TOP 5 ================= */
+      {
+        id: "x1", overallRank: 5, platformRank: 1, platform: "X", platformBadge: "X",
         platformColor: "bg-slate-500/10 text-slate-300 border-slate-500/30",
-        creatorName: { ko: "실시간 테크 번역소", en: "Realtime Tech Pulse" },
-        handle: "@tech_signal_x",
-        categoryTag: { ko: "AI·테크", en: "AI & Tech" },
-        rankChange: "NEW",
-        followers: { ko: "9.1만명", en: "91K" },
-        weeklyGrowth: { ko: "+1.8만", en: "+18.5K" },
-        headline: {
-          ko: "OpenAI 미발표 모델 유출 벤치마크 10줄 요약 타래로 1만 RT",
-          en: "10-bullet summary thread on leaked AI reasoning benchmarks hits 10K RT"
-        },
+        creatorName: { ko: "실시간 테크 번역소", en: "Realtime Tech Pulse" }, handle: "@tech_signal_x",
+        categoryTag: { ko: "AI·오픈소스", en: "AI & Open Source" }, rankChange: "NEW",
+        followers: { ko: "9.1만명", en: "91K" }, weeklyGrowth: { ko: "+1.8만", en: "+18.5K" },
+        headline: { ko: "OpenAI 미발표 추론 모델 유출 벤치마크 10줄 요약 타래로 1만 RT", en: "10-bullet summary thread on leaked AI reasoning benchmarks hits 10K RT" },
         viralTopic: "#o3유출 #AI벤치마크 #실시간트렌드",
-        growthFactor: {
-          ko: "해외 아카이브(arXiv) 논문과 깃허브 문서를 10줄 핵심 한국어로 가장 빠르게 요약해 개발자 커뮤니티 리트윗 폭발.",
-          en: "Fast translation of complex technical arXiv papers into 10 concise bullet points."
-        },
-        upvotes: 654,
-        disagrees: 19
+        growthFactor: { ko: "해외 아카이브(arXiv) 논문과 깃허브 문서를 10줄 핵심 한국어로 가장 빠르게 요약 번역.", en: "Sub-second translation of complex technical arXiv papers engineered viral RTs." },
+        upvotes: 654, disagrees: 19
+      },
+      {
+        id: "x2", overallRank: 10, platformRank: 2, platform: "X", platformBadge: "X",
+        platformColor: "bg-slate-500/10 text-slate-300 border-slate-500/30",
+        creatorName: { ko: "월가 브리핑 코리아", en: "Wall St Briefing KR" }, handle: "@wallst_kr",
+        categoryTag: { ko: "미국주식·금융", en: "US Equities & Macro" }, rankChange: "▲1",
+        followers: { ko: "14.2만명", en: "142K" }, weeklyGrowth: { ko: "+1.3만", en: "+13K" },
+        headline: { ko: "엔비디아·빅테크 실적 발표 전 어닝스콜 핵심 지표 인포그래픽 타래", en: "Pre-market visual summary thread of Big Tech earnings call metrics" },
+        viralTopic: "#미국증시 #엔비디아어닝 #빅테크실적",
+        growthFactor: { ko: "미국 장 시작 30분 전 복잡한 재무 지표를 1장의 인포그래픽으로 압축해 투자자 리트윗 장악.", en: "Dense financial figures synthesized into single-slide infographics before market open." },
+        upvotes: 610, disagrees: 15
+      },
+      {
+        id: "x3", overallRank: 15, platformRank: 3, platform: "X", platformBadge: "X",
+        platformColor: "bg-slate-500/10 text-slate-300 border-slate-500/30",
+        creatorName: { ko: "글로벌 밈 아카이빙", en: "Global Meme Vault" }, handle: "@meme_vault_x",
+        categoryTag: { ko: "인터넷 밈·유머", en: "Web Culture & Memes" }, rankChange: "▲2",
+        followers: { ko: "22.8만명", en: "228K" }, weeklyGrowth: { ko: "+1.1만", en: "+11K" },
+        headline: { ko: "레딧에서 난리 난 'AI 도구에게 코딩 맡겼을 때 시니어 반응' 짤 타래", en: "'Senior devs watching AI code' viral Reddit meme thread hits 8K RT" },
+        viralTopic: "#개발자유머 #AI대체론 #직장인밈",
+        growthFactor: { ko: "해외 최신 밈을 현지 직장인 정서에 맞게 한국어로 초월 번역해 폭발적인 리트윗 유도.", en: "Localization of cutting-edge tech memes for domestic tech workers." },
+        upvotes: 588, disagrees: 23
+      },
+      {
+        id: "x4", overallRank: 20, platformRank: 4, platform: "X", platformBadge: "X",
+        platformColor: "bg-slate-500/10 text-slate-300 border-slate-500/30",
+        creatorName: { ko: "서브컬처 큐레이터", en: "Subculture Radar" }, handle: "@subculture_radar",
+        categoryTag: { ko: "애니·게임 소식", en: "Anime & Gaming News" }, rankChange: "▼1",
+        followers: { ko: "11.7만명", en: "117K" }, weeklyGrowth: { ko: "+8,200명", en: "+8.2K" },
+        headline: { ko: "일본 신작 애니메이션 제작사 교체 이슈 현지 반응 실시간 번역", en: "Live translated Japanese reaction threads to major studio animator changes" },
+        viralTopic: "#신작애니발표 #제작사교체 #실시간반응",
+        growthFactor: { ko: "일본 X 트렌드 실시간 모니터링을 통한 10분 이내 속보 번역으로 서브컬처 팬덤 흡수.", en: "10-minute speed translation of Japanese trends engaged enthusiast fandoms." },
+        upvotes: 531, disagrees: 18
+      },
+      {
+        id: "x5", overallRank: 25, platformRank: 5, platform: "X", platformBadge: "X",
+        platformColor: "bg-slate-500/10 text-slate-300 border-slate-500/30",
+        creatorName: { ko: "소프트웨어 아키텍트 L", en: "Architect L" }, handle: "@system_arch_kr",
+        categoryTag: { ko: "시스템설계·개발", en: "Architecture & DevOps" }, rankChange: "▲1",
+        followers: { ko: "6.4만명", en: "64K" }, weeklyGrowth: { ko: "+6,900명", en: "+6.9K" },
+        headline: { ko: "'트래픽 10배 폭증 시 서버 다운 막는 DB 샤딩 체크리스트 5가지'", en: "5 DB sharding guidelines to prevent crash under 10x traffic surge" },
+        viralTopic: "#서버아키텍처 #대용량트래픽 #백엔드엔지니어",
+        growthFactor: { ko: "대규모 분산 장애 극복 실무 경험을 바탕으로 한 핵심 체크리스트 제공으로 엔지니어 인용 쇄도.", en: "Actionable production battle-tested system reliability advice for backend engineers." },
+        upvotes: 489, disagrees: 12
       }
     ];
 
@@ -283,24 +448,32 @@
       container.innerHTML = '';
       const t = I18N[currentLang];
 
-      const filtered = filter === 'ALL' ? RANKS : RANKS.filter(item => item.platform === filter);
+      let filtered = [];
+      if (filter === 'ALL') {
+        // 종합 순위는 전체 25개 중 주간 성장률/지표 기준 상위 10개 노출
+        filtered = [...RANKS].sort((a, b) => a.overallRank - b.overallRank).slice(0, 10);
+      } else {
+        // 매체별 선택 시 해당 매체의 1위부터 5위까지 정렬
+        filtered = RANKS.filter(item => item.platform === filter).sort((a, b) => a.platformRank - b.platformRank);
+      }
 
       filtered.forEach(item => {
+        const displayRank = filter === 'ALL' ? item.overallRank : item.platformRank;
         const isExpanded = expandedId === item.id;
         const votedKey = `rank_voted_${item.id}`;
         const userVoted = localStorage.getItem(votedKey);
 
         let rankMedal = '';
-        if (item.rank === 1) rankMedal = '<span class="text-base">🥇</span>';
-        else if (item.rank === 2) rankMedal = '<span class="text-base">🥈</span>';
-        else if (item.rank === 3) rankMedal = '<span class="text-base">🥉</span>';
-        else rankMedal = `<span class="font-mono font-black text-slate-400 text-xs w-5 text-center">#${item.rank}</span>`;
+        if (displayRank === 1) rankMedal = '<span class="text-base">🥇</span>';
+        else if (displayRank === 2) rankMedal = '<span class="text-base">🥈</span>';
+        else if (displayRank === 3) rankMedal = '<span class="text-base">🥉</span>';
+        else rankMedal = `<span class="font-mono font-black text-slate-400 text-xs w-5 text-center">#${displayRank}</span>`;
 
         const row = document.createElement('div');
         row.className = `border rounded-2xl transition overflow-hidden shadow-md ${isExpanded ? 'bg-[#161b22] border-amber-500/50' : 'bg-[#161b22]/70 border-slate-800 hover:border-slate-700'}`;
 
         row.innerHTML = `
-          <!-- 테이블 요약 행 (항상 노출, 터치 가능) -->
+          <!-- 테이블 요약 행 (터치 시 전개) -->
           <div onclick="toggleExpand('${item.id}')" class="p-3 flex items-center justify-between cursor-pointer select-none">
             <div class="flex items-center gap-2.5 min-w-0 pr-2">
               <div class="shrink-0 w-6 flex items-center justify-center">${rankMedal}</div>
@@ -324,9 +497,9 @@
             </div>
           </div>
 
-          <!-- 아코디언 확장 영역 (터치 시 전개) -->
+          <!-- 아코디언 전개 영역 -->
           ${isExpanded ? `
-            <div class="p-3.5 pt-1 space-y-2.5 border-t border-slate-800/80 bg-slate-950/40 text-xs animate-fadeIn">
+            <div class="p-3.5 pt-1 space-y-2.5 border-t border-slate-800/80 bg-slate-950/40 text-xs">
               <!-- 헤드라인 박스 -->
               <div class="space-y-1">
                 <div class="flex items-center justify-between text-[10px] font-mono">
@@ -345,7 +518,7 @@
                 </p>
               </div>
 
-              <!-- 투표 바 -->
+              <!-- 1클릭 투표 바 -->
               <div class="pt-1 flex items-center justify-between gap-2 border-t border-slate-800/60 text-xs">
                 <div class="flex items-center gap-1.5 flex-1">
                   <button onclick="toggleVote('${item.id}', 'up')" class="flex-1 py-1.5 px-2 rounded-lg border transition whitespace-nowrap active:scale-95 ${userVoted === 'up' ? 'bg-amber-500 border-amber-500 text-black font-extrabold' : 'border-slate-700 bg-slate-800 text-slate-300'}">
