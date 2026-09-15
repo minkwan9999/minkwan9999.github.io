@@ -50,7 +50,7 @@
         </div>
       </div>
 
-      <!-- 4개 카테고리 탭 -->
+      <!-- 4개 카테고리 필터 버튼 바 -->
       <div class="flex items-center gap-1.5 pt-2 border-t border-slate-800/80 text-xs font-semibold overflow-x-auto whitespace-nowrap">
         <button onclick="filterType('ALL')" class="filter-btn active px-3 py-1 rounded-lg bg-orange-500 text-white transition" data-type="ALL" id="filter-all">전체 피드</button>
         <button onclick="filterType('LESSON')" class="filter-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition" data-type="LESSON" id="filter-lesson">참교육</button>
@@ -94,7 +94,7 @@
         takeawayTrack: "💡 복기 인사이트:",
         takeawayOngoing: "💡 관전 포인트:",
         voteFail: "🔥 역대급 헛소리",
-        votePass: "🤔 그땐 그럴듯함",
+        votePass: "🤔 이번엔 진짜다",
         votedBadge: "성지순례 완료",
         footerNote: "역사적 문헌 아카이브, 보도 사진 및 시장 지표를 기반으로 기록되었습니다."
       },
@@ -107,7 +107,7 @@
         filterLesson: "Blunders",
         filterTrack: "Track Record",
         filterOngoing: "Latest Bets",
-        tagLesson: "🏛️ Historical Blunder",
+        tagLesson: "🏛️ Historic Blunder",
         tagTrack: "📈 Track Record",
         tagOngoing: "⏳ Ongoing Bet",
         quoteLabel: "📌 Recorded Quote",
@@ -130,13 +130,13 @@
         id: "p1",
         cardType: "LESSON",
         eraTag: { ko: "1830년대 · 산업혁명", en: "1830s · Industrial Rev." },
-        statusBadge: { ko: "역사의 참교육 ✕", en: "Aged Like Milk ✕" },
+        statusBadge: { ko: "참교육 ✕", en: "Aged Like Milk ✕" },
         statusColor: "bg-rose-500/10 text-rose-400 border-rose-500/20",
         author: { ko: "영국 왕립학회 학자단", en: "Royal Society Scholars" },
         authorTitle: { ko: "과학 지식인단", en: "Leading Scientists" },
         avatar: "🚂",
         imageBeforeUrl: "https://images.unsplash.com/photo-1541447271487-09612b3f49f7?w=800&auto=format&fit=crop&q=80",
-        imageCaption: { ko: "1830년대 초기 증기기관차 개통", en: "1830s early steam locomotive trials" },
+        imageCaption: { ko: "1830년대 초기 증기기관차", en: "1830s early steam locomotive" },
         title: {
           ko: "기차가 시속 40km로 달리면 승객들은 질식해서 즉사한다",
           en: "Trains running at 30mph will cause passengers to die of asphyxiation"
@@ -164,13 +164,13 @@
         id: "p2",
         cardType: "LESSON",
         eraTag: { ko: "1998년 · 인터넷 태동기", en: "1998 · Dot-com Era" },
-        statusBadge: { ko: "역사의 참교육 ✕", en: "Aged Like Milk ✕" },
+        statusBadge: { ko: "참교육 ✕", en: "Aged Like Milk ✕" },
         statusColor: "bg-rose-500/10 text-rose-400 border-rose-500/20",
         author: { ko: "폴 크루그먼", en: "Paul Krugman" },
         authorTitle: { ko: "노벨 경제학상 수상자", en: "Nobel Laureate in Economics" },
         avatar: "🎓",
-        imageBeforeUrl: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&auto=format&fit=crop&q=80",
-        imageCaption: { ko: "1990년대 전통 경제학계 월가 서밋", en: "1990s Wall Street economic summit" },
+        imageBeforeUrl: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80",
+        imageCaption: { ko: "1990년대 닷컴 태동기 네트워크 장비", en: "1990s early internet infrastructure" },
         title: {
           ko: "2005년쯤 되면 인터넷의 실체가 팩스(Fax) 수준이었음이 밝혀질 것",
           en: "By 2005, Internet's impact will be no greater than the fax machine"
@@ -198,13 +198,13 @@
         id: "p3",
         cardType: "TRACK",
         eraTag: { ko: "2007년 · 스마트폰 혁명기", en: "2007 · Smartphone Era" },
-        statusBadge: { ko: "역사의 참교육 ✕", en: "Aged Like Milk ✕" },
+        statusBadge: { ko: "성적표 ✕", en: "Epic Fail ✕" },
         statusColor: "bg-rose-500/10 text-rose-400 border-rose-500/20",
         author: { ko: "스티브 발머", en: "Steve Ballmer" },
         authorTitle: { ko: "MS 전 CEO", en: "Former CEO of MS" },
         avatar: "💼",
         imageBeforeUrl: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80",
-        imageCaption: { ko: "2007년 초기 터치스크린 스마트폰 발표회", en: "2007 early touch smartphone reveal" },
+        imageCaption: { ko: "2007년 초기 터치스크린 스마트폰", en: "2007 early touch smartphone" },
         title: {
           ko: "500달러짜리 아이폰? 키보드가 없어서 비즈니스맨에겐 0%짜리 장난감",
           en: "There's no chance that the iPhone is going to get any significant market share"
@@ -232,7 +232,7 @@
         id: "p4",
         cardType: "TRACK",
         eraTag: { ko: "2023년 · AI 태동기", en: "2023 · AI Boom" },
-        statusBadge: { ko: "빅마우스 성적표 ✓", en: "Verified Track Record ✓" },
+        statusBadge: { ko: "성적표 ✓", en: "Track Record ✓" },
         statusColor: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
         author: { ko: "샘 알트만", en: "Sam Altman" },
         authorTitle: { ko: "OpenAI CEO", en: "CEO of OpenAI" },
@@ -283,10 +283,10 @@
           en: "Cybercab without steering wheels or pedals will enter production by 2026. Your car will earn you money while you sleep."
         },
         timelineLabel: { ko: "⏳ 2026년 실시간 검증 중", en: "⏳ Real-Time Tracker 2026" },
-        realityStat: { ko: "규제 승인 장벽 vs 비전 중심 FSD 고도화 격돌", en: "Regulatory Hurdles vs End-to-End FSD" },
+        realityStat: { ko: "규제 승인 장벽 vs 순수 비전 FSD 고도화", en: "Regulatory Hurdles vs End-to-End FSD" },
         realityText: {
-          ko: "FSD V12 이후 자율주행 성능이 극적으로 진화했으나, 미 당국의 규제 승인과 사고 책임 법제화, 라이다 없는 순수 비전 방식의 한계 논쟁이 여전히 팽팽하게 맞서고 있습니다.",
-          en: "End-to-end neural network driving has leaped, but state regulatory approvals and pure-vision debates remain contentious."
+          ko: "FSD 신경망 주행 성능이 비약적으로 발전했으나, 주별 무인 운행 규제 승인과 사고 책임 법제화 문제가 여전히 팽팽한 쟁점입니다.",
+          en: "Neural network driving has leaped, but state-by-state regulatory approvals and liability laws remain contentious."
         },
         actionHighlight: {
           ko: "머스크의 시간표는 늘 2~3년 지연되지만 결국 기술적 임계점을 뚫어내는 패턴이 반복되었습니다. '완전 사기'로 치부할지 '지연된 혁신'으로 볼지가 투자의 핵심 갈림길입니다.",
@@ -305,26 +305,26 @@
         author: { ko: "젠슨 황", en: "Jensen Huang" },
         authorTitle: { ko: "엔비디아 CEO", en: "CEO of NVIDIA" },
         avatar: "⚡",
-        imageBeforeUrl: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80",
-        imageCaption: { ko: "AI 코드 생성 및 시스템 엔지니어링", en: "AI code generation & systems" },
+        imageBeforeUrl: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop&q=80",
+        imageCaption: { ko: "차세대 AI 컴퓨팅 및 칩셋 아키텍처", en: "Next-gen AI computing architecture" },
         title: {
           ko: "더 이상 코딩을 배울 필요 없다. 모든 아이에게 컴퓨터 대신 다른 걸 가르쳐라",
           en: "Nobody has to learn to code. Our job is to create computing that speaks human"
         },
         quoteSource: { ko: "세계정부정상회의(WGS) 기조연설", en: "World Government Summit Keynote" },
         quoteText: {
-          ko: "지난 10~15년간 모든 사람이 코딩을 배워야 한다고 말했지만 이제는 정반대입니다. 이제 모든 인간이 프로그래머입니다. 컴퓨터 프로그래밍 언어는 바로 인간의 자연어입니다.",
+          ko: "지난 10~15년간 모든 사람이 코딩을 배워야 한다고 말했지만 이제는 정반대입니다. 이제 모든 인간이 프로그래머입니다. 컴퓨터 언어는 인간의 자연어입니다.",
           en: "Over the last 10-15 years, almost everybody told you that your kids must learn to code. It's completely the opposite now. The programming language is human."
         },
         timelineLabel: { ko: "⏳ 2026년 실시간 검증 중", en: "⏳ Real-Time Tracker 2026" },
-        realityStat: { ko: "AI 코딩 도구 보편화 vs 시스템 아키텍처 역량 격차", en: "AI Coding Proliferation vs System Architecture Depth" },
+        realityStat: { ko: "AI 에이전트 코딩 보편화 vs 아키텍처 역량 격차", en: "AI Agent Coding vs System Architecture Depth" },
         realityText: {
-          ko: "초급 코딩과 보일러플레이트 작성은 AI 에이전트가 완벽히 대체하고 있으나, 복잡한 대규모 분산 아키텍처 설계와 장애 디버깅에서는 여전히 엔지니어링 역량이 기업의 핵심 병목으로 남아 있습니다.",
-          en: "AI tools write junior code with ease, but complex architecture and high-stakes debugging still heavily bottleneck on elite engineers."
+          ko: "단순 코딩 작성은 AI가 대체 중이나, 대규모 분산 아키텍처 설계와 장애 디버깅은 여전히 최상위 엔지니어의 핵심 영역으로 남아 있습니다.",
+          en: "AI tools write junior code with ease, but complex architecture and critical debugging still bottleneck on elite engineers."
         },
         actionHighlight: {
-          ko: "문법을 외우는 식의 '코더'는 사라지겠지만, 복잡한 시스템을 구조화하고 문제를 정의하는 '아키텍트'의 가치는 오히려 AI 레버리지를 타고 극대화됩니다.",
-          en: "Syntax memorizers will diminish, but architects who frame root problems and orchestrate AI systems will command unprecedented leverage."
+          ko: "문법을 외우는 단순 '코더'는 사라지겠지만, 복잡한 문제를 정의하고 AI 도구를 지휘하는 '시스템 아키텍트'의 가치는 오히려 극대화됩니다.",
+          en: "Syntax memorizers will diminish, but architects who frame root problems and orchestrate AI systems command unprecedented leverage."
         },
         upvotes: 563,
         disagrees: 145
@@ -388,23 +388,23 @@
 
         card.innerHTML = `
           <!-- 1. 헤더 -->
-          <div class="p-3 pb-2.5 flex items-start justify-between border-b border-slate-800/60 bg-slate-900/40 text-xs gap-2">
-            <div class="flex items-start gap-1.5 flex-1 min-w-0">
-              <span class="text-base shrink-0 mt-0.5">${item.avatar}</span>
-              <div class="leading-tight">
+          <div class="p-3 pb-2 flex items-center justify-between border-b border-slate-800/60 bg-slate-900/40 text-xs">
+            <div class="flex items-center gap-1.5 min-w-0 pr-2">
+              <span class="text-base shrink-0">${item.avatar}</span>
+              <div class="truncate">
                 <span class="font-bold text-slate-200">${item.author[currentLang]}</span>
-                <span class="text-[11px] text-slate-400 inline-block">· ${item.authorTitle[currentLang]}</span>
+                <span class="text-[11px] text-slate-400">· ${item.authorTitle[currentLang]}</span>
               </div>
             </div>
-            <div class="flex items-center gap-1.5 shrink-0 whitespace-nowrap pt-0.5">
+            <div class="flex items-center gap-1.5 shrink-0 whitespace-nowrap">
               ${typeHeaderTag}
               <span class="text-[10px] font-mono text-slate-400">${item.eraTag[currentLang]}</span>
             </div>
           </div>
 
-          <!-- 2. 상단 사진 아카이브 (100% 검증 CDN) -->
+          <!-- 2. 상단 사진 -->
           <div class="relative w-full h-40 bg-slate-950 overflow-hidden border-b border-slate-800">
-            <img src="${item.imageBeforeUrl}" alt="${item.author[currentLang]}" class="w-full h-full object-cover object-center filter grayscale contrast-110 hover:grayscale-0 transition duration-500" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop&q=80';">
+            <img src="${item.imageBeforeUrl}" alt="${item.author[currentLang]}" class="w-full h-full object-cover object-center filter grayscale contrast-110 hover:grayscale-0 transition duration-500" loading="lazy">
             <div class="absolute inset-0 bg-gradient-to-t from-[#161b22] via-transparent to-black/30"></div>
             <span class="absolute bottom-2 left-3 text-[10px] font-mono text-slate-300 bg-black/60 px-2 py-0.5 rounded backdrop-blur border border-white/10 truncate max-w-[85%]">
               📷 ${item.imageCaption[currentLang]}
@@ -433,7 +433,7 @@
               </p>
             </div>
 
-            <!-- 대비 구분선 -->
+            <!-- 대비 화살표 -->
             <div class="relative flex py-0.5 items-center justify-center">
               <div class="flex-grow border-t border-slate-800"></div>
               <span class="flex-shrink mx-2 text-[10px] font-mono font-bold text-slate-400 bg-[#161b22] px-2 py-0.5 rounded border border-slate-800 whitespace-nowrap">
@@ -461,7 +461,7 @@
             </div>
           </div>
 
-          <!-- 4. 토글 투표 인터랙션 바 -->
+          <!-- 4. 1클릭 토글 투표 인터랙션 바 -->
           <div class="px-4 py-2.5 bg-slate-900/60 border-t border-slate-800/80 flex items-center justify-between text-xs">
             <div class="flex items-center gap-2">
               <button onclick="toggleVote('${item.id}', 'up')" class="vote-btn flex items-center gap-1.5 px-3 py-1.5 rounded-lg border transition whitespace-nowrap ${userVoted === 'up' ? 'bg-orange-500 text-white font-bold border-orange-500 shadow-md shadow-orange-500/30' : 'bg-slate-800/80 text-slate-300 border-slate-700 hover:border-orange-500 hover:text-orange-400'}">
