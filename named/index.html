@@ -52,7 +52,7 @@
 
       <!-- 4 Category Tabs -->
       <div class="flex items-center gap-1.5 pt-2 border-t border-slate-800/80 text-xs font-semibold overflow-x-auto no-scrollbar">
-        <button onclick="filterType('ALL')" class="filter-btn active px-3 py-1 rounded-lg bg-orange-500 text-white transition whitespace-nowrap" data-type="ALL" id="filter-all">전체</button>
+        <button onclick="filterType('ALL')" class="filter-btn active px-3 py-1 rounded-lg bg-orange-500 text-white font-bold transition whitespace-nowrap" data-type="ALL" id="filter-all">전체</button>
         <button onclick="filterType('LESSON')" class="filter-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition whitespace-nowrap" data-type="LESSON" id="filter-lesson">참교육</button>
         <button onclick="filterType('TRACK')" class="filter-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition whitespace-nowrap" data-type="TRACK" id="filter-track">성적표</button>
         <button onclick="filterType('ONGOING')" class="filter-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition whitespace-nowrap" data-type="ONGOING" id="filter-ongoing">최신발언</button>
@@ -125,16 +125,17 @@
     };
 
     const POSTS = [
-      // 1. 과거: 철도 질식사 (참교육)
       {
         id: "p1",
         cardType: "LESSON",
         eraTag: { ko: "1830년대 · 산업혁명", en: "1830s · Industrial Rev." },
         badgeText: { ko: "참교육 ✕", en: "Aged Like Milk ✕" },
         badgeClass: "bg-rose-500/10 text-rose-400 border-rose-500/20",
-        author: { ko: "영국 왕립협회 학자단", en: "Royal Society Scholars" },
+        author: { ko: "영국 왕립학회 학자단", en: "Royal Society Scholars" },
         authorTitle: { ko: "당대 최고 과학 지식인들", en: "Leading Scientists of the Era" },
         avatar: "🚂",
+        imageUrl: "https://images.unsplash.com/photo-1541447271487-09612b3f49f7?w=800&auto=format&fit=crop&q=80",
+        imageCaption: { ko: "1830년대 초기 증기기관차 개통식", en: "1830s early steam locomotive trials" },
         title: {
           ko: "기차가 시속 40km로 달리면 승객들은 질식해서 즉사한다",
           en: "Trains running at 30mph will cause passengers to die of asphyxiation"
@@ -157,7 +158,6 @@
         upvotes: 541,
         disagrees: 19
       },
-      // 2. 과거: 폴 크루그먼 팩스론 (참교육)
       {
         id: "p2",
         cardType: "LESSON",
@@ -167,6 +167,8 @@
         author: { ko: "폴 크루그먼", en: "Paul Krugman" },
         authorTitle: { ko: "노벨 경제학상 수상자", en: "Nobel Laureate in Economics" },
         avatar: "🎓",
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Paul_Krugman_2008.jpg/640px-Paul_Krugman_2008.jpg",
+        imageCaption: { ko: "노벨 경제학상 수상자 폴 크루그먼", en: "Paul Krugman, Nobel Laureate in Economics" },
         title: {
           ko: "2005년쯤 되면 인터넷의 실체가 팩스(Fax) 수준이었음이 밝혀질 것",
           en: "By 2005, the Internet's impact will be no greater than the fax machine"
@@ -189,7 +191,6 @@
         upvotes: 428,
         disagrees: 12
       },
-      // 3. 시장 판결 완료: 스티브 발머 아이폰 조롱 (성적표)
       {
         id: "p3",
         cardType: "TRACK",
@@ -199,6 +200,8 @@
         author: { ko: "스티브 발머", en: "Steve Ballmer" },
         authorTitle: { ko: "마이크로소프트 전 CEO", en: "Former CEO of Microsoft" },
         avatar: "💼",
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Steve_Ballmer_2014.jpg/640px-Steve_Ballmer_2014.jpg",
+        imageCaption: { ko: "아이폰 발표 당시 비웃던 스티브 발머", en: "Steve Ballmer laughing at iPhone launch" },
         title: {
           ko: "500달러짜리 아이폰? 키보드가 없어서 비즈니스맨에겐 0%짜리 장난감",
           en: "There's no chance the iPhone is going to get any significant market share"
@@ -221,7 +224,6 @@
         upvotes: 689,
         disagrees: 14
       },
-      // 4. 시장 판결 완료: 샘 알트만 AGI 연막 (성적표)
       {
         id: "p4",
         cardType: "TRACK",
@@ -231,6 +233,8 @@
         author: { ko: "샘 알트만", en: "Sam Altman" },
         authorTitle: { ko: "OpenAI CEO", en: "CEO of OpenAI" },
         avatar: "🤖",
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Sam_Altman_TechCrunch_Disrupt_2019_%28cropped%29.jpg/640px-Sam_Altman_TechCrunch_Disrupt_2019_%28cropped%29.jpg",
+        imageCaption: { ko: "OpenAI CEO 샘 알트만", en: "OpenAI CEO Sam Altman" },
         title: {
           ko: "현재의 LLM은 생각하는 지능이 아니다. AGI는 아직 멀었다",
           en: "Current LLMs are useful tools, not thinking minds. Far from AGI"
@@ -253,7 +257,6 @@
         upvotes: 380,
         disagrees: 28
       },
-      // 5. 극최신 진행형: 일론 머스크 로보택시/노동 종말 (최신발언)
       {
         id: "p5",
         cardType: "ONGOING",
@@ -263,6 +266,8 @@
         author: { ko: "일론 머스크", en: "Elon Musk" },
         authorTitle: { ko: "테슬라 CEO", en: "CEO of Tesla" },
         avatar: "🚗",
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg/640px-Elon_Musk_Royal_Society_%28crop2%29.jpg",
+        imageCaption: { ko: "테슬라 CEO 일론 머스크", en: "Tesla CEO Elon Musk" },
         title: {
           ko: "2026년 안에 무인 로보택시가 미국 전역을 달리고 인간 운전자는 사라진다",
           en: "Unsupervised Robotaxis will be operating across the US within 2026"
@@ -285,7 +290,6 @@
         upvotes: 489,
         disagrees: 172
       },
-      // 6. 극최신 진행형: 젠슨 황 코딩 종말론 (최신발언)
       {
         id: "p6",
         cardType: "ONGOING",
@@ -295,6 +299,8 @@
         author: { ko: "젠슨 황", en: "Jensen Huang" },
         authorTitle: { ko: "엔비디아 CEO", en: "CEO of NVIDIA" },
         avatar: "⚡",
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Jensen_Huang_at_Computex_2023.jpg/640px-Jensen_Huang_at_Computex_2023.jpg",
+        imageCaption: { ko: "엔비디아 CEO 젠슨 황", en: "NVIDIA CEO Jensen Huang" },
         title: {
           ko: "더 이상 코딩을 배울 필요 없다. 모든 아이에게 컴퓨터 대신 다른 걸 가르쳐라",
           en: "Nobody has to learn to code. Our job is to create computing that speaks human"
@@ -375,7 +381,7 @@
         card.className = "bg-[#161b22] border border-slate-800 rounded-2xl overflow-hidden shadow-xl";
 
         card.innerHTML = `
-          <!-- 1. Header: Author & Tag (Natural Wrapping) -->
+          <!-- 1. Header: Author & Tag -->
           <div class="p-3.5 pb-2.5 flex items-start justify-between border-b border-slate-800/60 bg-slate-900/40 text-xs gap-2">
             <div class="flex items-center gap-2">
               <span class="text-base">${item.avatar}</span>
@@ -390,7 +396,20 @@
             </div>
           </div>
 
-          <!-- 2. Body -->
+          <!-- 2. Photo Archive Banner (With Fallback) -->
+          <div class="relative w-full h-44 bg-slate-950 overflow-hidden border-b border-slate-800">
+            <img src="${item.imageUrl}" 
+                 alt="${item.author[currentLang]}" 
+                 class="w-full h-full object-cover object-center filter contrast-110"
+                 loading="lazy"
+                 onerror="this.onerror=null; this.parentElement.style.display='none';">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#161b22] via-transparent to-black/30"></div>
+            <span class="absolute bottom-2 left-3 text-[10px] font-mono text-slate-300 bg-black/70 px-2 py-0.5 rounded backdrop-blur border border-white/10">
+              📷 ${item.imageCaption[currentLang]}
+            </span>
+          </div>
+
+          <!-- 3. Body -->
           <div class="p-4 space-y-3">
             <div class="flex items-start justify-between gap-2">
               <h2 class="text-base font-extrabold text-white leading-snug tracking-tight">
@@ -440,7 +459,7 @@
             </div>
           </div>
 
-          <!-- 3. Toggle Voting Bar -->
+          <!-- 4. Toggle Voting Bar -->
           <div class="px-4 py-2.5 bg-slate-900/60 border-t border-slate-800/80 flex items-center justify-between text-xs">
             <div class="flex items-center gap-2">
               <button onclick="toggleVote('${item.id}', 'up')" class="vote-btn flex items-center gap-1.5 px-3 py-1.5 rounded-lg border transition ${userVoted === 'up' ? 'bg-orange-500 text-white font-bold border-orange-500 shadow-md shadow-orange-500/30' : 'bg-slate-800/80 text-slate-300 border-slate-700 hover:border-orange-500 hover:text-orange-400'}">
@@ -464,7 +483,7 @@
       const prev = localStorage.getItem(votedKey);
 
       if (prev === type) {
-        localStorage.removeItem(votedKey); // Toggle off (cancel vote)
+        localStorage.removeItem(votedKey);
       } else {
         localStorage.setItem(votedKey, type);
       }
