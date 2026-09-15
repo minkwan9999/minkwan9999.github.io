@@ -3,44 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>인사이트랩 - SNS 네임드 결정적 한마디 아카이브</title>
-  <meta name="description" content="일론 머스크, 샘 알트만, 워런 버핏 등 유명인들의 과거 SNS 발언과 N년 뒤 실제 시장 결과, 데이터 기반 인사이트를 사후 검증합니다.">
-  <meta property="og:title" content="인사이트랩: 유명인 SNS 발언 사후 검증소">
-  <meta property="og:description" content="그때 그들의 예측은 맞았을까? 과거 발언과 현재 결과를 한눈에 대조해 보세요.">
+  <title>인사이트랩 - 빅마우스 호언장담 사후 검증소</title>
+  <meta name="description" content="일론 머스크, 샘 알트만 등 네임드들의 과거 SNS 발언과 N년 뒤 실제 성적표. 말과 현실의 괴리를 복기합니다.">
+  <meta property="og:title" content="인사이트랩: 네임드 발언 사후 검증">
+  <meta property="og:description" content="그때 그 장담은 어떻게 끝났을까? 과거 발언 vs 현재 성적표 팩트체크.">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Pretendard', -apple-system, sans-serif; }
+  </style>
 </head>
-<body class="bg-slate-900 text-slate-100 antialiased min-h-screen p-4 flex flex-col items-center">
+<body class="bg-[#0b0f17] text-slate-100 antialiased min-h-screen py-8 px-4 flex flex-col items-center selection:bg-rose-500 selection:text-white">
 
-  <main class="w-full max-w-xl my-4 space-y-6">
-    <!-- 브랜드 헤더 -->
-    <header class="text-center space-y-2 pt-2">
-      <div class="flex items-center justify-center gap-2">
-        <a href="/" class="text-xs text-slate-400 hover:text-white transition">← 인사이트랩 홈</a>
-        <span class="text-slate-600">|</span>
-        <span class="text-[11px] font-bold tracking-widest px-2.5 py-0.5 bg-indigo-500/20 text-indigo-400 border border-indigo-500/30 rounded-full">VOL. 01</span>
+  <main class="w-full max-w-lg space-y-6">
+    <!-- 헤더: 매거진 타이포 스타일 -->
+    <header class="space-y-3 pb-2 border-b border-slate-800">
+      <div class="flex items-center justify-between text-[11px] font-mono tracking-wider text-slate-400">
+        <span class="text-rose-400 font-black tracking-widest">● FACT-CHECK ARCHIVE</span>
+        <span>INSIGHT LAB VOL.01</span>
       </div>
-      <h1 class="text-2xl font-black text-white tracking-tight mt-2">네임드 발언 사후 검증소</h1>
-      <p class="text-xs text-slate-400 leading-relaxed">
-        빅마우스들의 과거 SNS 호언장담과 N년 뒤 실제 시장 성적표를 복기합니다.
+      <h1 class="text-3xl font-black text-white tracking-tight leading-tight">
+        그때 그 호언장담,<br>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-amber-300 to-emerald-400">지금 어떻게 됐을까?</span>
+      </h1>
+      <p class="text-xs text-slate-400 leading-relaxed font-medium">
+        빅마우스들이 남긴 결정적 한마디와 N년 뒤 냉정한 성적표. 말의 무게를 복기합니다.
       </p>
+
+      <!-- 탭 필터 -->
+      <div class="flex items-center gap-1.5 pt-2 text-xs font-semibold overflow-x-auto pb-1" id="filter-container">
+        <button onclick="filterCategory('ALL')" class="filter-btn active px-3 py-1.5 rounded-full bg-white text-black transition" data-category="ALL">전체</button>
+        <button onclick="filterCategory('테크/AI')" class="filter-btn px-3 py-1.5 rounded-full bg-slate-800/80 text-slate-400 border border-slate-700/60 transition hover:text-white" data-category="테크/AI">테크·AI</button>
+        <button onclick="filterCategory('금융/크립토')" class="filter-btn px-3 py-1.5 rounded-full bg-slate-800/80 text-slate-400 border border-slate-700/60 transition hover:text-white" data-category="금융/크립토">금융·크립토</button>
+        <button onclick="filterCategory('기업/경영')" class="filter-btn px-3 py-1.5 rounded-full bg-slate-800/80 text-slate-400 border border-slate-700/60 transition hover:text-white" data-category="기업/경영">기업·경영</button>
+      </div>
     </header>
 
-    <!-- 카테고리 필터 태그 -->
-    <div class="flex items-center justify-center gap-1.5 text-xs flex-wrap" id="filter-container">
-      <button onclick="filterCategory('ALL')" class="filter-btn active px-3 py-1.5 rounded-lg bg-indigo-600 text-white font-semibold transition" data-category="ALL">전체</button>
-      <button onclick="filterCategory('테크/AI')" class="filter-btn px-3 py-1.5 rounded-lg bg-slate-800 text-slate-400 hover:text-white border border-slate-700 transition" data-category="테크/AI">테크·AI</button>
-      <button onclick="filterCategory('금융/크립토')" class="filter-btn px-3 py-1.5 rounded-lg bg-slate-800 text-slate-400 hover:text-white border border-slate-700 transition" data-category="금융/크립토">금융·크립토</button>
-      <button onclick="filterCategory('기업/경영')" class="filter-btn px-3 py-1.5 rounded-lg bg-slate-800 text-slate-400 hover:text-white border border-slate-700 transition" data-category="기업/경영">기업·경영</button>
-    </div>
+    <!-- 피드 리스트 -->
+    <div id="cards-container" class="space-y-6"></div>
 
-    <!-- 카드 리스트 컨테이너 -->
-    <div id="cards-container" class="space-y-4 text-sm"></div>
-
-    <!-- 하단 알림 및 크레딧 -->
-    <section class="border-t border-slate-800 pt-5 text-xs text-slate-500 space-y-1 text-center">
-      <p>공개 SNS 게시물 및 당시 시장 지표를 기반으로 기록되었습니다.</p>
-      <p>© 2026 인사이트랩 (InsightLab). All rights reserved.</p>
-    </section>
+    <!-- 푸터 -->
+    <footer class="pt-8 pb-4 text-center text-xs text-slate-600 border-t border-slate-900 space-y-1">
+      <p>공개 기록 및 공시·시장 지표에 근거하여 작성되었습니다.</p>
+      <p>© 2026 인사이트랩 (InsightLab)</p>
+    </footer>
   </main>
 
   <script>
@@ -48,122 +56,98 @@
       {
         id: 1,
         author: "일론 머스크",
+        handle: "@elonmusk",
+        avatarBg: "bg-blue-600",
         role: "테슬라 CEO",
         platform: "X (구 Twitter)",
         date: "2018년 8월",
         category: "기업/경영",
-        statement: "테슬라를 주당 420달러에 비상장사로 전환하는 방안을 고려 중이다. 자금은 확보되었다(Funding secured).",
-        verifiedResult: "실제 자금 확보는 사실무근으로 드러나 SEC로부터 4,000만 달러 벌금형 및 의장직 사임 합의 처분을 받음. 다만 테슬라는 이후 흑자 전환과 S&P500 편입을 거치며 기업가치가 10배 이상 폭등함.",
-        resultType: "mixed",
-        insight: "리더의 정제되지 않은 언행 리스크와 제품/기업 본질 펀더멘털의 성장은 별개로 작동할 수 있음을 증명한 대표적 사례."
+        punchline: "테슬라를 주당 420달러에 비상장사로 전환하겠다. 자금은 확보되었다.",
+        originalQuote: "Am considering taking Tesla private at $420. Funding secured.",
+        verdict: "벌금 4,000만 달러 & 이후 주가 10배 폭등",
+        resultType: "mixed", // fail, success, mixed
+        realityText: "실제 확보된 자금은 없었으며 SEC로부터 사기 혐의로 4,000만 달러 벌금과 의장직 박탈 처분을 당했습니다. 그러나 이 소동 이후 테슬라는 대량 양산에 안착하며 주가가 1,000% 넘게 폭등했습니다.",
+        takeaway: "리더의 입은 가벼웠으나 공장의 실행력은 진짜였다. 노이즈와 펀더멘털을 구분하지 못한 쇼트(공매도) 세력만 궤멸당한 사건."
       },
       {
         id: 2,
         author: "샘 알트만",
+        handle: "@sama",
+        avatarBg: "bg-emerald-600",
         role: "OpenAI CEO",
         platform: "X (구 Twitter)",
         date: "2023년 2월",
         category: "테크/AI",
-        statement: "우리는 여전히 AGI와 거리가 멀다. 현재의 LLM은 유용한 도구일 뿐 스스로 생각하는 지능이 아니다.",
-        verifiedResult: "발언 직후 GPT-4, 멀티모달, 추론 전용 모델이 연이어 공개되며 지식 노동 대체 속도가 예상보다 급격히 빨라짐. 업계에서는 독점 및 규제 당국의 개입을 지연시키기 위한 전략적 기대치 낮추기(Sandbagging)로 평가.",
+        punchline: "현재의 LLM은 스스로 생각하는 지능이 아니다. AGI는 아직 멀었다.",
+        originalQuote: "Current LLMs are useful tools, not thinking minds. We are still far from AGI.",
+        verdict: "엄살 작전 (규제 회피용 샌드배깅)",
         resultType: "success",
-        insight: "빅테크 파운더의 겸손한 톤앤매너는 대중 안심과 정무적 규제 회피를 목적으로 설계된 고도의 언론 플레이일 가능성을 경계해야 함."
+        realityText: "이 말을 남긴 직후 GPT-4와 추론 전용 모델(o1)을 쏟아내며 시장을 충격에 빠뜨렸습니다. 정부와 규제 당국의 사전 검열을 피하기 위해 일부러 기술 수준을 낮춰 부르는 전형적인 '기대치 낮추기'였습니다.",
+        takeaway: "빅테크 파운더가 '우린 아직 멀었다'며 겸손을 떨 때는 경쟁자의 안도와 규제 당국의 방심을 유도하는 전략적 연막일 확률이 높다."
       },
       {
         id: 3,
+        author: "마이클 버리",
+        handle: "@michaeljburry",
+        avatarBg: "bg-purple-600",
+        role: "빅쇼트 실제 주인공",
+        platform: "X (구 Twitter)",
+        date: "2023년 1월",
+        category: "금융/크립토",
+        punchline: "Sell. (팔아라)",
+        originalQuote: "Sell.",
+        verdict: "역대급 상승장 직전 매도 경고 (대실패)",
+        resultType: "fail",
+        realityText: "단 한 단어의 트윗을 남기고 시장 폭락에 베팅했으나, 나스닥은 엔비디아를 필두로 한 생성형 AI 랠리를 시작하며 역사적 신고가를 갈아치웠습니다. 버리는 결국 두 달 뒤 '틀렸다'고 인정했습니다.",
+        takeaway: "거시 지표상 침체가 확실해 보여도, 시장의 탐욕과 새로운 기술 테마가 만드는 유동성 관성은 비관론자를 먼저 파산시킨다."
+      },
+      {
+        id: 4,
         author: "마이클 세일러",
+        handle: "@saylor",
+        avatarBg: "bg-amber-600",
         role: "마이크로스트래티지 의장",
         platform: "X (구 Twitter)",
         date: "2022년 6월",
         category: "금융/크립토",
-        statement: "비트코인이 2만 달러 밑으로 폭락해도 절대 팔지 않는다. 기업의 모든 현금과 회사채를 동원해 계속 매수할 것이다.",
-        verifiedResult: "당시 주주들의 극심한 반발과 마진콜 청산설에 직면했으나 끝까지 버텨냄. 이후 비트코인이 전고점을 뚫고 폭등하며 기업 가치가 나스닥 최상위권 상승률을 기록, 비트코인 레버리지 지주회사로 탈바꿈.",
+        punchline: "비트코인이 2만 달러 밑으로 곤두박질쳐도 우리는 1사토시도 안 판다.",
+        originalQuote: "We will not sell. MicroStrategy will continue to acquire bitcoin.",
+        verdict: "평가손실 수천억 ➔ 조 단위 평가익 전환",
         resultType: "success",
-        insight: "조롱받는 하락장에서 원칙과 자금 조달 구조(만기가 긴 무이자 전환사채)가 뒷받침된 단일 베팅은 파괴적인 비대칭 보상을 낳음."
-      },
-      {
-        id: 4,
-        author: "마크 저커버그",
-        role: "메타 CEO",
-        platform: "Facebook",
-        date: "2021년 10월",
-        category: "테크/AI",
-        statement: "앞으로 우리 회사의 북극성은 메타버스다. 모바일 인터넷의 다음 후계자는 VR/AR 메타버스가 될 것이다.",
-        verifiedResult: "사명을 메타로 바꾸고 리얼리티 랩스에 수백억 달러를 쏟아부었으나 대규모 적자와 주가 폭락을 초래. 이후 2023년 '효율의 해'를 선언하며 인력을 대규모 감원하고 LLaMA 중심의 오픈소스 AI로 급격히 피벗하여 부활.",
-        resultType: "fail",
-        insight: "시장 수요가 무르익지 않은 플랫폼 인프라에 자본을 선제 투입하는 것은 빅테크조차 휘청거리게 만드는 과잉 확신 편향의 전형."
+        realityText: "당시 기업 파산설과 주주들의 거센 비난에 직면했으나 만기가 긴 무이자 전환사채로 버텼습니다. 이후 비트코인이 10만 달러를 돌파하며 회사는 S&P500 최상위권 상승률을 기록했습니다.",
+        takeaway: "조롱받는 하락장에서 자금 조달 구조(만기 압박 없는 빚)를 버틸 수 있게 짜둔 집착은 비대칭적 보상을 낳는다."
       },
       {
         id: 5,
-        author: "워런 버핏",
-        role: "버크셔 해서웨이 회장",
-        platform: "연례 주주서한 / CNBC",
-        date: "2020년 5월",
+        author: "캐시 우드",
+        handle: "@CathieDWood",
+        avatarBg: "bg-rose-600",
+        role: "ARK 인베스트 대표",
+        platform: "X / 인터뷰",
+        date: "2021년 2월",
         category: "금융/크립토",
-        statement: "세상이 바뀌었다. 항공 산업의 미래는 불투명하다. 우리는 보유하던 미국 4대 항공주 전량을 손절 매도했다.",
-        verifiedResult: "팬데믹 공포의 극점에서 전량 매도했으나, 1년 뒤 글로벌 리오프닝과 함께 항공주가 단기 2~3배 급반등함. '오마하의 현인도 바닥에서 패닉 셀을 한다'는 조롱을 받음.",
+        punchline: "전통 가치주의 시대는 끝났다. 파괴적 혁신 기업만 연 40% 복리를 낸다.",
+        originalQuote: "Traditional value stocks are value traps. Disruptive innovation will dominate.",
+        verdict: "편입 종목 -80% 대폭락 (기술주 거품 붕괴)",
         resultType: "fail",
-        insight: "대가조차 꼬리 위험(Tail Risk) 앞에서는 손절을 택함. 다만 버핏의 목적은 최고점 매도가 아니라 영구적 자본 손실의 원천 차단이었음."
+        realityText: "발언 직후 연준의 급격한 금리 인상이 시작되자 ARKK 펀드의 혁신 성장주들이 70~80% 이상 폭락했습니다. 반면 버림받았던 원유, 금융, 방산 등 전통 가치주들은 사상 최고가를 경신했습니다.",
+        takeaway: "초저금리 유동성이 만든 주가 급등을 자신의 선구안으로 착각하면 사이클 반전 때 원금 복구가 불가능해진다."
       },
       {
         id: 6,
-        author: "캐시 우드",
-        role: "ARK 인베스트 CEO",
-        platform: "X (구 Twitter)",
-        date: "2021년 2월",
-        category: "금융/크립토",
-        statement: "전통 가치주의 시대는 끝났다. 파괴적 혁신 플랫폼 기업들만 향후 5년간 연평균 30~40% 복리 수익을 안겨줄 것이다.",
-        verifiedResult: "고금리 긴축 국면이 시작되자 ARKK 편입 종목(줌, 텔라닥 등)들이 70~80% 이상 폭락. 반면 버림받았던 에너지·금융 전통 가치주와 빅테크 독점주들만 사상 최고가를 경신함.",
-        resultType: "fail",
-        insight: "초저금리 유동성 파티에서 발생한 멀티플 확장을 비즈니스 모델의 영구적 우위로 착각하면 하락장에서 회복 불가능한 손실을 입음."
-      },
-      {
-        id: 7,
-        author: "젠슨 황",
-        role: "엔비디아 CEO",
-        platform: "컴퓨텍스 / 인터뷰",
-        date: "2023년 5월",
+        author: "마크 저커버그",
+        handle: "@zuck",
+        avatarBg: "bg-sky-600",
+        role: "메타 CEO",
+        platform: "Facebook 발표",
+        date: "2021년 10월",
         category: "테크/AI",
-        statement: "컴퓨팅의 새로운 시대가 열렸다. 지난 60년간의 범용 컴퓨팅 시대는 끝났고 가속 컴퓨팅이 모든 데이터센터를 집어삼킬 것이다.",
-        verifiedResult: "발언 당시 주가 고점 논란이 거셌으나, 빅테크의 AI 클러스터 투자 러시가 폭발하며 분기 순이익이 수백 퍼센트 급증. 엔비디아는 글로벌 시가총액 1위 자리를 수시로 탈환함.",
-        resultType: "success",
-        insight: "산업 하드웨어 아키텍처의 패러다임 전환을 가장 밑단에서 체감하는 공급망 독점자의 선언은 가장 신뢰도 높은 선행 지표."
-      },
-      {
-        id: 8,
-        author: "마이클 버리",
-        role: "사이언 에셋 대표",
-        platform: "X (구 Twitter)",
-        date: "2023년 1월",
-        category: "금융/크립토",
-        statement: "Sell. (팔아라)",
-        verifiedResult: "미국 증시 하락에 거액의 풋옵션을 매수하며 침체를 경고했으나, 나스닥은 AI 랠리를 타고 역사상 유례없는 대세 상승장을 기록. 버리는 몇 달 뒤 '내가 틀렸다(I was wrong)'고 공개 인정함.",
+        punchline: "사명을 메타로 바꾼다. 모바일 다음은 100% 메타버스다.",
+        originalQuote: "From now on, we're going to be metaverse first, not Facebook first.",
+        verdict: "수십조 적자 ➔ 2년 뒤 AI(LLaMA)로 긴급 피벗",
         resultType: "fail",
-        insight: "거시경제 지표상 침체 신호가 명백하더라도 시장의 유동성과 탐욕 모멘텀은 비이성적 상태를 생각보다 훨씬 오래 지속시킴."
-      },
-      {
-        id: 9,
-        author: "손정의",
-        role: "소프트뱅크 회장",
-        platform: "실적 발표회",
-        date: "2019년 11월",
-        category: "기업/경영",
-        statement: "위워크(WeWork)에 대한 나의 투자 판단은 틀렸다. 창업자의 과장된 비전에 눈이 멀어 거버넌스 문제를 간과했다.",
-        verifiedResult: "수조 원 규모의 평가손실을 인정하고 자금 수혈을 멈춤. 이후 위워크는 만성 적자를 극복하지 못하고 2023년 결국 미국 법원에 파산보호(Chapter 11)를 신청함.",
-        resultType: "success",
-        insight: "아무리 거대한 자본을 쥐고 있어도 유닛 이코노믹스(단위당 수익성)가 붕괴된 비즈니스 모델은 지속될 수 없음을 인정한 냉정한 손절의 교훈."
-      },
-      {
-        id: 10,
-        author: "팀 쿡",
-        role: "애플 CEO",
-        platform: "실적 발표 / 인터뷰",
-        date: "2021년 4월",
-        category: "기업/경영",
-        statement: "개인정보 보호는 인간의 기본 권리다. 사용자의 동의 없는 무단 앱 추적을 시스템 차원에서 전면 차단(ATT)하겠다.",
-        verifiedResult: "iOS 업데이트 적용 즉시 메타(페이스북)의 타깃 광고 매출이 분기 수십조 원 단위로 증발함. 반면 애플 자체 광고 네트워크(애플 서치 애드) 매출은 반사이익으로 급성장함.",
-        resultType: "success",
-        insight: "도덕적 명분(프라이버시 보호)을 앞세운 플랫폼 독점자의 룰 변경은 경쟁자의 비즈니스 모델을 합법적으로 파괴하는 가장 강력한 무기."
+        realityText: "리얼리티 랩스에 분기 수조 원씩 쏟아부었으나 대중의 외면을 받고 주가가 1/3 토막 났습니다. 결국 메타버스를 뒤로 미루고 '효율의 해' 선언과 함께 오픈소스 AI에 올인하며 극적으로 부활했습니다.",
+        takeaway: "기술적 완성도와 고객의 실제 소비 욕구 사이의 시차를 무시한 올인은 빅테크 1위 천재도 휘청이게 만든다."
       }
     ];
 
@@ -174,51 +158,74 @@
       const filtered = filter === 'ALL' ? DATA : DATA.filter(item => item.category === filter);
 
       filtered.forEach(item => {
-        const badgeColor = item.resultType === 'success' 
-          ? 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20' 
-          : item.resultType === 'fail' 
-          ? 'text-rose-400 bg-rose-500/10 border-rose-500/20' 
-          : 'text-amber-400 bg-amber-500/10 border-amber-500/20';
-
-        const badgeText = item.resultType === 'success' ? '결과 적중' : item.resultType === 'fail' ? '예측 빗나감' : '복합적 결과';
+        // 결과 뱃지 색상 및 태그
+        let badgeBg, badgeBorder, badgeText, statusIcon;
+        if (item.resultType === 'success') {
+          badgeBg = 'bg-emerald-500/10 text-emerald-400 border-emerald-500/30';
+          badgeText = '적중 / 성공';
+          statusIcon = '✓';
+        } else if (item.resultType === 'fail') {
+          badgeBg = 'bg-rose-500/10 text-rose-400 border-rose-500/30';
+          badgeText = '예측 빗나감';
+          statusIcon = '✕';
+        } else {
+          badgeBg = 'bg-amber-500/10 text-amber-400 border-amber-500/30';
+          badgeText = '반전 / 복합';
+          statusIcon = '△';
+        }
 
         const card = document.createElement('article');
-        card.className = "bg-slate-800/90 border border-slate-700 rounded-2xl p-5 shadow-lg space-y-4";
+        card.className = "bg-[#131926] border border-slate-800 rounded-2xl p-5 shadow-2xl relative overflow-hidden transition hover:border-slate-700";
+
         card.innerHTML = `
-          <div class="flex items-start justify-between border-b border-slate-700/60 pb-3">
-            <div>
-              <div class="flex items-center gap-2">
-                <h2 class="text-base font-bold text-white tracking-tight">${item.author}</h2>
-                <span class="text-[11px] text-slate-400">· ${item.role}</span>
+          <!-- 1. 소셜 프로필 헤더 -->
+          <div class="flex items-center justify-between gap-3 mb-4">
+            <div class="flex items-center gap-2.5">
+              <div class="w-10 h-10 rounded-full ${item.avatarBg} flex items-center justify-center font-black text-white text-base shadow-inner">
+                ${item.author.charAt(0)}
               </div>
-              <span class="text-[11px] text-slate-500">${item.platform} · ${item.date}</span>
+              <div>
+                <div class="flex items-center gap-1.5">
+                  <span class="font-extrabold text-white text-sm tracking-tight">${item.author}</span>
+                  <span class="text-[11px] text-slate-400">${item.handle}</span>
+                </div>
+                <div class="text-[11px] text-slate-500 flex items-center gap-1.5">
+                  <span>${item.role}</span>
+                  <span>·</span>
+                  <span>${item.date}</span>
+                </div>
+              </div>
             </div>
-            <span class="text-[11px] font-semibold px-2 py-0.5 rounded border ${badgeColor}">
-              ${badgeText}
+            <span class="text-[11px] font-mono font-bold px-2.5 py-1 rounded-full border ${badgeBg} flex items-center gap-1">
+              <span>${statusIcon}</span> ${badgeText}
             </span>
           </div>
 
-          <div class="space-y-1">
-            <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">당시 발언</span>
-            <blockquote class="text-sm font-medium text-slate-100 bg-slate-900/60 p-3 rounded-xl border border-slate-800 leading-relaxed italic">
-              "${item.statement}"
-            </blockquote>
-          </div>
-
-          <div class="space-y-1">
-            <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">사후 검증 결과</span>
-            <p class="text-xs text-slate-300 leading-relaxed pl-1">
-              ${item.verifiedResult}
+          <!-- 2. 핵심 펀치라인 (크고 강렬하게) -->
+          <div class="mb-4 pl-3.5 border-l-2 border-rose-500/80 space-y-1">
+            <p class="text-base sm:text-lg font-black text-white tracking-tight leading-snug">
+              "${item.punchline}"
+            </p>
+            <p class="text-[11px] text-slate-400 font-mono italic">
+              ${item.originalQuote}
             </p>
           </div>
 
-          <div class="bg-indigo-950/40 border border-indigo-500/20 rounded-xl p-3.5 space-y-1">
-            <div class="flex items-center gap-1.5">
-              <span class="text-indigo-400 text-xs">💡</span>
-              <span class="text-xs font-bold text-indigo-300">복기 인사이트</span>
+          <!-- 3. N년 뒤 현실 성적표 (고대비 박스) -->
+          <div class="bg-[#0b0f17] rounded-xl p-3.5 border border-slate-800/80 mb-3 space-y-1.5">
+            <div class="flex items-center gap-1.5 text-[11px] font-bold text-slate-400 uppercase tracking-wider">
+              <span class="text-amber-400">📊</span>
+              <span>현실 성적표: <strong class="text-slate-200">${item.verdict}</strong></span>
             </div>
             <p class="text-xs text-slate-300 leading-relaxed">
-              ${item.insight}
+              ${item.realityText}
+            </p>
+          </div>
+
+          <!-- 4. 팩폭 인사이트 (형광 하이라이트 느낌) -->
+          <div class="bg-gradient-to-r from-rose-950/30 to-amber-950/20 border-l-2 border-amber-400/80 rounded-r-xl p-3">
+            <p class="text-xs font-semibold text-amber-200/90 leading-relaxed">
+              <span class="font-black text-amber-400 mr-1">💡 복기:</span> ${item.takeaway}
             </p>
           </div>
         `;
@@ -229,9 +236,9 @@
     function filterCategory(category) {
       document.querySelectorAll('.filter-btn').forEach(btn => {
         if (btn.dataset.category === category) {
-          btn.className = "filter-btn active px-3 py-1.5 rounded-lg bg-indigo-600 text-white font-semibold transition";
+          btn.className = "filter-btn active px-3 py-1.5 rounded-full bg-white text-black transition";
         } else {
-          btn.className = "filter-btn px-3 py-1.5 rounded-lg bg-slate-800 text-slate-400 hover:text-white border border-slate-700 transition";
+          btn.className = "filter-btn px-3 py-1.5 rounded-full bg-slate-800/80 text-slate-400 border border-slate-700/60 transition hover:text-white";
         }
       });
       renderCards(category);
