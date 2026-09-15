@@ -6,7 +6,7 @@
   <title>인사이트랩 - 사이다·참교육 명예의 전당 (Justice Served)</title>
   <meta name="description" content="보배드림, 블라인드 등 인터넷을 달군 역대급 빌런과 사이다 참교육 실화 아카이브. 현실 법률/대응 팁까지 정리합니다.">
   <meta property="og:title" content="인사이트랩: 사이다·참교육 명예의 전당">
-  <meta property="og:description" content="선 넘은 빌런들의 인과응보 결말과 실전 법적 대응 인사이트">
+  <meta property="og:description" content="선 넘은 빌런들의 결말과 실전 법적 대응 인사이트">
   <script src="https://cdn.tailwindcss.com"></script>
 
 <!-- Google tag (gtag.js) -->
@@ -50,12 +50,13 @@
         </div>
       </div>
 
-      <!-- 4개 카테고리 탭 -->
+      <!-- 카테고리 탭 (진행형 포함 5개) -->
       <div class="flex items-center gap-1.5 pt-2 border-t border-slate-800/80 text-xs font-semibold overflow-x-auto whitespace-nowrap">
         <button onclick="filterType('ALL')" class="filter-btn active px-3 py-1 rounded-lg bg-cyan-500 text-white font-bold transition" data-type="ALL" id="filter-all">전체 피드</button>
+        <button onclick="filterType('ONGOING')" class="filter-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition" data-type="ONGOING" id="filter-ongoing">진행형 ⏳</button>
         <button onclick="filterType('PARKING')" class="filter-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition" data-type="PARKING" id="filter-parking">주차·교통</button>
         <button onclick="filterType('WORK')" class="filter-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition" data-type="WORK" id="filter-work">직장·갑질</button>
-        <button onclick="filterType('COMMERCE')" class="filter-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition" data-type="COMMERCE" id="filter-commerce">사기·중고거래</button>
+        <button onclick="filterType('COMMERCE')" class="filter-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition" data-type="COMMERCE" id="filter-commerce">사기·상거래</button>
       </div>
     </header>
 
@@ -80,14 +81,18 @@
         subtitle: "레전드 참교육 사건 & 실전 법적 대응 수칙",
         home: "홈",
         filterAll: "전체 피드",
+        filterOngoing: "진행형 ⏳",
         filterParking: "주차·교통",
         filterWork: "직장·갑질",
-        filterCommerce: "사기·중고거래",
+        filterCommerce: "사기·상거래",
         incidentLabel: "🚨 사건 발단 및 만행",
-        verdictTitle: "⚖️ 인과응보 사이다 결말",
+        verdictTitleResolved: "⚖️ 인과응보 사이다 결말",
+        verdictTitleOngoing: "⏳ 현재 수사·재판 공방 현황",
         takeawayTitle: "💡 실전 대처·법적 팁:",
         voteAwesome: "⚡ 속이 뻥 뚫림",
         voteWeak: "🤔 처벌이 약함",
+        voteOngoingGuilty: "🔥 구속/실형 각",
+        voteOngoingFlee: "🤔 솜방망이 우려",
         votedBadge: "열람 완료",
         footerNote: "실제 언론 보도 및 판례 아카이브를 바탕으로 재구성되었습니다."
       },
@@ -97,24 +102,97 @@
         subtitle: "Legendary instant karma & practical legal tips",
         home: "Home",
         filterAll: "All Feeds",
+        filterOngoing: "In Progress ⏳",
         filterParking: "Traffic & Parking",
         filterWork: "Workplace",
         filterCommerce: "Scams & Fraud",
         incidentLabel: "🚨 The Audacity / Incident",
-        verdictTitle: "⚖️ The Sweet Karma Outcome",
+        verdictTitleResolved: "⚖️ The Sweet Karma Outcome",
+        verdictTitleOngoing: "⏳ Current Legal Proceeding",
         takeawayTitle: "💡 Practical Legal Advice:",
         voteAwesome: "⚡ Pure Catharsis",
         voteWeak: "🤔 Too Lenient",
+        voteOngoingGuilty: "🔥 Jail Time Bound",
+        voteOngoingFlee: "🤔 Soft Penalty Fear",
         votedBadge: "Verified",
         footerNote: "Compiled based on verified news reports and legal precedent archives."
       }
     };
 
     const POSTS = [
-      // 1. 송도 지하주차장 입구 봉쇄 (주차·교통)
+      // 1. [진행형 1] 배달음식 벌레 자작극 상습 환불 공갈녀
+      {
+        id: "j_on1",
+        cardType: "COMMERCE",
+        isOngoing: true,
+        categoryName: { ko: "상거래 사기", en: "Commerce Extortion" },
+        statusBadge: { ko: "공갈죄 기소 ⏳", en: "Indicted ⏳" },
+        statusColor: "bg-amber-500/10 text-amber-400 border-amber-500/20",
+        target: { ko: "상습 환불 협박 인플루언서", en: "Habitual Refund Extortionist" },
+        location: { ko: "서울 강남 일대 식당가", en: "Gangnam, Seoul" },
+        avatar: "🍱",
+        imageBeforeUrl: "https://images.unsplash.com/photo-1526367790999-0150786686a2?w=800&auto=format&fit=crop&q=80",
+        imageCaption: { ko: "음식 배달 포장 및 매장 CCTV 교차 검증", en: "Packaging validation & surveillance" },
+        title: {
+          ko: "배달음식에 일부러 벌레 넣고 'SNS 폭로' 협박해 돈 뜯어내던 자작극의 최후",
+          en: "Planted insects in delivery food and blackmailed owners with social media ruin"
+        },
+        incidentDetail: {
+          ko: "배달받은 고가 음식에 본인이 준비한 날벌레와 이물질을 직접 넣은 뒤 사진을 찍어 리뷰 별점 테러. 'SNS와 구청에 위생 불량으로 폭로해 매장 문 닫게 만들겠다'며 수십 차례 환불과 현금 합의금을 갈취함.",
+          en: "Planted bugs into ordered food, posted 1-star reviews, and blackmailed restaurateurs: 'I will destroy your business on Instagram unless you refund and pay hush money.'"
+        },
+        timelineLabel: { ko: "⏳ 조리실 24시간 풀HD CCTV 백업 및 고소", en: "⏳ 24h CCTV Forensic Backup & Legal Action" },
+        realityStat: { ko: "단순 환불 분쟁 ✕ → 형법상 '공갈 및 업무방해죄' 기소", en: "Escalated from dispute to Criminal Blackmail charges" },
+        verdictDetail: {
+          ko: "피해 사장님들이 조리부터 포장 실링까지의 24시간 CCTV를 경찰에 증거로 제출. 배달 비닐이 뜯기지 않은 채 라이더에게 전달된 사실이 입증되어 단순 분쟁이 아닌 형법상 '공갈죄'로 정식 기소되어 재판 진행 중.",
+          en: "Owners proved zero contamination using tamper-evident sealed bags and 24/7 kitchen CCTV. Police formally charged the suspect with criminal extortion and business obstruction; trial underway."
+        },
+        actionHighlight: {
+          ko: "리뷰나 SNS 폭로를 빌미로 금전을 요구하면 단순 소비자의 권리 행사를 넘어 형법 제350조(공갈죄)에 해당합니다. 당황해 돈을 입금하지 말고 포장 CCTV 원본을 백업해 사이버수사팀에 형사 고소해야 합니다.",
+          en: "Demanding cash while threatening social reputation constitutes extortion under Penal Code Art. 350. Never settle; preserve unbroken packaging footage and file criminal charges immediately."
+        },
+        upvotes: 612,
+        disagrees: 42
+      },
+      // 2. [진행형 2] 벤츠 2칸 알박기 주차 빌런
+      {
+        id: "j_on2",
+        cardType: "PARKING",
+        isOngoing: true,
+        categoryName: { ko: "주차 분쟁", en: "Parking Dispute" },
+        statusBadge: { ko: "업무방해 피의자 입건 ⏳", en: "Police Inquiry ⏳" },
+        statusColor: "bg-amber-500/10 text-amber-400 border-amber-500/20",
+        target: { ko: "주차선 2칸 정중앙 벤츠 차주", en: "Two-Bay Parking Mercedes Driver" },
+        location: { ko: "경기 수원 신축 아파트", en: "Suwon, Gyeonggi" },
+        avatar: "🚙",
+        imageBeforeUrl: "https://images.unsplash.com/photo-1590362891991-f776e747a588?w=800&auto=format&fit=crop&q=80",
+        imageCaption: { ko: "지하주차장 주차선 2칸 사선 점유 현장", en: "Two parking spots illegally occupied" },
+        title: {
+          ko: "'내 차 문콕 당하기 싫다'며 매일 주차선 2칸 정중앙 먹고 전화 씹던 외제차",
+          en: "Occupied two garage bays daily to prevent dings, completely ignored manager calls"
+        },
+        incidentDetail: {
+          ko: "만차 상태인 지하주차장에서 전용 주차구역도 아니면서 매일 주차선 정중앙을 물고 사선 주차. '문콕 방지용이니 손대지 마라'는 메모를 남기고 연락처는 치워둬 주민들이 주차난에 시달림.",
+          en: "Parked diagonally across two busy garage spots every night. Left a note saying 'Do not touch, preventing door dings' without contact numbers, causing parking turmoil."
+        },
+        timelineLabel: { ko: "⏳ 입주자대표회의 규약 개정 및 형사고발", en: "⏳ Bylaws Overhaul & Criminal Complaint" },
+        realityStat: { ko: "징벌적 관리비 수백만 원 부과 + 경찰 업무방해 입건", en: "Punitive fees assessed + Interrogated for Obstruction" },
+        verdictDetail: {
+          ko: "입주자대표회의가 긴급 총회를 열어 '부정주차 징벌적 관리비 부과 규약'을 신설해 일 10만 원씩 누적 부과. 관리사무소장의 정당한 관리 업무를 고의 방해한 혐의로 경찰에 정식 고발되어 피의자 조사 단계.",
+          en: "The tenant board enacted daily penalty bylaws and billed millions of KRW in fines. The management office formally pressed charges for criminal obstruction of management duties; investigation underway."
+        },
+        actionHighlight: {
+          ko: "사유지 주차선 위반은 도로교통법 견인이 어렵지만, 관리규약을 개정해 관리비를 부과하거나 '관리주체의 주차 통제 업무를 위력으로 방해'한 혐의(업무방해죄)로 의율하는 판례가 최신 방어 경로입니다.",
+          en: "While road traffic towing does not apply to private lots, amending HOA bylaws to assess punitive fees and filing charges for obstruction of building management is the newest legal playbook."
+        },
+        upvotes: 754,
+        disagrees: 31
+      },
+      // 3. [종결 1] 송도 캠리 지하주차장 입구 봉쇄
       {
         id: "j1",
         cardType: "PARKING",
+        isOngoing: false,
         categoryName: { ko: "주차 분쟁", en: "Parking Dispute" },
         statusBadge: { ko: "금융치료 엔딩 ✓", en: "Financial Therapy ✓" },
         statusColor: "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
@@ -144,10 +222,11 @@
         upvotes: 894,
         disagrees: 23
       },
-      // 2. 새벽 카톡 폭언 부장 (직장·갑질)
+      // 4. [종결 2] 새벽 카톡 폭언 부장
       {
         id: "j2",
         cardType: "WORK",
+        isOngoing: false,
         categoryName: { ko: "직장 갑질", en: "Workplace Harassment" },
         statusBadge: { ko: "참교육 합의금 ✓", en: "Settlement Karma ✓" },
         statusColor: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
@@ -177,10 +256,11 @@
         upvotes: 721,
         disagrees: 11
       },
-      // 3. 중고거래 벽돌 배송 상습범 (사기·거래)
+      // 5. [종결 3] 중고거래 생수병 사기범
       {
         id: "j3",
         cardType: "COMMERCE",
+        isOngoing: false,
         categoryName: { ko: "중고 사기", en: "Secondhand Fraud" },
         statusBadge: { ko: "빨간줄 참교육 ✓", en: "Criminal Record ✓" },
         statusColor: "bg-rose-500/10 text-rose-400 border-rose-500/20",
@@ -219,6 +299,7 @@
       document.getElementById('ui-subtitle').innerText = t.subtitle;
       document.getElementById('ui-home').innerText = t.home;
       document.getElementById('filter-all').innerText = t.filterAll;
+      document.getElementById('filter-ongoing').innerText = t.filterOngoing;
       document.getElementById('filter-parking').innerText = t.filterParking;
       document.getElementById('filter-work').innerText = t.filterWork;
       document.getElementById('filter-commerce').innerText = t.filterCommerce;
@@ -240,11 +321,20 @@
       container.innerHTML = '';
       const t = I18N[currentLang];
 
-      const filtered = filter === 'ALL' ? POSTS : POSTS.filter(item => item.cardType === filter);
+      let filtered = POSTS;
+      if (filter === 'ONGOING') {
+        filtered = POSTS.filter(item => item.isOngoing);
+      } else if (filter !== 'ALL') {
+        filtered = POSTS.filter(item => item.cardType === filter);
+      }
 
       filtered.forEach(item => {
         const votedKey = `justice_voted_${item.id}`;
         const userVoted = localStorage.getItem(votedKey);
+
+        const outcomeTitle = item.isOngoing ? t.verdictTitleOngoing : t.verdictTitleResolved;
+        const voteLabelUp = item.isOngoing ? t.voteOngoingGuilty : t.voteAwesome;
+        const voteLabelDown = item.isOngoing ? t.voteOngoingFlee : t.voteWeak;
 
         const card = document.createElement('article');
         card.className = "bg-[#161b22] border border-slate-800 rounded-2xl overflow-hidden shadow-xl";
@@ -301,10 +391,10 @@
               <div class="flex-grow border-t border-slate-800"></div>
             </div>
 
-            <!-- 인과응보 사이다 결말 박스 -->
+            <!-- 결과 박스 -->
             <div class="bg-[#0e1117] border border-slate-800 rounded-xl p-3 space-y-1">
               <div class="flex items-center justify-between text-[11px] font-bold text-cyan-400 whitespace-nowrap">
-                <span>${t.verdictTitle}</span>
+                <span>${outcomeTitle}</span>
                 <span class="text-[10px] text-slate-400 font-mono truncate ml-2">${item.realityStat[currentLang]}</span>
               </div>
               <p class="text-xs text-slate-300 leading-relaxed font-medium">
@@ -324,11 +414,11 @@
           <div class="px-4 py-2.5 bg-slate-900/60 border-t border-slate-800/80 flex items-center justify-between text-xs">
             <div class="flex items-center gap-2">
               <button onclick="toggleVote('${item.id}', 'up')" class="vote-btn flex items-center gap-1.5 px-3 py-1.5 rounded-lg border transition whitespace-nowrap active:scale-95 ${userVoted === 'up' ? 'bg-cyan-600 border-cyan-500 text-white font-bold shadow-md shadow-cyan-500/30' : 'border-slate-700 bg-slate-800/80 text-slate-300 hover:border-cyan-500 hover:text-cyan-400'}">
-                <span>${t.voteAwesome}</span>
+                <span>${voteLabelUp}</span>
                 <span class="font-mono font-bold">${item.upvotes + (userVoted === 'up' ? 1 : 0)}</span>
               </button>
               <button onclick="toggleVote('${item.id}', 'down')" class="vote-btn flex items-center gap-1.5 px-3 py-1.5 rounded-lg border transition whitespace-nowrap active:scale-95 ${userVoted === 'down' ? 'bg-slate-700 border-slate-500 text-white font-bold' : 'border-slate-700 bg-slate-800/80 text-slate-400 hover:border-slate-500 hover:text-slate-200'}">
-                <span>${t.voteWeak}</span>
+                <span>${voteLabelDown}</span>
                 <span class="font-mono">${item.disagrees + (userVoted === 'down' ? 1 : 0)}</span>
               </button>
             </div>
