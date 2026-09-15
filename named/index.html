@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aged Like Milk - Historical Track Record</title>
+  <title>Aged Like Milk - Reality Trackers</title>
   <meta name="description" content="Iconic predictions and brutal reality checks from the Industrial Revolution to AI.">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800;900&display=swap" rel="stylesheet">
   <style>
     body { font-family: 'Plus Jakarta Sans', -apple-system, sans-serif; }
-    .tubik-card { box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.5); }
-    .tubik-glass { background: rgba(22, 27, 38, 0.85); backdrop-filter: blur(12px); }
+    .tubik-shadow { box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.6); }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
   </style>
 
 <!-- Google tag (gtag.js) -->
@@ -27,16 +28,16 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=pub-1957248819245044" crossorigin="anonymous"></script>
 
 </head>
-<body class="bg-[#0b0e14] text-slate-100 min-h-screen py-6 px-3 flex flex-col items-center selection:bg-orange-500 selection:text-white">
+<body class="bg-[#0c0f17] text-slate-100 min-h-screen py-6 px-3 flex flex-col items-center selection:bg-orange-500 selection:text-white">
 
-  <!-- Dribbble Mobile Frame Container -->
-  <main class="w-full max-w-[420px] space-y-4">
+  <!-- Dribbble Tubik Mobile Canvas Frame -->
+  <main class="w-full max-w-[410px] space-y-4">
     
-    <!-- Top App Bar -->
-    <header class="tubik-glass border border-slate-800/80 rounded-[28px] p-4 flex items-center justify-between">
+    <!-- Top Modern App Bar -->
+    <header class="bg-[#151926] border border-slate-800 rounded-[30px] p-4 flex items-center justify-between shadow-xl">
       <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-orange-500 via-rose-500 to-amber-400 p-0.5 shadow-lg shadow-orange-500/20">
-          <div class="w-full h-full bg-[#0e121a] rounded-[14px] flex items-center justify-center font-black text-white text-base">
+        <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-orange-500 via-rose-500 to-amber-300 p-0.5 shadow-lg shadow-orange-500/20">
+          <div class="w-full h-full bg-[#111420] rounded-[14px] flex items-center justify-center text-xl">
             🥛
           </div>
         </div>
@@ -45,37 +46,37 @@
             <h1 class="text-sm font-black tracking-tight text-white" id="ui-app-title">AGED LIKE MILK</h1>
             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
           </div>
-          <p class="text-[11px] font-semibold text-slate-400" id="ui-app-sub">AI & Tech Reality Tracker</p>
+          <p class="text-[11px] font-bold text-slate-400" id="ui-app-sub">Historic Reality Trackers</p>
         </div>
       </div>
 
-      <!-- Language Toggle & Nav -->
-      <div class="flex items-center gap-1.5 bg-[#0e121a] p-1 rounded-2xl border border-slate-800">
-        <button onclick="setLang('ko')" id="btn-ko" class="px-2.5 py-1 rounded-xl text-[11px] font-extrabold bg-gradient-to-r from-orange-500 to-rose-500 text-white shadow transition">KO</button>
-        <button onclick="setLang('en')" id="btn-en" class="px-2.5 py-1 rounded-xl text-[11px] font-extrabold text-slate-400 hover:text-white transition">EN</button>
+      <!-- Language Switcher Capsule -->
+      <div class="flex items-center bg-[#0d101a] p-1 rounded-2xl border border-slate-800">
+        <button onclick="setLang('ko')" id="btn-ko" class="px-3 py-1 rounded-xl text-[11px] font-black bg-gradient-to-r from-orange-500 to-rose-500 text-white shadow transition">KO</button>
+        <button onclick="setLang('en')" id="btn-en" class="px-3 py-1 rounded-xl text-[11px] font-black text-slate-400 hover:text-white transition">EN</button>
       </div>
     </header>
 
-    <!-- Visual Category Selector (Tubik Pill Style) -->
-    <nav class="flex items-center gap-2 overflow-x-auto pb-1 text-xs font-bold no-scrollbar" id="filter-container">
-      <button onclick="filterFeed('ALL')" class="filter-btn active px-4 py-2 rounded-2xl bg-white text-black font-extrabold shadow-md transition whitespace-nowrap" data-type="ALL" id="btn-all">
-        ⚡ ALL REVIEWS
+    <!-- Visual Category Nav (Tubik Bold Rounded Style) -->
+    <nav class="flex items-center gap-2 overflow-x-auto pb-1 text-xs font-black no-scrollbar" id="filter-container">
+      <button onclick="filterFeed('ALL')" class="filter-btn active px-4 py-2.5 rounded-2xl bg-white text-black shadow-lg transition whitespace-nowrap" data-type="ALL" id="btn-all">
+        ⚡ ALL CASES
       </button>
-      <button onclick="filterFeed('LESSON')" class="filter-btn px-4 py-2 rounded-2xl bg-[#161b26] text-slate-400 border border-slate-800 hover:text-white transition whitespace-nowrap" data-type="LESSON" id="btn-lesson">
+      <button onclick="filterFeed('LESSON')" class="filter-btn px-4 py-2.5 rounded-2xl bg-[#171c2b] text-slate-400 border border-slate-800 hover:text-white transition whitespace-nowrap" data-type="LESSON" id="btn-lesson">
         🏛️ HISTORIC BLUNDERS
       </button>
-      <button onclick="filterFeed('TRACK')" class="filter-btn px-4 py-2 rounded-2xl bg-[#161b26] text-slate-400 border border-slate-800 hover:text-white transition whitespace-nowrap" data-type="TRACK" id="btn-track">
+      <button onclick="filterFeed('TRACK')" class="filter-btn px-4 py-2.5 rounded-2xl bg-[#171c2b] text-slate-400 border border-slate-800 hover:text-white transition whitespace-nowrap" data-type="TRACK" id="btn-track">
         📊 TRACK RECORDS
       </button>
     </nav>
 
-    <!-- Cards Feed -->
-    <section id="feed-container" class="space-y-4"></section>
+    <!-- Cards Stream -->
+    <section id="feed-container" class="space-y-5"></section>
 
     <!-- Footer -->
     <footer class="text-center py-6 space-y-1">
-      <p class="text-[11px] font-bold text-slate-600 tracking-wider uppercase">InsightLab Product Design Edition</p>
-      <p class="text-[10px] text-slate-700">© 2026 InsightLab · Built with Surgical Simplicity</p>
+      <p class="text-[11px] font-black text-slate-600 tracking-wider uppercase">Dribbble Tubik Inspired UI</p>
+      <p class="text-[10px] text-slate-700">© 2026 InsightLab · Surgical Simplicity</p>
     </footer>
   </main>
 
@@ -92,66 +93,89 @@
         btnTrack: "📊 빅마우스 성적표",
         tagLesson: "역사의 참교육",
         tagTrack: "시장 성적표",
-        quoteLabel: "STATEMENT",
+        quoteLabel: "HISTORIC QUOTE",
         realityLabel: "REALITY CHECK",
         takeawayLabel: "ANTIDOTE",
         voteFail: "🔥 처참한 오판",
-        votePass: "🤔 나름 타당함",
-        votedBadge: "성지순례 완료"
+        votePass: "🤔 나름 타당함"
       },
       en: {
         appTitle: "AGED LIKE MILK",
-        appSub: "Tech Reality Tracker",
-        btnAll: "⚡ ALL REVIEWS",
+        appSub: "Historic Reality Trackers",
+        btnAll: "⚡ ALL CASES",
         btnLesson: "🏛️ HISTORIC BLUNDERS",
         btnTrack: "📊 TRACK RECORDS",
         tagLesson: "HISTORICAL REALITY",
         tagTrack: "MARKET VERDICT",
-        quoteLabel: "STATEMENT",
+        quoteLabel: "HISTORIC QUOTE",
         realityLabel: "REALITY CHECK",
         takeawayLabel: "ANTIDOTE",
         voteFail: "🔥 AGED LIKE MILK",
-        votePass: "🤔 REASONABLE THEN",
-        votedBadge: "VERIFIED"
+        votePass: "🤔 REASONABLE THEN"
       }
     };
 
+    // Card dataset with integrated Tubik retro illustrations & gradients
     const POSTS = [
       {
         id: "p1",
         cardType: "LESSON",
-        themeGradient: "from-rose-500 via-red-500 to-orange-400",
-        badgeColor: "bg-rose-500/20 text-rose-300 border-rose-500/30",
+        accentGradient: "from-[#ff5e62] to-[#ff9966]", // Vivid Coral Orange
+        themeColor: "#ff5e62",
         era: { ko: "1830s · 산업혁명", en: "1830s · Industrial Rev." },
         author: { ko: "영국 왕립학회 학자단", en: "Royal Society Scholars" },
-        role: { ko: "당대 최고 과학 지식인", en: "Top Scientific Council" },
+        role: { ko: "당대 최고 과학 지식인", en: "Top Scientific Minds" },
         statMetric: "300+ km/h",
-        statSub: { ko: "현재 고속철도 운행속도", en: "Modern High-Speed Rail" },
+        statSub: { ko: "현대 고속철도 운행속도", en: "Modern High-Speed Rail" },
         title: {
           ko: "시속 40km로 달리면 승객들은 질식사한다",
           en: "Passengers will die of asphyxiation at 30mph"
         },
         quote: {
-          ko: "인간의 신체는 시속 30마일의 속도를 견디도록 설계되지 않았다. 공기가 폐로 들어오지 않아 전원 질식사할 것이다.",
-          en: "The human body is not built for 30 mph. Air cannot enter the lungs, causing immediate asphyxiation."
+          ko: "인간의 신체는 시속 30마일(약 48km)의 속도를 견디도록 설계되지 않았다. 공기가 폐로 들어오지 않아 전원 질식사할 것이다.",
+          en: "The human body is not built to travel at 30 mph. Passengers will not be able to breathe and will die of asphyxiation."
         },
         reality: {
           ko: "철도는 영국 전역을 반나절 생활권으로 묶으며 1차 산업혁명의 심장이 되었습니다. 승객의 폐는 멀쩡했습니다.",
           en: "Railroads revolutionized transit across Britain, becoming the core engine of the Industrial Revolution."
         },
         antidote: {
-          ko: "새 기술이 태동할 때 인간은 언제나 '과학으로 포장된 원초적 공포'를 배설합니다. 공포 마케팅에 휘둘리지 마세요.",
+          ko: "새 기술이 태동할 때 인간은 언제나 '과학으로 포장된 원초적 공포'를 배설합니다. 근거 없는 공포에 흔들리지 마세요.",
           en: "Breakthrough tools always trigger primal fear disguised as science. Never let fear delay your adoption."
         },
-        chartSvg: `<path d="M0 35 Q 30 32, 60 28 T 120 8" fill="none" stroke="#fb7185" stroke-width="3" stroke-linecap="round"/>`,
+        // Tubik-style Locomotive Character Artwork (Inline SVG)
+        artworkSvg: `
+          <svg viewBox="0 0 340 170" class="w-full h-full object-contain">
+            <rect width="340" height="170" rx="24" fill="#1b2030"/>
+            <!-- Sun & Retro Grid -->
+            <circle cx="270" cy="50" r="32" fill="#ff7e67" opacity="0.8"/>
+            <path d="M 0 145 L 340 145" stroke="#ff9966" stroke-width="3"/>
+            <path d="M 0 152 L 340 152" stroke="#ff5e62" stroke-width="1.5" stroke-dasharray="8 6"/>
+            <!-- Retro Steam Train Body -->
+            <rect x="70" y="70" width="130" height="60" rx="14" fill="#ff5e62"/>
+            <rect x="140" y="45" width="55" height="50" rx="8" fill="#ffa07a"/>
+            <!-- Steam Chimney -->
+            <rect x="85" y="40" width="22" height="35" rx="4" fill="#ffd166"/>
+            <!-- Puff Smoke Cloud Character -->
+            <circle cx="95" cy="22" r="14" fill="#ffffff" opacity="0.9"/>
+            <circle cx="80" cy="18" r="10" fill="#ffffff" opacity="0.8"/>
+            <circle cx="112" cy="16" r="12" fill="#ffffff" opacity="0.85"/>
+            <!-- Wheels -->
+            <circle cx="95" cy="132" r="16" fill="#ffd166" stroke="#0c0f17" stroke-width="4"/>
+            <circle cx="135" cy="132" r="16" fill="#ffd166" stroke="#0c0f17" stroke-width="4"/>
+            <circle cx="175" cy="132" r="16" fill="#ffd166" stroke="#0c0f17" stroke-width="4"/>
+            <!-- Speed Lines -->
+            <path d="M 20 85 L 50 85 M 15 105 L 55 105 M 30 120 L 52 120" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+          </svg>
+        `,
         upvotes: 612,
         disagrees: 18
       },
       {
         id: "p2",
         cardType: "LESSON",
-        themeGradient: "from-amber-500 via-orange-500 to-yellow-400",
-        badgeColor: "bg-amber-500/20 text-amber-300 border-amber-500/30",
+        accentGradient: "from-[#f7971e] to-[#ffd200]", // Bright Retro Amber
+        themeColor: "#ffd200",
         era: { ko: "1998 · 닷컴 태동기", en: "1998 · Dot-Com Era" },
         author: { ko: "폴 크루그먼", en: "Paul Krugman" },
         role: { ko: "노벨 경제학상 수상자", en: "Nobel Laureate in Economics" },
@@ -162,7 +186,7 @@
           en: "Internet's economic impact: no greater than a fax machine"
         },
         quote: {
-          ko: "2005년쯤 되면 인터넷의 경제적 영향력은 팩스 기기보다 크지 않았음이 만천하에 드러날 것이다.",
+          ko: "2005년쯤 되면 인터넷의 경제적 영향력은 팩스 기기보다 크지 않았음이 만천하에 드러날 것이다. 사람들은 서로 할 말이 많지 않다.",
           en: "By 2005, it will be clear that the Internet's impact has been no greater than the fax machine's."
         },
         reality: {
@@ -173,15 +197,38 @@
           ko: "기존 분야의 최고 석학일수록 자신의 낡은 잣대로 새 패러다임을 폄하합니다. 권위자의 '거품론'에 안주하지 마세요.",
           en: "Legacy domain experts make the worst forecasts on paradigm shifts. Don't hide behind their complacency."
         },
-        chartSvg: `<path d="M0 35 Q 40 34, 80 18 T 120 4" fill="none" stroke="#fbbf24" stroke-width="3" stroke-linecap="round"/>`,
+        // Tubik-style Computer & Fax Character Artwork (Inline SVG)
+        artworkSvg: `
+          <svg viewBox="0 0 340 170" class="w-full h-full object-contain">
+            <rect width="340" height="170" rx="24" fill="#1e1f2b"/>
+            <!-- Big Geometric Sun -->
+            <circle cx="80" cy="80" r="45" fill="#f7971e" opacity="0.3"/>
+            <!-- Retro 90s CRT Monitor Character -->
+            <rect x="135" y="35" width="110" height="85" rx="16" fill="#ffd200"/>
+            <rect x="148" y="46" width="84" height="60" rx="10" fill="#0c0f17"/>
+            <!-- Eyes on Screen -->
+            <circle cx="175" cy="72" r="6" fill="#ffd200"/>
+            <circle cx="205" cy="72" r="6" fill="#ffd200"/>
+            <path d="M 183 88 Q 190 94, 198 88" stroke="#ffd200" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <!-- Stand & Keyboard -->
+            <rect x="175" y="120" width="30" height="12" rx="4" fill="#d48b00"/>
+            <rect x="130" y="132" width="120" height="14" rx="5" fill="#f7971e"/>
+            <!-- Flying Fax Paper -->
+            <path d="M 75 40 L 115 45 L 105 85 L 65 80 Z" fill="#ffffff" opacity="0.9"/>
+            <line x1="75" y1="52" x2="105" y2="56" stroke="#f7971e" stroke-width="2"/>
+            <line x1="73" y1="62" x2="100" y2="66" stroke="#f7971e" stroke-width="2"/>
+            <!-- Sparkles -->
+            <polygon points="280,35 284,45 295,47 286,54 288,65 280,58 272,65 274,54 265,47 276,45" fill="#ffd200"/>
+          </svg>
+        `,
         upvotes: 843,
         disagrees: 24
       },
       {
         id: "p3",
         cardType: "TRACK",
-        themeGradient: "from-violet-600 via-indigo-600 to-blue-500",
-        badgeColor: "bg-indigo-500/20 text-indigo-300 border-indigo-500/30",
+        accentGradient: "from-[#8a2387] via-[#e94057] to-[#f27121]", // Tubik Vibrant Violet Sunset
+        themeColor: "#e94057",
         era: { ko: "2023 · 생성형 AI", en: "2023 · Generative AI" },
         author: { ko: "샘 알트만", en: "Sam Altman" },
         role: { ko: "OpenAI CEO", en: "CEO of OpenAI" },
@@ -203,15 +250,37 @@
           ko: "빅테크 파운더가 '우린 아직 부족하다'고 겸손을 떨 때는, 규제 당국의 방심과 경쟁자의 늑장 대응을 유도하는 전략입니다.",
           en: "When founders perform strategic humility, it is calculated to buy time against antitrust regulations."
         },
-        chartSvg: `<path d="M0 25 Q 30 15, 60 20 T 120 6" fill="none" stroke="#818cf8" stroke-width="3" stroke-linecap="round"/>`,
+        // Tubik-style Robot & AI Artwork (Inline SVG)
+        artworkSvg: `
+          <svg viewBox="0 0 340 170" class="w-full h-full object-contain">
+            <rect width="340" height="170" rx="24" fill="#19152b"/>
+            <!-- Neon Orb Background -->
+            <circle cx="250" cy="85" r="55" fill="#8a2387" opacity="0.4"/>
+            <!-- Cute AI Robot Head -->
+            <rect x="90" y="45" width="95" height="80" rx="22" fill="#e94057"/>
+            <rect x="102" y="58" width="71" height="52" rx="14" fill="#0c0f17"/>
+            <!-- Glowing Eyes & Mouth -->
+            <circle cx="123" cy="80" r="7" fill="#f27121"/>
+            <circle cx="153" cy="80" r="7" fill="#f27121"/>
+            <circle cx="124" cy="79" r="2.5" fill="#ffffff"/>
+            <circle cx="154" cy="79" r="2.5" fill="#ffffff"/>
+            <line x1="130" y1="96" x2="146" y2="96" stroke="#f27121" stroke-width="2.5" stroke-linecap="round"/>
+            <!-- Robot Antenna -->
+            <line x1="137" y1="45" x2="137" y2="28" stroke="#e94057" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="137" cy="24" r="6" fill="#ffd166"/>
+            <!-- Orbiting Particle Rings -->
+            <ellipse cx="230" cy="85" rx="60" ry="25" fill="none" stroke="#f27121" stroke-width="2" stroke-dasharray="6 6" transform="rotate(-15 230 85)"/>
+            <circle cx="280" cy="70" r="5" fill="#ffffff"/>
+          </svg>
+        `,
         upvotes: 521,
         disagrees: 36
       },
       {
         id: "p4",
         cardType: "TRACK",
-        themeGradient: "from-emerald-500 via-teal-500 to-cyan-500",
-        badgeColor: "bg-emerald-500/20 text-emerald-300 border-emerald-500/30",
+        accentGradient: "from-[#00b09b] to-[#96c93d]", // Neon Emerald / Mint
+        themeColor: "#00b09b",
         era: { ko: "2022 · 크립토 하락장", en: "2022 · Crypto Bear" },
         author: { ko: "마이클 세일러", en: "Michael Saylor" },
         role: { ko: "마이크로스트래티지 의장", en: "Chairman, MicroStrategy" },
@@ -233,7 +302,24 @@
           ko: "조롱받는 하락장에서도 '만기 압박이 없는 자금 조달 구조'를 짜둔 집착은 사이클 전환 시 파괴적인 비대칭 보상을 낳습니다.",
           en: "Conviction engineered with zero liquidation pressure yields massive asymmetric payoff upon macro reversal."
         },
-        chartSvg: `<path d="M0 38 Q 40 40, 70 20 T 120 4" fill="none" stroke="#34d399" stroke-width="3" stroke-linecap="round"/>`,
+        // Tubik-style Bull & Crypto Coin Artwork (Inline SVG)
+        artworkSvg: `
+          <svg viewBox="0 0 340 170" class="w-full h-full object-contain">
+            <rect width="340" height="170" rx="24" fill="#132420"/>
+            <!-- Glow Arc -->
+            <circle cx="170" cy="180" r="100" fill="#00b09b" opacity="0.25"/>
+            <!-- Giant Crypto Diamond Coin Character -->
+            <polygon points="170,25 215,65 170,140 125,65" fill="#96c93d"/>
+            <polygon points="170,25 215,65 170,95 125,65" fill="#c4e538"/>
+            <!-- Sunglasses on Diamond (Boss Face) -->
+            <rect x="140" y="58" width="26" height="14" rx="3" fill="#0c0f17"/>
+            <rect x="174" y="58" width="26" height="14" rx="3" fill="#0c0f17"/>
+            <line x1="164" y1="64" x2="176" y2="64" stroke="#0c0f17" stroke-width="3"/>
+            <!-- Upward Momentum Arrows -->
+            <path d="M 60 120 L 95 75 L 85 75 M 95 75 L 95 85" fill="none" stroke="#00b09b" stroke-width="4" stroke-linecap="round"/>
+            <path d="M 245 120 L 280 75 L 270 75 M 280 75 L 280 85" fill="none" stroke="#00b09b" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+        `,
         upvotes: 789,
         disagrees: 42
       }
@@ -250,11 +336,11 @@
       const btnKo = document.getElementById('btn-ko');
       const btnEn = document.getElementById('btn-en');
       if (currentLang === 'ko') {
-        btnKo.className = "px-2.5 py-1 rounded-xl text-[11px] font-extrabold bg-gradient-to-r from-orange-500 to-rose-500 text-white shadow transition";
-        btnEn.className = "px-2.5 py-1 rounded-xl text-[11px] font-extrabold text-slate-400 hover:text-white transition";
+        btnKo.className = "px-3 py-1 rounded-xl text-[11px] font-black bg-gradient-to-r from-orange-500 to-rose-500 text-white shadow transition";
+        btnEn.className = "px-3 py-1 rounded-xl text-[11px] font-black text-slate-400 hover:text-white transition";
       } else {
-        btnEn.className = "px-2.5 py-1 rounded-xl text-[11px] font-extrabold bg-gradient-to-r from-orange-500 to-rose-500 text-white shadow transition";
-        btnKo.className = "px-2.5 py-1 rounded-xl text-[11px] font-extrabold text-slate-400 hover:text-white transition";
+        btnEn.className = "px-3 py-1 rounded-xl text-[11px] font-black bg-gradient-to-r from-orange-500 to-rose-500 text-white shadow transition";
+        btnKo.className = "px-3 py-1 rounded-xl text-[11px] font-black text-slate-400 hover:text-white transition";
       }
     }
 
@@ -270,80 +356,79 @@
         const userVoted = localStorage.getItem(votedKey);
 
         const card = document.createElement('article');
-        card.className = "tubik-card bg-[#141824] border border-slate-800/80 rounded-[32px] p-5 space-y-4 relative overflow-hidden transition-all duration-300 hover:border-slate-700";
+        card.className = "tubik-shadow bg-[#151926] border-2 border-slate-800/80 rounded-[34px] p-5 space-y-4 relative overflow-hidden transition hover:border-slate-700";
 
         card.innerHTML = `
-          <!-- Top Row: Avatar & Hero Metric Pill -->
+          <!-- 1. Header Profile & Stat Badge -->
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-3">
-              <div class="w-12 h-12 rounded-2xl bg-gradient-to-br ${item.themeGradient} p-0.5 shadow-lg">
-                <div class="w-full h-full bg-[#141824] rounded-[14px] flex items-center justify-center text-white font-black text-lg">
+              <div class="w-12 h-12 rounded-2xl bg-gradient-to-br ${item.accentGradient} p-0.5 shadow-md">
+                <div class="w-full h-full bg-[#151926] rounded-[14px] flex items-center justify-center text-white font-black text-lg">
                   ${item.author[currentLang].charAt(0)}
                 </div>
               </div>
               <div>
                 <h3 class="font-extrabold text-sm text-white tracking-tight leading-tight">${item.author[currentLang]}</h3>
-                <p class="text-[11px] font-semibold text-slate-400">${item.role[currentLang]}</p>
-                <span class="text-[10px] font-mono text-slate-500">${item.era[currentLang]}</span>
+                <p class="text-[11px] font-bold text-slate-400">${item.role[currentLang]}</p>
+                <span class="text-[10px] font-mono text-slate-500 font-bold">${item.era[currentLang]}</span>
               </div>
             </div>
 
-            <!-- Mini Sparkline + Stat Pill -->
-            <div class="bg-[#0b0e14] border border-slate-800 rounded-2xl p-2 px-3 text-right">
-              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">${item.statSub[currentLang]}</span>
-              <div class="flex items-center justify-end gap-2 mt-0.5">
-                <svg class="w-14 h-6 overflow-visible" viewBox="0 0 120 40">
-                  ${item.chartSvg}
-                </svg>
-                <span class="text-xs font-black text-white font-mono">${item.statMetric}</span>
-              </div>
+            <!-- Metric Pill -->
+            <div class="bg-[#0e121c] border border-slate-800 rounded-2xl py-1.5 px-3 text-right">
+              <span class="text-[9px] font-black uppercase tracking-wider text-slate-400 block">${item.statSub[currentLang]}</span>
+              <span class="text-xs font-black text-white font-mono tracking-tight">${item.statMetric}</span>
             </div>
           </div>
 
-          <!-- Hero Headline -->
-          <h2 class="text-base font-extrabold text-white tracking-tight leading-snug pt-1">
+          <!-- 2. Tubik Retro Character Illustration Container (100% Reliable SVG) -->
+          <div class="w-full h-40 rounded-[24px] overflow-hidden border border-slate-800 shadow-inner bg-slate-950 flex items-center justify-center">
+            ${item.artworkSvg}
+          </div>
+
+          <!-- 3. Headline -->
+          <h2 class="text-base font-black text-white tracking-tight leading-snug">
             ${item.title[currentLang]}
           </h2>
 
-          <!-- Dribbble Style Vibrant Quote Card -->
-          <div class="bg-gradient-to-br ${item.themeGradient} p-0.5 rounded-2xl shadow-lg">
-            <div class="bg-[#0e121a]/95 rounded-[15px] p-4 space-y-1">
-              <div class="flex items-center justify-between">
-                <span class="text-[10px] font-mono font-black tracking-widest text-slate-400 uppercase">${t.quoteLabel}</span>
-                <span class="text-xs">💬</span>
+          <!-- 4. Vibrant Gradient Quote Card (Tubik Style) -->
+          <div class="bg-gradient-to-br ${item.accentGradient} p-[2px] rounded-2xl shadow-lg">
+            <div class="bg-[#0f131f]/95 rounded-[14px] p-3.5 space-y-1">
+              <div class="flex items-center justify-between text-[10px] font-black tracking-widest text-slate-400 uppercase">
+                <span>${t.quoteLabel}</span>
+                <span>💬</span>
               </div>
-              <p class="text-xs sm:text-sm font-semibold text-slate-100 italic leading-relaxed">
+              <p class="text-xs sm:text-sm font-bold text-slate-100 italic leading-relaxed">
                 "${item.quote[currentLang]}"
               </p>
             </div>
           </div>
 
-          <!-- Reality Outcome Box -->
-          <div class="bg-[#0e121a] border border-slate-800/80 rounded-2xl p-3.5 space-y-1">
-            <div class="flex items-center justify-between text-[11px] font-bold text-slate-400">
-              <span class="text-emerald-400 font-extrabold uppercase tracking-wider">⚡ ${t.realityLabel}</span>
-              <span class="text-[10px] font-mono text-slate-500">VERIFIED METRIC</span>
-            </div>
-            <p class="text-xs text-slate-300 font-medium leading-relaxed">
+          <!-- 5. Reality Outcome Box -->
+          <div class="bg-[#0e121c] border border-slate-800 rounded-2xl p-3.5 space-y-1">
+            <span class="text-[10px] font-black text-emerald-400 uppercase tracking-wider block">
+              ⚡ ${t.realityLabel}
+            </span>
+            <p class="text-xs text-slate-300 font-semibold leading-relaxed">
               ${item.reality[currentLang]}
             </p>
           </div>
 
-          <!-- The Antidote (Core Takeaway Pill) -->
+          <!-- 6. Antidote Pill -->
           <div class="bg-white/5 border border-white/10 rounded-2xl p-3 flex items-start gap-2.5">
-            <div class="w-5 h-5 rounded-full bg-amber-400/20 text-amber-300 flex items-center justify-center text-xs flex-shrink-0 mt-0.5">💡</div>
-            <p class="text-xs font-semibold text-slate-200 leading-relaxed">
-              <strong class="text-amber-300 font-extrabold mr-1">${t.takeawayLabel}:</strong> ${item.antidote[currentLang]}
+            <span class="text-amber-300 text-xs mt-0.5">💡</span>
+            <p class="text-xs font-bold text-slate-200 leading-relaxed">
+              <strong class="text-amber-300 mr-1">${t.takeawayLabel}:</strong> ${item.antidote[currentLang]}
             </p>
           </div>
 
-          <!-- Interactive Action Bar (Capsule Style) -->
+          <!-- 7. Capsule Interactive Voting Bar -->
           <div class="pt-1 flex items-center justify-between gap-2">
-            <button onclick="castVote('${item.id}', 'fail')" class="flex-1 py-2.5 px-3 rounded-2xl text-xs font-extrabold flex items-center justify-center gap-1.5 border transition active:scale-95 ${userVoted === 'fail' ? 'bg-rose-500 border-rose-400 text-white shadow-lg shadow-rose-500/30' : 'bg-[#0e121a] border-slate-800 text-slate-300 hover:border-slate-700'}">
+            <button onclick="castVote('${item.id}', 'fail')" class="flex-1 py-2.5 px-3 rounded-2xl text-xs font-black flex items-center justify-center gap-1.5 border transition active:scale-95 ${userVoted === 'fail' ? 'bg-rose-500 border-rose-400 text-white shadow-lg shadow-rose-500/40' : 'bg-[#0e121c] border-slate-800 text-slate-300 hover:border-slate-700'}">
               <span>${t.voteFail}</span>
               <span class="font-mono text-[11px] opacity-80">${item.upvotes + (userVoted === 'fail' ? 1 : 0)}</span>
             </button>
-            <button onclick="castVote('${item.id}', 'pass')" class="flex-1 py-2.5 px-3 rounded-2xl text-xs font-extrabold flex items-center justify-center gap-1.5 border transition active:scale-95 ${userVoted === 'pass' ? 'bg-slate-700 border-slate-600 text-white' : 'bg-[#0e121a] border-slate-800 text-slate-400 hover:border-slate-700'}">
+            <button onclick="castVote('${item.id}', 'pass')" class="flex-1 py-2.5 px-3 rounded-2xl text-xs font-black flex items-center justify-center gap-1.5 border transition active:scale-95 ${userVoted === 'pass' ? 'bg-slate-700 border-slate-600 text-white' : 'bg-[#0e121c] border-slate-800 text-slate-400 hover:border-slate-700'}">
               <span>${t.votePass}</span>
               <span class="font-mono text-[11px] opacity-80">${item.disagrees + (userVoted === 'pass' ? 1 : 0)}</span>
             </button>
@@ -368,9 +453,9 @@
       currentFilter = type;
       document.querySelectorAll('.filter-btn').forEach(btn => {
         if (btn.dataset.type === type) {
-          btn.className = "filter-btn active px-4 py-2 rounded-2xl bg-white text-black font-extrabold shadow-md transition whitespace-nowrap";
+          btn.className = "filter-btn active px-4 py-2.5 rounded-2xl bg-white text-black shadow-lg transition whitespace-nowrap";
         } else {
-          btn.className = "filter-btn px-4 py-2 rounded-2xl bg-[#161b26] text-slate-400 border border-slate-800 hover:text-white transition whitespace-nowrap";
+          btn.className = "filter-btn px-4 py-2.5 rounded-2xl bg-[#171c2b] text-slate-400 border border-slate-800 hover:text-white transition whitespace-nowrap";
         }
       });
       renderFeed(type);
