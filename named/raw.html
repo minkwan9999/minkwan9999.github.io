@@ -3,57 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aged Like Milk - Historical Blunders & Reality Checks</title>
-  <meta name="description" content="From historical blunders to ongoing tech predictions: Iconic quotes and reality checks.">
-  <meta property="og:title" content="InsightLab: Aged Like Milk Archive">
-  <meta property="og:description" content="Past blunders, modern track records, and ongoing bets.">
+  <title>인사이트랩 - 상해버린 예측들 (Aged Like Milk)</title>
+  <meta name="description" content="산업혁명부터 닷컴, 스마트폰, AI 시대까지. 당대 최고 권위자들의 호언장담과 N년 뒤 참교육 성적표를 사진과 함께 박제합니다.">
+  <meta property="og:title" content="인사이트랩: 상해버린 예측들">
+  <meta property="og:description" content="사진으로 보는 과거 대가들의 오판 vs 냉정한 현실 성적표">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-[#0e1117] text-slate-200 antialiased min-h-screen py-6 px-3 flex flex-col items-center selection:bg-orange-500 selection:text-white">
+<body class="bg-[#0e1117] text-slate-200 antialiased min-h-screen py-5 px-3 flex flex-col items-center selection:bg-orange-500 selection:text-white">
 
-  <main class="w-full max-w-lg space-y-5">
-    <!-- Top Subreddit Header -->
-    <header class="bg-[#161b22] border border-slate-800 rounded-2xl p-4 shadow-lg space-y-3">
-      <div class="flex items-start justify-between gap-2">
-        <div class="flex items-center gap-2.5">
-          <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-orange-600 to-amber-500 flex items-center justify-center font-black text-white text-base shadow flex-shrink-0">
+  <main class="w-full max-w-md space-y-4">
+    <!-- 상단 헤더 -->
+    <header class="bg-[#161b22] border border-slate-800 rounded-2xl p-3.5 shadow-lg space-y-2.5">
+      <div class="flex items-center justify-between gap-2">
+        <div class="flex items-center gap-2 min-w-0">
+          <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-orange-600 to-amber-500 flex items-center justify-center font-black text-white text-sm shadow shrink-0">
             🥛
           </div>
-          <div>
-            <div class="flex items-center gap-1.5 flex-wrap">
-              <span class="font-extrabold text-white text-sm tracking-tight" id="ui-subname">r/상해버린_예측들</span>
-              <span class="text-[10px] bg-orange-500/20 text-orange-400 font-bold px-1.5 py-0.5 rounded border border-orange-500/30" id="ui-subtag">성지순례</span>
+          <div class="min-w-0">
+            <div class="flex items-center gap-1.5">
+              <span class="font-extrabold text-white text-sm tracking-tight truncate" id="ui-subname">상해버린 예측들</span>
+              <span class="text-[10px] bg-orange-500/20 text-orange-400 font-bold px-1.5 py-0.5 rounded border border-orange-500/30 shrink-0" id="ui-subtag">성지순례</span>
             </div>
-            <p class="text-[11px] text-slate-400" id="ui-subtitle">과거 대가의 오판부터 현재 진행형 호언장담까지</p>
+            <p class="text-[11px] text-slate-400 truncate" id="ui-subtitle">대가의 오판 교훈 & 빅마우스 성적표</p>
           </div>
         </div>
 
-        <!-- Language Switcher & Home -->
-        <div class="flex items-center gap-2 flex-shrink-0">
+        <!-- 언어 토글 & 홈 링크 -->
+        <div class="flex items-center gap-1.5 shrink-0">
           <div class="flex items-center bg-slate-900 border border-slate-700 rounded-lg p-0.5 text-[11px] font-bold">
             <button onclick="setLang('ko')" id="btn-ko" class="px-2 py-0.5 rounded bg-orange-500 text-white transition">KO</button>
             <button onclick="setLang('en')" id="btn-en" class="px-2 py-0.5 rounded text-slate-400 hover:text-white transition">EN</button>
           </div>
-          <a href="/" class="text-xs text-slate-400 hover:text-white transition" id="ui-home">홈</a>
+          <a href="/" class="text-xs text-slate-400 hover:text-white px-1 whitespace-nowrap transition" id="ui-home">홈</a>
         </div>
       </div>
 
-      <!-- 4 Category Tabs -->
-      <div class="flex items-center gap-1.5 pt-2 border-t border-slate-800/80 text-xs font-semibold overflow-x-auto no-scrollbar">
-        <button onclick="filterType('ALL')" class="filter-btn active px-3 py-1 rounded-lg bg-orange-500 text-white font-bold transition whitespace-nowrap" data-type="ALL" id="filter-all">전체</button>
-        <button onclick="filterType('LESSON')" class="filter-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition whitespace-nowrap" data-type="LESSON" id="filter-lesson">참교육</button>
-        <button onclick="filterType('TRACK')" class="filter-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition whitespace-nowrap" data-type="TRACK" id="filter-track">성적표</button>
-        <button onclick="filterType('ONGOING')" class="filter-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition whitespace-nowrap" data-type="ONGOING" id="filter-ongoing">최신발언</button>
+      <!-- 4개 카테고리 탭 -->
+      <div class="flex items-center gap-1.5 pt-2 border-t border-slate-800/80 text-xs font-semibold overflow-x-auto whitespace-nowrap">
+        <button onclick="filterType('ALL')" class="filter-btn active px-3 py-1 rounded-lg bg-orange-500 text-white transition" data-type="ALL" id="filter-all">전체 피드</button>
+        <button onclick="filterType('LESSON')" class="filter-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition" data-type="LESSON" id="filter-lesson">참교육</button>
+        <button onclick="filterType('TRACK')" class="filter-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition" data-type="TRACK" id="filter-track">성적표</button>
+        <button onclick="filterType('ONGOING')" class="filter-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition" data-type="ONGOING" id="filter-ongoing">최신발언</button>
       </div>
     </header>
 
-    <!-- Feed Container -->
+    <!-- 피드 리스트 컨테이너 -->
     <div id="feed-container" class="space-y-4"></div>
 
-    <!-- Footer -->
-    <footer class="pt-6 pb-8 text-center text-xs text-slate-500 space-y-1">
-      <p id="ui-footer-note">역사적 문헌, 신문 아카이브 및 공시 지표를 기반으로 기록되었습니다.</p>
-      <p>© 2026 InsightLab · r/AgedLikeMilk Edition</p>
+    <!-- 하단 푸터 -->
+    <footer class="pt-4 pb-6 text-center text-xs text-slate-500 space-y-1">
+      <p id="ui-footer-note">역사적 문헌 아카이브, 보도 사진 및 시장 지표를 기반으로 기록되었습니다.</p>
+      <p>© 2026 인사이트랩 (InsightLab) · Aged Like Milk Edition</p>
     </footer>
   </main>
 
@@ -63,35 +63,35 @@
 
     const I18N = {
       ko: {
-        subname: "r/상해버린_예측들",
+        subname: "상해버린 예측들",
         subtag: "성지순례",
-        subtitle: "과거 대가의 오판부터 현재 진행형 호언장담까지",
+        subtitle: "대가의 오판 교훈 & 빅마우스 성적표",
         home: "홈",
-        filterAll: "전체",
+        filterAll: "전체 피드",
         filterLesson: "참교육",
         filterTrack: "성적표",
         filterOngoing: "최신발언",
         tagLesson: "🏛️ 역사의 참교육",
         tagTrack: "📈 빅마우스 성적표",
         tagOngoing: "⏳ 현재 진행형 예측",
-        quoteLabel: "📌 당시 발언 기록",
+        quoteLabel: "📌 당시 발언",
         historyTitle: "⚖️ 역사의 실제 판결",
         marketTitle: "📊 실제 시장 성적표",
         ongoingTitle: "⏳ 현재 진행 상황",
         takeawayLesson: "💡 우리가 배울 점:",
         takeawayTrack: "💡 복기 인사이트:",
         takeawayOngoing: "💡 관전 포인트:",
-        voteFail: "🔥 헛소리 확정",
-        votePass: "🤔 이번엔 진짜다",
+        voteFail: "🔥 역대급 헛소리",
+        votePass: "🤔 그땐 그럴듯함",
         votedBadge: "성지순례 완료",
-        footerNote: "역사적 문헌, 신문 아카이브 및 공시 지표를 기반으로 기록되었습니다."
+        footerNote: "역사적 문헌 아카이브, 보도 사진 및 시장 지표를 기반으로 기록되었습니다."
       },
       en: {
-        subname: "r/AgedLikeMilk",
+        subname: "Aged Like Milk",
         subtag: "RealityCheck",
-        subtitle: "From historical blunders to ongoing high-stakes bets",
+        subtitle: "Historic blunders & big-mouth track records",
         home: "Home",
-        filterAll: "All",
+        filterAll: "All Feeds",
         filterLesson: "Blunders",
         filterTrack: "Track Record",
         filterOngoing: "Latest Bets",
@@ -108,29 +108,30 @@
         voteFail: "🔥 Aged Like Milk",
         votePass: "🤔 Might Be Right",
         votedBadge: "Verified",
-        footerNote: "Documented based on historical archives, news reports, and market data."
+        footerNote: "Documented based on historical photo archives, news records, and market data."
       }
     };
 
     const POSTS = [
+      // 1. 철도 질식사 (참교육)
       {
         id: "p1",
         cardType: "LESSON",
         eraTag: { ko: "1830년대 · 산업혁명", en: "1830s · Industrial Rev." },
-        badgeText: { ko: "참교육 ✕", en: "Aged Like Milk ✕" },
-        badgeClass: "bg-rose-500/10 text-rose-400 border-rose-500/20",
+        statusBadge: { ko: "역사의 참교육 ✕", en: "Aged Like Milk ✕" },
+        statusColor: "bg-rose-500/10 text-rose-400 border-rose-500/20",
         author: { ko: "영국 왕립학회 학자단", en: "Royal Society Scholars" },
-        authorTitle: { ko: "당대 최고 과학 지식인들", en: "Leading Scientists of the Era" },
+        authorTitle: { ko: "과학 지식인단", en: "Leading Scientists" },
         avatar: "🚂",
-        imageUrl: "https://images.unsplash.com/photo-1541447271487-09612b3f49f7?w=800&auto=format&fit=crop&q=80",
-        imageCaption: { ko: "1830년대 초기 증기기관차 개통식", en: "1830s early steam locomotive trials" },
+        imageBeforeUrl: "https://images.unsplash.com/photo-1541447271487-09612b3f49f7?w=800&auto=format&fit=crop&q=80",
+        imageCaption: { ko: "1830년대 초기 증기기관차 개통", en: "1830s early steam locomotive trials" },
         title: {
           ko: "기차가 시속 40km로 달리면 승객들은 질식해서 즉사한다",
           en: "Trains running at 30mph will cause passengers to die of asphyxiation"
         },
-        quoteSource: { ko: "1830년대 증기기관차 개통 당시 언론 기고", en: "1830s Press Reports on Steam Locomotives" },
+        quoteSource: { ko: "1830년대 언론 기고문", en: "1830s Press Reports" },
         quoteText: {
-          ko: "인간의 신체는 시속 30마일(약 48km)의 속도를 견디도록 설계되지 않았다. 열차가 그 속도로 달리면 공기가 폐로 들어오지 않아 모든 승객이 질식사할 것이다.",
+          ko: "인간의 신체는 시속 30마일(약 48km)의 속도를 견디도록 설계되지 않았다. 공기가 폐로 들어오지 않아 모든 승객이 질식사할 것이다.",
           en: "The human body is not built to travel at 30 mph. Passengers will not be able to breathe and will die of asphyxiation."
         },
         timelineLabel: { ko: "⏳ 개통 직후 역사적 판결", en: "⏳ Verdict of History" },
@@ -140,59 +141,61 @@
           en: "Passengers breathed normally. Railroads connected Britain into a half-day radius, becoming the backbone of the Industrial Revolution."
         },
         actionHighlight: {
-          ko: "새 기술이 등장할 때 인간은 언제나 '과학으로 위장한 원초적 공포'를 표출합니다. 근거 없는 공포에 질려 신기술 수용을 거부하지 마세요.",
+          ko: "새로운 기술이 등장할 때 인간은 언제나 '과학으로 위장한 원초적 공포'를 표출합니다. 근거 없는 공포에 질려 신기술 수용을 거부하지 마세요.",
           en: "When breakthrough tools appear, humanity often dresses primal fear as scientific reason. Never reject adoption out of irrational fear."
         },
         upvotes: 541,
         disagrees: 19
       },
+      // 2. 폴 크루그먼 팩스론 (참교육)
       {
         id: "p2",
         cardType: "LESSON",
         eraTag: { ko: "1998년 · 인터넷 태동기", en: "1998 · Dot-com Era" },
-        badgeText: { ko: "참교육 ✕", en: "Aged Like Milk ✕" },
-        badgeClass: "bg-rose-500/10 text-rose-400 border-rose-500/20",
+        statusBadge: { ko: "역사의 참교육 ✕", en: "Aged Like Milk ✕" },
+        statusColor: "bg-rose-500/10 text-rose-400 border-rose-500/20",
         author: { ko: "폴 크루그먼", en: "Paul Krugman" },
         authorTitle: { ko: "노벨 경제학상 수상자", en: "Nobel Laureate in Economics" },
         avatar: "🎓",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Paul_Krugman_2008.jpg/640px-Paul_Krugman_2008.jpg",
-        imageCaption: { ko: "노벨 경제학상 수상자 폴 크루그먼", en: "Paul Krugman, Nobel Laureate in Economics" },
+        imageBeforeUrl: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&auto=format&fit=crop&q=80",
+        imageCaption: { ko: "1990년대 전통 경제학계 월가 서밋", en: "1990s Wall Street economic summit" },
         title: {
           ko: "2005년쯤 되면 인터넷의 실체가 팩스(Fax) 수준이었음이 밝혀질 것",
-          en: "By 2005, the Internet's impact will be no greater than the fax machine"
+          en: "By 2005, Internet's impact will be no greater than the fax machine"
         },
         quoteSource: { ko: "The New York Times 칼럼 (1998)", en: "The New York Times Column (1998)" },
         quoteText: {
           ko: "2005년경이 되면, 경제에 미친 인터넷의 영향력은 팩스 기기보다 크지 않았다는 사실이 만천하에 드러날 것이다. 사람들은 서로에게 할 말이 그리 많지 않다.",
-          en: "By 2005 or so, it will become clear that the Internet's impact on the economy has been no greater than the fax machine's. People have nothing much to say to each other."
+          en: "By 2005 or so, it will become clear that the Internet's impact on the economy has been no greater than the fax machine's. People have nothing much to say."
         },
         timelineLabel: { ko: "⏳ 10년 뒤 역사적 판결", en: "⏳ 10 Years Later" },
         realityStat: { ko: "글로벌 시총 TOP 10 빅테크 독식", en: "Tech firms dominate Global Top 10 Market Cap" },
         realityText: {
-          ko: "인터넷은 통신 도구를 넘어 인류 문명과 글로벌 자본을 완전히 재편했습니다. 최고 석학조차 기하급수적 '네트워크 효과'를 전통 제조업의 잣대로 재단하다 평생의 흑역사를 남겼습니다.",
-          en: "The Internet reshaped human life and global finance. Even a Nobel laureate dismissed exponential network effects using legacy manufacturing frameworks."
+          ko: "인터넷은 통신 도구를 넘어 인류의 삶과 금융을 완전히 집어삼켰습니다. 노벨상 석학조차 기하급수적 '네트워크 효과'를 기존 전통 산업의 잣대로만 재단하다 평생의 흑역사를 남겼습니다.",
+          en: "The Internet reshaped human life and global finance. Even a Nobel laureate dismissed the exponential power of network effects."
         },
         actionHighlight: {
-          ko: "내 분야 최고 권위자라 해도 완전히 새로운 패러다임 앞에서는 가장 보수적인 오판을 내리기 쉽습니다. 권위자의 거품론에 안주하지 마세요.",
-          en: "Top authorities in legacy domains often make the most conservative blunders against new paradigms. Don't hide behind their authority."
+          ko: "내 분야 최고 권위자라 해도 완전히 새로운 패러다임 앞에서는 가장 보수적인 오판을 내리기 쉽습니다. 권위자의 '거품' 소리에 안주하지 마세요.",
+          en: "Top authorities in legacy domains often make the most conservative blunders in the face of new paradigms. Don't fall complacent behind them."
         },
         upvotes: 428,
         disagrees: 12
       },
+      // 3. 스티브 발머 아이폰 조롱 (성적표)
       {
         id: "p3",
         cardType: "TRACK",
         eraTag: { ko: "2007년 · 스마트폰 혁명기", en: "2007 · Smartphone Era" },
-        badgeText: { ko: "예측 대실패 ✕", en: "Epic Fail ✕" },
-        badgeClass: "bg-rose-500/10 text-rose-400 border-rose-500/20",
+        statusBadge: { ko: "역사의 참교육 ✕", en: "Aged Like Milk ✕" },
+        statusColor: "bg-rose-500/10 text-rose-400 border-rose-500/20",
         author: { ko: "스티브 발머", en: "Steve Ballmer" },
-        authorTitle: { ko: "마이크로소프트 전 CEO", en: "Former CEO of Microsoft" },
+        authorTitle: { ko: "MS 전 CEO", en: "Former CEO of MS" },
         avatar: "💼",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Steve_Ballmer_2014.jpg/640px-Steve_Ballmer_2014.jpg",
-        imageCaption: { ko: "아이폰 발표 당시 비웃던 스티브 발머", en: "Steve Ballmer laughing at iPhone launch" },
+        imageBeforeUrl: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80",
+        imageCaption: { ko: "2007년 초기 터치스크린 스마트폰 발표회", en: "2007 early touch smartphone reveal" },
         title: {
           ko: "500달러짜리 아이폰? 키보드가 없어서 비즈니스맨에겐 0%짜리 장난감",
-          en: "There's no chance the iPhone is going to get any significant market share"
+          en: "There's no chance that the iPhone is going to get any significant market share"
         },
         quoteSource: { ko: "USA 투데이 인터뷰 (2007)", en: "USA Today Interview (2007)" },
         quoteText: {
@@ -200,34 +203,35 @@
           en: "There's no chance that the iPhone is going to get any significant market share. No chance. It doesn't have a keyboard, which makes it not a very good email machine."
         },
         timelineLabel: { ko: "⏳ 5년 뒤 역사적 판결", en: "⏳ 5 Years Later" },
-        realityStat: { ko: "애플 스마트폰 영업이익 80%+ 독점", en: "Apple captures 80%+ of global smartphone profits" },
+        realityStat: { ko: "애플 스마트폰 시장 이익 80%+ 독점", en: "Apple captures 80%+ of global smartphone profits" },
         realityText: {
-          ko: "스마트폰은 전 세계 오피스의 필수품이 되었고, 물리 쿼티 키보드를 끝까지 고집하던 블랙베리와 윈도우 모바일은 시장에서 흔적도 없이 사라졌습니다.",
-          en: "Touchscreen smartphones became standard everywhere. Physical keyboard champions like BlackBerry and Windows Mobile completely vanished."
+          ko: "스마트폰은 전 세계 오피스의 필수품이 되었고, 물리 키보드를 끝까지 고집하던 블랙베리와 윈도우 모바일은 시장에서 흔적도 없이 도태되었습니다.",
+          en: "Touchscreen smartphones became standard everywhere. Physical keyboard phones like BlackBerry and Windows Mobile completely vanished."
         },
         actionHighlight: {
-          ko: "기존 주력 제품을 지키려는 방어 본능은 경쟁자의 파괴적 혁신을 '치명적 결함'으로 왜곡합니다. 사용자 경험의 거대한 전환을 거스르지 마세요.",
-          en: "Incumbent defensive instincts trick executives into viewing disruptive UX as a flaw. Never fight tidal shifts in consumer habits."
+          ko: "기존 주력 제품을 지키려는 방어 본능은 경쟁자의 파괴적 혁신을 '치명적 결함'으로 착각하게 만듭니다. 고객 경험의 거대한 물결을 거스르지 마세요.",
+          en: "The instinct to defend existing core products tricks incumbents into viewing disruption as a flaw. Never fight tidal waves in UX."
         },
         upvotes: 689,
         disagrees: 14
       },
+      // 4. 샘 알트만 AGI 연막 (성적표)
       {
         id: "p4",
         cardType: "TRACK",
-        eraTag: { ko: "2023년 · 생성형 AI 태동", en: "2023 · AI Boom" },
-        badgeText: { ko: "빅마우스 성적표 ✓", en: "Verified Track Record ✓" },
-        badgeClass: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
+        eraTag: { ko: "2023년 · AI 태동기", en: "2023 · AI Boom" },
+        statusBadge: { ko: "빅마우스 성적표 ✓", en: "Verified Track Record ✓" },
+        statusColor: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
         author: { ko: "샘 알트만", en: "Sam Altman" },
         authorTitle: { ko: "OpenAI CEO", en: "CEO of OpenAI" },
         avatar: "🤖",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Sam_Altman_TechCrunch_Disrupt_2019_%28cropped%29.jpg/640px-Sam_Altman_TechCrunch_Disrupt_2019_%28cropped%29.jpg",
-        imageCaption: { ko: "OpenAI CEO 샘 알트만", en: "OpenAI CEO Sam Altman" },
+        imageBeforeUrl: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&auto=format&fit=crop&q=80",
+        imageCaption: { ko: "생성형 AI 초거대 모델 인프라", en: "Generative AI cluster infrastructure" },
         title: {
-          ko: "현재의 LLM은 생각하는 지능이 아니다. AGI는 아직 멀었다",
+          ko: "현재의 LLM은 스스로 생각하는 지능이 아니다. AGI는 아직 멀었다",
           en: "Current LLMs are useful tools, not thinking minds. Far from AGI"
         },
-        quoteSource: { ko: "공식 X (2023.02)", en: "Official Post on X (2023.02)" },
+        quoteSource: { ko: "공식 X 포스팅 (2023.02)", en: "Official Post on X (2023.02)" },
         quoteText: {
           ko: "현재의 대규모 언어 모델들은 유용한 도구일 뿐 생각하는 마음이 아닙니다. 우리는 여전히 진정한 AGI와는 꽤 거리가 멉니다.",
           en: "Current LLMs are useful tools, not thinking minds. We are still quite far from true AGI."
@@ -235,32 +239,33 @@
         timelineLabel: { ko: "📊 1~2년 뒤 실제 성적표", en: "📊 1-2 Years Later" },
         realityStat: { ko: "GPT-4o, o1 추론 모델 연달아 장악", en: "Dominance with GPT-4o and o1 reasoning models" },
         realityText: {
-          ko: "이 겸손한 발언 직후 복합 추론 모델들을 연이어 쏟아내며 시장을 장악했습니다. 업계에서는 독점 비판과 정부 규제를 회피하기 위한 전략적 기대치 낮추기(Sandbagging)로 평가합니다.",
-          en: "Immediately after, OpenAI launched aggressive reasoning models. Industry insiders view this as calculated sandbagging to defuse regulatory scrutiny."
+          ko: "이 겸손한 발언 직후 복합 추론 모델들을 쏟아내며 시장을 장악했습니다. 업계에서는 독점 비판과 정부 규제를 피하기 위해 일부러 눈높이를 낮춘 정무적 전략으로 평가합니다.",
+          en: "Immediately after, OpenAI rolled out aggressive reasoning models, securing market leadership. Analysts view this as deliberate regulatory sandbagging."
         },
         actionHighlight: {
-          ko: "빅테크 파운더가 대중 앞에서 '우린 아직 부족하다'고 겸손을 떨 때는, 규제 당국의 방심과 경쟁자의 늑장 대응을 유도하는 전략적 연막일 수 있습니다.",
-          en: "When tech leaders perform public humility, it is often a strategic smokescreen to buy time against antitrust regulations and competitors."
+          ko: "빅테크 파운더가 대중 앞에서 '우린 아직 부족하다'고 겸손을 떨 때는, 규제 당국의 방심과 경쟁자의 방심을 유도하는 전략적 연막일 수 있습니다.",
+          en: "When tech founders publicly practice humility, it is often a strategic smokescreen to buy time against regulators and competitors."
         },
         upvotes: 380,
         disagrees: 28
       },
+      // 5. 일론 머스크 로보택시 (최신발언)
       {
         id: "p5",
         cardType: "ONGOING",
         eraTag: { ko: "2024~2026 · 완전 자율주행", en: "2024-2026 · Full Autonomy" },
-        badgeText: { ko: "판결 진행중 ⏳", en: "In Progress ⏳" },
-        badgeClass: "bg-amber-500/10 text-amber-400 border-amber-500/20",
+        statusBadge: { ko: "판결 진행중 ⏳", en: "In Progress ⏳" },
+        statusColor: "bg-amber-500/10 text-amber-400 border-amber-500/20",
         author: { ko: "일론 머스크", en: "Elon Musk" },
         authorTitle: { ko: "테슬라 CEO", en: "CEO of Tesla" },
         avatar: "🚗",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg/640px-Elon_Musk_Royal_Society_%28crop2%29.jpg",
-        imageCaption: { ko: "테슬라 CEO 일론 머스크", en: "Tesla CEO Elon Musk" },
+        imageBeforeUrl: "https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&auto=format&fit=crop&q=80",
+        imageCaption: { ko: "자율주행 차량 및 FSD 비전 시스템", en: "Autonomous driving & vision AI" },
         title: {
           ko: "2026년 안에 무인 로보택시가 미국 전역을 달리고 인간 운전자는 사라진다",
           en: "Unsupervised Robotaxis will be operating across the US within 2026"
         },
-        quoteSource: { ko: "테슬라 We, Robot 쇼케이스 및 어닝콜", en: "Tesla 'We, Robot' Event & Earnings Call" },
+        quoteSource: { ko: "테슬라 We, Robot 쇼케이스", en: "Tesla 'We, Robot' Event" },
         quoteText: {
           ko: "운전대와 페달이 없는 사이버캡이 2026년부터 대량 생산될 것입니다. 테슬라 차량 소유자는 자는 동안 차가 스스로 돈을 벌어다 주는 시대가 옵니다.",
           en: "Cybercab without steering wheels or pedals will enter production by 2026. Your car will earn you money while you sleep."
@@ -269,7 +274,7 @@
         realityStat: { ko: "규제 승인 장벽 vs 비전 중심 FSD 고도화 격돌", en: "Regulatory Hurdles vs End-to-End FSD" },
         realityText: {
           ko: "FSD V12 이후 자율주행 성능이 극적으로 진화했으나, 미 당국의 규제 승인과 사고 책임 법제화, 라이다 없는 순수 비전 방식의 한계 논쟁이 여전히 팽팽하게 맞서고 있습니다.",
-          en: "End-to-end neural network driving has leaped, but state-by-state regulatory approvals, liability frameworks, and pure-vision debates remain contentious."
+          en: "End-to-end neural network driving has leaped, but state regulatory approvals and pure-vision debates remain contentious."
         },
         actionHighlight: {
           ko: "머스크의 시간표는 늘 2~3년 지연되지만 결국 기술적 임계점을 뚫어내는 패턴이 반복되었습니다. '완전 사기'로 치부할지 '지연된 혁신'으로 볼지가 투자의 핵심 갈림길입니다.",
@@ -278,17 +283,18 @@
         upvotes: 489,
         disagrees: 172
       },
+      // 6. 젠슨 황 코딩 종말론 (최신발언)
       {
         id: "p6",
         cardType: "ONGOING",
         eraTag: { ko: "2024~2026 · AI 에이전트 혁명", en: "2024-2026 · Agentic AI" },
-        badgeText: { ko: "판결 진행중 ⏳", en: "In Progress ⏳" },
-        badgeClass: "bg-amber-500/10 text-amber-400 border-amber-500/20",
+        statusBadge: { ko: "판결 진행중 ⏳", en: "In Progress ⏳" },
+        statusColor: "bg-amber-500/10 text-amber-400 border-amber-500/20",
         author: { ko: "젠슨 황", en: "Jensen Huang" },
         authorTitle: { ko: "엔비디아 CEO", en: "CEO of NVIDIA" },
         avatar: "⚡",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Jensen_Huang_at_Computex_2023.jpg/640px-Jensen_Huang_at_Computex_2023.jpg",
-        imageCaption: { ko: "엔비디아 CEO 젠슨 황", en: "NVIDIA CEO Jensen Huang" },
+        imageBeforeUrl: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80",
+        imageCaption: { ko: "AI 코드 생성 및 시스템 엔지니어링", en: "AI code generation & systems" },
         title: {
           ko: "더 이상 코딩을 배울 필요 없다. 모든 아이에게 컴퓨터 대신 다른 걸 가르쳐라",
           en: "Nobody has to learn to code. Our job is to create computing that speaks human"
@@ -302,7 +308,7 @@
         realityStat: { ko: "AI 코딩 도구 보편화 vs 시스템 아키텍처 역량 격차", en: "AI Coding Proliferation vs System Architecture Depth" },
         realityText: {
           ko: "초급 코딩과 보일러플레이트 작성은 AI 에이전트가 완벽히 대체하고 있으나, 복잡한 대규모 분산 아키텍처 설계와 장애 디버깅에서는 여전히 엔지니어링 역량이 기업의 핵심 병목으로 남아 있습니다.",
-          en: "AI tools write junior code with ease, but complex enterprise architecture and high-stakes debugging still heavily bottleneck on elite human engineers."
+          en: "AI tools write junior code with ease, but complex architecture and high-stakes debugging still heavily bottleneck on elite engineers."
         },
         actionHighlight: {
           ko: "문법을 외우는 식의 '코더'는 사라지겠지만, 복잡한 시스템을 구조화하고 문제를 정의하는 '아키텍트'의 가치는 오히려 AI 레버리지를 타고 극대화됩니다.",
@@ -369,97 +375,93 @@
         card.className = "bg-[#161b22] border border-slate-800 rounded-2xl overflow-hidden shadow-xl";
 
         card.innerHTML = `
-          <!-- 1. Header: Author & Tag -->
-          <div class="p-3.5 pb-2.5 flex items-start justify-between border-b border-slate-800/60 bg-slate-900/40 text-xs gap-2">
-            <div class="flex items-center gap-2">
-              <span class="text-base">${item.avatar}</span>
+          <!-- 1. 헤더 -->
+          <div class="p-3 pb-2.5 flex items-start justify-between border-b border-slate-800/60 bg-slate-900/40 text-xs gap-2">
+            <div class="flex items-start gap-1.5 flex-1 min-w-0">
+              <span class="text-base shrink-0 mt-0.5">${item.avatar}</span>
               <div class="leading-tight">
                 <span class="font-bold text-slate-200">${item.author[currentLang]}</span>
-                <span class="text-[11px] text-slate-400">· ${item.authorTitle[currentLang]}</span>
+                <span class="text-[11px] text-slate-400 inline-block">· ${item.authorTitle[currentLang]}</span>
               </div>
             </div>
-            <div class="flex items-center gap-1.5 flex-shrink-0">
+            <div class="flex items-center gap-1.5 shrink-0 whitespace-nowrap pt-0.5">
               ${typeHeaderTag}
               <span class="text-[10px] font-mono text-slate-400">${item.eraTag[currentLang]}</span>
             </div>
           </div>
 
-          <!-- 2. Photo Archive Banner (With Fallback) -->
-          <div class="relative w-full h-44 bg-slate-950 overflow-hidden border-b border-slate-800">
-            <img src="${item.imageUrl}" 
-                 alt="${item.author[currentLang]}" 
-                 class="w-full h-full object-cover object-center filter contrast-110"
-                 loading="lazy"
-                 onerror="this.onerror=null; this.parentElement.style.display='none';">
+          <!-- 2. 상단 사진 아카이브 (100% 검증 CDN) -->
+          <div class="relative w-full h-40 bg-slate-950 overflow-hidden border-b border-slate-800">
+            <img src="${item.imageBeforeUrl}" alt="${item.author[currentLang]}" class="w-full h-full object-cover object-center filter grayscale contrast-110 hover:grayscale-0 transition duration-500" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop&q=80';">
             <div class="absolute inset-0 bg-gradient-to-t from-[#161b22] via-transparent to-black/30"></div>
-            <span class="absolute bottom-2 left-3 text-[10px] font-mono text-slate-300 bg-black/70 px-2 py-0.5 rounded backdrop-blur border border-white/10">
+            <span class="absolute bottom-2 left-3 text-[10px] font-mono text-slate-300 bg-black/60 px-2 py-0.5 rounded backdrop-blur border border-white/10 truncate max-w-[85%]">
               📷 ${item.imageCaption[currentLang]}
             </span>
           </div>
 
-          <!-- 3. Body -->
+          <!-- 3. 카드 본문 -->
           <div class="p-4 space-y-3">
             <div class="flex items-start justify-between gap-2">
               <h2 class="text-base font-extrabold text-white leading-snug tracking-tight">
                 ${item.title[currentLang]}
               </h2>
-              <span class="text-[10px] font-bold px-2 py-0.5 rounded whitespace-nowrap border flex-shrink-0 ${item.badgeClass}">
-                ${item.badgeText[currentLang]}
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded whitespace-nowrap border shrink-0 ${item.statusColor}">
+                ${item.statusBadge[currentLang]}
               </span>
             </div>
 
-            <!-- Quote Box -->
-            <div class="bg-[#1c2128] border-l-4 border-amber-500/80 rounded-r-xl p-3.5 space-y-1 shadow-inner">
-              <div class="flex items-center justify-between text-[11px] text-amber-400 font-mono font-bold">
+            <!-- 발언 인용구 박스 -->
+            <div class="bg-[#1c2128] border-l-4 border-amber-500/80 rounded-r-xl p-3 space-y-1 shadow-inner">
+              <div class="flex items-center justify-between text-[11px] text-amber-400 font-mono font-bold whitespace-nowrap">
                 <span>${t.quoteLabel}</span>
-                <span class="text-slate-500 text-[10px]">${item.quoteSource[currentLang]}</span>
+                <span class="text-slate-500 truncate ml-2 text-[10px]">${item.quoteSource[currentLang]}</span>
               </div>
               <p class="text-xs sm:text-sm text-slate-300 italic leading-relaxed">
                 "${item.quoteText[currentLang]}"
               </p>
             </div>
 
-            <!-- Arrow Divider -->
-            <div class="relative flex py-1 items-center justify-center">
+            <!-- 대비 구분선 -->
+            <div class="relative flex py-0.5 items-center justify-center">
               <div class="flex-grow border-t border-slate-800"></div>
-              <span class="flex-shrink mx-2 text-[10px] font-mono font-bold text-slate-400 bg-[#161b22] px-2 py-0.5 rounded border border-slate-800">
+              <span class="flex-shrink mx-2 text-[10px] font-mono font-bold text-slate-400 bg-[#161b22] px-2 py-0.5 rounded border border-slate-800 whitespace-nowrap">
                 ${item.timelineLabel[currentLang]}
               </span>
               <div class="flex-grow border-t border-slate-800"></div>
             </div>
 
-            <!-- Reality / Status Box -->
-            <div class="bg-[#0e1117] border border-slate-800 rounded-xl p-3.5 space-y-1.5">
-              <div class="flex items-center justify-between text-[11px] font-bold text-emerald-400">
+            <!-- 결과 박스 -->
+            <div class="bg-[#0e1117] border border-slate-800 rounded-xl p-3 space-y-1">
+              <div class="flex items-center justify-between text-[11px] font-bold text-emerald-400 whitespace-nowrap">
                 <span>${outcomeTitle}</span>
-                <span class="text-[10px] text-slate-400 font-mono">${item.realityStat[currentLang]}</span>
+                <span class="text-[10px] text-slate-400 font-mono truncate ml-2">${item.realityStat[currentLang]}</span>
               </div>
               <p class="text-xs text-slate-300 leading-relaxed font-medium">
                 ${item.realityText[currentLang]}
               </p>
             </div>
 
-            <!-- Takeaway Box -->
-            <div class="bg-gradient-to-r from-orange-950/20 to-amber-950/10 border border-orange-500/20 rounded-xl p-3">
+            <!-- 실전 교훈 박스 -->
+            <div class="bg-gradient-to-r from-orange-950/20 to-amber-950/10 border border-orange-500/20 rounded-xl p-2.5">
               <p class="text-xs text-orange-200/90 leading-relaxed">
-                <strong class="text-orange-400 font-extrabold mr-1">${takeawayTitle}</strong> ${item.actionHighlight[currentLang]}
+                <strong class="text-orange-400 font-extrabold mr-1 whitespace-nowrap">${takeawayTitle}</strong>${item.actionHighlight[currentLang]}
               </p>
             </div>
           </div>
 
-          <!-- 4. Toggle Voting Bar -->
+          <!-- 4. 토글 투표 인터랙션 바 -->
           <div class="px-4 py-2.5 bg-slate-900/60 border-t border-slate-800/80 flex items-center justify-between text-xs">
             <div class="flex items-center gap-2">
-              <button onclick="toggleVote('${item.id}', 'up')" class="vote-btn flex items-center gap-1.5 px-3 py-1.5 rounded-lg border transition ${userVoted === 'up' ? 'bg-orange-500 text-white font-bold border-orange-500 shadow-md shadow-orange-500/30' : 'bg-slate-800/80 text-slate-300 border-slate-700 hover:border-orange-500 hover:text-orange-400'}">
+              <button onclick="toggleVote('${item.id}', 'up')" class="vote-btn flex items-center gap-1.5 px-3 py-1.5 rounded-lg border transition whitespace-nowrap ${userVoted === 'up' ? 'bg-orange-500 text-white font-bold border-orange-500 shadow-md shadow-orange-500/30' : 'bg-slate-800/80 text-slate-300 border-slate-700 hover:border-orange-500 hover:text-orange-400'}">
                 <span>${t.voteFail}</span>
                 <span class="font-mono font-bold">${item.upvotes + (userVoted === 'up' ? 1 : 0)}</span>
               </button>
-              <button onclick="toggleVote('${item.id}', 'down')" class="vote-btn flex items-center gap-1.5 px-3 py-1.5 rounded-lg border transition ${userVoted === 'down' ? 'bg-slate-700 text-white font-bold border-slate-600 shadow-md' : 'bg-slate-800/80 text-slate-400 border-slate-700 hover:border-slate-500 hover:text-white'}">
+              <button onclick="toggleVote('${item.id}', 'down')" class="vote-btn flex items-center gap-1.5 px-3 py-1.5 rounded-lg border transition whitespace-nowrap ${userVoted === 'down' ? 'bg-slate-700 text-white font-bold border-slate-600 shadow-md' : 'bg-slate-800/80 text-slate-400 border-slate-700 hover:border-slate-500 hover:text-white'}">
                 <span>${t.votePass}</span>
                 <span class="font-mono">${item.disagrees + (userVoted === 'down' ? 1 : 0)}</span>
               </button>
             </div>
-            <span class="text-[11px] text-slate-500 font-mono">${userVoted ? t.votedBadge : ''}</span>
+            <span class="text-[11px] text-slate-500 font-mono whitespace-nowrap">${userVoted ? t.votedBadge : ''}</span>
           </div>
         `;
         container.appendChild(card);
@@ -482,9 +484,9 @@
       currentFilter = type;
       document.querySelectorAll('.filter-btn').forEach(btn => {
         if (btn.dataset.type === type) {
-          btn.className = "filter-btn active px-3 py-1 rounded-lg bg-orange-500 text-white font-bold transition whitespace-nowrap";
+          btn.className = "filter-btn active px-3 py-1 rounded-lg bg-orange-500 text-white font-bold transition";
         } else {
-          btn.className = "filter-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition whitespace-nowrap";
+          btn.className = "filter-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition";
         }
       });
       renderFeed(type);
