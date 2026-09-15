@@ -3,17 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aged Like Milk - Reality Trackers</title>
-  <meta name="description" content="Iconic predictions and brutal reality checks from the Industrial Revolution to AI.">
+  <title>Aged Like Milk - Swipe Reality Tracker</title>
+  <meta name="description" content="Swipe to explore iconic historical predictions and their brutal reality checks.">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800;900&display=swap" rel="stylesheet">
   <style>
     body { font-family: 'Plus Jakarta Sans', -apple-system, sans-serif; }
-    .tubik-shadow { box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.6); }
+    /* 수평 스냅 캐러셀 설정 */
+    .snap-carousel {
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+    .snap-card {
+      scroll-snap-align: center;
+      scroll-snap-stop: always;
+    }
     .no-scrollbar::-webkit-scrollbar { display: none; }
     .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    .card-shadow { box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6); }
   </style>
 
 <!-- Google tag (gtag.js) -->
@@ -28,56 +37,59 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=pub-1957248819245044" crossorigin="anonymous"></script>
 
 </head>
-<body class="bg-[#0c0f17] text-slate-100 min-h-screen py-6 px-3 flex flex-col items-center selection:bg-orange-500 selection:text-white">
+<body class="bg-[#0b0e14] text-slate-100 min-h-screen py-5 flex flex-col items-center justify-between selection:bg-lime-400 selection:text-black overflow-x-hidden">
 
-  <!-- Dribbble Tubik Mobile Canvas Frame -->
-  <main class="w-full max-w-[410px] space-y-4">
+  <!-- Main Mobile Shell Container -->
+  <main class="w-full max-w-[430px] flex flex-col h-full space-y-3 px-3">
     
-    <!-- Top Modern App Bar -->
-    <header class="bg-[#151926] border border-slate-800 rounded-[30px] p-4 flex items-center justify-between shadow-xl">
-      <div class="flex items-center gap-3">
-        <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-orange-500 via-rose-500 to-amber-300 p-0.5 shadow-lg shadow-orange-500/20">
-          <div class="w-full h-full bg-[#111420] rounded-[14px] flex items-center justify-center text-xl">
+    <!-- Top Header: Modern Pill Navigation -->
+    <header class="bg-[#151924] border border-slate-800/80 rounded-[28px] p-3.5 flex items-center justify-between shadow-lg mx-1">
+      <div class="flex items-center gap-2.5">
+        <div class="w-9 h-9 rounded-2xl bg-gradient-to-tr from-lime-400 to-emerald-500 p-0.5 shadow-md shadow-lime-500/20">
+          <div class="w-full h-full bg-[#0b0e14] rounded-[13px] flex items-center justify-center font-black text-lime-400 text-sm">
             🥛
           </div>
         </div>
         <div>
           <div class="flex items-center gap-1.5">
-            <h1 class="text-sm font-black tracking-tight text-white" id="ui-app-title">AGED LIKE MILK</h1>
-            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <h1 class="text-xs font-black tracking-tight text-white" id="ui-title">AGED LIKE MILK</h1>
+            <span class="text-[10px] font-extrabold text-lime-400 bg-lime-400/10 px-1.5 py-0.5 rounded border border-lime-400/20">SWIPE</span>
           </div>
-          <p class="text-[11px] font-bold text-slate-400" id="ui-app-sub">Historic Reality Trackers</p>
+          <p class="text-[10px] font-bold text-slate-400" id="ui-sub">좌우로 넘겨서 참교육 성적표 보기</p>
         </div>
       </div>
 
-      <!-- Language Switcher Capsule -->
-      <div class="flex items-center bg-[#0d101a] p-1 rounded-2xl border border-slate-800">
-        <button onclick="setLang('ko')" id="btn-ko" class="px-3 py-1 rounded-xl text-[11px] font-black bg-gradient-to-r from-orange-500 to-rose-500 text-white shadow transition">KO</button>
-        <button onclick="setLang('en')" id="btn-en" class="px-3 py-1 rounded-xl text-[11px] font-black text-slate-400 hover:text-white transition">EN</button>
+      <!-- Language & Home Actions -->
+      <div class="flex items-center gap-1 bg-[#0b0e14] p-1 rounded-2xl border border-slate-800">
+        <button onclick="setLang('ko')" id="btn-ko" class="px-2.5 py-1 rounded-xl text-[10px] font-black bg-lime-400 text-black shadow transition">KO</button>
+        <button onclick="setLang('en')" id="btn-en" class="px-2.5 py-1 rounded-xl text-[10px] font-black text-slate-400 hover:text-white transition">EN</button>
       </div>
     </header>
 
-    <!-- Visual Category Nav (Tubik Bold Rounded Style) -->
-    <nav class="flex items-center gap-2 overflow-x-auto pb-1 text-xs font-black no-scrollbar" id="filter-container">
-      <button onclick="filterFeed('ALL')" class="filter-btn active px-4 py-2.5 rounded-2xl bg-white text-black shadow-lg transition whitespace-nowrap" data-type="ALL" id="btn-all">
-        ⚡ ALL CASES
-      </button>
-      <button onclick="filterFeed('LESSON')" class="filter-btn px-4 py-2.5 rounded-2xl bg-[#171c2b] text-slate-400 border border-slate-800 hover:text-white transition whitespace-nowrap" data-type="LESSON" id="btn-lesson">
-        🏛️ HISTORIC BLUNDERS
-      </button>
-      <button onclick="filterFeed('TRACK')" class="filter-btn px-4 py-2.5 rounded-2xl bg-[#171c2b] text-slate-400 border border-slate-800 hover:text-white transition whitespace-nowrap" data-type="TRACK" id="btn-track">
-        📊 TRACK RECORDS
-      </button>
-    </nav>
+    <!-- Results Counter Indicator (Nixtio Style) -->
+    <div class="flex items-center justify-between px-3 pt-1 text-xs">
+      <div class="flex items-center gap-1.5">
+        <span class="w-2 h-2 rounded-full bg-lime-400"></span>
+        <span class="font-black text-slate-300 text-[11px]" id="indicator-text">1 of 4 CASES</span>
+      </div>
+      <!-- Era Filters -->
+      <div class="flex gap-1 text-[11px] font-bold">
+        <button onclick="filterFeed('ALL')" class="era-tab active text-white bg-slate-800 px-2.5 py-1 rounded-xl transition" data-type="ALL" id="f-all">전체</button>
+        <button onclick="filterFeed('LESSON')" class="era-tab text-slate-400 px-2.5 py-1 rounded-xl hover:text-white transition" data-type="LESSON" id="f-lesson">과거</button>
+        <button onclick="filterFeed('TRACK')" class="era-tab text-slate-400 px-2.5 py-1 rounded-xl hover:text-white transition" data-type="TRACK" id="f-track">최근</button>
+      </div>
+    </div>
 
-    <!-- Cards Stream -->
-    <section id="feed-container" class="space-y-5"></section>
+    <!-- Horizontal Swipe Carousel Track (좌우 스크롤 스냅) -->
+    <section id="carousel-track" class="snap-carousel flex overflow-x-auto gap-4 py-2 px-6 no-scrollbar w-full"></section>
 
-    <!-- Footer -->
-    <footer class="text-center py-6 space-y-1">
-      <p class="text-[11px] font-black text-slate-600 tracking-wider uppercase">Dribbble Tubik Inspired UI</p>
-      <p class="text-[10px] text-slate-700">© 2026 InsightLab · Surgical Simplicity</p>
-    </footer>
+    <!-- Bottom Swipe Guide Hint -->
+    <div class="text-center pt-1 pb-3 space-y-1">
+      <p class="text-[11px] font-extrabold text-slate-500 tracking-wider flex items-center justify-center gap-1.5">
+        <span>←</span> <span id="swipe-hint">카드를 좌우로 밀어서 탐색하세요</span> <span>→</span>
+      </p>
+      <p class="text-[9px] text-slate-700">© 2026 InsightLab · Nixtio Swipe Canvas</p>
+    </div>
   </main>
 
   <script>
@@ -86,101 +98,95 @@
 
     const I18N = {
       ko: {
-        appTitle: "AGED LIKE MILK",
-        appSub: "빅마우스 호언장담 사후 검증소",
-        btnAll: "⚡ 전체 피드",
-        btnLesson: "🏛️ 역사의 참교육",
-        btnTrack: "📊 빅마우스 성적표",
-        tagLesson: "역사의 참교육",
-        tagTrack: "시장 성적표",
-        quoteLabel: "HISTORIC QUOTE",
-        realityLabel: "REALITY CHECK",
-        takeawayLabel: "ANTIDOTE",
-        voteFail: "🔥 처참한 오판",
-        votePass: "🤔 나름 타당함"
+        title: "AGED LIKE MILK",
+        sub: "좌우로 넘겨서 참교육 성적표 보기",
+        hint: "카드를 좌우로 밀어서 탐색하세요",
+        all: "전체",
+        lesson: "과거",
+        track: "최근",
+        tagLesson: "역사의 참교육 ✕",
+        tagTrack: "빅마우스 성적표 ✓",
+        quoteLabel: "HISTORIC STATEMENT",
+        realityLabel: "REALITY VERDICT",
+        antidoteLabel: "ANTIDOTE (백신)",
+        btnFail: "🔥 역대급 헛소리",
+        btnPass: "🤔 당시엔 그럴듯",
+        caseWord: "사건"
       },
       en: {
-        appTitle: "AGED LIKE MILK",
-        appSub: "Historic Reality Trackers",
-        btnAll: "⚡ ALL CASES",
-        btnLesson: "🏛️ HISTORIC BLUNDERS",
-        btnTrack: "📊 TRACK RECORDS",
-        tagLesson: "HISTORICAL REALITY",
-        tagTrack: "MARKET VERDICT",
-        quoteLabel: "HISTORIC QUOTE",
-        realityLabel: "REALITY CHECK",
-        takeawayLabel: "ANTIDOTE",
-        voteFail: "🔥 AGED LIKE MILK",
-        votePass: "🤔 REASONABLE THEN"
+        title: "AGED LIKE MILK",
+        sub: "Swipe left/right to check reality",
+        hint: "Swipe cards horizontally to explore",
+        all: "All",
+        lesson: "History",
+        track: "Recent",
+        tagLesson: "Aged Like Milk ✕",
+        tagTrack: "Verified Track Record ✓",
+        quoteLabel: "HISTORIC STATEMENT",
+        realityLabel: "REALITY VERDICT",
+        antidoteLabel: "ANTIDOTE (Lesson)",
+        btnFail: "🔥 Aged Like Milk",
+        btnPass: "🤔 Fair Point Then",
+        caseWord: "CASES"
       }
     };
 
-    // Card dataset with integrated Tubik retro illustrations & gradients
     const POSTS = [
       {
         id: "p1",
         cardType: "LESSON",
-        accentGradient: "from-[#ff5e62] to-[#ff9966]", // Vivid Coral Orange
-        themeColor: "#ff5e62",
-        era: { ko: "1830s · 산업혁명", en: "1830s · Industrial Rev." },
+        accentLime: "#a3e635", // Nixtio Neon Lime
+        era: { ko: "1830년대 · 산업혁명", en: "1830s · Industrial Rev." },
         author: { ko: "영국 왕립학회 학자단", en: "Royal Society Scholars" },
-        role: { ko: "당대 최고 과학 지식인", en: "Top Scientific Minds" },
+        role: { ko: "당대 최고 과학 지식인단", en: "Top Scientific Minds" },
         statMetric: "300+ km/h",
-        statSub: { ko: "현대 고속철도 운행속도", en: "Modern High-Speed Rail" },
+        statLabel: { ko: "현재 고속철도 운행속도", en: "Modern High-Speed Rail" },
         title: {
           ko: "시속 40km로 달리면 승객들은 질식사한다",
           en: "Passengers will die of asphyxiation at 30mph"
         },
         quote: {
           ko: "인간의 신체는 시속 30마일(약 48km)의 속도를 견디도록 설계되지 않았다. 공기가 폐로 들어오지 않아 전원 질식사할 것이다.",
-          en: "The human body is not built to travel at 30 mph. Passengers will not be able to breathe and will die of asphyxiation."
+          en: "The human body is not built for 30 mph. Air cannot enter the lungs, causing immediate asphyxiation."
         },
         reality: {
           ko: "철도는 영국 전역을 반나절 생활권으로 묶으며 1차 산업혁명의 심장이 되었습니다. 승객의 폐는 멀쩡했습니다.",
-          en: "Railroads revolutionized transit across Britain, becoming the core engine of the Industrial Revolution."
+          en: "Railroads connected Britain into a half-day radius, becoming the core engine of the Industrial Revolution."
         },
         antidote: {
-          ko: "새 기술이 태동할 때 인간은 언제나 '과학으로 포장된 원초적 공포'를 배설합니다. 근거 없는 공포에 흔들리지 마세요.",
+          ko: "새 기술이 태동할 때 인간은 언제나 '과학으로 포장된 원초적 공포'를 배설합니다. 근거 없는 공포 마케팅에 휘둘리지 마세요.",
           en: "Breakthrough tools always trigger primal fear disguised as science. Never let fear delay your adoption."
         },
-        // Tubik-style Locomotive Character Artwork (Inline SVG)
-        artworkSvg: `
-          <svg viewBox="0 0 340 170" class="w-full h-full object-contain">
-            <rect width="340" height="170" rx="24" fill="#1b2030"/>
-            <!-- Sun & Retro Grid -->
-            <circle cx="270" cy="50" r="32" fill="#ff7e67" opacity="0.8"/>
-            <path d="M 0 145 L 340 145" stroke="#ff9966" stroke-width="3"/>
-            <path d="M 0 152 L 340 152" stroke="#ff5e62" stroke-width="1.5" stroke-dasharray="8 6"/>
-            <!-- Retro Steam Train Body -->
-            <rect x="70" y="70" width="130" height="60" rx="14" fill="#ff5e62"/>
-            <rect x="140" y="45" width="55" height="50" rx="8" fill="#ffa07a"/>
-            <!-- Steam Chimney -->
-            <rect x="85" y="40" width="22" height="35" rx="4" fill="#ffd166"/>
-            <!-- Puff Smoke Cloud Character -->
-            <circle cx="95" cy="22" r="14" fill="#ffffff" opacity="0.9"/>
-            <circle cx="80" cy="18" r="10" fill="#ffffff" opacity="0.8"/>
-            <circle cx="112" cy="16" r="12" fill="#ffffff" opacity="0.85"/>
-            <!-- Wheels -->
-            <circle cx="95" cy="132" r="16" fill="#ffd166" stroke="#0c0f17" stroke-width="4"/>
-            <circle cx="135" cy="132" r="16" fill="#ffd166" stroke="#0c0f17" stroke-width="4"/>
-            <circle cx="175" cy="132" r="16" fill="#ffd166" stroke="#0c0f17" stroke-width="4"/>
-            <!-- Speed Lines -->
-            <path d="M 20 85 L 50 85 M 15 105 L 55 105 M 30 120 L 52 120" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+        // Nixtio Stylized Character Box (Vector Graphic)
+        visualSvg: `
+          <svg viewBox="0 0 320 180" class="w-full h-full object-cover">
+            <rect width="320" height="180" fill="#182017"/>
+            <circle cx="250" cy="50" r="45" fill="#a3e635" opacity="0.2"/>
+            <!-- Stylized Neon Steam Engine Art -->
+            <rect x="60" y="70" width="130" height="65" rx="14" fill="#a3e635"/>
+            <rect x="135" y="45" width="55" height="50" rx="8" fill="#bef264"/>
+            <rect x="75" y="40" width="20" height="35" rx="4" fill="#111827"/>
+            <!-- Steam Wheel Dots -->
+            <circle cx="85" cy="135" r="16" fill="#111827" stroke="#ffffff" stroke-width="3"/>
+            <circle cx="125" cy="135" r="16" fill="#111827" stroke="#ffffff" stroke-width="3"/>
+            <circle cx="165" cy="135" r="16" fill="#111827" stroke="#ffffff" stroke-width="3"/>
+            <!-- Speed Track lines -->
+            <line x1="10" y1="155" x2="310" y2="155" stroke="#a3e635" stroke-width="3"/>
+            <line x1="30" y1="162" x2="290" y2="162" stroke="#4d7c0f" stroke-width="2" stroke-dasharray="8 6"/>
           </svg>
         `,
-        upvotes: 612,
-        disagrees: 18
+        upvotes: 541,
+        disagrees: 19
       },
       {
         id: "p2",
         cardType: "LESSON",
-        accentGradient: "from-[#f7971e] to-[#ffd200]", // Bright Retro Amber
-        themeColor: "#ffd200",
+        accentLime: "#38bdf8", // Sky Blue Neon
         era: { ko: "1998 · 닷컴 태동기", en: "1998 · Dot-Com Era" },
         author: { ko: "폴 크루그먼", en: "Paul Krugman" },
         role: { ko: "노벨 경제학상 수상자", en: "Nobel Laureate in Economics" },
         statMetric: "TOP 10",
-        statSub: { ko: "인터넷 빅테크 글로벌 시총 독식", en: "Tech Dominates Global Top 10" },
+        statLabel: { ko: "빅테크 글로벌 시총 독식", en: "Tech Dominates Global Top 10" },
         title: {
           ko: "인터넷 경제 효과는 팩스(Fax) 수준에 그칠 것",
           en: "Internet's economic impact: no greater than a fax machine"
@@ -197,43 +203,32 @@
           ko: "기존 분야의 최고 석학일수록 자신의 낡은 잣대로 새 패러다임을 폄하합니다. 권위자의 '거품론'에 안주하지 마세요.",
           en: "Legacy domain experts make the worst forecasts on paradigm shifts. Don't hide behind their complacency."
         },
-        // Tubik-style Computer & Fax Character Artwork (Inline SVG)
-        artworkSvg: `
-          <svg viewBox="0 0 340 170" class="w-full h-full object-contain">
-            <rect width="340" height="170" rx="24" fill="#1e1f2b"/>
-            <!-- Big Geometric Sun -->
-            <circle cx="80" cy="80" r="45" fill="#f7971e" opacity="0.3"/>
-            <!-- Retro 90s CRT Monitor Character -->
-            <rect x="135" y="35" width="110" height="85" rx="16" fill="#ffd200"/>
-            <rect x="148" y="46" width="84" height="60" rx="10" fill="#0c0f17"/>
-            <!-- Eyes on Screen -->
-            <circle cx="175" cy="72" r="6" fill="#ffd200"/>
-            <circle cx="205" cy="72" r="6" fill="#ffd200"/>
-            <path d="M 183 88 Q 190 94, 198 88" stroke="#ffd200" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-            <!-- Stand & Keyboard -->
-            <rect x="175" y="120" width="30" height="12" rx="4" fill="#d48b00"/>
-            <rect x="130" y="132" width="120" height="14" rx="5" fill="#f7971e"/>
-            <!-- Flying Fax Paper -->
-            <path d="M 75 40 L 115 45 L 105 85 L 65 80 Z" fill="#ffffff" opacity="0.9"/>
-            <line x1="75" y1="52" x2="105" y2="56" stroke="#f7971e" stroke-width="2"/>
-            <line x1="73" y1="62" x2="100" y2="66" stroke="#f7971e" stroke-width="2"/>
-            <!-- Sparkles -->
-            <polygon points="280,35 284,45 295,47 286,54 288,65 280,58 272,65 274,54 265,47 276,45" fill="#ffd200"/>
+        visualSvg: `
+          <svg viewBox="0 0 320 180" class="w-full h-full object-cover">
+            <rect width="320" height="180" fill="#0f1b29"/>
+            <circle cx="80" cy="70" r="40" fill="#38bdf8" opacity="0.2"/>
+            <!-- 90s CRT Monitor Vector -->
+            <rect x="105" y="35" width="110" height="85" rx="16" fill="#38bdf8"/>
+            <rect x="118" y="47" width="84" height="60" rx="10" fill="#0b0e14"/>
+            <circle cx="145" cy="72" r="6" fill="#38bdf8"/>
+            <circle cx="175" cy="72" r="6" fill="#38bdf8"/>
+            <path d="M 152 86 Q 160 92, 168 86" stroke="#38bdf8" stroke-width="2.5" fill="none"/>
+            <rect x="145" y="120" width="30" height="12" rx="3" fill="#0284c7"/>
+            <rect x="100" y="132" width="120" height="12" rx="4" fill="#38bdf8"/>
           </svg>
         `,
-        upvotes: 843,
-        disagrees: 24
+        upvotes: 428,
+        disagrees: 12
       },
       {
         id: "p3",
         cardType: "TRACK",
-        accentGradient: "from-[#8a2387] via-[#e94057] to-[#f27121]", // Tubik Vibrant Violet Sunset
-        themeColor: "#e94057",
+        accentLime: "#a855f7", // Purple Neon
         era: { ko: "2023 · 생성형 AI", en: "2023 · Generative AI" },
         author: { ko: "샘 알트만", en: "Sam Altman" },
         role: { ko: "OpenAI CEO", en: "CEO of OpenAI" },
         statMetric: "o1 / GPT-4o",
-        statSub: { ko: "추론 모델 연달아 장악 독주", en: "Successive Reasoning Releases" },
+        statLabel: { ko: "추론 모델 연달아 장악 독주", en: "Successive Reasoning Releases" },
         title: {
           ko: "현재 LLM은 지능이 아니다. AGI는 아직 멀었다",
           en: "LLMs are not thinking minds. Far from AGI"
@@ -250,42 +245,32 @@
           ko: "빅테크 파운더가 '우린 아직 부족하다'고 겸손을 떨 때는, 규제 당국의 방심과 경쟁자의 늑장 대응을 유도하는 전략입니다.",
           en: "When founders perform strategic humility, it is calculated to buy time against antitrust regulations."
         },
-        // Tubik-style Robot & AI Artwork (Inline SVG)
-        artworkSvg: `
-          <svg viewBox="0 0 340 170" class="w-full h-full object-contain">
-            <rect width="340" height="170" rx="24" fill="#19152b"/>
-            <!-- Neon Orb Background -->
-            <circle cx="250" cy="85" r="55" fill="#8a2387" opacity="0.4"/>
-            <!-- Cute AI Robot Head -->
-            <rect x="90" y="45" width="95" height="80" rx="22" fill="#e94057"/>
-            <rect x="102" y="58" width="71" height="52" rx="14" fill="#0c0f17"/>
-            <!-- Glowing Eyes & Mouth -->
-            <circle cx="123" cy="80" r="7" fill="#f27121"/>
-            <circle cx="153" cy="80" r="7" fill="#f27121"/>
-            <circle cx="124" cy="79" r="2.5" fill="#ffffff"/>
-            <circle cx="154" cy="79" r="2.5" fill="#ffffff"/>
-            <line x1="130" y1="96" x2="146" y2="96" stroke="#f27121" stroke-width="2.5" stroke-linecap="round"/>
-            <!-- Robot Antenna -->
-            <line x1="137" y1="45" x2="137" y2="28" stroke="#e94057" stroke-width="4" stroke-linecap="round"/>
-            <circle cx="137" cy="24" r="6" fill="#ffd166"/>
-            <!-- Orbiting Particle Rings -->
-            <ellipse cx="230" cy="85" rx="60" ry="25" fill="none" stroke="#f27121" stroke-width="2" stroke-dasharray="6 6" transform="rotate(-15 230 85)"/>
-            <circle cx="280" cy="70" r="5" fill="#ffffff"/>
+        visualSvg: `
+          <svg viewBox="0 0 320 180" class="w-full h-full object-cover">
+            <rect width="320" height="180" fill="#1b1229"/>
+            <circle cx="240" cy="80" r="50" fill="#a855f7" opacity="0.25"/>
+            <!-- AI Bot Art -->
+            <rect x="110" y="45" width="100" height="85" rx="20" fill="#a855f7"/>
+            <rect x="122" y="58" width="76" height="55" rx="12" fill="#0b0e14"/>
+            <circle cx="145" cy="80" r="7" fill="#f43f5e"/>
+            <circle cx="175" cy="80" r="7" fill="#f43f5e"/>
+            <line x1="148" y1="98" x2="172" y2="98" stroke="#f43f5e" stroke-width="3" stroke-linecap="round"/>
+            <line x1="160" y1="45" x2="160" y2="28" stroke="#a855f7" stroke-width="4"/>
+            <circle cx="160" cy="24" r="6" fill="#fbbf24"/>
           </svg>
         `,
-        upvotes: 521,
-        disagrees: 36
+        upvotes: 380,
+        disagrees: 28
       },
       {
         id: "p4",
         cardType: "TRACK",
-        accentGradient: "from-[#00b09b] to-[#96c93d]", // Neon Emerald / Mint
-        themeColor: "#00b09b",
+        accentLime: "#fbbf24", // Amber Neon
         era: { ko: "2022 · 크립토 하락장", en: "2022 · Crypto Bear" },
         author: { ko: "마이클 세일러", en: "Michael Saylor" },
         role: { ko: "마이크로스트래티지 의장", en: "Chairman, MicroStrategy" },
         statMetric: "$100K+",
-        statSub: { ko: "비트코인 신고가 돌파 폭등", en: "Bitcoin All-Time High" },
+        statLabel: { ko: "비트코인 전고점 돌파 폭등", en: "Bitcoin All-Time High" },
         title: {
           ko: "비트코인이 2만 불 밑으로 떨어져도 절대 안 판다",
           en: "We will not sell even below $20,000"
@@ -302,174 +287,177 @@
           ko: "조롱받는 하락장에서도 '만기 압박이 없는 자금 조달 구조'를 짜둔 집착은 사이클 전환 시 파괴적인 비대칭 보상을 낳습니다.",
           en: "Conviction engineered with zero liquidation pressure yields massive asymmetric payoff upon macro reversal."
         },
-        // Tubik-style Bull & Crypto Coin Artwork (Inline SVG)
-        artworkSvg: `
-          <svg viewBox="0 0 340 170" class="w-full h-full object-contain">
-            <rect width="340" height="170" rx="24" fill="#132420"/>
-            <!-- Glow Arc -->
-            <circle cx="170" cy="180" r="100" fill="#00b09b" opacity="0.25"/>
-            <!-- Giant Crypto Diamond Coin Character -->
-            <polygon points="170,25 215,65 170,140 125,65" fill="#96c93d"/>
-            <polygon points="170,25 215,65 170,95 125,65" fill="#c4e538"/>
-            <!-- Sunglasses on Diamond (Boss Face) -->
-            <rect x="140" y="58" width="26" height="14" rx="3" fill="#0c0f17"/>
-            <rect x="174" y="58" width="26" height="14" rx="3" fill="#0c0f17"/>
-            <line x1="164" y1="64" x2="176" y2="64" stroke="#0c0f17" stroke-width="3"/>
-            <!-- Upward Momentum Arrows -->
-            <path d="M 60 120 L 95 75 L 85 75 M 95 75 L 95 85" fill="none" stroke="#00b09b" stroke-width="4" stroke-linecap="round"/>
-            <path d="M 245 120 L 280 75 L 270 75 M 280 75 L 280 85" fill="none" stroke="#00b09b" stroke-width="4" stroke-linecap="round"/>
+        visualSvg: `
+          <svg viewBox="0 0 320 180" class="w-full h-full object-cover">
+            <rect width="320" height="180" fill="#241d0f"/>
+            <circle cx="160" cy="90" r="60" fill="#fbbf24" opacity="0.2"/>
+            <polygon points="160,35 205,75 160,145 115,75" fill="#fbbf24"/>
+            <polygon points="160,35 205,75 160,105 115,75" fill="#fde68a"/>
+            <!-- Cool Sunglasses -->
+            <rect x="135" y="68" width="24" height="12" rx="2" fill="#0b0e14"/>
+            <rect x="165" y="68" width="24" height="12" rx="2" fill="#0b0e14"/>
+            <line x1="155" y1="73" x2="168" y2="73" stroke="#0b0e14" stroke-width="2.5"/>
           </svg>
         `,
-        upvotes: 789,
-        disagrees: 42
+        upvotes: 492,
+        disagrees: 45
       }
     ];
 
     function updateUiLabels() {
       const t = I18N[currentLang];
-      document.getElementById('ui-app-title').innerText = t.appTitle;
-      document.getElementById('ui-app-sub').innerText = t.appSub;
-      document.getElementById('btn-all').innerText = t.btnAll;
-      document.getElementById('btn-lesson').innerText = t.btnLesson;
-      document.getElementById('btn-track').innerText = t.btnTrack;
+      document.getElementById('ui-title').innerText = t.title;
+      document.getElementById('ui-sub').innerText = t.sub;
+      document.getElementById('swipe-hint').innerText = t.hint;
+      document.getElementById('f-all').innerText = t.all;
+      document.getElementById('f-lesson').innerText = t.lesson;
+      document.getElementById('f-track').innerText = t.track;
 
       const btnKo = document.getElementById('btn-ko');
       const btnEn = document.getElementById('btn-en');
       if (currentLang === 'ko') {
-        btnKo.className = "px-3 py-1 rounded-xl text-[11px] font-black bg-gradient-to-r from-orange-500 to-rose-500 text-white shadow transition";
-        btnEn.className = "px-3 py-1 rounded-xl text-[11px] font-black text-slate-400 hover:text-white transition";
+        btnKo.className = "px-2.5 py-1 rounded-xl text-[10px] font-black bg-lime-400 text-black shadow transition";
+        btnEn.className = "px-2.5 py-1 rounded-xl text-[10px] font-black text-slate-400 hover:text-white transition";
       } else {
-        btnEn.className = "px-3 py-1 rounded-xl text-[11px] font-black bg-gradient-to-r from-orange-500 to-rose-500 text-white shadow transition";
-        btnKo.className = "px-3 py-1 rounded-xl text-[11px] font-black text-slate-400 hover:text-white transition";
+        btnEn.className = "px-2.5 py-1 rounded-xl text-[10px] font-black bg-lime-400 text-black shadow transition";
+        btnKo.className = "px-2.5 py-1 rounded-xl text-[10px] font-black text-slate-400 hover:text-white transition";
       }
     }
 
-    function renderFeed(filter = 'ALL') {
-      const container = document.getElementById('feed-container');
-      container.innerHTML = '';
+    function renderCarousel(filter = 'ALL') {
+      const track = document.getElementById('carousel-track');
+      track.innerHTML = '';
       const t = I18N[currentLang];
 
       const filtered = filter === 'ALL' ? POSTS : POSTS.filter(item => item.cardType === filter);
+      document.getElementById('indicator-text').innerText = `1 of ${filtered.length} ${t.caseWord.toUpperCase()}`;
 
-      filtered.forEach(item => {
-        const votedKey = `tubik_voted_${item.id}`;
+      filtered.forEach((item, index) => {
+        const votedKey = `swipe_voted_${item.id}`;
         const userVoted = localStorage.getItem(votedKey);
+        const isPastLesson = item.cardType === 'LESSON';
 
+        // 85% 너비로 좌우 카드가 살짝 보이는 Nixtio 비율
         const card = document.createElement('article');
-        card.className = "tubik-shadow bg-[#151926] border-2 border-slate-800/80 rounded-[34px] p-5 space-y-4 relative overflow-hidden transition hover:border-slate-700";
+        card.className = "snap-card flex-shrink-0 w-[84%] sm:w-[340px] card-shadow bg-[#141824] border-2 border-slate-800 rounded-[32px] p-5 space-y-3.5 relative flex flex-col justify-between";
 
         card.innerHTML = `
-          <!-- 1. Header Profile & Stat Badge -->
-          <div class="flex items-center justify-between">
-            <div class="flex items-center gap-3">
-              <div class="w-12 h-12 rounded-2xl bg-gradient-to-br ${item.accentGradient} p-0.5 shadow-md">
-                <div class="w-full h-full bg-[#151926] rounded-[14px] flex items-center justify-center text-white font-black text-lg">
+          <!-- Top Row: Avatar & Era Pill -->
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex items-center gap-2.5">
+                <div class="w-10 h-10 rounded-2xl flex items-center justify-center font-black text-black text-base shadow" style="background-color: ${item.accentLime};">
                   ${item.author[currentLang].charAt(0)}
                 </div>
+                <div>
+                  <h2 class="font-extrabold text-sm text-white tracking-tight leading-tight">${item.author[currentLang]}</h2>
+                  <p class="text-[10px] font-bold text-slate-400">${item.role[currentLang]}</p>
+                </div>
               </div>
-              <div>
-                <h3 class="font-extrabold text-sm text-white tracking-tight leading-tight">${item.author[currentLang]}</h3>
-                <p class="text-[11px] font-bold text-slate-400">${item.role[currentLang]}</p>
-                <span class="text-[10px] font-mono text-slate-500 font-bold">${item.era[currentLang]}</span>
+              <span class="text-[10px] font-black px-2 py-0.5 rounded-full border bg-slate-900 border-slate-700 text-slate-300">
+                ${item.era[currentLang]}
+              </span>
+            </div>
+
+            <!-- Nixtio Cut-corner Artwork Canvas -->
+            <div class="w-full h-36 rounded-[22px] overflow-hidden border border-slate-800 shadow-inner bg-slate-950 relative mb-3">
+              ${item.visualSvg}
+              <div class="absolute bottom-2 right-2 bg-black/70 backdrop-blur px-2.5 py-1 rounded-xl border border-white/10 text-right">
+                <span class="text-[8px] font-black uppercase tracking-widest text-slate-400 block">${item.statLabel[currentLang]}</span>
+                <span class="text-xs font-black text-lime-400 font-mono">${item.statMetric}</span>
               </div>
             </div>
 
-            <!-- Metric Pill -->
-            <div class="bg-[#0e121c] border border-slate-800 rounded-2xl py-1.5 px-3 text-right">
-              <span class="text-[9px] font-black uppercase tracking-wider text-slate-400 block">${item.statSub[currentLang]}</span>
-              <span class="text-xs font-black text-white font-mono tracking-tight">${item.statMetric}</span>
-            </div>
-          </div>
+            <!-- Headline -->
+            <h3 class="text-sm sm:text-base font-black text-white tracking-tight leading-snug mb-2">
+              ${item.title[currentLang]}
+            </h3>
 
-          <!-- 2. Tubik Retro Character Illustration Container (100% Reliable SVG) -->
-          <div class="w-full h-40 rounded-[24px] overflow-hidden border border-slate-800 shadow-inner bg-slate-950 flex items-center justify-center">
-            ${item.artworkSvg}
-          </div>
-
-          <!-- 3. Headline -->
-          <h2 class="text-base font-black text-white tracking-tight leading-snug">
-            ${item.title[currentLang]}
-          </h2>
-
-          <!-- 4. Vibrant Gradient Quote Card (Tubik Style) -->
-          <div class="bg-gradient-to-br ${item.accentGradient} p-[2px] rounded-2xl shadow-lg">
-            <div class="bg-[#0f131f]/95 rounded-[14px] p-3.5 space-y-1">
-              <div class="flex items-center justify-between text-[10px] font-black tracking-widest text-slate-400 uppercase">
-                <span>${t.quoteLabel}</span>
-                <span>💬</span>
-              </div>
-              <p class="text-xs sm:text-sm font-bold text-slate-100 italic leading-relaxed">
+            <!-- Quote Box (Nixtio Lime Accent Bar) -->
+            <div class="bg-[#0e121a] border-l-4 rounded-r-2xl p-3 space-y-1 mb-2.5 shadow-sm" style="border-color: ${item.accentLime};">
+              <span class="text-[9px] font-black tracking-widest uppercase block" style="color: ${item.accentLime};">
+                ${t.quoteLabel}
+              </span>
+              <p class="text-xs font-semibold text-slate-100 italic leading-relaxed">
                 "${item.quote[currentLang]}"
+              </p>
+            </div>
+
+            <!-- Reality Outcome -->
+            <div class="bg-[#0b0e14] border border-slate-800/80 rounded-2xl p-3 space-y-1 mb-2">
+              <span class="text-[10px] font-black text-emerald-400 uppercase tracking-wider block">
+                ⚡ ${t.realityLabel}
+              </span>
+              <p class="text-[11px] text-slate-300 font-medium leading-relaxed">
+                ${item.reality[currentLang]}
+              </p>
+            </div>
+
+            <!-- Antidote (Core Lesson) -->
+            <div class="bg-white/5 border border-white/10 rounded-xl p-2.5 flex items-start gap-2">
+              <span class="text-xs mt-0.5">💡</span>
+              <p class="text-[11px] font-bold text-slate-200 leading-relaxed">
+                <strong class="text-amber-300 mr-1">${t.antidoteLabel}:</strong> ${item.antidote[currentLang]}
               </p>
             </div>
           </div>
 
-          <!-- 5. Reality Outcome Box -->
-          <div class="bg-[#0e121c] border border-slate-800 rounded-2xl p-3.5 space-y-1">
-            <span class="text-[10px] font-black text-emerald-400 uppercase tracking-wider block">
-              ⚡ ${t.realityLabel}
-            </span>
-            <p class="text-xs text-slate-300 font-semibold leading-relaxed">
-              ${item.reality[currentLang]}
-            </p>
-          </div>
-
-          <!-- 6. Antidote Pill -->
-          <div class="bg-white/5 border border-white/10 rounded-2xl p-3 flex items-start gap-2.5">
-            <span class="text-amber-300 text-xs mt-0.5">💡</span>
-            <p class="text-xs font-bold text-slate-200 leading-relaxed">
-              <strong class="text-amber-300 mr-1">${t.takeawayLabel}:</strong> ${item.antidote[currentLang]}
-            </p>
-          </div>
-
-          <!-- 7. Capsule Interactive Voting Bar -->
-          <div class="pt-1 flex items-center justify-between gap-2">
-            <button onclick="castVote('${item.id}', 'fail')" class="flex-1 py-2.5 px-3 rounded-2xl text-xs font-black flex items-center justify-center gap-1.5 border transition active:scale-95 ${userVoted === 'fail' ? 'bg-rose-500 border-rose-400 text-white shadow-lg shadow-rose-500/40' : 'bg-[#0e121c] border-slate-800 text-slate-300 hover:border-slate-700'}">
-              <span>${t.voteFail}</span>
-              <span class="font-mono text-[11px] opacity-80">${item.upvotes + (userVoted === 'fail' ? 1 : 0)}</span>
+          <!-- Bottom Voting Pill (Interactive Feedback) -->
+          <div class="pt-2 flex items-center justify-between gap-2 border-t border-slate-800/60">
+            <button onclick="castVote('${item.id}', 'fail')" class="flex-1 py-2 rounded-xl text-[11px] font-black flex items-center justify-center gap-1 border transition active:scale-95 ${userVoted === 'fail' ? 'bg-rose-500 border-rose-400 text-white shadow-md shadow-rose-500/30' : 'bg-[#0b0e14] border-slate-800 text-slate-300 hover:border-slate-700'}">
+              <span>${t.btnFail}</span>
+              <span class="font-mono text-[10px] opacity-80">${item.upvotes + (userVoted === 'fail' ? 1 : 0)}</span>
             </button>
-            <button onclick="castVote('${item.id}', 'pass')" class="flex-1 py-2.5 px-3 rounded-2xl text-xs font-black flex items-center justify-center gap-1.5 border transition active:scale-95 ${userVoted === 'pass' ? 'bg-slate-700 border-slate-600 text-white' : 'bg-[#0e121c] border-slate-800 text-slate-400 hover:border-slate-700'}">
-              <span>${t.votePass}</span>
-              <span class="font-mono text-[11px] opacity-80">${item.disagrees + (userVoted === 'pass' ? 1 : 0)}</span>
+            <button onclick="castVote('${item.id}', 'pass')" class="flex-1 py-2 rounded-xl text-[11px] font-black flex items-center justify-center gap-1 border transition active:scale-95 ${userVoted === 'pass' ? 'bg-slate-700 border-slate-600 text-white' : 'bg-[#0b0e14] border-slate-800 text-slate-400 hover:border-slate-700'}">
+              <span>${t.btnPass}</span>
+              <span class="font-mono text-[10px] opacity-80">${item.disagrees + (userVoted === 'pass' ? 1 : 0)}</span>
             </button>
           </div>
         `;
-        container.appendChild(card);
+        track.appendChild(card);
       });
+
+      // 스크롤 시 상단 인디케이터 인덱스 실시간 갱신
+      track.addEventListener('scroll', () => {
+        const cardWidth = track.firstElementChild?.offsetWidth || 300;
+        const activeIdx = Math.round(track.scrollLeft / cardWidth) + 1;
+        const total = filtered.length;
+        document.getElementById('indicator-text').innerText = `${Math.min(activeIdx, total)} of ${total} ${t.caseWord.toUpperCase()}`;
+      }, { passive: true });
     }
 
     function castVote(id, type) {
-      const votedKey = `tubik_voted_${id}`;
+      const votedKey = `swipe_voted_${id}`;
       const prev = localStorage.getItem(votedKey);
       if (prev) {
         alert(currentLang === 'ko' ? "이미 투표에 참여하셨습니다!" : "You have already voted!");
         return;
       }
       localStorage.setItem(votedKey, type);
-      renderFeed(currentFilter);
+      renderCarousel(currentFilter);
     }
 
     function filterFeed(type) {
       currentFilter = type;
-      document.querySelectorAll('.filter-btn').forEach(btn => {
+      document.querySelectorAll('.era-tab').forEach(btn => {
         if (btn.dataset.type === type) {
-          btn.className = "filter-btn active px-4 py-2.5 rounded-2xl bg-white text-black shadow-lg transition whitespace-nowrap";
+          btn.className = "era-tab active text-white bg-slate-800 px-2.5 py-1 rounded-xl transition font-black";
         } else {
-          btn.className = "filter-btn px-4 py-2.5 rounded-2xl bg-[#171c2b] text-slate-400 border border-slate-800 hover:text-white transition whitespace-nowrap";
+          btn.className = "era-tab text-slate-400 px-2.5 py-1 rounded-xl hover:text-white transition font-medium";
         }
       });
-      renderFeed(type);
+      renderCarousel(type);
     }
 
     function setLang(lang) {
       currentLang = lang;
-      localStorage.setItem('tubik_lang', lang);
+      localStorage.setItem('swipe_lang', lang);
       document.documentElement.lang = lang;
       updateUiLabels();
-      renderFeed(currentFilter);
+      renderCarousel(currentFilter);
     }
 
-    const savedLang = localStorage.getItem('tubik_lang');
+    const savedLang = localStorage.getItem('swipe_lang');
     if (savedLang) {
       currentLang = savedLang;
     } else if (!navigator.language.startsWith('ko')) {
@@ -478,7 +466,7 @@
 
     document.documentElement.lang = currentLang;
     updateUiLabels();
-    renderFeed();
+    renderCarousel();
   </script>
 </body>
 </html>
