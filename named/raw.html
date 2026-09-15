@@ -103,6 +103,7 @@
       }
     };
 
+    // Unsplash 글로벌 고속 CDN 이미지 (핫링크 차단 0%)
     const POSTS = [
       {
         id: "p1",
@@ -114,7 +115,7 @@
         authorTitle: { ko: "당대 최고 과학 지식인들", en: "Leading Scientists of the Era" },
         avatar: "🚂",
         imageBeforeUrl: "https://images.unsplash.com/photo-1541447271487-09612b3f49f7?w=800&auto=format&fit=crop&q=80",
-        imageCaption: { ko: "1830년대 로버트 스티븐슨의 초기 증기기관차 개통식", en: "1830s early steam locomotive trials" },
+        imageCaption: { ko: "1830년대 로버트 스티븐슨의 초기 증기기관차", en: "1830s early steam locomotive trials" },
         title: {
           ko: "기차가 시속 40km로 달리면 승객들은 질식해서 즉사한다",
           en: "Trains running at 30mph will cause passengers to die of asphyxiation"
@@ -146,8 +147,8 @@
         author: { ko: "폴 크루그먼", en: "Paul Krugman" },
         authorTitle: { ko: "노벨 경제학상 수상자", en: "Nobel Laureate in Economics" },
         avatar: "🎓",
-        imageBeforeUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Paul_Krugman_2008.jpg/640px-Paul_Krugman_2008.jpg",
-        imageCaption: { ko: "노벨 경제학상 수상자 폴 크루그먼", en: "Paul Krugman, Nobel Laureate in Economics" },
+        imageBeforeUrl: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&auto=format&fit=crop&q=80",
+        imageCaption: { ko: "1990년대 전통 경제학계의 월가 포럼", en: "1990s Wall Street economic summit" },
         title: {
           ko: "2005년쯤 되면 인터넷의 실체가 팩스(Fax) 수준이었음이 밝혀질 것",
           en: "By 2005, Internet's impact will be no greater than the fax machine"
@@ -179,8 +180,8 @@
         author: { ko: "스티브 발머", en: "Steve Ballmer" },
         authorTitle: { ko: "마이크로소프트 전 CEO", en: "Former CEO of Microsoft" },
         avatar: "💼",
-        imageBeforeUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Steve_Ballmer_2014.jpg/640px-Steve_Ballmer_2014.jpg",
-        imageCaption: { ko: "아이폰 발표 당시 인터뷰 중 폭소하던 스티브 발머", en: "Steve Ballmer laughing at iPhone launch" },
+        imageBeforeUrl: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80",
+        imageCaption: { ko: "2007년 초기 터치스크린 스마트폰 출시 발표회", en: "2007 early touch smartphone reveal" },
         title: {
           ko: "500달러짜리 아이폰? 키보드가 없어서 비즈니스맨에겐 0%짜리 장난감",
           en: "There's no chance that the iPhone is going to get any significant market share"
@@ -212,8 +213,8 @@
         author: { ko: "샘 알트만", en: "Sam Altman" },
         authorTitle: { ko: "OpenAI CEO", en: "CEO of OpenAI" },
         avatar: "🤖",
-        imageBeforeUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Sam_Altman_TechCrunch_Disrupt_2019_%28cropped%29.jpg/640px-Sam_Altman_TechCrunch_Disrupt_2019_%28cropped%29.jpg",
-        imageCaption: { ko: "OpenAI CEO 샘 알트만", en: "OpenAI CEO Sam Altman" },
+        imageBeforeUrl: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&auto=format&fit=crop&q=80",
+        imageCaption: { ko: "생성형 AI 초거대 모델 데이터센터 인프라", en: "Generative AI cluster infrastructure" },
         title: {
           ko: "현재의 LLM은 스스로 생각하는 지능이 아니다. AGI는 아직 멀었다",
           en: "Current LLMs are useful tools, not thinking minds. Far from AGI"
@@ -295,10 +296,10 @@
             </div>
           </div>
 
-          <!-- 상단 2분할 짤방: 당시 인물/사건 실제 사진 -->
-          <div class="relative w-full h-48 bg-slate-950 overflow-hidden border-b border-slate-800">
-            <img src="${item.imageBeforeUrl}" alt="${item.author[currentLang]}" class="w-full h-full object-cover object-center filter grayscale contrast-125 hover:grayscale-0 transition duration-500" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-[#161b22] via-transparent to-black/40"></div>
+          <!-- 상단 사진 (핫링크 차단 방지 및 onerror 완비) -->
+          <div class="relative w-full h-44 bg-slate-950 overflow-hidden border-b border-slate-800">
+            <img src="${item.imageBeforeUrl}" alt="${item.author[currentLang]}" class="w-full h-full object-cover object-center filter grayscale contrast-110 hover:grayscale-0 transition duration-500" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop&q=80';">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#161b22] via-transparent to-black/30"></div>
             <span class="absolute bottom-2 left-3 text-[11px] font-mono text-slate-300 bg-black/60 px-2 py-0.5 rounded backdrop-blur border border-white/10">
               📷 ${item.imageCaption[currentLang]}
             </span>
