@@ -316,200 +316,62 @@
         },
         upvotes: 563,
         disagrees: 145
-      }
+      },
+{
+      "cardType": "ONGOING",
+      "eraTag": {
+            "ko": "2026년 · 자율주행",
+            "en": "2026 · Autonomous Driving"
+      },
+      "statusBadge": {
+            "ko": "진행중 ⏳",
+            "en": "Pending Verdict ⏳"
+      },
+      "statusColor": "bg-slate-500/10 text-slate-300 border-slate-500/30",
+      "author": {
+            "ko": "일론 머스크",
+            "en": "Elon Musk"
+      },
+      "authorTitle": {
+            "ko": "테슬라 CEO",
+            "en": "CEO of Tesla"
+      },
+      "avatar": "🚕",
+      "imageBeforeUrl": "https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=800&auto=format&fit=crop&q=80",
+      "imageCaption": {
+            "ko": "테슬라 FSD 테스트 주행",
+            "en": "Tesla FSD beta testing"
+      },
+      "title": {
+            "ko": "2026년 안에 무인 로보택시가 미국 전역을 달린다",
+            "en": "Robotaxis will span the US by 2026"
+      },
+      "quoteSource": {
+            "ko": "테슬라 실적 발표",
+            "en": "Tesla Earnings Call"
+      },
+      "quoteText": {
+            "ko": "2026년 안에 운전대와 페달이 없는 로보택시가 대량 양산되어 미국 전역의 거리를 장악할 것입니다.",
+            "en": "By 2026, Robotaxis without steering wheels or pedals will take over the streets."
+      },
+      "timelineLabel": {
+            "ko": "⏳ 현재 진행 상황",
+            "en": "⏳ Current Status"
+      },
+      "realityStat": {
+            "ko": "규제 승인 및 완성도 논쟁 중",
+            "en": "Regulatory approval debate ongoing"
+      },
+      "realityText": {
+            "ko": "완전 자율주행(레벨 4 이상)의 규제 당국 승인과 돌발 변수 대처 능력을 두고 여전히 업계와 시장의 팽팽한 논쟁이 진행 중입니다.",
+            "en": "Intense debate continues globally regarding Level 4+ autonomous regulatory approval."
+      },
+      "actionHighlight": {
+            "ko": "거대한 비전은 막대한 자본을 끌어모으지만, 실제 세상의 인프라와 규제가 바뀌는 속도는 언제나 선구자의 호언장담보다 느립니다.",
+            "en": "Grand visions attract capital, but physical infrastructure and regulation always lag."
+      },
+      "upvotes": 215,
+      "disagrees": 184,
+      "id": "p_auto_1789559098"
+}
     ];
-
-    function updateUiLabels() {
-      const t = I18N[currentLang];
-      document.getElementById('ui-subname').innerText = t.subname;
-      document.getElementById('ui-subtag').innerText = t.subtag;
-      document.getElementById('ui-subtitle').innerText = t.subtitle;
-      document.getElementById('ui-home').innerText = t.home;
-      document.getElementById('filter-all').innerText = t.filterAll;
-      document.getElementById('filter-lesson').innerText = t.filterLesson;
-      document.getElementById('filter-track').innerText = t.filterTrack;
-      document.getElementById('filter-ongoing').innerText = t.filterOngoing;
-      document.getElementById('ui-footer-note').innerText = t.footerNote;
-
-      const btnKo = document.getElementById('btn-ko');
-      const btnEn = document.getElementById('btn-en');
-      if (currentLang === 'ko') {
-        btnKo.className = "px-2 py-0.5 rounded bg-orange-500 text-white transition";
-        btnEn.className = "px-2 py-0.5 rounded text-slate-400 hover:text-white transition";
-      } else {
-        btnEn.className = "px-2 py-0.5 rounded bg-orange-500 text-white transition";
-        btnKo.className = "px-2 py-0.5 rounded text-slate-400 hover:text-white transition";
-      }
-    }
-
-    function renderFeed(filter = 'ALL') {
-      const container = document.getElementById('feed-container');
-      container.innerHTML = '';
-      const t = I18N[currentLang];
-
-      const filtered = filter === 'ALL' ? POSTS : POSTS.filter(item => item.cardType === filter);
-
-      filtered.forEach(item => {
-        const votedKey = `voted_${item.id}`;
-        const userVoted = localStorage.getItem(votedKey);
-
-        let typeHeaderTag = '';
-        let outcomeTitle = '';
-        let takeawayTitle = '';
-
-        if (item.cardType === 'LESSON') {
-          typeHeaderTag = `<span class="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/30">${t.tagLesson}</span>`;
-          outcomeTitle = t.historyTitle;
-          takeawayTitle = t.takeawayLesson;
-        } else if (item.cardType === 'TRACK') {
-          typeHeaderTag = `<span class="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-500/10 text-blue-300 border border-blue-500/30">${t.tagTrack}</span>`;
-          outcomeTitle = t.marketTitle;
-          takeawayTitle = t.takeawayTrack;
-        } else {
-          typeHeaderTag = `<span class="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-300 border border-emerald-500/30">${t.tagOngoing}</span>`;
-          outcomeTitle = t.ongoingTitle;
-          takeawayTitle = t.takeawayOngoing;
-        }
-
-        const card = document.createElement('article');
-        card.className = "bg-[#161b22] border border-slate-800 rounded-2xl overflow-hidden shadow-xl";
-
-        card.innerHTML = `
-          <!-- 1. 헤더 -->
-          <div class="p-3 pb-2 flex items-center justify-between border-b border-slate-800/60 bg-slate-900/40 text-xs">
-            <div class="flex items-center gap-1.5 min-w-0 pr-2">
-              <span class="text-base shrink-0">${item.avatar}</span>
-              <div class="truncate">
-                <span class="font-bold text-slate-200">${item.author[currentLang]}</span>
-                <span class="text-[11px] text-slate-400">· ${item.authorTitle[currentLang]}</span>
-              </div>
-            </div>
-            <div class="flex items-center gap-1.5 shrink-0 whitespace-nowrap">
-              ${typeHeaderTag}
-              <span class="text-[10px] font-mono text-slate-400">${item.eraTag[currentLang]}</span>
-            </div>
-          </div>
-
-          <!-- 2. 상단 사진 -->
-          <div class="relative w-full h-40 bg-slate-950 overflow-hidden border-b border-slate-800">
-            <img src="${item.imageBeforeUrl}" alt="${item.author[currentLang]}" class="w-full h-full object-cover object-center filter grayscale contrast-110 hover:grayscale-0 transition duration-500" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-[#161b22] via-transparent to-black/30"></div>
-            <span class="absolute bottom-2 left-3 text-[10px] font-mono text-slate-300 bg-black/60 px-2 py-0.5 rounded backdrop-blur border border-white/10 truncate max-w-[85%]">
-              📷 ${item.imageCaption[currentLang]}
-            </span>
-          </div>
-
-          <!-- 3. 카드 본문 -->
-          <div class="p-4 space-y-3">
-            <div class="flex items-start justify-between gap-2">
-              <h2 class="text-base font-extrabold text-white leading-snug tracking-tight">
-                ${item.title[currentLang]}
-              </h2>
-              <span class="text-[10px] font-bold px-2 py-0.5 rounded whitespace-nowrap border shrink-0 ${item.statusColor}">
-                ${item.statusBadge[currentLang]}
-              </span>
-            </div>
-
-            <!-- 발언 인용구 박스 -->
-            <div class="bg-[#1c2128] border-l-4 border-amber-500/80 rounded-r-xl p-3 space-y-1 shadow-inner">
-              <div class="flex items-center justify-between text-[11px] text-amber-400 font-mono font-bold whitespace-nowrap">
-                <span>${t.quoteLabel}</span>
-                <span class="text-slate-500 truncate ml-2 text-[10px]">${item.quoteSource[currentLang]}</span>
-              </div>
-              <p class="text-xs sm:text-sm text-slate-300 italic leading-relaxed">
-                "${item.quoteText[currentLang]}"
-              </p>
-            </div>
-
-            <!-- 대비 화살표 -->
-            <div class="relative flex py-0.5 items-center justify-center">
-              <div class="flex-grow border-t border-slate-800"></div>
-              <span class="flex-shrink mx-2 text-[10px] font-mono font-bold text-slate-400 bg-[#161b22] px-2 py-0.5 rounded border border-slate-800 whitespace-nowrap">
-                ${item.timelineLabel[currentLang]}
-              </span>
-              <div class="flex-grow border-t border-slate-800"></div>
-            </div>
-
-            <!-- 결과 박스 -->
-            <div class="bg-[#0e1117] border border-slate-800 rounded-xl p-3 space-y-1">
-              <div class="flex items-center justify-between text-[11px] font-bold text-emerald-400 whitespace-nowrap">
-                <span>${outcomeTitle}</span>
-                <span class="text-[10px] text-slate-400 font-mono truncate ml-2">${item.realityStat[currentLang]}</span>
-              </div>
-              <p class="text-xs text-slate-300 leading-relaxed font-medium">
-                ${item.realityText[currentLang]}
-              </p>
-            </div>
-
-            <!-- 실전 교훈 박스 -->
-            <div class="bg-gradient-to-r from-orange-950/20 to-amber-950/10 border border-orange-500/20 rounded-xl p-2.5">
-              <p class="text-xs text-orange-200/90 leading-relaxed">
-                <strong class="text-orange-400 font-extrabold mr-1 whitespace-nowrap">${takeawayTitle}</strong>${item.actionHighlight[currentLang]}
-              </p>
-            </div>
-          </div>
-
-          <!-- 4. 1클릭 토글 투표 인터랙션 바 -->
-          <div class="px-4 py-2.5 bg-slate-900/60 border-t border-slate-800/80 flex items-center justify-between text-xs">
-            <div class="flex items-center gap-2">
-              <button onclick="toggleVote('${item.id}', 'up')" class="vote-btn flex items-center gap-1.5 px-3 py-1.5 rounded-lg border transition whitespace-nowrap ${userVoted === 'up' ? 'bg-orange-500 text-white font-bold border-orange-500 shadow-md shadow-orange-500/30' : 'bg-slate-800/80 text-slate-300 border-slate-700 hover:border-orange-500 hover:text-orange-400'}">
-                <span>${t.voteFail}</span>
-                <span class="font-mono font-bold">${item.upvotes + (userVoted === 'up' ? 1 : 0)}</span>
-              </button>
-              <button onclick="toggleVote('${item.id}', 'down')" class="vote-btn flex items-center gap-1.5 px-3 py-1.5 rounded-lg border transition whitespace-nowrap ${userVoted === 'down' ? 'bg-slate-700 text-white font-bold border-slate-600 shadow-md' : 'bg-slate-800/80 text-slate-400 border-slate-700 hover:border-slate-500 hover:text-white'}">
-                <span>${t.votePass}</span>
-                <span class="font-mono">${item.disagrees + (userVoted === 'down' ? 1 : 0)}</span>
-              </button>
-            </div>
-            <span class="text-[11px] text-slate-500 font-mono whitespace-nowrap">${userVoted ? t.votedBadge : ''}</span>
-          </div>
-        `;
-        container.appendChild(card);
-      });
-    }
-
-    function toggleVote(id, type) {
-      const votedKey = `voted_${id}`;
-      const prev = localStorage.getItem(votedKey);
-
-      if (prev === type) {
-        localStorage.removeItem(votedKey);
-      } else {
-        localStorage.setItem(votedKey, type);
-      }
-      renderFeed(currentFilter);
-    }
-
-    function filterType(type) {
-      currentFilter = type;
-      document.querySelectorAll('.filter-btn').forEach(btn => {
-        if (btn.dataset.type === type) {
-          btn.className = "filter-btn active px-3 py-1 rounded-lg bg-orange-500 text-white font-bold transition";
-        } else {
-          btn.className = "filter-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition";
-        }
-      });
-      renderFeed(type);
-    }
-
-    function setLang(lang) {
-      currentLang = lang;
-      localStorage.setItem('user_lang', lang);
-      document.documentElement.lang = lang;
-      updateUiLabels();
-      renderFeed(currentFilter);
-    }
-
-    const savedLang = localStorage.getItem('user_lang');
-    if (savedLang) {
-      currentLang = savedLang;
-    } else if (!navigator.language.startsWith('ko')) {
-      currentLang = 'en';
-    }
-
-    document.documentElement.lang = currentLang;
-    updateUiLabels();
-    renderFeed();
-  </script>
-</body>
-</html>
