@@ -1,4 +1,4 @@
-# [Version 1.1]
+# [Version 1.2]
 name: Deploy to GitHub Pages
 
 on:
@@ -6,7 +6,6 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
-# 동일한 페이지 배포 작업이 겹칠 때 충돌을 방지하는 동시성 제어 설정
 concurrency:
   group: "pages"
   cancel-in-progress: false
@@ -15,7 +14,7 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
       pages: write
       id-token: write
     steps:
@@ -27,12 +26,16 @@ jobs:
 
       - name: Detect and Inject Adsense/GA4 & Copy to Root
         run: |
-          echo "Building and deploying site..."
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: '.'
-
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
+          python3 - <<'EOF'
+          import glob, os
+          SNIPPET = """
+          <!-- Google tag (gtag.js) -->
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q543DWEBBW"></script>
+          <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-Q543DWEBBW');
+          </script>
+          <!-- Google AdSense -->
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=pub-1957248819245044" crossorigin="anonymous">
