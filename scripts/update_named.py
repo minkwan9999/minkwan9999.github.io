@@ -14,7 +14,7 @@ def fetch_new_named_item():
         print("[WARN] GEMINI_API_KEY is missing.")
         return None
 
-    # 404 에러 해결: gemini-1.5-flash 모델로 수정
+    # 404 에러 픽스: 실제 서비스 중인 모델명(gemini-1.5-flash)으로 수정
     url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}"
     
     prompt = """
