@@ -1,0 +1,32 @@
+name: Daily Named App Updater
+
+on:
+  schedule:
+    # 매일 한국 시간 오전 10시 (UTC 01:00) 
+    # (랭크 앱 실행 시간과 겹치지 않도록 분산 배치)
+    - cron: '0 1 * * *'
+  workflow_dispatch:
+
+jobs:
+  update-named:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 저장소 체크아웃
+        uses: actions/checkout@v4
+
+      - name: Python 세팅
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: 팩트체크 및 HTML 업데이트 실행
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python scripts/update_named.py
+
+      - name: 자동 커밋 및 푸시
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add named/raw.html
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-add new named quote" && git push)
