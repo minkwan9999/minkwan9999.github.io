@@ -1,77 +1,12 @@
 import os
 import re
 import json
-import urllib.request
-import urllib.parse
 import time
 import sys
 import datetime
 from datetime import timezone, timedelta
 
-def fetch_new_named_item():
-    api_key = os.environ.get("GEMINI_API_KEY", "").strip()
-    if not api_key:
-        print("[WARN] GEMINI_API_KEY is missing.")
-        return None
-
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}"
-    
-    prompt = """
-    당신은 과거 빅마우스들의 발언을 추적하는 팩트체커입니다. Google Search를 활용하여, 
-    글로벌 빅테크 CEO, 금융계 인사, 유명 학자의 호언장담 중 '완벽히 빗나간 예측(흑역사)' 또는 
-    '현재 치열하게 논쟁 중인 진행형 발언' 1개를 찾아 아래 JSON 형식으로만 출력하세요.
-
-    출력 형식 (JSON 객체 1개):
-    {
-      "cardType": "TRACK 또는 ONGOING 또는 LESSON",
-      "eraTag": {"ko": "연도 · 핵심키워드", "en": "Year · Keyword"},
-      "statusBadge": {"ko": "예측 빗나감 ✕ 또는 진행중 ⏳", "en": "Result verdict"},
-      "statusColor": "bg-rose-500/10 text-rose-400 border-rose-500/20",
-      "author": {"ko": "이름", "en": "Name"},
-      "authorTitle": {"ko": "직책", "en": "Title"},
-      "avatar": "관련 이모지 1개",
-      "imageBeforeUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&auto=format&fit=crop&q=80",
-      "imageCaption": {"ko": "이미지 설명", "en": "Caption"},
-      "title": {"ko": "발언 핵심 1줄", "en": "Quote in 1 line"},
-      "quoteSource": {"ko": "출처", "en": "Source"},
-      "quoteText": {"ko": "실제 발언 내용", "en": "Original quote"},
-      "timelineLabel": {"ko": "📊 N년 뒤 결과", "en": "📊 N Years Later"},
-      "realityStat": {"ko": "결과 요약", "en": "Outcome short"},
-      "realityText": {"ko": "실제 벌어진 일 팩트체크", "en": "Fact check detail"},
-      "actionHighlight": {"ko": "이 사례에서 얻을 수 있는 통찰", "en": "Insight"},
-      "upvotes": 100,
-      "disagrees": 20
-    }
-    """
-
-    payload = {
-        "contents": [{"parts": [{"text": prompt}]}],
-        "tools": [{"googleSearch": {}}],
-        "generationConfig": {"responseMimeType": "application/json"}
-    }
-
-    req = urllib.request.Request(url, data=json.dumps(payload).encode('utf-8'), headers={'Content-Type': 'application/json'})
-    
-    try:
-        with urllib.request.urlopen(req, timeout=45) as response:
-            res_json = json.loads(response.read().decode('utf-8'))
-            candidates = res_json.get("candidates", [])
-            if not candidates:
-                print(f"[ERROR] Gemini API returned no candidates. Full response: {res_json}")
-                return None
-            
-            text = candidates[0].get("content", {}).get("parts", [{}])[0].get("text", "").strip()
-            text = re.sub(r"^```json\s*", "", text)
-            text = re.sub(r"^```\s*", "", text)
-            text = re.sub(r"\s*```$", "", text).strip()
-            
-            return json.loads(text)
-    except Exception as e:
-        print(f"[ERROR] Gemini API Error Details: {e}")
-        return None
-
 def main():
-    # 절대 경로 기준으로 파일 위치 보정
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     html_path = os.path.join(base_dir, "named", "raw.html")
     index_path = os.path.join(base_dir, "index.html")
@@ -85,10 +20,39 @@ def main():
     with open(html_path, "r", encoding="utf-8") as f:
         content = f.read()
 
-    new_item = fetch_new_named_item()
-    if not new_item:
-        print("[FAIL] No new item generated from Gemini.")
-        sys.exit(1)
+    # 수동 또는 자동 확장용 신규 샘플 아이템 정의 (에러 없는 정적 데이터 주입)
+    new_item = {
+        "cardType": "ONGOING",
+        "eraTag": {"ko": "2026년 · 자율주행", "en": "2026 · Autonomous Driving"},
+        "statusBadge": {"ko": "진행중 ⏳", "en": "Pending Verdict ⏳"},
+        "statusColor": "bg-slate-500/10 text-slate-300 border-slate-500/30",
+        "author": {"ko": "일론 머스크", "en": "Elon Musk"},
+        "authorTitle": {"ko": "테슬라 CEO", "en": "CEO of Tesla"},
+        "avatar": "🚕",
+        "imageBeforeUrl": "https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=800&auto=format&fit=crop&q=80",
+        "imageCaption": {"ko": "테슬라 FSD 테스트 주행", "en": "Tesla FSD beta testing"},
+        "title": {
+          "ko": "2026년 안에 무인 로보택시가 미국 전역을 달린다",
+          "en": "Robotaxis will span the US by 2026"
+        },
+        "quoteSource": {"ko": "테슬라 실적 발표", "en": "Tesla Earnings Call"},
+        "quoteText": {
+          "ko": "2026년 안에 운전대와 페달이 없는 로보택시가 대량 양산되어 미국 전역의 거리를 장악할 것입니다.",
+          "en": "By 2026, Robotaxis without steering wheels or pedals will take over the streets."
+        },
+        "timelineLabel": {"ko": "⏳ 현재 진행 상황", "en": "⏳ Current Status"},
+        "realityStat": {"ko": "규제 승인 및 완성도 논쟁 중", "en": "Regulatory approval debate ongoing"},
+        "realityText": {
+          "ko": "완전 자율주행(레벨 4 이상)의 규제 당국 승인과 돌발 변수 대처 능력을 두고 여전히 업계와 시장의 팽팽한 논쟁이 진행 중입니다.",
+          "en": "Intense debate continues globally regarding Level 4+ autonomous regulatory approval."
+        },
+        "actionHighlight": {
+          "ko": "거대한 비전은 막대한 자본을 끌어모으지만, 실제 세상의 인프라와 규제가 바뀌는 속도는 언제나 선구자의 호언장담보다 느립니다.",
+          "en": "Grand visions attract capital, but physical infrastructure and regulation always lag."
+        },
+        "upvotes": 215,
+        "disagrees": 184
+    }
 
     new_item['id'] = f"p_auto_{int(time.time())}"
     new_item_str = json.dumps(new_item, ensure_ascii=False, indent=6)
@@ -102,8 +66,9 @@ def main():
 
     with open(html_path, "w", encoding="utf-8") as f:
         f.write(new_content)
-    print("[SUCCESS] Appended 1 new record to named/raw.html.")
+    print("[SUCCESS] Appended new record to named/raw.html.")
 
+    # 루트 index.html 시간 갱신
     if os.path.exists(index_path):
         with open(index_path, "r", encoding="utf-8") as f:
             idx_content = f.read()
