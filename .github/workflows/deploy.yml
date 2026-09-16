@@ -1,72 +1,38 @@
-name: Auto Inject Adsense & GA4
+# [Version 1.1]
+name: Deploy to GitHub Pages
 
 on:
   push:
-    paths:
-      - '**/raw.html'
-    branches:
-      - main
+    branches: [ main ]
+  workflow_dispatch:
+
+# 동일한 페이지 배포 작업이 겹칠 때 충돌을 방지하는 동시성 제어 설정
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
-
+      contents: read
+      pages: write
+      id-token: write
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Inject Snippets into all raw.html
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Detect and Inject Adsense/GA4 & Copy to Root
         run: |
-          python3 -c "
-          import os, glob
+          echo "Building and deploying site..."
 
-          adsense_id = os.environ.get('ADSENSE_CLIENT_ID', '')
-          ga4_id = os.environ.get('GA4_ID', '')
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
 
-          head_tags = f'''
-          <!-- Google tag (gtag.js) -->
-          <script async src=\"https://www.googletagmanager.com/gtag/js?id={ga4_id}\"></script>
-          <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){{dataLayer.push(arguments);}}
-            gtag('js', new Date());
-            gtag('config', '{ga4_id}');
-          </script>
-          <!-- Google AdSense -->
-          <script async src=\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={adsense_id}\" crossorigin=\"anonymous\"></script>
-          '''
-
-          # 저장소 내의 모든 raw.html 탐색
-          for raw_path in glob.glob('**/raw.html', recursive=True):
-              dir_name = os.path.dirname(raw_path)
-              index_path = os.path.join(dir_name, 'index.html')
-
-              with open(raw_path, 'r', encoding='utf-8') as f:
-                  html = f.read()
-
-              if '</head>' in html:
-                  html = html.replace('</head>', head_tags + '\n</head>')
-              else:
-                  html = head_tags + '\n' + html
-
-              with open(index_path, 'w', encoding='utf-8') as f:
-                  f.write(html)
-              print(f'Processed: {index_path}')
-          "
-        env:
-          ADSENSE_CLIENT_ID: ${{ secrets.ADSENSE_CLIENT_ID }}
-          GA4_ID: ${{ secrets.GA4_ID }}
-
-      - name: Commit and Push generated index.html
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add "**/index.html"
-          if git diff --staged --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "Auto-generated index.html with AdSense/GA"
-            git push
-          fi
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
