@@ -20,7 +20,6 @@ def main():
     with open(html_path, "r", encoding="utf-8") as f:
         content = f.read()
 
-    # 수동 또는 자동 확장용 신규 샘플 아이템 정의 (에러 없는 정적 데이터 주입)
     new_item = {
         "cardType": "ONGOING",
         "eraTag": {"ko": "2026년 · 자율주행", "en": "2026 · Autonomous Driving"},
@@ -68,7 +67,6 @@ def main():
         f.write(new_content)
     print("[SUCCESS] Appended new record to named/raw.html.")
 
-    # 루트 index.html 시간 갱신
     if os.path.exists(index_path):
         with open(index_path, "r", encoding="utf-8") as f:
             idx_content = f.read()
