@@ -1,3 +1,4 @@
+# [Version 2.1]
 import os
 import re
 import json
@@ -21,47 +22,58 @@ def main():
         content = f.read()
 
     new_item = {
-        "cardType": "ONGOING",
+        "id": f"p_auto_{int(time.time())}",
+        "cardType": "TRACK",
         "eraTag": {"ko": "2026년 · 자율주행", "en": "2026 · Autonomous Driving"},
-        "statusBadge": {"ko": "진행중 ⏳", "en": "Pending Verdict ⏳"},
-        "statusColor": "bg-slate-500/10 text-slate-300 border-slate-500/30",
+        "badgeText": {"ko": "빅마우스 성적표 ✓", "en": "Verified Track Record ✓"},
+        "badgeClass": "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
         "author": {"ko": "일론 머스크", "en": "Elon Musk"},
         "authorTitle": {"ko": "테슬라 CEO", "en": "CEO of Tesla"},
         "avatar": "🚕",
         "imageBeforeUrl": "https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=800&auto=format&fit=crop&q=80",
-        "imageCaption": {"ko": "테슬라 FSD 테스트 주행", "en": "Tesla FSD beta testing"},
+        "imageCaption": {"ko": "테슬라 FSD 테스트 주행 현장", "en": "Tesla FSD beta testing scene"},
         "title": {
-          "ko": "2026년 안에 무인 로보택시가 미국 전역을 달린다",
-          "en": "Robotaxis will span the US by 2026"
+          "ko": "2026년까지 완전 자율주행으로 수익을 내지 못하면 사업을 접는다",
+          "en": "If Tesla doesn't achieve fully autonomous profitability by 2026, we fail"
         },
-        "quoteSource": {"ko": "테슬라 실적 발표", "en": "Tesla Earnings Call"},
+        "quoteSource": {"ko": "테슬라 실적 컨퍼런스 콜 및 X 포스팅", "en": "Tesla Earnings Call & X Post"},
         "quoteText": {
-          "ko": "2026년 안에 운전대와 페달이 없는 로보택시가 대량 양산되어 미국 전역의 거리를 장악할 것입니다.",
-          "en": "By 2026, Robotaxis without steering wheels or pedals will take over the streets."
+          "ko": "우리는 올해와 내년에 걸쳐 완전 자율주행(FSD) 승인과 무인 로보택시 대량 양산을 완수할 것입니다. 인간 운전자보다 압도적으로 안전해집니다.",
+          "en": "We will achieve full autonomy and mass production of uncrewed robotaxis. It will be overwhelmingly safer than human drivers."
         },
-        "timelineLabel": {"ko": "⏳ 현재 진행 상황", "en": "⏳ Current Status"},
-        "realityStat": {"ko": "규제 승인 및 완성도 논쟁 중", "en": "Regulatory approval debate ongoing"},
+        "timelineLabel": {"ko": "📊 2026년 현재 성적표", "en": "📊 2026 Current Track Record"},
+        "realityStat": {"ko": "규제 승인 대기 및 감독자 탑승 유지", "en": "Regulatory pending & supervision required"},
         "realityText": {
-          "ko": "완전 자율주행(레벨 4 이상)의 규제 당국 승인과 돌발 변수 대처 능력을 두고 여전히 업계와 시장의 팽팽한 논쟁이 진행 중입니다.",
-          "en": "Intense debate continues globally regarding Level 4+ autonomous regulatory approval."
+          "ko": "여전히 완전 무인 자율주행은 주요 주정부의 엄격한 승인 심사와 안전 운전자 상시 대기 조건 속에서 제한적으로 테스트되고 있습니다.",
+          "en": "True uncrewed autonomy remains under strict state regulatory review and requires safety drivers in most jurisdictions."
         },
         "actionHighlight": {
-          "ko": "거대한 비전은 막대한 자본을 끌어모으지만, 실제 세상의 인프라와 규제가 바뀌는 속도는 언제나 선구자의 호언장담보다 느립니다.",
-          "en": "Grand visions attract capital, but physical infrastructure and regulation always lag."
+          "ko": "거대한 비전과 혁신적 기술 발표는 시장의 기대감을 모으지만, 물리적 안전 규제와 인프라의 장벽은 언제나 예상보다 높고 오래 걸립니다.",
+          "en": "Grand visions capture market excitement, but physical safety regulations and infrastructure barriers always take longer than expected."
         },
-        "upvotes": 215,
-        "disagrees": 184
+        "upvotes": 312,
+        "disagrees": 45
     }
 
-    new_item['id'] = f"p_auto_{int(time.time())}"
     new_item_str = json.dumps(new_item, ensure_ascii=False, indent=6)
 
-    match = re.search(r'(const POSTS = \[.*?\})(\s*\];)', content, flags=re.DOTALL)
-    if not match:
-        print("[ERROR] POSTS array closing not found in HTML.")
+    if "const POSTS = [" in content:
+        parts = content.split("const POSTS = [")
+        header = parts[0] + "const POSTS = ["
+        rest = parts[1]
+        idx = rest.rfind("];")
+        if idx != -1:
+            array_content = rest[:idx].strip()
+            footer = rest[idx:]
+            if array_content and not array_content.endswith(","):
+                array_content += ","
+            new_content = header + "\n" + array_content + "\n" + new_item_str + "\n" + footer
+        else:
+            print("[ERROR] Could not find closing ]; for POSTS")
+            sys.exit(1)
+    else:
+        print("[ERROR] const POSTS = [ not found in raw.html")
         sys.exit(1)
-
-    new_content = content[:match.end(1)] + ",\n" + new_item_str + match.group(2)
 
     with open(html_path, "w", encoding="utf-8") as f:
         f.write(new_content)
