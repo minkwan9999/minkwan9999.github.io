@@ -5,6 +5,8 @@ import urllib.request
 import urllib.parse
 import time
 import sys
+import datetime
+from datetime import timezone, timedelta
 
 def fetch_new_named_item():
     api_key = os.environ.get("GEMINI_API_KEY", "").strip()
@@ -12,7 +14,8 @@ def fetch_new_named_item():
         print("[WARN] GEMINI_API_KEY is missing.")
         return None
 
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={api_key}"
+    # 404 에러 해결: gemini-1.5-flash 모델로 수정
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}"
     
     prompt = """
     당신은 과거 빅마우스들의 발언을 추적하는 팩트체커입니다. Google Search를 활용하여, 
@@ -67,6 +70,8 @@ def fetch_new_named_item():
 
 def main():
     html_path = "named/raw.html"
+    index_path = "index.html"
+    
     if not os.path.exists(html_path):
         print(f"[ERROR] {html_path} not found.")
         sys.exit(1)
@@ -79,12 +84,9 @@ def main():
         print("[FAIL] No new item generated.")
         sys.exit(1)
 
-    # 파싱 에러 방지용 랜덤 ID 생성
     new_item['id'] = f"p_auto_{int(time.time())}"
     new_item_str = json.dumps(new_item, ensure_ascii=False, indent=6)
 
-    # JSON 파싱 없이 정규식으로 직접 외과적 끼워넣기
-    # const POSTS = [...] 배열의 마지막 } 뒤에 새 객체를 이어붙임
     match = re.search(r'(const POSTS = \[.*?\})(\s*\];)', content, flags=re.DOTALL)
     if not match:
         print("[ERROR] POSTS array closing not found.")
@@ -94,8 +96,28 @@ def main():
 
     with open(html_path, "w", encoding="utf-8") as f:
         f.write(new_content)
-    
-    print("[SUCCESS] Appended 1 new record via Regex bypass.")
+    print("[SUCCESS] Appended 1 new record to named/raw.html.")
+
+    # 루트 index.html 시간에 외과적 치환 주입
+    if os.path.exists(index_path):
+        with open(index_path, "r", encoding="utf-8") as f:
+            idx_content = f.read()
+
+        kst = timezone(timedelta(hours=9))
+        now_str = datetime.datetime.now(kst).strftime("%Y.%m.%d %H:%M")
+        
+        # 정규식으로 id="insight-update-time" 태그 내부 텍스트 갱신
+        new_idx_content = re.sub(
+            r'(<span[^>]*id="insight-update-time"[^>]*>)(.*?)(</span>)',
+            fr'\g<1>마지막 업데이트: {now_str}\g<3>',
+            idx_content
+        )
+        
+        with open(index_path, "w", encoding="utf-8") as f:
+            f.write(new_idx_content)
+        print(f"[SUCCESS] index.html time updated to: {now_str}")
+    else:
+        print("[WARN] index.html not found, skipped time update.")
 
 if __name__ == "__main__":
     main()
