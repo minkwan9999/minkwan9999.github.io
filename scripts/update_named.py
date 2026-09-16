@@ -14,33 +14,31 @@ def fetch_new_named_item():
         print("[WARN] GEMINI_API_KEY is missing.")
         return None
 
-    # 404 에러 픽스: 실제 서비스 중인 모델명(gemini-1.5-flash)으로 수정
     url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}"
     
     prompt = """
     당신은 과거 빅마우스들의 발언을 추적하는 팩트체커입니다. Google Search를 활용하여, 
     글로벌 빅테크 CEO, 금융계 인사, 유명 학자의 호언장담 중 '완벽히 빗나간 예측(흑역사)' 또는 
     '현재 치열하게 논쟁 중인 진행형 발언' 1개를 찾아 아래 JSON 형식으로만 출력하세요.
-    (기존에 유명한 폴 크루그먼 팩스 발언, 일론 머스크 로보택시, 팀 쿡 비전프로, 스티브 발머 아이폰 조롱 외의 새롭고 신선한 사례를 발굴할 것)
 
     출력 형식 (JSON 객체 1개):
     {
       "cardType": "TRACK 또는 ONGOING 또는 LESSON",
       "eraTag": {"ko": "연도 · 핵심키워드", "en": "Year · Keyword"},
       "statusBadge": {"ko": "예측 빗나감 ✕ 또는 진행중 ⏳", "en": "Result verdict"},
-      "statusColor": "결과에 따라 bg-rose-500/10 text-rose-400 border-rose-500/20 또는 bg-slate-500/10 등",
+      "statusColor": "bg-rose-500/10 text-rose-400 border-rose-500/20",
       "author": {"ko": "이름", "en": "Name"},
       "authorTitle": {"ko": "직책", "en": "Title"},
       "avatar": "관련 이모지 1개",
-      "imageBeforeUrl": "관련된 고화질 무료 이미지 URL (Unsplash 등)",
+      "imageBeforeUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&auto=format&fit=crop&q=80",
       "imageCaption": {"ko": "이미지 설명", "en": "Caption"},
       "title": {"ko": "발언 핵심 1줄", "en": "Quote in 1 line"},
-      "quoteSource": {"ko": "출처(예: 2021년 인터뷰)", "en": "Source"},
+      "quoteSource": {"ko": "출처", "en": "Source"},
       "quoteText": {"ko": "실제 발언 내용", "en": "Original quote"},
       "timelineLabel": {"ko": "📊 N년 뒤 결과", "en": "📊 N Years Later"},
       "realityStat": {"ko": "결과 요약", "en": "Outcome short"},
       "realityText": {"ko": "실제 벌어진 일 팩트체크", "en": "Fact check detail"},
-      "actionHighlight": {"ko": "이 사례에서 얻을 수 있는 통찰/행동 지침", "en": "Insight"},
+      "actionHighlight": {"ko": "이 사례에서 얻을 수 있는 통찰", "en": "Insight"},
       "upvotes": 100,
       "disagrees": 20
     }
@@ -57,23 +55,31 @@ def fetch_new_named_item():
     try:
         with urllib.request.urlopen(req, timeout=45) as response:
             res_json = json.loads(response.read().decode('utf-8'))
-            text = res_json.get("candidates", [{}])[0].get("content", {}).get("parts", [{}])[0].get("text", "").strip()
+            candidates = res_json.get("candidates", [])
+            if not candidates:
+                print(f"[ERROR] Gemini API returned no candidates. Full response: {res_json}")
+                return None
             
+            text = candidates[0].get("content", {}).get("parts", [{}])[0].get("text", "").strip()
             text = re.sub(r"^```json\s*", "", text)
             text = re.sub(r"^```\s*", "", text)
             text = re.sub(r"\s*```$", "", text).strip()
             
             return json.loads(text)
     except Exception as e:
-        print(f"[ERROR] Gemini API Error: {e}")
+        print(f"[ERROR] Gemini API Error Details: {e}")
         return None
 
 def main():
-    html_path = "named/raw.html"
-    index_path = "index.html"
+    # 절대 경로 기준으로 파일 위치 보정
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    html_path = os.path.join(base_dir, "named", "raw.html")
+    index_path = os.path.join(base_dir, "index.html")
     
+    print(f"[INFO] Target named HTML path: {html_path}")
+
     if not os.path.exists(html_path):
-        print(f"[ERROR] {html_path} not found.")
+        print(f"[ERROR] File not found at {html_path}")
         sys.exit(1)
 
     with open(html_path, "r", encoding="utf-8") as f:
@@ -81,7 +87,7 @@ def main():
 
     new_item = fetch_new_named_item()
     if not new_item:
-        print("[FAIL] No new item generated.")
+        print("[FAIL] No new item generated from Gemini.")
         sys.exit(1)
 
     new_item['id'] = f"p_auto_{int(time.time())}"
@@ -89,7 +95,7 @@ def main():
 
     match = re.search(r'(const POSTS = \[.*?\})(\s*\];)', content, flags=re.DOTALL)
     if not match:
-        print("[ERROR] POSTS array closing not found.")
+        print("[ERROR] POSTS array closing not found in HTML.")
         sys.exit(1)
 
     new_content = content[:match.end(1)] + ",\n" + new_item_str + match.group(2)
@@ -98,7 +104,6 @@ def main():
         f.write(new_content)
     print("[SUCCESS] Appended 1 new record to named/raw.html.")
 
-    # 루트 index.html 시간에 외과적 치환 주입
     if os.path.exists(index_path):
         with open(index_path, "r", encoding="utf-8") as f:
             idx_content = f.read()
@@ -106,7 +111,6 @@ def main():
         kst = timezone(timedelta(hours=9))
         now_str = datetime.datetime.now(kst).strftime("%Y.%m.%d %H:%M")
         
-        # 정규식으로 id="insight-update-time" 태그 내부 텍스트 갱신
         new_idx_content = re.sub(
             r'(<span[^>]*id="insight-update-time"[^>]*>)(.*?)(</span>)',
             fr'\g<1>마지막 업데이트: {now_str}\g<3>',
@@ -117,7 +121,7 @@ def main():
             f.write(new_idx_content)
         print(f"[SUCCESS] index.html time updated to: {now_str}")
     else:
-        print("[WARN] index.html not found, skipped time update.")
+        print("[WARN] index.html not found at root.")
 
 if __name__ == "__main__":
     main()
