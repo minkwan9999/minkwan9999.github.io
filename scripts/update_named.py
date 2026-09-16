@@ -61,7 +61,7 @@ def main():
         parts = content.split("const POSTS = [")
         header = parts[0] + "const POSTS = ["
         rest = parts[1]
-        idx = rest.rfind("];")
+        idx = rest.find("];")
         if idx != -1:
             array_content = rest[:idx].strip()
             footer = rest[idx:]
