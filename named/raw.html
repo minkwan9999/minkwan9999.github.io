@@ -125,7 +125,7 @@
     };
 
     const POSTS = [
-// 1. 철도 질식사 (참교육)
+      // 1. 철도 질식사 (참교육)
       {
         id: "p1",
         cardType: "LESSON",
@@ -357,65 +357,7 @@
     function renderFeed(filter = 'ALL') {
       const container = document.getElementById('feed-container');
       container.innerHTML = '';
-      const t = I18N[currentLang,
-{
-      "id": "p_auto_1789567934",
-      "cardType": "TRACK",
-      "eraTag": {
-            "ko": "2026년 · 자율주행",
-            "en": "2026 · Autonomous Driving"
-      },
-      "badgeText": {
-            "ko": "빅마우스 성적표 ✓",
-            "en": "Verified Track Record ✓"
-      },
-      "badgeClass": "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
-      "author": {
-            "ko": "일론 머스크",
-            "en": "Elon Musk"
-      },
-      "authorTitle": {
-            "ko": "테슬라 CEO",
-            "en": "CEO of Tesla"
-      },
-      "avatar": "🚕",
-      "imageBeforeUrl": "https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=800&auto=format&fit=crop&q=80",
-      "imageCaption": {
-            "ko": "테슬라 FSD 테스트 주행 현장",
-            "en": "Tesla FSD beta testing scene"
-      },
-      "title": {
-            "ko": "2026년까지 완전 자율주행으로 수익을 내지 못하면 사업을 접는다",
-            "en": "If Tesla doesn't achieve fully autonomous profitability by 2026, we fail"
-      },
-      "quoteSource": {
-            "ko": "테슬라 실적 컨퍼런스 콜 및 X 포스팅",
-            "en": "Tesla Earnings Call & X Post"
-      },
-      "quoteText": {
-            "ko": "우리는 올해와 내년에 걸쳐 완전 자율주행(FSD) 승인과 무인 로보택시 대량 양산을 완수할 것입니다. 인간 운전자보다 압도적으로 안전해집니다.",
-            "en": "We will achieve full autonomy and mass production of uncrewed robotaxis. It will be overwhelmingly safer than human drivers."
-      },
-      "timelineLabel": {
-            "ko": "📊 2026년 현재 성적표",
-            "en": "📊 2026 Current Track Record"
-      },
-      "realityStat": {
-            "ko": "규제 승인 대기 및 감독자 탑승 유지",
-            "en": "Regulatory pending & supervision required"
-      },
-      "realityText": {
-            "ko": "여전히 완전 무인 자율주행은 주요 주정부의 엄격한 승인 심사와 안전 운전자 상시 대기 조건 속에서 제한적으로 테스트되고 있습니다.",
-            "en": "True uncrewed autonomy remains under strict state regulatory review and requires safety drivers in most jurisdictions."
-      },
-      "actionHighlight": {
-            "ko": "거대한 비전과 혁신적 기술 발표는 시장의 기대감을 모으지만, 물리적 안전 규제와 인프라의 장벽은 언제나 예상보다 높고 오래 걸립니다.",
-            "en": "Grand visions capture market excitement, but physical safety regulations and infrastructure barriers always take longer than expected."
-      },
-      "upvotes": 312,
-      "disagrees": 45
-}
-];
+      const t = I18N[currentLang];
 
       const filtered = filter === 'ALL' ? POSTS : POSTS.filter(item => item.cardType === filter);
 
