@@ -1,8 +1,8 @@
-name: Daily Named App Updater
+name: Weekly Named App Updater
 
 on:
   schedule:
-    - cron: '0 1 * * *'
+    - cron: '0 1 * * 1'   # 매주 월요일 01:00 UTC = 한국시간 오전 10시
   workflow_dispatch:
 
 permissions:
@@ -22,12 +22,16 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: 새 글 추가
-        run: python scripts/update_named.py
+      - name: 새 글 7개 추가
+        run: |
+          for i in 1 2 3 4 5 6 7; do
+            echo "=== ${i}번째 글감 추가 ==="
+            python scripts/update_named.py
+          done
 
       - name: 자동 커밋 및 푸시
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add named/posts.json scripts/named_pool.json
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-add new named quote" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-add 7 new named quotes (weekly batch)" && git push)
