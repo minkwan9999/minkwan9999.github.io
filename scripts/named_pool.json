@@ -894,7 +894,119 @@
     "actionHighlight": { "ko": "DVD 사업이 한창 잘 되던 시점에 스스로 그 사업을 대체할 다음 기술에 베팅한 것이 오히려 회사를 살렸습니다.", "en": "Betting on the very technology that would replace its own thriving DVD business — while that business was still booming — is what ultimately saved the company." },
     "upvotes": 0,
     "disagrees": 0
+  },  {
+    "cardType": "ONGOING",
+    "eraTag": {
+      "ko": "2025~2026 · 휴머노이드 로봇 붐",
+      "en": "2025-2026 · The Humanoid Robot Boom"
+    },
+    "statusBadge": {
+      "ko": "판결 진행중 ⏳",
+      "en": "In Progress ⏳"
+    },
+    "statusColor": "bg-amber-500/10 text-amber-400 border-amber-500/20",
+    "author": {
+      "ko": "일론 머스크",
+      "en": "Elon Musk"
+    },
+    "authorTitle": {
+      "ko": "테슬라 · 스페이스X CEO",
+      "en": "CEO of Tesla & SpaceX"
+    },
+    "avatar": "🤖",
+    "imageBeforeUrl": "https://images.unsplash.com/photo-1737644467636-6b0053476bb2?w=800&auto=format&fit=crop&q=80",
+    "imageCaption": {
+      "ko": "흰색 휴머노이드 로봇",
+      "en": "A white humanoid robot"
+    },
+    "title": {
+      "ko": "\"옵티머스가 테슬라 미래 가치의 80%를 차지할 것\"",
+      "en": "80% of Tesla's future value will come from Optimus, not cars"
+    },
+    "quoteSource": {
+      "ko": "2025년 9월 발언 (다수 매체 재인용)",
+      "en": "September 2025 remark, widely re-quoted"
+    },
+    "quoteText": {
+      "ko": "테슬라 미래 가치의 80%는 자동차가 아니라 옵티머스와 AI에서 나올 것입니다.",
+      "en": "80% of Tesla's future value will come from Optimus and AI — not cars."
+    },
+    "timelineLabel": {
+      "ko": "⏳ 2026년 실시간 검증 중",
+      "en": "⏳ Real-Time Tracker 2026"
+    },
+    "realityStat": {
+      "ko": "연산 100만대 생산 목표 vs 2025년 실제 생산량 수백 대 수준",
+      "en": "Target: 1M units/year vs. actual 2025 production in the hundreds"
+    },
+    "realityText": {
+      "ko": "테슬라는 2026년 말까지 연간 100만 대 생산라인을 목표로 내걸었지만, 2025년 실제 생산량은 수백~수천 대 수준에 그쳤고 본격 양산 시점은 계속 뒤로 밀리고 있습니다.",
+      "en": "Tesla has set a goal of a 1-million-unit annual production line by the end of 2026, but actual 2025 production remained in the hundreds to low thousands, with full-scale manufacturing repeatedly pushed back."
+    },
+    "actionHighlight": {
+      "ko": "자동차 생산라인까지 멈추고 로봇에 올인하는 베팅이 옳았는지는, 실제 양산 대수가 나와야 알 수 있습니다.",
+      "en": "Whether halting car production lines to bet everything on robots was the right call will only be clear once real production numbers arrive."
+    },
+    "upvotes": 0,
+    "disagrees": 0
+  },
+  {
+    "cardType": "ONGOING",
+    "eraTag": {
+      "ko": "2025 · 메타버스에서 슈퍼인텔리전스로 선회",
+      "en": "2025 · From Metaverse to Superintelligence"
+    },
+    "statusBadge": {
+      "ko": "판결 진행중 ⏳",
+      "en": "In Progress ⏳"
+    },
+    "statusColor": "bg-amber-500/10 text-amber-400 border-amber-500/20",
+    "author": {
+      "ko": "마크 저커버그",
+      "en": "Mark Zuckerberg"
+    },
+    "authorTitle": {
+      "ko": "메타 창업자 · CEO",
+      "en": "Founder & CEO of Meta"
+    },
+    "avatar": "🥽",
+    "imageBeforeUrl": "https://images.unsplash.com/photo-1728571195314-5979a49acd12?w=800&auto=format&fit=crop&q=80",
+    "imageCaption": {
+      "ko": "VR 헤드셋을 착용한 모습",
+      "en": "Wearing a VR headset"
+    },
+    "title": {
+      "ko": "메타버스에 이어 \"퍼스널 슈퍼인텔리전스\"를 새 승부수로 내걸다",
+      "en": "Developing superintelligence is now in sight"
+    },
+    "quoteSource": {
+      "ko": "2025년 7월, 공개 서한 'Personal Superintelligence'",
+      "en": "July 2025, public letter 'Personal Superintelligence'"
+    },
+    "quoteText": {
+      "ko": "AI 시스템이 스스로를 개선하는 초기 신호가 보이고 있습니다. 슈퍼인텔리전스 개발이 이제 시야에 들어왔습니다.",
+      "en": "We have started to see glimpses of AI systems improving themselves... developing superintelligence is now in sight."
+    },
+    "timelineLabel": {
+      "ko": "⏳ 2026년 실시간 검증 중",
+      "en": "⏳ Real-Time Tracker 2026"
+    },
+    "realityStat": {
+      "ko": "메타버스에 600억 달러 이상 손실 후, 이번엔 슈퍼인텔리전스 연구자 영입에 수억 달러 베팅",
+      "en": "After $60B+ in metaverse losses, now betting hundreds of millions on superintelligence researchers"
+    },
+    "realityText": {
+      "ko": "2021년에도 저커버그는 '메타버스가 인터넷의 다음 장'이라며 회사명까지 바꿨지만, 리얼리티랩스 부문은 이후 600억 달러 이상 손실을 냈습니다. 이번 서한에는 메타버스 언급이 아예 빠져있어, 같은 인물의 '다음 큰 베팅'이 반복되는 패턴이라는 지적이 나옵니다.",
+      "en": "In 2021, Zuckerberg similarly declared the metaverse 'the next chapter of the internet' and renamed the company — after which Reality Labs racked up over $60 billion in losses. This new letter makes no mention of the metaverse at all, prompting observers to note a repeating pattern of the same person's 'next big bet.'"
+    },
+    "actionHighlight": {
+      "ko": "이전 베팅의 결과가 아직 정리되지 않은 채 다음 베팅으로 넘어가는 패턴은, 그 자체로 지켜볼 가치가 있는 신호입니다.",
+      "en": "Moving on to the next big bet before the previous one's results are even settled is itself a signal worth watching."
+    },
+    "upvotes": 0,
+    "disagrees": 0
   }
+
 
 
 
