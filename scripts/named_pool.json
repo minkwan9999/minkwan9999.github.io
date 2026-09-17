@@ -647,6 +647,174 @@
     "actionHighlight": { "ko": "역사상 가장 뛰어난 물리학자조차 자신의 전공 분야에서 코앞의 돌파구를 완전히 놓칠 수 있습니다.", "en": "Even history's greatest physicist can completely miss a breakthrough right in his own field, just around the corner." },
     "upvotes": 0,
     "disagrees": 0
+  },  {
+    "cardType": "LESSON",
+    "eraTag": {
+      "ko": "1900 · 20세기 문턱",
+      "en": "1900 · The Turn of the Century"
+    },
+    "statusBadge": {
+      "ko": "완전히 틀림 ✗",
+      "en": "Fully Wrong ✗"
+    },
+    "statusColor": "bg-rose-500/10 text-rose-400 border-rose-500/20",
+    "author": {
+      "ko": "윌리엄 톰슨 (켈빈 경)",
+      "en": "William Thomson (Lord Kelvin)"
+    },
+    "authorTitle": {
+      "ko": "물리학자 · 영국왕립학회 회장",
+      "en": "Physicist, President of the Royal Society"
+    },
+    "avatar": "🧊",
+    "imageBeforeUrl": "https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?w=800&auto=format&fit=crop&q=80",
+    "imageCaption": {
+      "ko": "수식이 적힌 칠판",
+      "en": "A chalkboard covered in equations"
+    },
+    "title": {
+      "ko": "물리학에서 더 이상 새로 발견할 것은 없다",
+      "en": "There is nothing new to be discovered in physics now"
+    },
+    "quoteSource": {
+      "ko": "1900년경 발언 (다수 매체 재인용)",
+      "en": "Remark attributed to around 1900, widely re-quoted"
+    },
+    "quoteText": {
+      "ko": "물리학에서 더 이상 새로 발견할 것은 없다. 남은 것은 더욱더 정밀한 측정뿐이다.",
+      "en": "There is nothing new to be discovered in physics now. All that remains is more and more precise measurement."
+    },
+    "timelineLabel": {
+      "ko": "📜 이미 역사가 심판 완료",
+      "en": "📜 History Has Already Judged"
+    },
+    "realityStat": {
+      "ko": "이후 상대성이론과 양자역학이 물리학 전체를 새로 씀",
+      "en": "Relativity and quantum mechanics rewrote physics entirely soon after"
+    },
+    "realityText": {
+      "ko": "이 발언 직후 X선, 방사능, 전자가 잇따라 발견되었고, 곧이어 아인슈타인의 상대성이론과 양자역학이 물리학의 기초를 완전히 뒤흔들었습니다.",
+      "en": "Soon after, X-rays, radioactivity, and the electron were discovered, and Einstein's relativity and quantum mechanics upended the foundations of physics."
+    },
+    "actionHighlight": {
+      "ko": "한 분야의 최고 권위자가 '더 알아낼 게 없다'고 말할 때가 오히려 가장 큰 혁명 직전일 수 있습니다.",
+      "en": "When the top authority in a field says there's nothing left to discover, that's often exactly when the biggest revolution is about to hit."
+    },
+    "upvotes": 0,
+    "disagrees": 0
+  },
+  {
+    "cardType": "LESSON",
+    "eraTag": {
+      "ko": "1933 · 핵분열 발견 직전",
+      "en": "1933 · Just Before Nuclear Fission"
+    },
+    "statusBadge": {
+      "ko": "완전히 틀림 ✗",
+      "en": "Fully Wrong ✗"
+    },
+    "statusColor": "bg-rose-500/10 text-rose-400 border-rose-500/20",
+    "author": {
+      "ko": "어니스트 러더퍼드",
+      "en": "Ernest Rutherford"
+    },
+    "authorTitle": {
+      "ko": "물리학자 · 노벨 화학상 수상자 · '핵물리학의 아버지'",
+      "en": "Physicist, Nobel Laureate, 'Father of Nuclear Physics'"
+    },
+    "avatar": "☢️",
+    "imageBeforeUrl": "https://images.unsplash.com/photo-1758685848095-249ad965f4f3?w=800&auto=format&fit=crop&q=80",
+    "imageCaption": {
+      "ko": "칠판에 수식을 쓰는 모습",
+      "en": "Writing formulas on a chalkboard"
+    },
+    "title": {
+      "ko": "원자에서 에너지를 뽑아낸다는 건 헛소리다",
+      "en": "Anyone who expects a source of power from the transformation of these atoms is talking moonshine"
+    },
+    "quoteSource": {
+      "ko": "1933년 9월, 영국과학진흥협회 연설",
+      "en": "September 1933, British Association for the Advancement of Science"
+    },
+    "quoteText": {
+      "ko": "원자 에너지는 보잘것없는 것이다. 원자의 변환에서 동력원을 기대하는 사람은 헛소리를 하고 있는 것이다.",
+      "en": "The energy produced by the atom is a poor kind of thing. Anyone who expects a source of power from the transformation of these atoms is talking moonshine."
+    },
+    "timelineLabel": {
+      "ko": "📜 발언 몇 달 뒤 핵분열 이론적 토대 마련",
+      "en": "📜 The Groundwork for Fission Came Just Months Later"
+    },
+    "realityStat": {
+      "ko": "현재 전세계 전력의 약 9%를 원자력발전이 공급",
+      "en": "Nuclear power currently supplies roughly 9% of global electricity"
+    },
+    "realityText": {
+      "ko": "이 발언 직후 동료 물리학자 레오 실라르드가 핵연쇄반응 개념을 떠올렸고, 수년 뒤 실제 핵분열이 발견되며 원자력 시대가 열렸습니다.",
+      "en": "Shortly after, physicist Leo Szilard conceived the nuclear chain reaction, and nuclear fission was discovered just years later, ushering in the atomic age."
+    },
+    "actionHighlight": {
+      "ko": "그 분야를 만든 창시자조차, 자신이 닦아놓은 토대 위에서 일어날 다음 도약은 못 볼 수 있습니다.",
+      "en": "Even the founder of a field can fail to see the next leap that will be built on the very foundation they laid."
+    },
+    "upvotes": 0,
+    "disagrees": 0
+  },
+  {
+    "cardType": "LESSON",
+    "eraTag": {
+      "ko": "1927 · 유성영화 태동기",
+      "en": "1927 · Dawn of the Talkies"
+    },
+    "statusBadge": {
+      "ko": "완전히 틀림 ✗",
+      "en": "Fully Wrong ✗"
+    },
+    "statusColor": "bg-rose-500/10 text-rose-400 border-rose-500/20",
+    "author": {
+      "ko": "해리 워너",
+      "en": "Harry M. Warner"
+    },
+    "authorTitle": {
+      "ko": "워너브라더스 공동창업자",
+      "en": "Co-founder of Warner Bros."
+    },
+    "avatar": "🎬",
+    "imageBeforeUrl": "https://images.unsplash.com/photo-1568876694728-451bbf694b83?w=800&auto=format&fit=crop&q=80",
+    "imageCaption": {
+      "ko": "옛날 영화 영사기",
+      "en": "An old film projector"
+    },
+    "title": {
+      "ko": "누가 배우들 말하는 걸 듣고 싶어하겠냐며 유성영화를 반대하다",
+      "en": "Who the hell wants to hear actors talk?"
+    },
+    "quoteSource": {
+      "ko": "1927년, 유성영화 도입 반대 발언",
+      "en": "1927, remark opposing the introduction of talking pictures"
+    },
+    "quoteText": {
+      "ko": "도대체 누가 배우들이 말하는 걸 듣고 싶어하겠는가?",
+      "en": "Who the hell wants to hear actors talk?"
+    },
+    "timelineLabel": {
+      "ko": "📜 같은 해 워너브라더스가 첫 유성영화 개봉",
+      "en": "📜 Warner Bros. Released the First Talkie That Same Year"
+    },
+    "realityStat": {
+      "ko": "무성영화는 이후 완전히 도태, 유성영화가 표준이 됨",
+      "en": "Silent film was completely displaced; talkies became the industry standard"
+    },
+    "realityText": {
+      "ko": "정작 워너브라더스 본인이 1927년 세계 최초의 장편 유성영화 '재즈 싱어'를 개봉하며 영화 산업의 판도를 스스로 뒤집었습니다.",
+      "en": "Warner Bros. itself released 'The Jazz Singer,' the first feature-length talkie, that same year — flipping the industry on its own head."
+    },
+    "actionHighlight": {
+      "ko": "회사 창업자 본인의 회의적 반응조차, 정작 그 회사가 만드는 혁신을 못 알아볼 수 있습니다.",
+      "en": "Even a company's own founder can fail to recognize the innovation his own studio is about to ship."
+    },
+    "upvotes": 0,
+    "disagrees": 0
   }
+
 
 ]
