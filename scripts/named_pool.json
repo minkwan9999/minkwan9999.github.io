@@ -2,62 +2,6 @@
   {
     "cardType": "LESSON",
     "eraTag": {
-      "ko": "1943 · 컴퓨터 태동기",
-      "en": "1943 · Birth of Computing"
-    },
-    "statusBadge": {
-      "ko": "완전히 틀림 ✗",
-      "en": "Fully Wrong ✗"
-    },
-    "statusColor": "bg-rose-500/10 text-rose-400 border-rose-500/20",
-    "author": {
-      "ko": "토마스 왓슨",
-      "en": "Thomas Watson"
-    },
-    "authorTitle": {
-      "ko": "IBM 회장",
-      "en": "Chairman of IBM"
-    },
-    "avatar": "🧮",
-    "imageBeforeUrl": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop&q=80",
-    "imageCaption": {
-      "ko": "1940년대 초기 컴퓨터",
-      "en": "Early 1940s computer"
-    },
-    "title": {
-      "ko": "전세계 컴퓨터 수요는 5대 정도일 것",
-      "en": "I think there is a world market for maybe five computers"
-    },
-    "quoteSource": {
-      "ko": "1943년 IBM 내부 발언(전언)",
-      "en": "1943 attributed IBM remark"
-    },
-    "quoteText": {
-      "ko": "전 세계적으로 컴퓨터 수요는 5대 정도일 것으로 봅니다.",
-      "en": "I think there is a world market for maybe five computers."
-    },
-    "timelineLabel": {
-      "ko": "📜 이미 역사가 심판 완료",
-      "en": "📜 History Has Already Judged"
-    },
-    "realityStat": {
-      "ko": "현재 가동 중인 컴퓨팅 기기 수십억 대",
-      "en": "Billions of computing devices in operation today"
-    },
-    "realityText": {
-      "ko": "출처가 불확실하다는 논쟁도 있지만, 초기 컴퓨터 산업의 수요 예측이 얼마나 빗나갔는지를 상징하는 인용구로 굳어졌습니다.",
-      "en": "Though its exact origin is debated, it has become the symbolic quote for just how badly early computing demand was underestimated."
-    },
-    "actionHighlight": {
-      "ko": "완전히 새로운 기술의 초기 시장 규모 예측은 거의 항상 과소평가로 끝납니다.",
-      "en": "Early market-size estimates for brand-new technologies are almost always drastic underestimates."
-    },
-    "upvotes": 0,
-    "disagrees": 0
-  },
-  {
-    "cardType": "LESSON",
-    "eraTag": {
       "ko": "1995 · 인터넷 초창기",
       "en": "1995 · Early Internet"
     },
