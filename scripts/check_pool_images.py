@@ -37,8 +37,13 @@ def main():
             for item in items:
                 print(f"   - {item}")
 
+    print(f"\n[INFO] named/posts.json 게시글 수: {len(posts)}개")
+    print(f"[INFO] scripts/named_pool.json 남은 글감 수: {len(pool)}개")
+    if len(pool) <= 7:
+        print(f"[WARN] pool이 {len(pool)}개 남아 다음 주간 배치(7개)를 못 채울 수 있습니다.")
+
     if not dupes_found:
-        print("[OK] 중복된 imageBeforeUrl이 없습니다.")
+        print("\n[OK] 중복된 imageBeforeUrl이 없습니다.")
         sys.exit(0)
     else:
         print("\n[FAIL] 위 항목들의 이미지를 서로 다른 것으로 교체해주세요.")
