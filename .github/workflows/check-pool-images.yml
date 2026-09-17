@@ -1,0 +1,19 @@
+name: Check Pool Images (Manual)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  check-images:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 저장소 체크아웃
+        uses: actions/checkout@v4
+
+      - name: Python 세팅
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: 이미지 중복 검사
+        run: python scripts/check_pool_images.py
