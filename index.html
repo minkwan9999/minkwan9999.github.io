@@ -212,6 +212,13 @@
         tabMoney.className = "flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl font-extrabold text-sm transition text-slate-400 hover:text-white";
       }
     }
+    fetch('./named/posts.json')
+  .then(res => res.json())
+  .then(data => {
+    const badge = document.getElementById('named-update-badge');
+    if (badge && data.lastUpdated) badge.textContent = `최종 갱신: ${data.lastUpdated}`;
+  })
+  .catch(() => {});
   </script>
 </body>
 </html>
