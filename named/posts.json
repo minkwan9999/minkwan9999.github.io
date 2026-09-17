@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.09.17 13:38",
+  "lastUpdated": "2026.09.17 14:01",
   "posts": [
     {
       "id": "p1",
@@ -342,6 +342,63 @@
       },
       "upvotes": 563,
       "disagrees": 145
+    },
+    {
+      "cardType": "LESSON",
+      "eraTag": {
+        "ko": "1977 · PC 여명기",
+        "en": "1977 · Dawn of PC"
+      },
+      "statusBadge": {
+        "ko": "완전히 틀림 ✗",
+        "en": "Fully Wrong ✗"
+      },
+      "statusColor": "bg-rose-500/10 text-rose-400 border-rose-500/20",
+      "author": {
+        "ko": "켄 올슨",
+        "en": "Ken Olsen"
+      },
+      "authorTitle": {
+        "ko": "DEC(디지털이큅먼트) 창업자",
+        "en": "Founder of Digital Equipment Corp"
+      },
+      "avatar": "🖥️",
+      "imageBeforeUrl": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop&q=80",
+      "imageCaption": {
+        "ko": "1970년대 미니컴퓨터",
+        "en": "1970s minicomputer era"
+      },
+      "title": {
+        "ko": "가정에 컴퓨터를 들일 이유가 전혀 없다",
+        "en": "There is no reason anyone would want a computer in their home"
+      },
+      "quoteSource": {
+        "ko": "1977년 세계미래학회 연설",
+        "en": "1977 World Future Society speech"
+      },
+      "quoteText": {
+        "ko": "가정에 컴퓨터를 둘 이유가 없습니다.",
+        "en": "There is no reason anyone would want a computer in their home."
+      },
+      "timelineLabel": {
+        "ko": "📜 이미 역사가 심판 완료",
+        "en": "📜 History Has Already Judged"
+      },
+      "realityStat": {
+        "ko": "전세계 가정용 PC 보급률 90%+",
+        "en": "90%+ home PC penetration worldwide"
+      },
+      "realityText": {
+        "ko": "40년 뒤 컴퓨터는 모든 가정의 필수품이 됐고, 이 발언은 기술사에서 가장 유명한 오판 중 하나로 남았습니다.",
+        "en": "Four decades later, the computer became a household essential, making this one of tech history's most cited misjudgments."
+      },
+      "actionHighlight": {
+        "ko": "전문가일수록 자신의 산업 프레임(미니컴퓨터)에 갇혀 완전히 다른 시장(개인용)의 등장을 놓치기 쉽습니다.",
+        "en": "Even top experts can miss an entirely new market when they're anchored to their own industry's frame."
+      },
+      "upvotes": 0,
+      "disagrees": 0,
+      "id": "p_auto_1789621308"
     }
   ]
 }
