@@ -1,0 +1,347 @@
+{
+  "lastUpdated": "2026.09.17 13:38",
+  "posts": [
+    {
+      "id": "p1",
+      "cardType": "LESSON",
+      "eraTag": {
+        "ko": "1830년대 · 산업혁명",
+        "en": "1830s · Industrial Rev."
+      },
+      "statusBadge": {
+        "ko": "참교육 ✕",
+        "en": "Aged Like Milk ✕"
+      },
+      "statusColor": "bg-rose-500/10 text-rose-400 border-rose-500/20",
+      "author": {
+        "ko": "영국 왕립학회 학자단",
+        "en": "Royal Society Scholars"
+      },
+      "authorTitle": {
+        "ko": "과학 지식인단",
+        "en": "Leading Scientists"
+      },
+      "avatar": "🚂",
+      "imageBeforeUrl": "https://images.unsplash.com/photo-1541447271487-09612b3f49f7?w=800&auto=format&fit=crop&q=80",
+      "imageCaption": {
+        "ko": "1830년대 초기 증기기관차",
+        "en": "1830s early steam locomotive"
+      },
+      "title": {
+        "ko": "기차가 시속 40km로 달리면 승객들은 질식해서 즉사한다",
+        "en": "Trains running at 30mph will cause passengers to die of asphyxiation"
+      },
+      "quoteSource": {
+        "ko": "1830년대 언론 기고문",
+        "en": "1830s Press Reports"
+      },
+      "quoteText": {
+        "ko": "인간의 신체는 시속 30마일(약 48km)의 속도를 견디도록 설계되지 않았다. 공기가 폐로 들어오지 않아 모든 승객이 질식사할 것이다.",
+        "en": "The human body is not built to travel at 30 mph. Passengers will not be able to breathe and will die of asphyxiation."
+      },
+      "timelineLabel": {
+        "ko": "⏳ 개통 직후 역사적 판결",
+        "en": "⏳ Verdict of History"
+      },
+      "realityStat": {
+        "ko": "현대 고속철도: 시속 300km+ 일상 운행",
+        "en": "Modern High-Speed Rail: 300km/h+ daily"
+      },
+      "realityText": {
+        "ko": "승객의 폐는 멀쩡했고, 철도는 영국 전역을 반나절 생활권으로 묶으며 1차 산업혁명의 심장이자 물류의 표준이 되었습니다.",
+        "en": "Passengers breathed normally. Railroads connected Britain into a half-day radius, becoming the backbone of the Industrial Revolution."
+      },
+      "actionHighlight": {
+        "ko": "새로운 기술이 등장할 때 인간은 언제나 '과학으로 위장한 원초적 공포'를 표출합니다. 근거 없는 공포에 질려 신기술 수용을 거부하지 마세요.",
+        "en": "When breakthrough tools appear, humanity often dresses primal fear as scientific reason. Never reject adoption out of irrational fear."
+      },
+      "upvotes": 541,
+      "disagrees": 19
+    },
+    {
+      "id": "p2",
+      "cardType": "LESSON",
+      "eraTag": {
+        "ko": "1998년 · 인터넷 태동기",
+        "en": "1998 · Dot-com Era"
+      },
+      "statusBadge": {
+        "ko": "참교육 ✕",
+        "en": "Aged Like Milk ✕"
+      },
+      "statusColor": "bg-rose-500/10 text-rose-400 border-rose-500/20",
+      "author": {
+        "ko": "폴 크루그먼",
+        "en": "Paul Krugman"
+      },
+      "authorTitle": {
+        "ko": "노벨 경제학상 수상자",
+        "en": "Nobel Laureate in Economics"
+      },
+      "avatar": "🎓",
+      "imageBeforeUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80",
+      "imageCaption": {
+        "ko": "1990년대 닷컴 태동기 네트워크 장비",
+        "en": "1990s early internet infrastructure"
+      },
+      "title": {
+        "ko": "2005년쯤 되면 인터넷의 실체가 팩스(Fax) 수준이었음이 밝혀질 것",
+        "en": "By 2005, Internet's impact will be no greater than the fax machine"
+      },
+      "quoteSource": {
+        "ko": "The New York Times 칼럼 (1998)",
+        "en": "The New York Times Column (1998)"
+      },
+      "quoteText": {
+        "ko": "2005년경이 되면, 경제에 미친 인터넷의 영향력은 팩스 기기보다 크지 않았다는 사실이 만천하에 드러날 것이다. 사람들은 서로에게 할 말이 그리 많지 않다.",
+        "en": "By 2005 or so, it will become clear that the Internet's impact on the economy has been no greater than the fax machine's. People have nothing much to say."
+      },
+      "timelineLabel": {
+        "ko": "⏳ 10년 뒤 역사적 판결",
+        "en": "⏳ 10 Years Later"
+      },
+      "realityStat": {
+        "ko": "글로벌 시총 TOP 10 빅테크 독식",
+        "en": "Tech firms dominate Global Top 10 Market Cap"
+      },
+      "realityText": {
+        "ko": "인터넷은 통신 도구를 넘어 인류의 삶과 금융을 완전히 집어삼켰습니다. 노벨상 석학조차 기하급수적 '네트워크 효과'를 기존 전통 산업의 잣대로만 재단하다 평생의 흑역사를 남겼습니다.",
+        "en": "The Internet reshaped human life and global finance. Even a Nobel laureate dismissed the exponential power of network effects."
+      },
+      "actionHighlight": {
+        "ko": "내 분야 최고 권위자라 해도 완전히 새로운 패러다임 앞에서는 가장 보수적인 오판을 내리기 쉽습니다. 권위자의 '거품' 소리에 안주하지 마세요.",
+        "en": "Top authorities in legacy domains often make the most conservative blunders in the face of new paradigms. Don't fall complacent behind them."
+      },
+      "upvotes": 428,
+      "disagrees": 12
+    },
+    {
+      "id": "p3",
+      "cardType": "TRACK",
+      "eraTag": {
+        "ko": "2007년 · 스마트폰 혁명기",
+        "en": "2007 · Smartphone Era"
+      },
+      "statusBadge": {
+        "ko": "성적표 ✕",
+        "en": "Epic Fail ✕"
+      },
+      "statusColor": "bg-rose-500/10 text-rose-400 border-rose-500/20",
+      "author": {
+        "ko": "스티브 발머",
+        "en": "Steve Ballmer"
+      },
+      "authorTitle": {
+        "ko": "MS 전 CEO",
+        "en": "Former CEO of MS"
+      },
+      "avatar": "💼",
+      "imageBeforeUrl": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80",
+      "imageCaption": {
+        "ko": "2007년 초기 터치스크린 스마트폰",
+        "en": "2007 early touch smartphone"
+      },
+      "title": {
+        "ko": "500달러짜리 아이폰? 키보드가 없어서 비즈니스맨에겐 0%짜리 장난감",
+        "en": "There's no chance that the iPhone is going to get any significant market share"
+      },
+      "quoteSource": {
+        "ko": "USA 투데이 인터뷰 (2007)",
+        "en": "USA Today Interview (2007)"
+      },
+      "quoteText": {
+        "ko": "아이폰이 시장 점유율을 유의미하게 가져갈 가능성은 0%입니다. 물리 자판이 없어서 이메일을 보낼 수 없기 때문에 비즈니스 고객에게 매력적인 기계가 아닙니다.",
+        "en": "There's no chance that the iPhone is going to get any significant market share. No chance. It doesn't have a keyboard, which makes it not a very good email machine."
+      },
+      "timelineLabel": {
+        "ko": "⏳ 5년 뒤 역사적 판결",
+        "en": "⏳ 5 Years Later"
+      },
+      "realityStat": {
+        "ko": "애플 스마트폰 시장 이익 80%+ 독점",
+        "en": "Apple captures 80%+ of global smartphone profits"
+      },
+      "realityText": {
+        "ko": "스마트폰은 전 세계 오피스의 필수품이 되었고, 물리 키보드를 끝까지 고집하던 블랙베리와 윈도우 모바일은 시장에서 흔적도 없이 도태되었습니다.",
+        "en": "Touchscreen smartphones became standard everywhere. Physical keyboard phones like BlackBerry and Windows Mobile completely vanished."
+      },
+      "actionHighlight": {
+        "ko": "기존 주력 제품을 지키려는 방어 본능은 경쟁자의 파괴적 혁신을 '치명적 결함'으로 착각하게 만듭니다. 고객 경험의 거대한 물결을 거스르지 마세요.",
+        "en": "The instinct to defend existing core products tricks incumbents into viewing disruption as a flaw. Never fight tidal waves in UX."
+      },
+      "upvotes": 689,
+      "disagrees": 14
+    },
+    {
+      "id": "p4",
+      "cardType": "TRACK",
+      "eraTag": {
+        "ko": "2023년 · AI 태동기",
+        "en": "2023 · AI Boom"
+      },
+      "statusBadge": {
+        "ko": "성적표 ✓",
+        "en": "Track Record ✓"
+      },
+      "statusColor": "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
+      "author": {
+        "ko": "샘 알트만",
+        "en": "Sam Altman"
+      },
+      "authorTitle": {
+        "ko": "OpenAI CEO",
+        "en": "CEO of OpenAI"
+      },
+      "avatar": "🤖",
+      "imageBeforeUrl": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&auto=format&fit=crop&q=80",
+      "imageCaption": {
+        "ko": "생성형 AI 초거대 모델 인프라",
+        "en": "Generative AI cluster infrastructure"
+      },
+      "title": {
+        "ko": "현재의 LLM은 스스로 생각하는 지능이 아니다. AGI는 아직 멀었다",
+        "en": "Current LLMs are useful tools, not thinking minds. Far from AGI"
+      },
+      "quoteSource": {
+        "ko": "공식 X 포스팅 (2023.02)",
+        "en": "Official Post on X (2023.02)"
+      },
+      "quoteText": {
+        "ko": "현재의 대규모 언어 모델들은 유용한 도구일 뿐 생각하는 마음이 아닙니다. 우리는 여전히 진정한 AGI와는 꽤 거리가 멉니다.",
+        "en": "Current LLMs are useful tools, not thinking minds. We are still quite far from true AGI."
+      },
+      "timelineLabel": {
+        "ko": "📊 1~2년 뒤 실제 성적표",
+        "en": "📊 1-2 Years Later"
+      },
+      "realityStat": {
+        "ko": "GPT-4o, o1 추론 모델 연달아 장악",
+        "en": "Dominance with GPT-4o and o1 reasoning models"
+      },
+      "realityText": {
+        "ko": "이 겸손한 발언 직후 복합 추론 모델들을 쏟아내며 시장을 장악했습니다. 업계에서는 독점 비판과 정부 규제를 피하기 위해 일부러 눈높이를 낮춘 정무적 전략으로 평가합니다.",
+        "en": "Immediately after, OpenAI rolled out aggressive reasoning models, securing market leadership. Analysts view this as deliberate regulatory sandbagging."
+      },
+      "actionHighlight": {
+        "ko": "빅테크 파운더가 대중 앞에서 '우린 아직 부족하다'고 겸손을 떨 때는, 규제 당국의 방심과 경쟁자의 방심을 유도하는 전략적 연막일 수 있습니다.",
+        "en": "When tech founders publicly practice humility, it is often a strategic smokescreen to buy time against regulators and competitors."
+      },
+      "upvotes": 380,
+      "disagrees": 28
+    },
+    {
+      "id": "p5",
+      "cardType": "ONGOING",
+      "eraTag": {
+        "ko": "2024~2026 · 완전 자율주행",
+        "en": "2024-2026 · Full Autonomy"
+      },
+      "statusBadge": {
+        "ko": "판결 진행중 ⏳",
+        "en": "In Progress ⏳"
+      },
+      "statusColor": "bg-amber-500/10 text-amber-400 border-amber-500/20",
+      "author": {
+        "ko": "일론 머스크",
+        "en": "Elon Musk"
+      },
+      "authorTitle": {
+        "ko": "테슬라 CEO",
+        "en": "CEO of Tesla"
+      },
+      "avatar": "🚗",
+      "imageBeforeUrl": "https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&auto=format&fit=crop&q=80",
+      "imageCaption": {
+        "ko": "자율주행 차량 및 FSD 비전 시스템",
+        "en": "Autonomous driving & vision AI"
+      },
+      "title": {
+        "ko": "2026년 안에 무인 로보택시가 미국 전역을 달리고 인간 운전자는 사라진다",
+        "en": "Unsupervised Robotaxis will be operating across the US within 2026"
+      },
+      "quoteSource": {
+        "ko": "테슬라 We, Robot 쇼케이스",
+        "en": "Tesla 'We, Robot' Event"
+      },
+      "quoteText": {
+        "ko": "운전대와 페달이 없는 사이버캡이 2026년부터 대량 생산될 것입니다. 테슬라 차량 소유자는 자는 동안 차가 스스로 돈을 벌어다 주는 시대가 옵니다.",
+        "en": "Cybercab without steering wheels or pedals will enter production by 2026. Your car will earn you money while you sleep."
+      },
+      "timelineLabel": {
+        "ko": "⏳ 2026년 실시간 검증 중",
+        "en": "⏳ Real-Time Tracker 2026"
+      },
+      "realityStat": {
+        "ko": "규제 승인 장벽 vs 순수 비전 FSD 고도화",
+        "en": "Regulatory Hurdles vs End-to-End FSD"
+      },
+      "realityText": {
+        "ko": "FSD 신경망 주행 성능이 비약적으로 발전했으나, 주별 무인 운행 규제 승인과 사고 책임 법제화 문제가 여전히 팽팽한 쟁점입니다.",
+        "en": "Neural network driving has leaped, but state-by-state regulatory approvals and liability laws remain contentious."
+      },
+      "actionHighlight": {
+        "ko": "머스크의 시간표는 늘 2~3년 지연되지만 결국 기술적 임계점을 뚫어내는 패턴이 반복되었습니다. '완전 사기'로 치부할지 '지연된 혁신'으로 볼지가 투자의 핵심 갈림길입니다.",
+        "en": "Musk's timelines consistently slip by years, yet often reach fruition eventually. Deciding between 'delay' and 'impossibility' defines the investment thesis."
+      },
+      "upvotes": 489,
+      "disagrees": 172
+    },
+    {
+      "id": "p6",
+      "cardType": "ONGOING",
+      "eraTag": {
+        "ko": "2024~2026 · AI 에이전트 혁명",
+        "en": "2024-2026 · Agentic AI"
+      },
+      "statusBadge": {
+        "ko": "판결 진행중 ⏳",
+        "en": "In Progress ⏳"
+      },
+      "statusColor": "bg-amber-500/10 text-amber-400 border-amber-500/20",
+      "author": {
+        "ko": "젠슨 황",
+        "en": "Jensen Huang"
+      },
+      "authorTitle": {
+        "ko": "엔비디아 CEO",
+        "en": "CEO of NVIDIA"
+      },
+      "avatar": "⚡",
+      "imageBeforeUrl": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop&q=80",
+      "imageCaption": {
+        "ko": "차세대 AI 컴퓨팅 및 칩셋 아키텍처",
+        "en": "Next-gen AI computing architecture"
+      },
+      "title": {
+        "ko": "더 이상 코딩을 배울 필요 없다. 모든 아이에게 컴퓨터 대신 다른 걸 가르쳐라",
+        "en": "Nobody has to learn to code. Our job is to create computing that speaks human"
+      },
+      "quoteSource": {
+        "ko": "세계정부정상회의(WGS) 기조연설",
+        "en": "World Government Summit Keynote"
+      },
+      "quoteText": {
+        "ko": "지난 10~15년간 모든 사람이 코딩을 배워야 한다고 말했지만 이제는 정반대입니다. 이제 모든 인간이 프로그래머입니다. 컴퓨터 언어는 인간의 자연어입니다.",
+        "en": "Over the last 10-15 years, almost everybody told you that your kids must learn to code. It's completely the opposite now. The programming language is human."
+      },
+      "timelineLabel": {
+        "ko": "⏳ 2026년 실시간 검증 중",
+        "en": "⏳ Real-Time Tracker 2026"
+      },
+      "realityStat": {
+        "ko": "AI 에이전트 코딩 보편화 vs 아키텍처 역량 격차",
+        "en": "AI Agent Coding vs System Architecture Depth"
+      },
+      "realityText": {
+        "ko": "단순 코딩 작성은 AI가 대체 중이나, 대규모 분산 아키텍처 설계와 장애 디버깅은 여전히 최상위 엔지니어의 핵심 영역으로 남아 있습니다.",
+        "en": "AI tools write junior code with ease, but complex architecture and critical debugging still bottleneck on elite engineers."
+      },
+      "actionHighlight": {
+        "ko": "문법을 외우는 단순 '코더'는 사라지겠지만, 복잡한 문제를 정의하고 AI 도구를 지휘하는 '시스템 아키텍트'의 가치는 오히려 극대화됩니다.",
+        "en": "Syntax memorizers will diminish, but architects who frame root problems and orchestrate AI systems command unprecedented leverage."
+      },
+      "upvotes": 563,
+      "disagrees": 145
+    }
+  ]
+}
