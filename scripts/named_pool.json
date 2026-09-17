@@ -2,62 +2,6 @@
   {
     "cardType": "LESSON",
     "eraTag": {
-      "ko": "1995 · 인터넷 초창기",
-      "en": "1995 · Early Internet"
-    },
-    "statusBadge": {
-      "ko": "완전히 틀림 ✗",
-      "en": "Fully Wrong ✗"
-    },
-    "statusColor": "bg-rose-500/10 text-rose-400 border-rose-500/20",
-    "author": {
-      "ko": "로버트 멧칼프",
-      "en": "Robert Metcalfe"
-    },
-    "authorTitle": {
-      "ko": "이더넷 발명가 · 3Com 창업자",
-      "en": "Inventor of Ethernet, Founder of 3Com"
-    },
-    "avatar": "🌐",
-    "imageBeforeUrl": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop&q=80",
-    "imageCaption": {
-      "ko": "1990년대 초기 인터넷",
-      "en": "Early-1990s internet"
-    },
-    "title": {
-      "ko": "인터넷은 1996년 폭발적으로 붕괴할 것",
-      "en": "The Internet will soon go spectacularly supernova and in 1996 catastrophically collapse"
-    },
-    "quoteSource": {
-      "ko": "1995년 InfoWorld 칼럼",
-      "en": "1995 InfoWorld column"
-    },
-    "quoteText": {
-      "ko": "저는 인터넷이 1996년에 극적으로 붕괴할 것이라 예측합니다.",
-      "en": "I predict the Internet will soon go spectacularly supernova and in 1996 catastrophically collapse."
-    },
-    "timelineLabel": {
-      "ko": "📜 이미 역사가 심판 완료",
-      "en": "📜 History Has Already Judged"
-    },
-    "realityStat": {
-      "ko": "전세계 인터넷 이용자 50억 명 이상",
-      "en": "5+ billion internet users worldwide"
-    },
-    "realityText": {
-      "ko": "본인이 틀리면 칼럼을 먹어버리겠다고 공언했고, 실제로 1997년 컨퍼런스에서 인쇄된 칼럼을 갈아 마신 일화로도 유명합니다.",
-      "en": "He famously promised to eat his words if wrong, and literally blended and drank the printed column on stage in 1997."
-    },
-    "actionHighlight": {
-      "ko": "기술 인프라 전문가조차 지수적 성장 곡선의 방향을 오판할 수 있습니다.",
-      "en": "Even infrastructure experts can misjudge the direction of an exponential growth curve."
-    },
-    "upvotes": 0,
-    "disagrees": 0
-  },
-  {
-    "cardType": "LESSON",
-    "eraTag": {
       "ko": "2007 · 스마트폰 태동기",
       "en": "2007 · Dawn of Smartphones"
     },
