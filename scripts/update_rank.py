@@ -1,59 +1,81 @@
+# [Version 2.0] - raw.html 정규식 치환 방식 폐기, posts.json 직접 조작 방식으로 전환.
+# 특정 플랫폼 데이터 가져오기에 실패하면(API 키 누락, 네트워크 오류 등) 해당 플랫폼은
+# 기존 posts.json에 있던 값을 그대로 유지한다 (원래 스크립트의 안전장치를 그대로 계승).
 import os
 import re
 import json
+import time
+import datetime
+from datetime import timezone, timedelta
 import urllib.request
-import urllib.parse
 
-# 1. YouTube Data API v3 (공식 API 연동 유지)
+PLATFORM_ORDER = ["YOUTUBE", "TIKTOK", "THREADS", "INSTA", "X"]
+BADGE_MAP = {
+    "YOUTUBE": ("YouTube", "bg-red-500/10 text-red-400 border-red-500/30"),
+    "TIKTOK": ("TikTok", "bg-cyan-500/10 text-cyan-400 border-cyan-500/30"),
+    "THREADS": ("Threads", "bg-emerald-500/10 text-emerald-400 border-emerald-500/30"),
+    "INSTA": ("Instagram", "bg-pink-500/10 text-pink-400 border-pink-500/30"),
+    "X": ("X", "bg-slate-500/10 text-slate-300 border-slate-500/30"),
+}
+
+# --- 1. YouTube Data API v3 (공식 API) ---
 def fetch_youtube_top():
     api_key = os.environ.get("YOUTUBE_API_KEY", "")
     items = []
     if not api_key:
-        print("Warning: YOUTUBE_API_KEY not found.")
+        print("[WARN] YOUTUBE_API_KEY not found. Keeping existing YouTube data.")
         return items
 
     try:
-        url = f"https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics&chart=mostPopular&regionCode=KR&maxResults=5&key={api_key}"
+        url = (
+            "https://www.googleapis.com/youtube/v3/videos"
+            f"?part=snippet,statistics&chart=mostPopular&regionCode=KR&maxResults=5&key={api_key}"
+        )
         req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
         with urllib.request.urlopen(req, timeout=10) as response:
-            data = json.loads(response.read().decode('utf-8'))
+            data = json.loads(response.read().decode("utf-8"))
+            badge, color = BADGE_MAP["YOUTUBE"]
             for idx, v in enumerate(data.get("items", []), start=1):
                 snip = v["snippet"]
                 stat = v.get("statistics", {})
                 views = int(stat.get("viewCount", 0))
-                channel = snip.get("channelTitle", "크리에이터").replace('"', '\\"')
-                title = snip.get("title", "").replace('"', '\\"')
-                
+                channel = snip.get("channelTitle", "크리에이터")
+                title = snip.get("title", "")
+
                 items.append({
                     "id": f"yt{idx}",
-                    "overallRank": (idx * 5) - 4,
                     "platformRank": idx,
                     "platform": "YOUTUBE",
-                    "platformBadge": "YouTube",
-                    "platformColor": "bg-red-500/10 text-red-400 border-red-500/30",
+                    "platformBadge": badge,
+                    "platformColor": color,
                     "creatorName": {"ko": channel, "en": channel},
                     "handle": f"@{channel.replace(' ', '_')[:20]}",
                     "categoryTag": {"ko": "주간 급상승", "en": "Trending"},
                     "rankChange": f"▲{idx}",
-                    "followers": {"ko": f"{views//10000}만 뷰", "en": f"{views//1000}K views"},
-                    "weeklyGrowth": {"ko": f"+{max(1, views//50000)}만", "en": f"+{max(1, views//50000)}0K"},
+                    "followers": {"ko": f"{views // 10000}만 뷰", "en": f"{views // 1000}K views"},
+                    "weeklyGrowth": {"ko": f"+{max(1, views // 50000)}만", "en": f"+{max(1, views // 50000)}0K"},
                     "headline": {"ko": title, "en": title},
                     "viralTopic": f"#{channel.replace(' ', '')[:15]} #인기급상승",
-                    "growthFactor": {"ko": "실시간 급상승 알고리즘 및 높은 완청률 기반 트래픽 폭발.", "en": "Surged via recommendation algorithms."},
+                    "growthFactor": {
+                        "ko": "실시간 급상승 알고리즘 및 높은 완청률 기반 트래픽 폭발.",
+                        "en": "Surged via recommendation algorithms.",
+                    },
                     "upvotes": 500 + (idx * 50),
-                    "disagrees": 10 + (idx * 5)
+                    "disagrees": 10 + (idx * 5),
                 })
-        print(f"Successfully fetched {len(items)} YouTube items.")
+        print(f"[SUCCESS] Fetched {len(items)} YouTube items.")
     except Exception as e:
-        print(f"YouTube API Error: {e}")
+        print(f"[ERROR] YouTube API failed: {e}. Keeping existing YouTube data.")
+        return []
 
     return items
 
-# 2. Gemini 2.5 Flash Search Grounding 기반 4개 플랫폼 실시간 분석
+
+# --- 2. Gemini 2.5 Flash Search Grounding (TikTok/Threads/Insta/X) ---
 def fetch_social_trends_via_gemini():
     api_key = os.environ.get("GEMINI_API_KEY", "")
     if not api_key:
-        print("Warning: GEMINI_API_KEY not found.")
+        print("[WARN] GEMINI_API_KEY not found. Keeping existing TikTok/Threads/Insta/X data.")
         return {}
 
     prompt = """
@@ -88,136 +110,117 @@ def fetch_social_trends_via_gemini():
 }
 """
 
-    url = f"[https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=](https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=){api_key}"
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={api_key}"
     payload = {
         "contents": [{"parts": [{"text": prompt}]}],
         "tools": [{"google_search": {}}],
         "generationConfig": {
             "temperature": 0.2,
-            "response_mime_type": "application/json"
-        }
+            "response_mime_type": "application/json",
+        },
     }
 
     try:
         req = urllib.request.Request(
             url,
-            data=json.dumps(payload).encode('utf-8'),
-            headers={'Content-Type': 'application/json'},
-            method='POST'
+            data=json.dumps(payload).encode("utf-8"),
+            headers={"Content-Type": "application/json"},
+            method="POST",
         )
         with urllib.request.urlopen(req, timeout=30) as resp:
-            res_data = json.loads(resp.read().decode('utf-8'))
-            raw_text = res_data['candidates'][0]['content']['parts'][0]['text'].strip()
-            # 혹시 모를 마크다운 블록 제거
-            raw_text = re.sub(r'^```json\s*', '', raw_text)
-            raw_text = re.sub(r'\s*```$', '', raw_text)
+            res_data = json.loads(resp.read().decode("utf-8"))
+            raw_text = res_data["candidates"][0]["content"]["parts"][0]["text"].strip()
+            raw_text = re.sub(r"^```json\s*", "", raw_text)
+            raw_text = re.sub(r"\s*```$", "", raw_text)
             return json.loads(raw_text)
     except Exception as e:
-        print(f"Gemini API Grounding Error: {e}")
+        print(f"[ERROR] Gemini API failed: {e}. Keeping existing data for affected platforms.")
         return {}
 
+
 def format_gemini_items(platform_key, raw_list):
-    badge_map = {
-        "TIKTOK": ("TikTok", "bg-cyan-500/10 text-cyan-400 border-cyan-500/30", 1),
-        "THREADS": ("Threads", "bg-emerald-500/10 text-emerald-400 border-emerald-500/30", 2),
-        "INSTA": ("Instagram", "bg-pink-500/10 text-pink-400 border-pink-500/30", 3),
-        "X": ("X (Twitter)", "bg-slate-500/10 text-slate-300 border-slate-500/30", 4)
-    }
-    badge, color, plat_idx = badge_map[platform_key]
+    badge, color = BADGE_MAP[platform_key]
     items = []
-
     for idx, item in enumerate(raw_list[:5], start=1):
-        creator = str(item.get("creatorName", "화제의 크리에이터")).replace('"', '\\"')
-        handle = str(item.get("handle", "@trend_creator")).replace('"', '\\"')
-        category = str(item.get("categoryTag", "실시간 화제")).replace('"', '\\"')
-        rank_change = str(item.get("rankChange", "▲1")).replace('"', '\\"')
-        followers = str(item.get("followers", "50만")).replace('"', '\\"')
-        weekly = str(item.get("weeklyGrowth", "+5만")).replace('"', '\\"')
-        headline = str(item.get("headline", "알고리즘 급상승 화제")).replace('"', '\\"')
-        viral_topic = str(item.get("viralTopic", f"#{platform_key} #트렌드")).replace('"', '\\"')
-        growth = str(item.get("growthFactor", "알고리즘 적중 및 높은 인게이지먼트로 확산.")).replace('"', '\\"')
-
         items.append({
             "id": f"{platform_key.lower()[:2]}{idx}",
-            "overallRank": (idx * 5) - (4 - plat_idx),
             "platformRank": idx,
             "platform": platform_key,
             "platformBadge": badge,
             "platformColor": color,
-            "creatorName": {"ko": creator, "en": creator},
-            "handle": handle,
-            "categoryTag": {"ko": category, "en": category},
-            "rankChange": rank_change,
-            "followers": {"ko": followers, "en": followers},
-            "weeklyGrowth": {"ko": weekly, "en": weekly},
-            "headline": {"ko": headline, "en": headline},
-            "viralTopic": viral_topic,
-            "growthFactor": {"ko": growth, "en": growth},
+            "creatorName": {"ko": str(item.get("creatorName", "화제의 크리에이터")), "en": str(item.get("creatorName", "Trending Creator"))},
+            "handle": str(item.get("handle", "@trend_creator")),
+            "categoryTag": {"ko": str(item.get("categoryTag", "실시간 화제")), "en": str(item.get("categoryTag", "Trending"))},
+            "rankChange": str(item.get("rankChange", "▲1")),
+            "followers": {"ko": str(item.get("followers", "50만")), "en": str(item.get("followers", "500K"))},
+            "weeklyGrowth": {"ko": str(item.get("weeklyGrowth", "+5만")), "en": str(item.get("weeklyGrowth", "+50K"))},
+            "headline": {"ko": str(item.get("headline", "알고리즘 급상승 화제")), "en": str(item.get("headline", "Trending topic"))},
+            "viralTopic": str(item.get("viralTopic", f"#{platform_key} #트렌드")),
+            "growthFactor": {
+                "ko": str(item.get("growthFactor", "알고리즘 적중 및 높은 인게이지먼트로 확산.")),
+                "en": str(item.get("growthFactor", "Spread via strong algorithmic engagement.")),
+            },
             "upvotes": int(item.get("upvotes", 400 - (idx * 20))),
-            "disagrees": int(item.get("disagrees", 10 + (idx * 2)))
+            "disagrees": int(item.get("disagrees", 10 + (idx * 2))),
         })
     return items
 
-def build_js_block(item):
-    return f"""      {{
-        id: "{item['id']}", overallRank: {item['overallRank']}, platformRank: {item['platformRank']}, platform: "{item['platform']}", platformBadge: "{item['platformBadge']}",
-        platformColor: "{item['platformColor']}",
-        creatorName: {{ ko: "{item['creatorName']['ko']}", en: "{item['creatorName']['en']}" }}, handle: "{item['handle']}",
-        categoryTag: {{ ko: "{item['categoryTag']['ko']}", en: "{item['categoryTag']['en']}" }}, rankChange: "{item['rankChange']}",
-        followers: {{ ko: "{item['followers']['ko']}", en: "{item['followers']['en']}" }}, weeklyGrowth: {{ ko: "{item['weeklyGrowth']['ko']}", en: "{item['weeklyGrowth']['en']}" }},
-        headline: {{ ko: "{item['headline']['ko']}", en: "{item['headline']['en']}" }},
-        viralTopic: "{item['viralTopic']}",
-        growthFactor: {{ ko: "{item['growthFactor']['ko']}", en: "{item['growthFactor']['en']}" }},
-        upvotes: {item['upvotes']}, disagrees: {item['disagrees']}
-      }}"""
 
-def replace_platform_block(content, comment_num, platform_name, js_items_str, next_comment_num=None):
-    if next_comment_num:
-        pattern = rf'(/\* =+ {comment_num}\. {platform_name} TOP 5 =+ \*/\s*\n)(.*?)(,\s*\n\s*/\* =+ {next_comment_num}\.)'
-        if re.search(pattern, content, flags=re.DOTALL):
-            return re.sub(pattern, rf'\g<1>{js_items_str}\g<3>', content, flags=re.DOTALL)
-    else:
-        pattern = rf'(/\* =+ {comment_num}\. {platform_name} TOP 5 =+ \*/\s*\n)(.*?)(\n\s*\];)'
-        if re.search(pattern, content, flags=re.DOTALL):
-            return re.sub(pattern, rf'\g<1>{js_items_str}\g<3>', content, flags=re.DOTALL)
-    return content
+def recompute_overall_ranks(all_items):
+    """플랫폼 순서(YOUTUBE,TIKTOK,THREADS,INSTA,X)로 인터리빙된 종합 순위를 재계산."""
+    by_platform = {p: sorted([i for i in all_items if i["platform"] == p], key=lambda x: x["platformRank"]) for p in PLATFORM_ORDER}
+    for plat_idx, plat in enumerate(PLATFORM_ORDER):
+        for item in by_platform[plat]:
+            item["overallRank"] = (item["platformRank"] - 1) * 5 + (plat_idx + 1)
+    return all_items
+
 
 def main():
-    html_path = "rank/raw.html"
-    if not os.path.exists(html_path):
-        print(f"Error: {html_path} not found.")
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    posts_path = os.path.join(base_dir, "rank", "posts.json")
+
+    if not os.path.exists(posts_path):
+        print(f"[ERROR] File not found: {posts_path}")
         return
 
-    with open(html_path, "r", encoding="utf-8") as f:
-        content = f.read()
+    with open(posts_path, "r", encoding="utf-8") as f:
+        existing = json.load(f)
 
-    # 1. YouTube Data API 갱신
+    existing_by_platform = {p: [r for r in existing["ranks"] if r["platform"] == p] for p in PLATFORM_ORDER}
+
+    # 1. YouTube 갱신 시도
     yt_items = fetch_youtube_top()
+    final_by_platform = dict(existing_by_platform)
     if yt_items:
-        yt_str = ",\n".join([build_js_block(i) for i in yt_items])
-        content = replace_platform_block(content, 1, "YOUTUBE", yt_str, 2)
+        final_by_platform["YOUTUBE"] = yt_items
 
-    # 2. Gemini Search Grounding (TikTok, Threads, Insta, X) 갱신
+    # 2. Gemini로 4개 플랫폼 갱신 시도
     social_data = fetch_social_trends_via_gemini()
-    targets = [
-        ("TIKTOK", 2, 3),
-        ("THREADS", 3, 4),
-        ("INSTA", 4, 5),
-        ("X", 5, None)
-    ]
-
-    for plat_key, num, next_num in targets:
-        if plat_key in social_data and isinstance(social_data[plat_key], list):
+    for plat_key in ["TIKTOK", "THREADS", "INSTA", "X"]:
+        if plat_key in social_data and isinstance(social_data[plat_key], list) and social_data[plat_key]:
             plat_items = format_gemini_items(plat_key, social_data[plat_key])
-            if plat_items:
-                plat_str = ",\n".join([build_js_block(i) for i in plat_items])
-                content = replace_platform_block(content, num, plat_key, plat_str, next_num)
-                print(f"Successfully processed {plat_key} with Gemini data.")
+            final_by_platform[plat_key] = plat_items
+            print(f"[SUCCESS] Refreshed {plat_key} via Gemini.")
+        else:
+            print(f"[WARN] {plat_key} not refreshed. Keeping existing data.")
 
-    with open(html_path, "w", encoding="utf-8") as f:
-        f.write(content)
+    # 3. 25개로 합치고 overallRank 재계산
+    all_items = []
+    for p in PLATFORM_ORDER:
+        all_items.extend(final_by_platform.get(p, []))
+    all_items = recompute_overall_ranks(all_items)
 
-    print("Rank auto-update completed.")
+    kst = timezone(timedelta(hours=9))
+    result = {
+        "lastUpdated": datetime.datetime.now(kst).strftime("%Y.%m.%d %H:%M"),
+        "ranks": all_items,
+    }
+
+    with open(posts_path, "w", encoding="utf-8") as f:
+        json.dump(result, f, ensure_ascii=False, indent=2)
+
+    print(f"[SUCCESS] rank/posts.json updated. Total items: {len(all_items)}")
+
 
 if __name__ == "__main__":
     main()
