@@ -8,6 +8,7 @@ import time
 import datetime
 from datetime import timezone, timedelta
 import urllib.request
+import urllib.error
 
 PLATFORM_ORDER = ["YOUTUBE", "TIKTOK", "THREADS", "INSTA", "X"]
 BADGE_MAP = {
@@ -133,6 +134,14 @@ def fetch_social_trends_via_gemini():
             raw_text = re.sub(r"^```json\s*", "", raw_text)
             raw_text = re.sub(r"\s*```$", "", raw_text)
             return json.loads(raw_text)
+    except urllib.error.HTTPError as e:
+        try:
+            body = e.read().decode("utf-8")
+        except Exception:
+            body = "(no response body)"
+        print(f"[ERROR] Gemini API HTTP {e.code}: {body}")
+        print("[ERROR] Keeping existing data for affected platforms.")
+        return {}
     except Exception as e:
         print(f"[ERROR] Gemini API failed: {e}. Keeping existing data for affected platforms.")
         return {}
