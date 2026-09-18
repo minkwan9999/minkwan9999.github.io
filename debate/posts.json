@@ -1,0 +1,157 @@
+{
+  "lastUpdated": "2026.09.18 00:00",
+  "posts": [
+    {
+      "id": "d1",
+      "cardType": "WORK",
+      "tag": { "ko": "직장·생성형 AI", "en": "Workplace & AI" },
+      "statusBadge": { "ko": "2026 최신 쟁점 ⚡", "en": "Trending 2026 ⚡" },
+      "statusColor": "bg-violet-500/10 text-violet-400 border-violet-500/20",
+      "avatar": "🤖",
+      "imageBeforeUrl": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&auto=format&fit=crop&q=80",
+      "imageCaption": { "ko": "기업 내 LLM 프롬프트 및 사내 보고서 작성", "en": "Enterprise LLM prompt workflows" },
+      "title": {
+        "ko": "직장 보고서·코드에 ChatGPT 활용 사실, 상사에게 의무적으로 밝혀야 할까?",
+        "en": "Should employees be mandated to disclose AI usage in reports and code?"
+      },
+      "contextText": {
+        "ko": "LLM이 일상 업무 도구가 되면서 '완벽한 결과물만 내면 도구는 알 바 아니다'는 효율파와 'AI 개입 사실 은폐는 신뢰 훼손이자 보안 리스크'라는 원칙파가 충돌 중입니다.",
+        "en": "As LLMs become ubiquitous, efficiency advocates argue tool choice is irrelevant, while traditionalists demand transparency over security and integrity."
+      },
+      "sideA": {
+        "label": { "ko": "밝힐 필요 없다 (결과주의)", "en": "No Need (Results First)" },
+        "reasons": {
+          "ko": ["계산기나 엑셀 수식 썼다고 보고서에 일일이 적지 않듯 단순한 레버리지 도구일 뿐임", "프롬프트를 정교화하고 결괏값을 검증·수정한 것도 엄연한 본인 작업 역량임", "밝히는 순간 'AI로 날로 먹었다'는 낡은 편견에 시달려 업무 평가에서 불이익을 받음"],
+          "en": ["It's just leverage, like calculators or Excel formulas.", "Prompt design, verification, and editing are still human skills.", "Disclosing invites biased prejudice that you cheated work."]
+        }
+      },
+      "sideB": {
+        "label": { "ko": "반드시 밝혀야 한다 (투명성)", "en": "Must Disclose (Integrity)" },
+        "reasons": {
+          "ko": ["할루시네이션(환각)이나 오류 발생 시 책임 소재와 팩트체크 경로 추적이 불가능해짐", "사내 미공개 데이터나 소스코드가 외부 서버로 유출될 수 있는 보안 리스크가 상존함", "직접 고민해서 쓴 척 속이는 행위는 동료 평가 및 기여도 산정에서 공정성을 심각하게 해침"],
+          "en": ["Hallucinations and bugs require verifiable audit trails.", "Leaking sensitive company data into external prompts is a critical risk.", "Pretending AI output is your own work damages fair meritocracy."]
+        }
+      },
+      "practicalVerdict": {
+        "ko": "단순 복붙은 무조건 표기 또는 금지. 단, 본인의 검증과 편집을 거쳐 80% 이상 재구성된 산출물이라면 굳이 도구를 명시하지 않는 방향으로 사내 규정이 수렴 중입니다.",
+        "en": "Raw copy-paste requires disclosure. Heavy editing and verified outputs (80%+ human touch) are increasingly accepted without formal citation."
+      },
+      "votesA": 582,
+      "votesB": 419
+    },
+    {
+      "id": "d2",
+      "cardType": "RELATION",
+      "tag": { "ko": "경조사 예절", "en": "Wedding Etiquette" },
+      "statusBadge": { "ko": "매주 주말 격돌 🔥", "en": "Hot Dispute 🔥" },
+      "statusColor": "bg-rose-500/10 text-rose-400 border-rose-500/20",
+      "avatar": "💌",
+      "imageBeforeUrl": "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&auto=format&fit=crop&q=80",
+      "imageCaption": { "ko": "호텔 웨딩 및 식대 인플레이션", "en": "Luxury wedding venue catering" },
+      "title": {
+        "ko": "식대 15만원 넘는 특급호텔 결혼식, 혼자 가서 축의금 10만원 내면 민폐인가?",
+        "en": "Is gifting $100 rude when attending a luxury hotel wedding with $150+ catering?"
+      },
+      "contextText": {
+        "ko": "고물가로 호텔 웨딩 식대가 인당 15~20만원대로 치솟자, 오랜 지인 결혼식에 10만원을 내고 참석한 하객을 '적자 유발자'로 볼 것인가를 둘러싼 전국민 단골 논쟁.",
+        "en": "As luxury venue meals surpass $150 per plate, whether standard $100 gifts constitute an imposition has split opinions nationwide."
+      },
+      "sideA": {
+        "label": { "ko": "전혀 민폐 아니다 (축하 우선)", "en": "Not Rude (Celebration First)" },
+        "reasons": {
+          "ko": ["결혼식은 축하받는 자리이지 하객 상대로 밥값 장사하거나 본전 뽑는 비즈니스가 아님", "호텔을 선택한 것은 혼주의 허영과 자기만족인데 왜 그 비용 부담을 하객에게 전가하는가", "주말 시간 쪼개서 교통비 들여 축하하러 와준 정성만으로도 10만원은 충분히 큰 성의임"],
+          "en": ["Weddings are about celebrating, not breaking even on dinner bills.", "Couples chose the luxury hotel for vanity; guests shouldn't subsidize it.", "Showing up on a weekend with a gift is more than enough honor."]
+        }
+      },
+      "sideB": {
+        "label": { "ko": "명백한 민폐다 (식대 배려)", "en": "Rude (Respect Costs)" },
+        "reasons": {
+          "ko": ["호텔 웨딩인 것을 뻔히 알면서 식대보다 적게 내서 주최 측에 적자를 안기는 건 예의가 아님", "15만원 이상 낼 형편이나 친분이 아니라면 불참하고 축의금 5만원만 송금하는 게 상식임", "사회생활에서 경조사 비용의 기본은 최소한 자신이 먹은 밥값 이상의 성의를 표하는 것"],
+          "en": ["Knowing the meal costs $150, causing a net loss to the host is inconsiderate.", "If not close enough to give $150+, send $50 and politely skip the meal.", "Etiquette 101 dictates covering at least your own plate."]
+        }
+      },
+      "practicalVerdict": {
+        "ko": "호텔 예식 참석 시 최소 15~20만원이 암묵적 국룰로 정착 중. 10만원 이하로 성의를 표할 거라면 참석하지 않고 모바일 송금만 하는 것이 양쪽 모두 뒷말이 없습니다.",
+        "en": "Consensus leans toward $150+ for attending hotel weddings in person. If budgeting $100 or less, sending money digitally without dining prevents awkwardness."
+      },
+      "votesA": 641,
+      "votesB": 532
+    },
+    {
+      "id": "d3",
+      "cardType": "RELATION",
+      "tag": { "ko": "연애 심리", "en": "Dating & Psychology" },
+      "statusBadge": { "ko": "판도라의 상자 📦", "en": "Pandora's Box 📦" },
+      "statusColor": "bg-amber-500/10 text-amber-400 border-amber-500/20",
+      "avatar": "👜",
+      "imageBeforeUrl": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=800&auto=format&fit=crop&q=80",
+      "imageCaption": { "ko": "고가 명품 지갑 및 개인 소지품", "en": "Designer leather accessories" },
+      "title": {
+        "ko": "현 애인이 전 애인에게 선물 받은 수백만원대 명품 가방/시계, 계속 쓰는 것 허용?",
+        "en": "Can you tolerate your partner wearing luxury gifts given by their ex?"
+      },
+      "contextText": {
+        "ko": "현 연인의 지갑, 가방, 시계가 전 애인이 사준 고가품이라는 사실을 알게 되었을 때, '물건은 죄가 없다'는 실용주의와 '볼 때마다 전 애인 떠올라 기만이다'는 감정파의 충돌.",
+        "en": "Discovering your partner's designer bag or watch was a gift from an ex sparks conflict between pure utilitarianism and emotional insecurity."
+      },
+      "sideA": {
+        "label": { "ko": "완전 상관없다 (실용주의)", "en": "Totally Fine (Practicality)" },
+        "reasons": {
+          "ko": ["물건은 그냥 물질일 뿐 이미 감정은 끝났는데 수백만원짜리를 멀쩡히 버릴 수는 없음", "전 애인이 사줬다는 이유로 버리거나 팔라고 강요하는 것은 과도한 집착이자 자격지심임", "새로 같은 급의 명품을 사줄 능력이 안 된다면 상대의 경제적 자산을 존중해줘야 함"],
+          "en": ["The item is just leather/steel; throwing away thousands of dollars is foolish.", "Forcing someone to trash an asset reveals petty insecurity.", "Unless you plan to buy an equivalent replacement, respect their property."]
+        }
+      },
+      "sideB": {
+        "label": { "ko": "절대 이해 못 함 (배려 부족)", "en": "Unacceptable (Inconsiderate)" },
+        "reasons": {
+          "ko": ["데이트할 때마다 전 애인의 흔적과 추억이 깃든 물건을 눈앞에 대동하는 건 기본 배려 부족임", "중고로 처분하고 다른 가방을 사는 등 현 애인의 기분을 헤아리는 최소한의 성의가 필요함", "아무리 물질이라 해도 그 물건을 착용할 때마다 전 애인과의 기억이 완전히 무관할 수 없음"],
+          "en": ["Parading an ex's romantic token on dates shows zero empathy.", "Sell it second-hand and buy something else if you truly moved on.", "Subconsciously, wearing an intimate keepsake retains memories of the ex."]
+        }
+      },
+      "practicalVerdict": {
+        "ko": "알고도 차고 나오는 건 예의가 아니라는 여론이 우세. 중고 명품 플랫폼에 처분한 뒤 그 돈으로 비슷한 가격대의 새 물건을 구매하는 것이 가장 안전한 해법입니다.",
+        "en": "Public sentiment strongly favors selling the ex's item on luxury resale platforms and purchasing a neutral replacement to protect peace of mind."
+      },
+      "votesA": 389,
+      "votesB": 712
+    },
+    {
+      "id": "d4",
+      "cardType": "LIFE",
+      "tag": { "ko": "재테크·소비", "en": "Money & Lifestyle" },
+      "statusBadge": { "ko": "현실 도파민 🚗", "en": "Reality Check 🚗" },
+      "statusColor": "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
+      "avatar": "🚘",
+      "imageBeforeUrl": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&auto=format&fit=crop&q=80",
+      "imageCaption": { "ko": "외제차 할부 및 2030 자산 양극화", "en": "Luxury vehicle financing realities" },
+      "title": {
+        "ko": "월급 300만원에 외제차(C클/3시리즈) 60개월 풀할부, 젊음의 자유인가 인생 파멸인가?",
+        "en": "Earning $2,500/mo and financing a BMW: Youthful ambition or financial suicide?"
+      },
+      "contextText": {
+        "ko": "집값 급등으로 아파트 마련이 요원해지자 '월 100만원 감당하고 지금 청춘을 즐긴다'는 현재형 소비와 '30대 중반 카푸어는 영원히 하층민 직행'이라는 미래 자산파의 설전.",
+        "en": "Amid soaring housing costs, debates rage between enjoying youth through car ownership and avoiding permanent poverty through disciplined investing."
+      },
+      "sideA": {
+        "label": { "ko": "개인의 자유 (젊음의 효용)", "en": "Personal Choice (Youth Utility)" },
+        "reasons": {
+          "ko": ["어차피 월급 300만원 몇 년 뼈빠지게 아껴봐야 평생 서울 아파트 한 채 살 수 없음", "20대 후반~30대 초반에 누리는 외제차의 드라이빙 경험과 연애 시장 효용은 나이 들면 못 느낌", "할부금 연체 없이 본인이 식비 줄여서 감당한다면 타인이 간섭할 권리가 전혀 없음"],
+          "en": ["Saving pennies on an average wage will never buy an apartment anyway.", "The dating and lifestyle premium of driving a luxury car expires with age.", "As long as payments aren't delinquent, it's nobody else's business."]
+        }
+      },
+      "sideB": {
+        "label": { "ko": "금융 문맹의 파멸 (자산 단절)", "en": "Financial Ruin (Zero Compounding)" },
+        "reasons": {
+          "ko": ["감가상각이 가장 빠른 소모품에 월급의 30% 이상을 묶는 순간 복리의 기회는 영원히 박탈됨", "할부금 외에도 보험료, 고급유, 취등록세, 소모품 교체비로 월 150만원 이상이 녹아내림", "겉멋에 취해 시드머니를 못 모은 대가는 30대 후반 결혼 및 주거 위기 때 재앙으로 돌아옴"],
+          "en": ["Locking 30%+ of income into a rapidly depreciating asset kills compounding.", "Insurance, maintenance, and taxes quietly drain over 50% of take-home pay.", "Failing to build a seed fund leads to a brutal crisis in your late 30s."]
+        }
+      },
+      "practicalVerdict": {
+        "ko": "자산 형성기인 30대 초반 월급의 30% 이상을 차량 유지비로 쓰는 것은 '부의 사다리 걷어차기'라는 것이 금융권의 일치된 결론. 차량 가액은 연봉의 40% 이내가 안전선입니다.",
+        "en": "Financial planners unanimously agree that spending over 30% of income on car expenses destroys wealth accumulation. Vehicle cost should never exceed 40% of annual salary."
+      },
+      "votesA": 310,
+      "votesB": 845
+    }
+  ]
+}
