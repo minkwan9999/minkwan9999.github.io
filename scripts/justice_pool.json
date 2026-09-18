@@ -1,1 +1,320 @@
-[]
+[
+  {
+    "cardType": "PARKING",
+    "isOngoing": false,
+    "categoryName": {
+      "ko": "주차 분쟁",
+      "en": "Parking Dispute"
+    },
+    "statusBadge": {
+      "ko": "행정 개입 엔딩 ✓",
+      "en": "Government Intervention ✓"
+    },
+    "statusColor": "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
+    "target": {
+      "ko": "화순 주차장 알박기 부부",
+      "en": "Hwasun Parking Lot Squatter Couple"
+    },
+    "location": {
+      "ko": "전남 화순",
+      "en": "Hwasun, Jeollanam-do"
+    },
+    "avatar": "🚙",
+    "imageBeforeUrl": "https://images.unsplash.com/photo-1627638154017-056df3e16eef?w=800&auto=format&fit=crop&q=80",
+    "imageCaption": {
+      "ko": "아파트 단지 야외 주차장",
+      "en": "An apartment complex outdoor parking lot"
+    },
+    "title": {
+      "ko": "국화축제 갔다온 사이 남의 차 막아놓고 잠적한 부부, 나중엔 주차장까지 사유화 시도",
+      "en": "Couple blocked a stranger's car during a local festival, later tried to privatize the shared lot"
+    },
+    "incidentDetail": {
+      "ko": "2019년 11월, 국화축제를 보러 나간 사이 자신의 차가 세워진 자리 앞을 싼타페로 막아놓은 이웃. 연락처도 남기지 않아 피해자는 발이 묶였고, 항의하자 부부는 잠적. 여론이 잠잠해지자 이번엔 공용주차장 진입로에 문을 달고 CCTV와 촬영금지 경고문까지 붙여 아예 자기 땅처럼 사유화하려 함.",
+      "en": "In Nov 2019, while out at a local festival, a couple blocked in a neighbor's car with their Santa Fe and left no contact info. When confronted, they went silent. Once the outrage faded, they later tried to fence off and privatize the shared parking lot with a gate, CCTV, and 'no photography' signage."
+    },
+    "timelineLabel": {
+      "ko": "⏳ 누리꾼 차막이 응징 및 군청 개입",
+      "en": "⏳ Netizen Retaliation & County Government Steps In"
+    },
+    "realityStat": {
+      "ko": "군청이 나서 사유화 시도 저지, 공용주차장 원상 복구",
+      "en": "County office intervened to block privatization, restored public access"
+    },
+    "verdictDetail": {
+      "ko": "분노한 누리꾼들이 자신의 차로 부부의 차량을 둘러싸는 '차막이'로 응징했고, 부부는 결국 사과하며 통로를 열었다. 하지만 여론이 가라앉자 다시 문을 걸어 잠그고 CCTV를 설치해 주차장을 사유화하려는 정황이 포착됐고, 이 사실이 재차 알려지자 화순군청이 개입해 공용 주차장 지위를 재확인시켰다.",
+      "en": "Angry netizens retaliated by boxing in the couple's cars with their own, forcing an apology and reopening the road. But once outrage faded, the couple quietly locked the gate again and installed CCTV to privatize the lot — until the follow-up story went viral again and the county government stepped in to reaffirm it as public parking."
+    },
+    "actionHighlight": {
+      "ko": "한 번 여론의 힘으로 문제가 해결된 것처럼 보여도, 시간이 지나 잠잠해지면 같은 시도가 반복될 수 있습니다. 사유화 시도의 재발을 막으려면 관할 행정기관에 공용시설 지위를 명문화해 등록해두는 것이 확실합니다.",
+      "en": "Even after public pressure resolves an issue once, the same behavior can quietly resurface once attention fades. Registering a shared facility's public status with the local authority is the surest way to prevent repeat privatization attempts."
+    },
+    "upvotes": 512,
+    "disagrees": 27
+  },
+  {
+    "cardType": "WORK",
+    "isOngoing": false,
+    "categoryName": {
+      "ko": "직장 갑질",
+      "en": "Workplace Harassment"
+    },
+    "statusBadge": {
+      "ko": "대법원 해고 확정 ✓",
+      "en": "Supreme Court Confirmed ✓"
+    },
+    "statusColor": "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
+    "target": {
+      "ko": "사내 폭행 후 해고 불복 소송낸 직원",
+      "en": "Employee Who Assaulted Coworkers, Then Fought His Firing"
+    },
+    "location": {
+      "ko": "부산 르노삼성자동차 공장",
+      "en": "Renault Samsung Motors Plant, Busan"
+    },
+    "avatar": "🔧",
+    "imageBeforeUrl": "https://images.unsplash.com/photo-1643700973089-baa86a1ab9ee?w=800&auto=format&fit=crop&q=80",
+    "imageCaption": {
+      "ko": "자동차 정비 작업장",
+      "en": "An auto repair workshop"
+    },
+    "title": {
+      "ko": "동료들 보는 앞에서 상급자·동료 폭행하고도 '부당해고'라며 소송 건 직원의 최후",
+      "en": "Assaulted a superior and coworker in front of everyone, then sued the company for 'unfair dismissal'"
+    },
+    "incidentDetail": {
+      "ko": "자동차 정비 라인에서 근무하던 직원이 동료들이 지켜보는 가운데 상급자와 동료를 폭행. 회사는 사내폭행을 취업규칙상 대표적 징계사유로 규정하고 있어 해당 직원을 즉시 해고했다. 직원은 이에 불복해 노동위원회에 부당해고 구제신청을 냈다.",
+      "en": "While coworkers watched, an employee at an auto-repair line assaulted both a supervisor and a colleague. The company, which classifies workplace assault as grounds for immediate dismissal, fired him on the spot. He challenged the firing before the labor relations commission."
+    },
+    "timelineLabel": {
+      "ko": "⏳ 노동위원회 → 법원 항소심까지 이어진 공방",
+      "en": "⏳ From the Labor Commission to the Court of Appeals"
+    },
+    "realityStat": {
+      "ko": "항소심 및 대법원 모두 해고 정당 확정",
+      "en": "Both the appellate court and Supreme Court upheld the dismissal"
+    },
+    "verdictDetail": {
+      "ko": "항소심 재판부는 '동료들이 보는 앞에서 상급자와 동료를 폭행한 행위는 회사의 인적 화합과 위계질서를 근본적으로 훼손한 것'이라며 해고가 정당하다고 판단했다. 중앙노동위원회가 상고했지만 대법원은 심리불속행으로 상고를 기각해 해고가 최종 확정됐다.",
+      "en": "The appellate court ruled that assaulting a superior and coworker in front of others 'fundamentally undermined workplace harmony and order,' upholding the dismissal. The Central Labor Relations Commission appealed further, but the Supreme Court dismissed it without full review, finalizing the termination."
+    },
+    "actionHighlight": {
+      "ko": "직장 내 폭력은 설령 상대방에게 잘못이 있었다 해도 정당화되지 않으며, 특히 목격자가 있는 상황에서의 폭행은 해고 사유로 매우 강하게 인정됩니다. 억울함이 있다면 폭력이 아니라 사내 신고 절차나 노동청을 통해 해결해야 합니다.",
+      "en": "Workplace violence is rarely justified even if the other party was at fault, and assault witnessed by others is treated as strong grounds for dismissal. Grievances should go through internal reporting channels or the labor authority, not physical confrontation."
+    },
+    "upvotes": 468,
+    "disagrees": 19
+  },
+  {
+    "cardType": "COMMERCE",
+    "isOngoing": false,
+    "categoryName": {
+      "ko": "중고 사기",
+      "en": "Secondhand Fraud"
+    },
+    "statusBadge": {
+      "ko": "실형 확정 ✓",
+      "en": "Prison Sentence ✓"
+    },
+    "statusColor": "bg-rose-500/10 text-rose-400 border-rose-500/20",
+    "target": {
+      "ko": "중고거래 사기 조직 자금세탁책 일당",
+      "en": "Money Launderers for a Secondhand Marketplace Scam Ring"
+    },
+    "location": {
+      "ko": "부산지방법원",
+      "en": "Busan District Court"
+    },
+    "avatar": "📦",
+    "imageBeforeUrl": "https://images.unsplash.com/photo-1624137527136-66e631bdaa0e?w=800&auto=format&fit=crop&q=80",
+    "imageCaption": {
+      "ko": "택배 상자",
+      "en": "A shipping box"
+    },
+    "title": {
+      "ko": "당근마켓서 98명 속인 사기 조직, 돈세탁까지 해준 일당도 결국 실형",
+      "en": "Ring scammed 98 secondhand marketplace buyers — even the money launderers who helped got prison time"
+    },
+    "incidentDetail": {
+      "ko": "텔레그램에서 만난 인터넷 물품 사기 조직으로부터 '계좌에 들어온 돈을 가상화폐로 바꿔 해외 지갑으로 보내면 하루 40만 원을 주겠다'는 제안을 받고 자금세탁책 역할을 맡은 일당. 당근마켓 등에 허위 판매 글을 올려 98명의 피해자에게서 가로챈 약 5천만 원을 테더(USDT) 등 가상자산으로 세탁해 해외로 빼돌렸다.",
+      "en": "After being recruited via Telegram with an offer of 400,000 won a day, the group laundered roughly 50 million won stolen from 98 victims of a secondhand-marketplace scam, converting it to Tether (USDT) and funneling it overseas."
+    },
+    "timelineLabel": {
+      "ko": "⏳ 부산지법 형사6단독 선고",
+      "en": "⏳ Sentencing at Busan District Court"
+    },
+    "realityStat": {
+      "ko": "주범 징역 1년, 공범들 징역 6~8개월 실형 선고",
+      "en": "Ringleader sentenced to 1 year, accomplices to 6-8 months in prison"
+    },
+    "verdictDetail": {
+      "ko": "부산지법은 사기 및 범죄수익은닉규제법 위반 혐의로 기소된 이들에게 실형을 선고했다. 재판부는 '인터넷 물품 사기는 전자상거래 질서를 훼손하고 피해 회복도 쉽지 않다'며 가담 기간이 짧고 이익이 적은 점을 참작하고도 실형이 불가피하다고 밝혔다.",
+      "en": "The Busan District Court sentenced the group on charges of fraud and violating the Act on Regulation of Money Laundering. The court stated that internet marketplace fraud 'undermines e-commerce order and is difficult for victims to recover from,' making prison time unavoidable despite the short duration and modest profit."
+    },
+    "actionHighlight": {
+      "ko": "단순히 '계좌만 빌려주고 심부름만 했다'는 항변은 통하지 않습니다. 사기 피해금인 걸 알면서 가상자산으로 세탁을 도운 것만으로도 범죄수익은닉규제법 위반으로 실형까지 가능합니다. 고수익 아르바이트 제안은 대부분 이런 자금세탁 가담을 노린 것이니 응하지 마세요.",
+      "en": "Claiming you 'just lent your account and ran errands' won't hold up in court. Even helping launder funds you knew were fraud proceeds can lead to real prison time. Suspiciously high-paying 'part-time' offers online are almost always attempts to recruit money-laundering mules — never accept them."
+    },
+    "upvotes": 389,
+    "disagrees": 8
+  },
+  {
+    "cardType": "PARKING",
+    "isOngoing": false,
+    "categoryName": {
+      "ko": "주차 분쟁",
+      "en": "Parking Dispute"
+    },
+    "statusBadge": {
+      "ko": "벌금형 확정 ✓",
+      "en": "Fined by Court ✓"
+    },
+    "statusColor": "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
+    "target": {
+      "ko": "18시간 주차장 입구 가로막은 40대",
+      "en": "40-Something Who Blocked a Garage Entrance for 18 Hours"
+    },
+    "location": {
+      "ko": "대구",
+      "en": "Daegu"
+    },
+    "avatar": "🚧",
+    "imageBeforeUrl": "https://images.unsplash.com/photo-1765710475256-1708882da66e?w=800&auto=format&fit=crop&q=80",
+    "imageCaption": {
+      "ko": "차단봉이 설치된 주차장 입구",
+      "en": "A parking garage entrance with a barrier gate"
+    },
+    "title": {
+      "ko": "아파트 주차장 출입구 18시간 넘게 막아놓고 배째던 차주, 결국 벌금형",
+      "en": "Blocked an apartment garage entrance for over 18 hours, refused to move — fined by the court"
+    },
+    "incidentDetail": {
+      "ko": "아파트 단지 내 주차장 출입구에 자신의 차를 세워두고 18시간 넘게 방치, 다른 입주민들의 차량 출입을 전면 차단했다. 관리사무소와 입주민들의 항의에도 차를 빼지 않았다.",
+      "en": "Parked at the entrance of an apartment complex's parking garage and left it there for over 18 hours, completely blocking other residents from entering or exiting. Ignored complaints from the management office and neighbors."
+    },
+    "timelineLabel": {
+      "ko": "📊 업무방해 혐의로 정식 기소",
+      "en": "📊 Formally Charged with Obstruction of Business"
+    },
+    "realityStat": {
+      "ko": "대구지법, 업무방해죄로 벌금 200만원 선고",
+      "en": "Daegu District Court fined him 2 million won for obstruction"
+    },
+    "verdictDetail": {
+      "ko": "2024년 8월 대구지방법원은 고의로 18시간 넘게 주차장 출입구를 가로막아 관리사무소의 정상적인 관리 업무를 방해한 혐의(업무방해죄)를 인정해 해당 차주에게 벌금 200만원을 선고했다.",
+      "en": "In August 2024, the Daegu District Court found the driver guilty of obstruction of business for deliberately blocking the garage entrance for over 18 hours, fining him 2 million won."
+    },
+    "actionHighlight": {
+      "ko": "'사유지라 처벌 못 한다'는 인식과 달리, 장시간 고의적인 통행 방해는 업무방해죄로 형사처벌까지 이어질 수 있습니다. 2026년 8월부터는 개정 주차장법까지 시행되어 최대 500만원 과태료와 강제 견인도 가능해졌습니다.",
+      "en": "Contrary to the belief that private property is beyond the law's reach, deliberately blocking passage for hours can lead to criminal obstruction charges. Since August 2026, an amended Parking Lot Act also allows fines up to 5 million won and forced towing."
+    },
+    "upvotes": 445,
+    "disagrees": 21
+  },
+  {
+    "cardType": "WORK",
+    "isOngoing": false,
+    "categoryName": {
+      "ko": "직장 갑질",
+      "en": "Workplace Harassment"
+    },
+    "statusBadge": {
+      "ko": "벌금형 선고 ✓",
+      "en": "Fined by Court ✓"
+    },
+    "statusColor": "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
+    "target": {
+      "ko": "2년간 단톡방서 직원 모욕한 대표·이사",
+      "en": "CEO and Director Who Insulted an Employee in a Group Chat for 2 Years"
+    },
+    "location": {
+      "ko": "울산",
+      "en": "Ulsan"
+    },
+    "avatar": "💬",
+    "imageBeforeUrl": "https://images.unsplash.com/photo-1689799514696-b16af9b53753?w=800&auto=format&fit=crop&q=80",
+    "imageCaption": {
+      "ko": "휴대폰을 들고 있는 모습",
+      "en": "Holding a smartphone"
+    },
+    "title": {
+      "ko": "\"돌대가리\" 2년간 단톡방서 욕설·비하하던 대표·이사, 결국 벌금형",
+      "en": "'Blockhead' — CEO and director insulted an employee in a group chat for 2 years, fined by the court"
+    },
+    "incidentDetail": {
+      "ko": "직원들이 참여한 단체 채팅방에서 대표와 이사가 특정 직원을 '돌대가리' 등으로 수십 차례 비하하고 욕설을 반복. 피해 직원은 약 2년간 이어진 모욕적인 발언을 견디다 결국 두 사람을 경찰에 고소했다.",
+      "en": "In a group chat that included multiple employees, the CEO and a director repeatedly insulted and cursed at a specific employee, calling them a 'blockhead' among other slurs, dozens of times. After enduring roughly two years of this, the employee filed a police complaint against both."
+    },
+    "timelineLabel": {
+      "ko": "📊 울산지법 형사9단독 선고",
+      "en": "📊 Sentencing at Ulsan District Court"
+    },
+    "realityStat": {
+      "ko": "대표·이사 각각 벌금 100만원 선고 (모욕죄)",
+      "en": "CEO and director each fined 1 million won for criminal insult"
+    },
+    "verdictDetail": {
+      "ko": "법원은 \"욕설의 내용과 범행 기간 등을 보면 죄질이 좋지 않고, 피해자도 상당한 정신적 고통을 겪은 것으로 보인다\"며 두 사람에게 각각 벌금 100만원을 선고했다. 다만 반성하는 점과 초범인 점은 유리하게 참작됐다.",
+      "en": "The court stated that 'given the content and duration of the abuse, the offense is serious, and the victim appears to have suffered considerable emotional distress,' fining both defendants 1 million won each. Their remorse and lack of prior record were considered mitigating factors."
+    },
+    "actionHighlight": {
+      "ko": "단체 채팅방에서의 모욕도 형법상 모욕죄(공연성 요건 충족)로 처벌 대상입니다. 캡처와 날짜별 기록을 꾸준히 모아두면 대표나 이사 같은 회사 최고 책임자라도 형사처벌을 피할 수 없습니다.",
+      "en": "Insults in a group chat can also constitute criminal defamation/insult under Korean law, since the 'publicness' requirement is met. Consistently saving dated screenshots means even a CEO or director can't escape criminal liability."
+    },
+    "upvotes": 398,
+    "disagrees": 14
+  },
+  {
+    "cardType": "COMMERCE",
+    "isOngoing": false,
+    "categoryName": {
+      "ko": "중고 사기",
+      "en": "Secondhand Fraud"
+    },
+    "statusBadge": {
+      "ko": "실형 선고 ✓",
+      "en": "Prison Sentence ✓"
+    },
+    "statusColor": "bg-rose-500/10 text-rose-400 border-rose-500/20",
+    "target": {
+      "ko": "당근마켓 부동산 사기 후 협박한 일당",
+      "en": "Fake Rental Scammers Who Threatened Victims Demanding Refunds"
+    },
+    "location": {
+      "ko": "서울",
+      "en": "Seoul"
+    },
+    "avatar": "🏠",
+    "imageBeforeUrl": "https://images.unsplash.com/photo-1729505305192-610539203144?w=800&auto=format&fit=crop&q=80",
+    "imageCaption": {
+      "ko": "계산기 앞에 놓인 집 열쇠",
+      "en": "A house key placed in front of a calculator"
+    },
+    "title": {
+      "ko": "당근마켓에 가짜 매물 올려 3.5억 뜯고, 환불 요구하자 합성 음란사진으로 협박",
+      "en": "Scammed 350 million won with fake rental listings, then threatened refund-seeking victims with fake explicit photos"
+    },
+    "incidentDetail": {
+      "ko": "대포폰과 대포통장, 위조 신분증과 공인중개사 명함까지 준비해 공실 부동산을 실제 임대 매물처럼 꾸며 당근마켓에 허위 게시글을 올림. 계약금과 보증금 명목으로 여러 피해자에게서 총 3억5천만원을 가로챘고, 환불을 요구하는 피해자에게는 욕설과 함께 합성 음란사진으로 협박했다.",
+      "en": "Using burner phones, borrowed bank accounts, forged IDs, and fake real-estate agent business cards, the group posted fraudulent listings for vacant properties as if they were real rentals. They collected 350 million won in deposits from victims — and when victims demanded refunds, threatened them with fabricated explicit photos."
+    },
+    "timelineLabel": {
+      "ko": "📊 법원 선고",
+      "en": "📊 Court Sentencing"
+    },
+    "realityStat": {
+      "ko": "실형 선고 확정",
+      "en": "Prison sentence finalized"
+    },
+    "verdictDetail": {
+      "ko": "법원은 피해자들을 속여 거액을 가로챈 사기 혐의와 협박 혐의를 모두 유죄로 인정해 관련자들에게 실형을 선고했다.",
+      "en": "The court found the defendants guilty of both large-scale fraud and threats against victims, sentencing them to prison."
+    },
+    "actionHighlight": {
+      "ko": "부동산 매물은 등기부등본으로 실제 소유자와 임대인이 일치하는지 반드시 직접 확인하고, 집주인과의 직접 통화나 대면 없이 계약금부터 보내면 안 됩니다. 협박을 받았다면 절대 응하지 말고 즉시 캡처해 신고하세요.",
+      "en": "Always verify a property's actual owner against the land registry and never wire a deposit without speaking to or meeting the landlord directly. If threatened, never comply — screenshot everything and report immediately."
+    },
+    "upvotes": 512,
+    "disagrees": 9
+  }
+]
