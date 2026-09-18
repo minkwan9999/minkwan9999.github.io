@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.09.17 16:15",
+  "lastUpdated": "2026.09.18 14:22",
   "posts": [
     {
       "id": "p1",
@@ -912,6 +912,63 @@
       "upvotes": 0,
       "disagrees": 0,
       "id": "p_auto_1789629346"
+    },
+    {
+      "cardType": "LESSON",
+      "eraTag": {
+        "ko": "1876 · 전화 발명 직후",
+        "en": "1876 · Right After the Telephone"
+      },
+      "statusBadge": {
+        "ko": "완전히 틀림 ✗",
+        "en": "Fully Wrong ✗"
+      },
+      "statusColor": "bg-rose-500/10 text-rose-400 border-rose-500/20",
+      "author": {
+        "ko": "윌리엄 오턴",
+        "en": "William Orton"
+      },
+      "authorTitle": {
+        "ko": "웨스턴유니온 사장",
+        "en": "President of Western Union"
+      },
+      "avatar": "☎️",
+      "imageBeforeUrl": "https://images.unsplash.com/photo-1525598912003-663126343e1f?w=800&auto=format&fit=crop&q=80",
+      "imageCaption": {
+        "ko": "1870년대 초기 전화기",
+        "en": "An 1870s-era telephone"
+      },
+      "title": {
+        "ko": "전화는 통신수단으로 진지하게 고려할 가치가 없다",
+        "en": "This telephone has too many shortcomings to be seriously considered as a means of communication"
+      },
+      "quoteSource": {
+        "ko": "1876년, 벨의 특허 인수 제안 거절 사유",
+        "en": "1876, reason given for rejecting Bell's patent offer"
+      },
+      "quoteText": {
+        "ko": "이 '전화'라는 것은 결함이 너무 많아 진지한 통신수단으로 고려할 수 없습니다.",
+        "en": "This 'telephone' has too many shortcomings to be seriously considered as a means of communication."
+      },
+      "timelineLabel": {
+        "ko": "📜 이미 역사가 심판 완료",
+        "en": "📜 History Has Already Judged"
+      },
+      "realityStat": {
+        "ko": "전세계 통신 인프라의 근간이 된 전화망",
+        "en": "The telephone network became the backbone of global communications"
+      },
+      "realityText": {
+        "ko": "웨스턴유니온은 이 판단으로 벨의 특허를 단돈 10만 달러에 살 기회를 스스로 걷어찼습니다.",
+        "en": "Western Union passed on buying Bell's patent for a mere $100,000 as a direct result of this judgment."
+      },
+      "actionHighlight": {
+        "ko": "초기 프로토타입의 완성도만 보고 원천기술의 잠재력을 판단하면 역사적인 헐값 매각을 놓치게 됩니다.",
+        "en": "Judging a raw prototype's potential only by its current rough edges can mean missing a historic bargain."
+      },
+      "upvotes": 0,
+      "disagrees": 0,
+      "id": "p_auto_1789708978"
     }
   ]
 }
