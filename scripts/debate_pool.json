@@ -1,1 +1,750 @@
-[]
+[
+  {
+    "cardType": "WORK",
+    "tag": {
+      "ko": "퇴근 후 연락",
+      "en": "After-Hours Contact"
+    },
+    "statusBadge": {
+      "ko": "칼퇴 vs 즉각응답 ⚡",
+      "en": "On-Time Exit vs Instant Reply ⚡"
+    },
+    "statusColor": "bg-violet-500/10 text-violet-400 border-violet-500/20",
+    "avatar": "📵",
+    "imageBeforeUrl": "https://images.unsplash.com/photo-1507307359011-2447a3598a6f?w=800&auto=format&fit=crop&q=80",
+    "imageCaption": {
+      "ko": "소파에서 스마트폰을 확인하는 모습",
+      "en": "Checking a smartphone on the couch"
+    },
+    "title": {
+      "ko": "퇴근 후 온 업무 카톡, 밤 11시에도 즉시 답장해야 하나?",
+      "en": "Should you reply instantly to a work KakaoTalk message that arrives at 11pm after you've clocked out?"
+    },
+    "contextText": {
+      "ko": "메신저가 업무 도구로 자리잡으면서 '연락되면 무조건 즉답'이 국룰이 된 조직과 '근무시간 외엔 알림도 꺼둔다'는 워라밸파가 매번 부딪힙니다.",
+      "en": "As messaging apps became core work tools, teams split between an 'always reply instantly' norm and a work-life-balance camp that mutes notifications after hours."
+    },
+    "sideA": {
+      "label": {
+        "ko": "즉시 답장해야 한다 (책임감)",
+        "en": "Reply Instantly (Responsibility)"
+      },
+      "reasons": {
+        "ko": [
+          "업무 특성상 몇 시간만 늦어도 다음날 전체 일정이 밀리는 경우가 실제로 존재함",
+          "빠른 응답이 곧 신뢰이며, 씹으면 '일 안 하는 사람'이라는 낙인이 찍혀 인사평가에 불리함",
+          "5분 안에 답장하는 게 어려운 요청이 아니라면 즉답이 오히려 서로의 시간을 아껴줌"
+        ],
+        "en": [
+          "In some jobs, even a few hours' delay pushes back the entire next day's schedule.",
+          "Fast replies build trust; ignoring messages can brand you as uncommitted, hurting reviews.",
+          "If a reply takes under 5 minutes, answering promptly actually saves everyone time."
+        ]
+      }
+    },
+    "sideB": {
+      "label": {
+        "ko": "칼퇴는 지켜져야 한다 (워라밸)",
+        "en": "Respect Off-Hours (Work-Life Balance)"
+      },
+      "reasons": {
+        "ko": [
+          "근로기준법상 근무시간 외 연락에 응답할 법적 의무가 없고, 응답하는 순간 사실상 무급 연장근무임",
+          "정말 급한 일이면 전화를 하지 카톡부터 보내는 것 자체가 급하지 않다는 방증임",
+          "매번 즉답하는 습관을 들이면 상사도 '언제든 되는 사람'으로 인식해 경계 없이 계속 연락함"
+        ],
+        "en": [
+          "Labor law creates no obligation to respond after hours; doing so is effectively unpaid overtime.",
+          "If it were truly urgent, they'd call, not text — the medium itself signals it can wait.",
+          "Always replying instantly trains managers to see you as always available, erasing boundaries."
+        ]
+      }
+    },
+    "practicalVerdict": {
+      "ko": "정말 긴급한 건 아니면 다음날 업무 시작 후 답장하는 게 원칙. 다만 '내일 오전까지 확인 부탁드립니다' 정도의 업무 지시성 메시지엔 익일 오전 첫 응답이 무난한 절충안으로 자리잡고 있습니다.",
+      "en": "Unless it's truly urgent, replying the next business day is the emerging norm. For task-assignment messages like 'please check by tomorrow morning,' responding first thing the next day is the accepted compromise."
+    },
+    "votesA": 298,
+    "votesB": 671
+  },
+  {
+    "cardType": "WORK",
+    "tag": {
+      "ko": "회식 문화",
+      "en": "Company Dinner Culture"
+    },
+    "statusBadge": {
+      "ko": "회식 잔혹사 🍺",
+      "en": "Dinner Dilemma 🍺"
+    },
+    "statusColor": "bg-amber-500/10 text-amber-400 border-amber-500/20",
+    "avatar": "🍖",
+    "imageBeforeUrl": "https://images.unsplash.com/photo-1709433420601-6e473136571b?w=800&auto=format&fit=crop&q=80",
+    "imageCaption": {
+      "ko": "회식 자리 고기 굽는 모습",
+      "en": "Grilling meat at a company dinner"
+    },
+    "title": {
+      "ko": "팀 회식 불참 시 인사평가 불이익, 정당한가?",
+      "en": "Is it fair to penalize performance reviews for skipping team dinners?"
+    },
+    "contextText": {
+      "ko": "저녁 시간과 개인 스케줄을 희생해야 하는 회식 문화에, '팀워크 다지는 자리니 참석은 최소한의 예의'라는 기성세대와 '업무 외 시간에 대한 강요는 갑질'이라는 신세대가 정면 충돌.",
+      "en": "Company dinners that eat into personal evening time pit an older-generation view of team bonding as basic courtesy against a younger view that it's coercion outside work hours."
+    },
+    "sideA": {
+      "label": {
+        "ko": "참석이 최소한의 예의 (팀워크)",
+        "en": "Attendance Is Basic Courtesy (Teamwork)"
+      },
+      "reasons": {
+        "ko": [
+          "회식은 업무 시간 외 친목 도모 자리이기 이전에 팀의 결속력과 협업 분위기를 다지는 중요한 자리임",
+          "매번 개인 사정으로 빠지면서 팀에 녹아들 노력을 안 하는 것도 결국 본인의 사회생활 손해로 돌아옴",
+          "1차 식사만이라도 참석하는 최소한의 성의는 조직 생활에서 당연히 기대되는 부분임"
+        ],
+        "en": [
+          "Beyond socializing, dinners build team cohesion and a collaborative atmosphere.",
+          "Constantly opting out to avoid bonding eventually hurts your own standing at work.",
+          "Attending at least the first round is a reasonable baseline expectation in office life."
+        ]
+      }
+    },
+    "sideB": {
+      "label": {
+        "ko": "업무 외 강요는 부당 (개인 시간)",
+        "en": "Coercing Off-Hours Time Is Unfair (Personal Time)"
+      },
+      "reasons": {
+        "ko": [
+          "법적으로 회식은 근무시간이 아니므로 불참을 이유로 인사평가에 불이익을 주는 것은 명백한 직장 내 괴롭힘에 해당함",
+          "육아, 간병 등 개인 사정이 있는 직원에게 참석을 강요하면 실질적인 차별로 작용함",
+          "친목은 업무 성과와 별개인데 이를 평가 항목에 연결하는 것 자체가 평가 제도의 공정성을 해침"
+        ],
+        "en": [
+          "Legally, dinners aren't work hours, so penalizing absences in reviews constitutes workplace harassment.",
+          "Forcing attendance on employees with childcare or caregiving duties amounts to real discrimination.",
+          "Tying social bonding to performance scores undermines the fairness of the evaluation system itself."
+        ]
+      }
+    },
+    "practicalVerdict": {
+      "ko": "고용노동부 지침상 회식 불참을 이유로 한 불이익 처우는 명백히 위법. 다만 팀 화합을 위해 월 1회 정도의 부담 없는 회식(음주 강요 없는 저녁식사)으로 합의하는 조직이 늘고 있습니다.",
+      "en": "Ministry of Employment guidelines make it clearly illegal to penalize employees for skipping dinners. Still, more organizations are settling on a low-pressure monthly dinner (no forced drinking) as a workable compromise."
+    },
+    "votesA": 245,
+    "votesB": 738
+  },
+  {
+    "cardType": "RELATION",
+    "tag": {
+      "ko": "데이트 비용",
+      "en": "Dating Costs"
+    },
+    "statusBadge": {
+      "ko": "국룰 논쟁 1위 💳",
+      "en": "Debate Champion 💳"
+    },
+    "statusColor": "bg-rose-500/10 text-rose-400 border-rose-500/20",
+    "avatar": "🍽️",
+    "imageBeforeUrl": "https://images.unsplash.com/photo-1507363102828-2022ceba1dfe?w=800&auto=format&fit=crop&q=80",
+    "imageCaption": {
+      "ko": "촛불 켜진 데이트 테이블",
+      "en": "A candlelit date table"
+    },
+    "title": {
+      "ko": "소개팅 첫 데이트, 밥값은 반반이 국룰인가 남자가 내는 게 국룰인가?",
+      "en": "On a first blind date, is splitting the bill or the man paying the actual norm?"
+    },
+    "contextText": {
+      "ko": "성 역할 고정관념 해소와 경제적 평등에 대한 인식이 커지면서, 전통적인 '남자가 낸다'는 관습과 '요즘 세상에 반반이 당연하다'는 신흥 관례가 소개팅 자리마다 눈치싸움을 유발.",
+      "en": "As awareness of gender-role stereotypes and financial equality grows, the traditional 'the man pays' custom clashes with the newer 'obviously split it' expectation, causing awkward standoffs on first dates."
+    },
+    "sideA": {
+      "label": {
+        "ko": "반반이 당연하다 (평등)",
+        "en": "Split It (Equality)"
+      },
+      "reasons": {
+        "ko": [
+          "연애 초반부터 한쪽에게만 비용 부담을 지우는 관계는 대등하지 않은 출발이며 오래 못 감",
+          "여성도 동등하게 사회생활하고 소득이 있는 시대에 성별을 이유로 지불 의무를 나누는 건 시대착오적임",
+          "처음부터 더치페이로 시작하면 이후 만남에서도 부담 없이 자주 볼 수 있어 관계 발전에 오히려 유리함"
+        ],
+        "en": [
+          "Starting a relationship with one-sided financial burden sets an unequal foundation that rarely lasts.",
+          "Assigning payment by gender is outdated when women have equal careers and income.",
+          "Splitting from the start removes financial pressure, making frequent meetups easier."
+        ]
+      }
+    },
+    "sideB": {
+      "label": {
+        "ko": "남자가 내는 게 예의 (관례)",
+        "en": "The Man Pays (Tradition)"
+      },
+      "reasons": {
+        "ko": [
+          "적어도 첫 만남에서는 호감을 표현하고 리드하는 차원에서 남자가 계산하는 게 오랜 관례이자 기본 매너임",
+          "처음부터 정산 앱을 켜고 나누는 모습은 상대에게 계산적이고 정 없는 인상을 줄 수 있음",
+          "두 번째 만남부터 여성이 커피값이나 다음 식사를 내는 식으로 자연스럽게 균형을 맞추면 됨"
+        ],
+        "en": [
+          "Paying on the first date is a long-standing courtesy showing interest and initiative.",
+          "Splitting the bill via an app right away can feel transactional and cold.",
+          "Balance can naturally follow later, with the woman covering coffee or the next meal."
+        ]
+      }
+    },
+    "practicalVerdict": {
+      "ko": "여론조사 기준 20~30대는 첫 데이트 더치페이에 대체로 긍정적이나, 남성이 먼저 계산하고 다음 자리를 여성이 사는 '순환 정산' 방식이 실제로 가장 무난하게 자리잡고 있습니다.",
+      "en": "Surveys show 20s-30s generally favor splitting on a first date, but the most common real-world pattern is alternating: he pays first, she covers the next round."
+    },
+    "votesA": 512,
+    "votesB": 487
+  },
+  {
+    "cardType": "RELATION",
+    "tag": {
+      "ko": "명절 용돈",
+      "en": "Holiday Cash Gifts"
+    },
+    "statusBadge": {
+      "ko": "명절 단골 논쟁 🧧",
+      "en": "Holiday Classic 🧧"
+    },
+    "statusColor": "bg-amber-500/10 text-amber-400 border-amber-500/20",
+    "avatar": "🧧",
+    "imageBeforeUrl": "https://images.unsplash.com/photo-1593182440959-9d5165b29b59?w=800&auto=format&fit=crop&q=80",
+    "imageCaption": {
+      "ko": "현금 다발을 들고 있는 모습",
+      "en": "Holding a fan of cash"
+    },
+    "title": {
+      "ko": "취업 1년차, 명절에 부모님 용돈 얼마가 국룰인가?",
+      "en": "One year into your first job — what's the going rate for holiday cash to your parents?"
+    },
+    "contextText": {
+      "ko": "첫 명절 용돈 액수를 두고 '형편껏 내는 마음이 중요하다'는 온정파와 '사회 나온 자식이면 최소 금액은 지켜야 한다'는 기준파가 매년 명절마다 재점화.",
+      "en": "Every holiday season, opinions clash between those who say 'give what you can, the thought counts' and those who insist there's a minimum expected amount once you've started working."
+    },
+    "sideA": {
+      "label": {
+        "ko": "형편껏이 맞다 (마음이 우선)",
+        "en": "Give What You Can (Sincerity First)"
+      },
+      "reasons": {
+        "ko": [
+          "사회초년생은 월세, 학자금 대출 등 지출이 많아 무리한 액수를 드리면 오히려 본인 생활이 망가짐",
+          "부모님도 자식이 안정적으로 자리잡는 걸 더 원하지, 무리한 용돈을 바라는 경우는 드묾",
+          "금액보다 명절에 직접 찾아뵙고 시간을 보내는 것 자체가 더 큰 효도임"
+        ],
+        "en": [
+          "New workers already face rent and student loans; overspending here wrecks their own finances.",
+          "Most parents want financial stability for their child more than a big holiday gift.",
+          "Spending time together in person matters more than the amount given."
+        ]
+      }
+    },
+    "sideB": {
+      "label": {
+        "ko": "최소 기준은 있어야 (사회인의 도리)",
+        "en": "There's a Baseline (Adult Duty)"
+      },
+      "reasons": {
+        "ko": [
+          "취업했다는 걸 알면서 빈손이나 소액으로 가면 부모님 입장에서 서운함을 느낄 수밖에 없음",
+          "친척들 앞에서 다른 집 자녀와 비교당하는 상황을 피하려면 최소한의 체면치레 금액은 필요함",
+          "첫 월급 이후 첫 명절이라는 상징성이 있어 형편이 어려워도 성의 표시는 필수임"
+        ],
+        "en": [
+          "Showing up empty-handed after landing a job inevitably disappoints parents.",
+          "A baseline amount avoids awkward comparisons with relatives' children.",
+          "The symbolism of the first holiday after your first paycheck makes some gesture essential."
+        ]
+      }
+    },
+    "practicalVerdict": {
+      "ko": "사회초년생 첫 명절 용돈은 부모님 한 분당 10~20만원 선이 암묵적 평균으로 자리잡고 있으며, 형편이 어려우면 금액보다 편지나 선물로 마음을 전하는 것도 무리 없이 받아들여지는 분위기입니다.",
+      "en": "10-20만원 (roughly $70-150) per parent has become the informal average for a first-year worker's holiday gift. If money is tight, a letter or small gift instead is widely accepted."
+    },
+    "votesA": 356,
+    "votesB": 429
+  },
+  {
+    "cardType": "LIFE",
+    "tag": {
+      "ko": "무지출 챌린지",
+      "en": "No-Spend Challenge"
+    },
+    "statusBadge": {
+      "ko": "무지출 vs 플렉스 💸",
+      "en": "No-Spend vs Small Flex 💸"
+    },
+    "statusColor": "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
+    "avatar": "☕",
+    "imageBeforeUrl": "https://images.unsplash.com/photo-1699514834211-24b56949ef08?w=800&auto=format&fit=crop&q=80",
+    "imageCaption": {
+      "ko": "카페에서 커피를 즐기는 모습",
+      "en": "Enjoying coffee at a cafe"
+    },
+    "title": {
+      "ko": "무지출 챌린지 하면서 매일 아침 스타벅스 사 마시는 거, 모순인가 힐링인가?",
+      "en": "Doing a no-spend challenge but buying Starbucks every morning — contradiction or self-care?"
+    },
+    "contextText": {
+      "ko": "고금리·고물가 시대에 짠테크 열풍이 불면서, '무지출을 표방하며 커피는 산다'는 사람들을 향해 '그건 무지출이 아니다'는 원칙파와 '작은 사치 정도는 지속가능한 절약을 위해 필요하다'는 실용파가 갈립니다.",
+      "en": "Amid a frugal-living boom driven by high interest rates and inflation, purists argue that buying coffee disqualifies a 'no-spend challenge,' while pragmatists say a small daily indulgence keeps saving sustainable."
+    },
+    "sideA": {
+      "label": {
+        "ko": "명백한 모순이다 (원칙주의)",
+        "en": "Clear Contradiction (Purism)"
+      },
+      "reasons": {
+        "ko": [
+          "무지출이라는 이름을 붙였으면 정의 그대로 지출을 안 하는 게 맞지 예외를 두는 순간 그건 그냥 절약임",
+          "하루 5천원짜리 커피도 한 달이면 15만원, 1년이면 180만원인데 이걸 무시하는 건 숫자 감각이 없는 것",
+          "SNS에 무지출 인증하면서 커피 사진을 올리는 건 자기기만적이고 보여주기식 챌린지에 불과함"
+        ],
+        "en": [
+          "If you call it 'no-spend,' any exception just makes it regular frugality, not the real thing.",
+          "A 5,000-won coffee a day adds up to 150,000 won a month, 1.8 million a year — hard to ignore.",
+          "Posting a no-spend badge alongside a coffee photo is self-deception dressed up for social media."
+        ]
+      }
+    },
+    "sideB": {
+      "label": {
+        "ko": "지속가능한 절약이다 (실용주의)",
+        "en": "Sustainable Saving (Pragmatism)"
+      },
+      "reasons": {
+        "ko": [
+          "극단적으로 다 끊으면 며칠 못 가 요요처럼 폭식성 소비로 돌아오는 경우가 훨씬 많음",
+          "무지출의 진짜 목적은 충동구매나 불필요한 소비를 줄이는 것이지 모든 소비를 금지하는 고행이 아님",
+          "출근 전 커피 한 잔이 주는 정신적 안정과 생산성 효과를 고려하면 오히려 남는 장사임"
+        ],
+        "en": [
+          "Cutting everything cold-turkey usually backfires into binge spending within days.",
+          "The real point of no-spend is cutting impulse buys, not turning saving into total austerity.",
+          "The mental boost and productivity from a morning coffee often outweighs its cost."
+        ]
+      }
+    },
+    "practicalVerdict": {
+      "ko": "재테크 커뮤니티에서는 '무지출'을 하루 지출 0원이 아니라 '고정 소비 항목 외 충동구매 0원'으로 재정의해서 커피 같은 소액 습관 지출은 예외로 인정하는 방향으로 정착 중입니다.",
+      "en": "In personal-finance communities, 'no-spend' is increasingly redefined not as literally zero spending, but as zero impulse purchases beyond fixed habitual items like a daily coffee."
+    },
+    "votesA": 289,
+    "votesB": 604
+  },
+  {
+    "cardType": "LIFE",
+    "tag": {
+      "ko": "신혼부부 재테크",
+      "en": "Newlywed Finances"
+    },
+    "statusBadge": {
+      "ko": "결혼 전 필수 논쟁 💰",
+      "en": "Pre-Wedding Must-Discuss 💰"
+    },
+    "statusColor": "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
+    "avatar": "🐷",
+    "imageBeforeUrl": "https://images.unsplash.com/photo-1607863680198-23d4b2565df0?w=800&auto=format&fit=crop&q=80",
+    "imageCaption": {
+      "ko": "저금통과 동전",
+      "en": "A piggy bank and coins"
+    },
+    "title": {
+      "ko": "신혼부부, 월급 통장 무조건 합쳐야 하나 각자 관리해도 되나?",
+      "en": "Should newlyweds always merge paychecks into one account, or is managing separately fine?"
+    },
+    "contextText": {
+      "ko": "결혼 전 재무 계획을 세울 때마다 '부부는 하나니까 통장부터 합쳐야 신뢰가 쌓인다'는 합계파와 '각자 벌어 각자 관리하며 생활비만 분담하면 된다'는 분리파가 팽팽하게 맞섭니다.",
+      "en": "When planning finances before marriage, couples clash between merging everything into one account for shared trust, and keeping separate accounts while splitting only living expenses."
+    },
+    "sideA": {
+      "label": {
+        "ko": "무조건 합쳐야 한다 (신뢰와 투명성)",
+        "en": "Must Merge (Trust & Transparency)"
+      },
+      "reasons": {
+        "ko": [
+          "돈 관리를 따로 하면 서로의 소비와 저축 현황을 모르게 되고, 이게 결혼생활 갈등의 가장 큰 원인 중 하나임",
+          "내 집 마련이나 노후 준비 같은 공동의 재무 목표는 통합 계좌로 관리해야 실행력과 저축률이 확실히 올라감",
+          "비상시 배우자 계좌에 접근이 안 되면 응급상황에서 오히려 곤란한 일이 생김"
+        ],
+        "en": [
+          "Managing money separately hides each other's spending and savings — a top source of marital conflict.",
+          "Shared goals like a home or retirement fund save faster and more reliably in one combined account.",
+          "In an emergency, not being able to access a spouse's account can cause real problems."
+        ]
+      }
+    },
+    "sideB": {
+      "label": {
+        "ko": "각자 관리해도 된다 (독립성 존중)",
+        "en": "Separate Is Fine (Respecting Independence)"
+      },
+      "reasons": {
+        "ko": [
+          "소비 습관과 금전 감각이 다른 두 사람을 억지로 하나의 통장에 묶으면 사소한 지출까지 서로 간섭하며 다투게 됨",
+          "생활비, 저축 목표 금액만 명확히 정해서 각자 계좌에서 이체하면 투명성은 충분히 확보됨",
+          "각자 커리어와 경제력을 유지하는 게 결혼 후에도 개인의 독립성과 자존감을 지키는 데 중요함"
+        ],
+        "en": [
+          "Forcing two people with different spending habits into one account leads to constant micromanaging fights.",
+          "Clearly agreed contributions to living costs and savings goals already provide enough transparency.",
+          "Maintaining individual career and financial standing after marriage matters for personal independence."
+        ]
+      }
+    },
+    "practicalVerdict": {
+      "ko": "재무설계사들이 가장 많이 권하는 방식은 '3통장 시스템' — 생활비 공동통장 하나에 각자 정해진 금액을 이체하고, 나머지는 개인 통장에서 자유롭게 관리하는 절충형이 실제로 가장 널리 정착되어 있습니다.",
+      "en": "The most commonly recommended approach by financial planners is the '3-account system': a shared account for living expenses that both partners contribute a fixed amount to, with the rest managed freely in personal accounts."
+    },
+    "votesA": 467,
+    "votesB": 398
+  },
+  {
+    "cardType": "WORK",
+    "tag": {
+      "ko": "복장 규정",
+      "en": "Dress Code"
+    },
+    "statusBadge": {
+      "ko": "복장 자유화 논쟁 👔",
+      "en": "Dress Code Debate 👔"
+    },
+    "statusColor": "bg-violet-500/10 text-violet-400 border-violet-500/20",
+    "avatar": "👔",
+    "imageBeforeUrl": "https://images.unsplash.com/photo-1611095790444-1dfa35e37b52?w=800&auto=format&fit=crop&q=80",
+    "imageCaption": {
+      "ko": "사무실 복장을 갖춰 입은 동료들",
+      "en": "Colleagues in office attire"
+    },
+    "title": {
+      "ko": "사무실 복장 완전 자율화, 생산성 오르나 프로 의식 흐려지나?",
+      "en": "Fully free office dress code — does it boost productivity or erode professionalism?"
+    },
+    "contextText": {
+      "ko": "실리콘밸리식 자율복장 문화가 국내 기업에도 퍼지면서, '편한 복장이 곧 성과'라는 자율파와 '옷차림이 곧 프로 의식이자 고객 신뢰'라는 격식파가 부딪힙니다.",
+      "en": "As Silicon-Valley-style casual dress spreads to Korean companies, those who see comfort as boosting performance clash with those who see attire as core to professionalism and client trust."
+    },
+    "sideA": {
+      "label": {
+        "ko": "완전 자율이 맞다 (편안함이 성과)",
+        "en": "Full Freedom (Comfort Drives Performance)"
+      },
+      "reasons": {
+        "ko": [
+          "옷차림에 신경 쓰는 시간과 스트레스가 줄어야 정작 업무에 집중할 에너지가 늘어남",
+          "실력과 성과는 옷이 아니라 결과물로 증명되는 것이지 정장을 입는다고 일을 더 잘하는 게 아님",
+          "요즘 우수 인재들은 자유로운 근무 환경을 중요한 채용 조건으로 여기는 추세임"
+        ],
+        "en": [
+          "Less time and stress on dressing means more energy left for actual work.",
+          "Skill shows in output, not outfit — a suit doesn't make someone better at their job.",
+          "Top talent increasingly treats a relaxed dress culture as a key hiring factor."
+        ]
+      }
+    },
+    "sideB": {
+      "label": {
+        "ko": "최소한의 격식은 필요 (프로 의식)",
+        "en": "Some Formality Needed (Professionalism)"
+      },
+      "reasons": {
+        "ko": [
+          "고객이나 거래처를 상대하는 직군은 옷차림 자체가 회사의 신뢰도를 대변하는 요소임",
+          "복장이 지나치게 흐트러지면 태도와 마인드셋도 함께 느슨해지는 경향이 실제로 나타남",
+          "완전 자율화는 결국 눈치 게임이 되어 오히려 옷 고르는 데 더 신경 쓰게 만드는 역설이 생김"
+        ],
+        "en": [
+          "For client-facing roles, attire itself signals the company's credibility.",
+          "Overly loose dress codes tend to correlate with looser attitudes and mindsets.",
+          "Total freedom paradoxically creates more anxiety over what's 'appropriate' to wear."
+        ]
+      }
+    },
+    "practicalVerdict": {
+      "ko": "대부분의 기업은 '고객 미팅이 있는 날만 비즈니스 캐주얼 이상'이라는 조건부 자율화로 절충하는 추세이며, 완전 무제한 자율복장은 스타트업 등 일부 업종에 국한되어 있습니다.",
+      "en": "Most companies settle on conditional freedom — business casual or above only on client-meeting days — while fully unrestricted dress remains limited to certain industries like startups."
+    },
+    "votesA": 478,
+    "votesB": 356
+  },
+  {
+    "cardType": "WORK",
+    "tag": {
+      "ko": "사내 경조사비",
+      "en": "Office Collections"
+    },
+    "statusBadge": {
+      "ko": "갹출 강요 논쟁 💵",
+      "en": "Chip-In Dispute 💵"
+    },
+    "statusColor": "bg-amber-500/10 text-amber-400 border-amber-500/20",
+    "avatar": "🎁",
+    "imageBeforeUrl": "https://images.unsplash.com/photo-1513201099705-a9746e1e201f?w=800&auto=format&fit=crop&q=80",
+    "imageCaption": {
+      "ko": "리본이 달린 선물 상자",
+      "en": "A ribboned gift box"
+    },
+    "title": {
+      "ko": "친하지도 않은 상사 생일선물, 팀원 전체가 갹출해서 사줘야 하나?",
+      "en": "Should the whole team chip in for a birthday gift for a boss they're not even close to?"
+    },
+    "contextText": {
+      "ko": "누군가 '상사 생일이니 만원씩 걷자'는 말을 꺼내는 순간, '조직 예의상 당연하다'는 관행파와 '친분도 없는데 강제로 걷는 건 부당하다'는 개인파가 부딪힙니다.",
+      "en": "The moment someone suggests 'let's each chip in 10,000 won for the boss's birthday,' tradition-minded employees clash with those who see it as unfair pressure absent real closeness."
+    },
+    "sideA": {
+      "label": {
+        "ko": "관행상 당연하다 (조직 예의)",
+        "en": "Standard Practice (Office Courtesy)"
+      },
+      "reasons": {
+        "ko": [
+          "소액이고 조직 생활에서 최소한의 성의 표시로 자리잡은 관행이라 굳이 거부할 이유가 없음",
+          "다른 팀원들이 다 내는데 혼자 안 내면 분위기를 망치고 이후 관계에도 불편함이 생김",
+          "직급이 높은 사람에게 잘 보이려는 게 아니라 조직 내 예의를 지키는 차원임"
+        ],
+        "en": [
+          "It's a small, low-stakes gesture that's become standard office courtesy.",
+          "Being the one holdout when everyone else chips in creates awkwardness and strains relationships.",
+          "It's not about currying favor — it's basic organizational etiquette."
+        ]
+      }
+    },
+    "sideB": {
+      "label": {
+        "ko": "강요는 부당하다 (개인 선택)",
+        "en": "Coercion Is Unfair (Personal Choice)"
+      },
+      "reasons": {
+        "ko": [
+          "개인적 친분이 없는 상사에게 선물할지 말지는 순전히 개인의 자유이지 조직이 강제할 사안이 아님",
+          "적은 금액이라도 매번 여러 명 생일마다 걷으면 누적 금액이 상당히 부담스러워짐",
+          "정말 마음에서 우러나 주고 싶은 사람만 자발적으로 내는 방식이 훨씬 건강한 조직문화임"
+        ],
+        "en": [
+          "Whether to gift a boss you're not close to is a personal choice, not something the organization should mandate.",
+          "Small amounts add up fast when collections happen for every birthday across the team.",
+          "A healthier culture lets only those who genuinely want to contribute do so voluntarily."
+        ]
+      }
+    },
+    "practicalVerdict": {
+      "ko": "최근에는 강제 갹출 대신 '내고 싶은 사람만 자율적으로' 방식으로 전환하는 조직이 늘고 있으며, 아예 사내 경조사비 규정을 만들어 회사 예산으로 통일하는 곳도 증가하는 추세입니다.",
+      "en": "More organizations are shifting from mandatory collections to a voluntary opt-in system, and some are standardizing gifts through company budgets with formal policies instead."
+    },
+    "votesA": 289,
+    "votesB": 612
+  },
+  {
+    "cardType": "RELATION",
+    "tag": {
+      "ko": "커플 여행 경비",
+      "en": "Couple Travel Costs"
+    },
+    "statusBadge": {
+      "ko": "여행 경비 분담 ✈️",
+      "en": "Trip Cost Split ✈️"
+    },
+    "statusColor": "bg-rose-500/10 text-rose-400 border-rose-500/20",
+    "avatar": "🧳",
+    "imageBeforeUrl": "https://images.unsplash.com/photo-1666238855001-d11112be431f?w=800&auto=format&fit=crop&q=80",
+    "imageCaption": {
+      "ko": "나란히 놓인 여행 가방",
+      "en": "Luggage bags side by side"
+    },
+    "title": {
+      "ko": "커플 여행, 숙소는 남자가 항공권은 여자가 vs 무조건 반반 정산?",
+      "en": "Couple trips: he books lodging, she books flights — or split everything evenly?"
+    },
+    "contextText": {
+      "ko": "여행 경비가 클수록 정산 방식에 대한 온도차가 커지는데, '역할 분담이 더 합리적'이라는 실용파와 '한 항목이라도 불균형하면 결국 다투게 된다'는 정확파가 맞섭니다.",
+      "en": "As trip costs grow, opinions diverge between those who prefer splitting by category (lodging vs. flights) and those who insist on exact even splits to avoid future disputes."
+    },
+    "sideA": {
+      "label": {
+        "ko": "역할 분담이 합리적 (편의성)",
+        "en": "Split by Category (Convenience)"
+      },
+      "reasons": {
+        "ko": [
+          "매번 영수증 모아서 반반 계산하는 것 자체가 번거롭고 여행 분위기를 깨뜨림",
+          "누가 항공권을 예약하고 누가 숙소를 예약할지 역할을 나누면 각자 책임감 있게 준비하게 됨",
+          "장기적으로 보면 큰 항목끼리 서로 맞바꾸는 방식이 결국 총액에서는 비슷하게 수렴함"
+        ],
+        "en": [
+          "Collecting receipts for a 50/50 split every time is tedious and kills the trip vibe.",
+          "Dividing responsibilities (who books what) makes each person prepare more carefully.",
+          "Over time, swapping big-ticket categories tends to even out to similar totals anyway."
+        ]
+      }
+    },
+    "sideB": {
+      "label": {
+        "ko": "정확히 반반이 안전하다 (형평성)",
+        "en": "Exact 50/50 Is Safest (Fairness)"
+      },
+      "reasons": {
+        "ko": [
+          "항공권과 숙소 가격 차이가 클 경우 한쪽이 은근히 손해 보는 구조가 생길 수 있음",
+          "정확한 정산 앱으로 매번 나누면 감정적 소모 없이 깔끔하게 관계를 유지할 수 있음",
+          "역할 분담 방식은 물가나 시기에 따라 매번 유불리가 달라져 결국 누군가는 불만이 쌓임"
+        ],
+        "en": [
+          "If flight and lodging costs differ significantly, one person quietly ends up paying more overall.",
+          "Splitting exactly via an app avoids emotional friction and keeps things clean.",
+          "Category-based splitting shifts unfairly with prices and timing, building resentment over time."
+        ]
+      }
+    },
+    "practicalVerdict": {
+      "ko": "정산 앱으로 총액을 합산해 여행 끝에 한 번에 반반 정산하는 방식이 가장 뒷말 없는 방법으로 자리잡고 있으며, 역할 분담은 신뢰가 충분히 쌓인 커플에게만 권장되는 편입니다.",
+      "en": "Totaling everything and splitting once at the end via an app has become the least contentious method; role-based splitting is generally recommended only for couples with well-established trust."
+    },
+    "votesA": 401,
+    "votesB": 487
+  },
+  {
+    "cardType": "RELATION",
+    "tag": {
+      "ko": "친구 축의금",
+      "en": "Friend's Wedding Gift"
+    },
+    "statusBadge": {
+      "ko": "친밀도별 논쟁 💌",
+      "en": "By-Closeness Debate 💌"
+    },
+    "statusColor": "bg-amber-500/10 text-amber-400 border-amber-500/20",
+    "avatar": "💌",
+    "imageBeforeUrl": "https://images.unsplash.com/photo-1627618998627-70a92a874cc2?w=800&auto=format&fit=crop&q=80",
+    "imageCaption": {
+      "ko": "편지와 봉투",
+      "en": "A letter and envelope"
+    },
+    "title": {
+      "ko": "연락 뜸했던 대학 동창 결혼식, 축의금 5만원이면 충분한가?",
+      "en": "For a college friend you've fallen out of touch with, is a 50,000-won wedding gift enough?"
+    },
+    "contextText": {
+      "ko": "청첩장을 받고 '얼마를 내야 하나' 고민할 때, '친밀도에 비례해서 내는 게 맞다'는 현실파와 '동창이면 예전 정을 생각해서 최소 10만원은 해야 한다'는 의리파가 갈립니다.",
+      "en": "Upon receiving a wedding invitation, people split between those who scale the gift to current closeness and those who insist old friendship warrants at least 100,000 won."
+    },
+    "sideA": {
+      "label": {
+        "ko": "친밀도에 비례해야 한다 (현실적 기준)",
+        "en": "Scale by Closeness (Realistic Standard)"
+      },
+      "reasons": {
+        "ko": [
+          "몇 년째 연락도 안 하다가 청첩장 올 때만 연락 오는 관계라면 형식적인 5만원으로 충분함",
+          "과거의 친분만으로 현재의 지출을 정당화하는 건 비합리적인 인정에 기댄 소비임",
+          "정말 소중한 친구라면 애초에 평소에도 연락을 유지했을 것이므로 지금의 거리감이 곧 답임"
+        ],
+        "en": [
+          "If contact only happens when the invitation arrives, a standard 50,000 won is enough.",
+          "Justifying spending based purely on past closeness is irrational, sentiment-driven spending.",
+          "A truly valued friend would have stayed in touch — the current distance already answers the question."
+        ]
+      }
+    },
+    "sideB": {
+      "label": {
+        "ko": "동창의 의리는 지켜야 한다 (관계 유지)",
+        "en": "Honor Old Ties (Maintaining Relationships)"
+      },
+      "reasons": {
+        "ko": [
+          "연락이 뜸했던 것도 서로 바빠서였을 뿐 우정 자체가 사라진 건 아니므로 성의는 갖춰야 함",
+          "5만원은 식대도 못 채우는 액수라 참석할 거면 최소 10만원 정도는 예의상 필요함",
+          "훗날 다시 가까워질 수도 있는 관계인데 이런 순간에 인색하게 굴면 관계 회복이 더 어려워짐"
+        ],
+        "en": [
+          "Infrequent contact often just reflects busy lives, not the end of a friendship — some gesture matters.",
+          "50,000 won doesn't even cover the meal cost, so attending calls for at least 100,000 as basic courtesy.",
+          "Being stingy at a moment like this can make it harder to reconnect down the road."
+        ]
+      }
+    },
+    "practicalVerdict": {
+      "ko": "최근 몇 년간 연락이 없었고 참석도 안 할 관계라면 5만원 축의금만 송금하는 것이 무난한 국룰로 자리잡았으며, 직접 참석할 경우엔 최소 10만원이 암묵적 기준입니다.",
+      "en": "For relationships with years of no contact and no plans to attend, sending 50,000 won alone has become the accepted norm; attending in person implies a 100,000-won baseline."
+    },
+    "votesA": 534,
+    "votesB": 402
+  },
+  {
+    "cardType": "LIFE",
+    "tag": {
+      "ko": "반려동물 보험",
+      "en": "Pet Insurance"
+    },
+    "statusBadge": {
+      "ko": "펫보험 필수 논쟁 🐕",
+      "en": "Pet Insurance Debate 🐕"
+    },
+    "statusColor": "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
+    "avatar": "🐾",
+    "imageBeforeUrl": "https://images.unsplash.com/photo-1770836037793-95bdbf190f71?w=800&auto=format&fit=crop&q=80",
+    "imageCaption": {
+      "ko": "수의사가 강아지를 진료하는 모습",
+      "en": "A vet examining a small dog"
+    },
+    "title": {
+      "ko": "반려동물 키우면 펫보험 필수로 가입해야 하나, 목돈 저축이 더 나은가?",
+      "en": "Is pet insurance a must for pet owners, or is saving a lump sum smarter?"
+    },
+    "contextText": {
+      "ko": "동물병원 진료비가 표준수가제 없이 병원마다 천차만별로 치솟자, '보험이 안전망'이라는 가입파와 '보험료 낼 돈을 그냥 모아두는 게 이득'이라는 저축파가 부딪힙니다.",
+      "en": "As vet costs vary wildly without standardized pricing, insurance advocates who see it as a safety net clash with those who say saving the premium amount directly is more cost-effective."
+    },
+    "sideA": {
+      "label": {
+        "ko": "필수로 가입해야 한다 (안전망)",
+        "en": "Insurance Is Essential (Safety Net)"
+      },
+      "reasons": {
+        "ko": [
+          "큰 수술이나 중대 질병이 걸리면 수백만 원 단위 진료비가 한 번에 나갈 수 있어 예측이 불가능함",
+          "매달 소액을 내고 큰 리스크를 보험사에 넘기는 것이 재무적으로 합리적인 위험 관리임",
+          "목돈을 모으는 도중에 사고나 질병이 생기면 저축만으로는 대응이 불가능함"
+        ],
+        "en": [
+          "A major surgery or illness can suddenly cost millions of won — an unpredictable risk.",
+          "Paying a small monthly premium to transfer big financial risk to an insurer is sound risk management.",
+          "If illness strikes before enough savings accumulate, saving alone won't cover it."
+        ]
+      }
+    },
+    "sideB": {
+      "label": {
+        "ko": "직접 저축이 낫다 (자기 관리)",
+        "en": "Self-Saving Is Better (Self-Management)"
+      },
+      "reasons": {
+        "ko": [
+          "국내 펫보험은 보장 범위가 좁고 예외 조항이 많아 정작 필요할 때 보장 못 받는 경우가 흔함",
+          "건강한 반려동물이면 몇 년간 낸 보험료 총액이 실제 진료비보다 훨씬 많을 수 있음",
+          "매달 보험료만큼 별도 통장에 저축하면 필요할 때 그 목적 외에도 유연하게 쓸 수 있음"
+        ],
+        "en": [
+          "Domestic pet insurance often has narrow coverage and many exclusions, leaving owners uncovered when it matters.",
+          "For a healthy pet, total premiums paid over years can exceed actual vet costs.",
+          "Saving the premium amount separately offers more flexibility if the money isn't needed for vet bills."
+        ]
+      }
+    },
+    "practicalVerdict": {
+      "ko": "반려동물이 어리고 건강할 때 가입하는 저렴한 실속형 보험 + 별도의 소액 비상금 저축을 병행하는 것이 수의사와 재무 전문가 모두가 권장하는 절충안으로 자리잡고 있습니다.",
+      "en": "Both veterinarians and financial advisors increasingly recommend a hybrid: an affordable basic policy taken out while the pet is young and healthy, combined with a small separate emergency fund."
+    },
+    "votesA": 356,
+    "votesB": 298
+  }
+]
