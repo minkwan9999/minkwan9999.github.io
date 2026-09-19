@@ -75,6 +75,16 @@
     let currentLang = 'ko';
     let currentFilter = 'ALL';
     let POSTS = [];
+    let expandedId = null;
+
+    const NEW_BADGE_DAYS = 3;
+    function isNewItem(item) {
+      if (!item.addedAt) return false;
+      const addedMs = new Date(item.addedAt).getTime();
+      if (isNaN(addedMs)) return false;
+      const daysSince = (Date.now() - addedMs) / 86400000;
+      return daysSince >= 0 && daysSince <= NEW_BADGE_DAYS;
+    }
 
     const I18N = {
       ko: {
@@ -89,6 +99,7 @@
         contextLabel: "🔥 논쟁 발단 및 쟁점",
         ruleTitle: "⚖️ 현실 여론 & 암묵적 합의선:",
         votedBadge: "판결 참여 완료",
+        newBadge: "NEW",
         footerNote: "커뮤니티 및 여론조사 빅데이터를 기반으로 찬반 논리를 재구성했습니다.",
         loadError: "데이터를 불러오지 못했습니다."
       },
@@ -104,6 +115,7 @@
         contextLabel: "🔥 What Sparked The Debate",
         ruleTitle: "⚖️ Public Consensus & Practical Standard:",
         votedBadge: "Vote Recorded",
+        newBadge: "NEW",
         footerNote: "Compiled based on viral community discourse and polling datasets.",
         loadError: "Failed to load data."
       }
@@ -132,6 +144,11 @@
       }
     }
 
+    function toggleExpand(id) {
+      expandedId = expandedId === id ? null : id;
+      renderFeed(currentFilter);
+    }
+
     function renderFeed(filter = 'ALL') {
       const container = document.getElementById('feed-container');
       container.innerHTML = '';
@@ -142,6 +159,8 @@
       filtered.forEach(item => {
         const votedKey = `debate_voted_${item.id}`;
         const userVoted = localStorage.getItem(votedKey);
+        const isExpanded = expandedId === item.id;
+        const isNew = isNewItem(item);
 
         const vA = item.votesA + (userVoted === 'A' ? 1 : 0);
         const vB = item.votesB + (userVoted === 'B' ? 1 : 0);
@@ -150,99 +169,95 @@
         const pctB = 100 - pctA;
 
         const card = document.createElement('article');
-        card.className = "bg-[#161b22] border border-slate-800 rounded-2xl overflow-hidden shadow-xl";
+        card.className = `border rounded-2xl overflow-hidden shadow-xl transition ${isExpanded ? 'bg-[#161b22] border-violet-500/50' : 'bg-[#161b22]/80 border-slate-800 hover:border-slate-700'}`;
 
         card.innerHTML = `
-          <!-- 1. 헤더 -->
-          <div class="p-3 pb-2 flex items-center justify-between border-b border-slate-800/60 bg-slate-900/40 text-xs">
-            <div class="flex items-center gap-1.5 min-w-0 pr-2">
-              <span class="text-base shrink-0">${item.avatar}</span>
-              <span class="font-bold text-slate-200 truncate">${item.tag[currentLang]}</span>
+          <!-- 요약 행 (탭하면 펼쳐짐) -->
+          <div onclick="toggleExpand('${item.id}')" class="p-3 flex items-center gap-2 cursor-pointer select-none">
+            <span class="text-lg shrink-0">${item.avatar}</span>
+            <div class="min-w-0 flex-1">
+              <div class="flex items-center gap-1.5 flex-wrap mb-0.5">
+                <span class="text-[10px] font-mono text-slate-400">${item.tag[currentLang]}</span>
+                ${isNew ? `<span class="text-[9px] font-black px-1.5 py-0.5 rounded bg-rose-500 text-white shrink-0 animate-pulse">${t.newBadge}</span>` : ''}
+                <span class="text-[10px] font-bold px-1.5 py-0.5 rounded border whitespace-nowrap ${item.statusColor}">${item.statusBadge[currentLang]}</span>
+              </div>
+              <h2 class="text-sm font-extrabold text-white leading-snug ${isExpanded ? '' : 'line-clamp-2'}">${item.title[currentLang]}</h2>
             </div>
-            <div class="flex items-center gap-1.5 shrink-0 whitespace-nowrap">
-              <span class="text-[10px] font-bold px-2 py-0.5 rounded border ${item.statusColor}">
-                ${item.statusBadge[currentLang]}
+            <span class="text-slate-500 text-xs shrink-0 transition-transform duration-200 ${isExpanded ? 'rotate-180 text-violet-400' : ''}">▼</span>
+          </div>
+
+          ${isExpanded ? `
+          <div class="border-t border-slate-800/80">
+            <!-- 보도/상황 사진 아카이브 -->
+            <div class="relative w-full h-40 bg-slate-950 overflow-hidden border-b border-slate-800">
+              <img src="${item.imageBeforeUrl}" alt="${item.title[currentLang]}" class="w-full h-full object-cover object-center filter grayscale contrast-110 hover:grayscale-0 transition duration-500" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#161b22] via-transparent to-black/30"></div>
+              <span class="absolute bottom-2 left-3 text-[10px] font-mono text-slate-300 bg-black/60 px-2 py-0.5 rounded backdrop-blur border border-white/10 truncate max-w-[85%]">
+                📷 ${item.imageCaption[currentLang]}
               </span>
             </div>
-          </div>
 
-          <!-- 2. 보도/상황 사진 아카이브 -->
-          <div class="relative w-full h-40 bg-slate-950 overflow-hidden border-b border-slate-800">
-            <img src="${item.imageBeforeUrl}" alt="${item.title[currentLang]}" class="w-full h-full object-cover object-center filter grayscale contrast-110 hover:grayscale-0 transition duration-500" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-[#161b22] via-transparent to-black/30"></div>
-            <span class="absolute bottom-2 left-3 text-[10px] font-mono text-slate-300 bg-black/60 px-2 py-0.5 rounded backdrop-blur border border-white/10 truncate max-w-[85%]">
-              📷 ${item.imageCaption[currentLang]}
-            </span>
-          </div>
-
-          <!-- 3. 카드 본문 -->
-          <div class="p-4 space-y-3">
-            <h2 class="text-base font-extrabold text-white leading-snug tracking-tight">
-              ${item.title[currentLang]}
-            </h2>
-
-            <!-- 발단 맥락 박스 -->
-            <div class="bg-[#1c2128] border-l-4 border-violet-500/80 rounded-r-xl p-3 space-y-1 shadow-inner">
-              <div class="text-[11px] text-violet-400 font-mono font-bold whitespace-nowrap">
-                ${t.contextLabel}
+            <div class="p-4 space-y-3">
+              <!-- 발단 맥락 박스 -->
+              <div class="bg-[#1c2128] border-l-4 border-violet-500/80 rounded-r-xl p-3 space-y-1 shadow-inner">
+                <div class="text-[11px] text-violet-400 font-mono font-bold whitespace-nowrap">
+                  ${t.contextLabel}
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed font-normal">
+                  ${item.contextText[currentLang]}
+                </p>
               </div>
-              <p class="text-xs text-slate-300 leading-relaxed font-normal">
-                ${item.contextText[currentLang]}
-              </p>
+
+              <!-- 양측 핵심 논리 2단 박스 -->
+              <div class="grid grid-cols-1 gap-2 pt-1">
+                <div class="bg-[#0e1117] border border-blue-900/40 rounded-xl p-3 space-y-1.5">
+                  <div class="flex items-center justify-between text-xs font-bold text-blue-400">
+                    <span>🔵 ${item.sideA.label[currentLang]}</span>
+                    <span class="font-mono text-[11px]">${pctA}%</span>
+                  </div>
+                  <ul class="text-[11px] text-slate-300 space-y-1 list-disc list-inside">
+                    ${item.sideA.reasons[currentLang].map(r => `<li class="leading-relaxed">${r}</li>`).join('')}
+                  </ul>
+                </div>
+
+                <div class="bg-[#0e1117] border border-rose-900/40 rounded-xl p-3 space-y-1.5">
+                  <div class="flex items-center justify-between text-xs font-bold text-rose-400">
+                    <span>🔴 ${item.sideB.label[currentLang]}</span>
+                    <span class="font-mono text-[11px]">${pctB}%</span>
+                  </div>
+                  <ul class="text-[11px] text-slate-300 space-y-1 list-disc list-inside">
+                    ${item.sideB.reasons[currentLang].map(r => `<li class="leading-relaxed">${r}</li>`).join('')}
+                  </ul>
+                </div>
+              </div>
+
+              <!-- 현실 종결 기준 박스 -->
+              <div class="bg-gradient-to-r from-violet-950/20 to-indigo-950/10 border border-violet-500/20 rounded-xl p-2.5">
+                <p class="text-xs text-violet-200/90 leading-relaxed">
+                  <strong class="text-violet-400 font-extrabold mr-1 whitespace-nowrap">${t.ruleTitle}</strong>${item.practicalVerdict[currentLang]}
+                </p>
+              </div>
             </div>
 
-            <!-- 양측 핵심 논리 2단 박스 -->
-            <div class="grid grid-cols-1 gap-2 pt-1">
-              <!-- A 진영 -->
-              <div class="bg-[#0e1117] border border-blue-900/40 rounded-xl p-3 space-y-1.5">
-                <div class="flex items-center justify-between text-xs font-bold text-blue-400">
+            <!-- 실시간 양자택일 투표 인터랙션 바 -->
+            <div class="px-4 py-3 bg-slate-900/60 border-t border-slate-800/80 space-y-2">
+              <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden flex">
+                <div style="width: ${pctA}%" class="bg-blue-500 transition-all duration-500"></div>
+                <div style="width: ${pctB}%" class="bg-rose-500 transition-all duration-500"></div>
+              </div>
+
+              <div class="flex items-center justify-between gap-2 text-xs pt-1">
+                <button onclick="event.stopPropagation(); toggleVote('${item.id}', 'A')" class="flex-1 py-1.5 px-2 rounded-lg border transition text-center truncate ${userVoted === 'A' ? 'bg-blue-600 border-blue-500 text-white font-bold shadow-md shadow-blue-500/30' : 'bg-slate-800 border-slate-700 text-slate-300 hover:border-blue-500 hover:text-blue-400'}">
                   <span>🔵 ${item.sideA.label[currentLang]}</span>
-                  <span class="font-mono text-[11px]">${pctA}%</span>
-                </div>
-                <ul class="text-[11px] text-slate-300 space-y-1 list-disc list-inside">
-                  ${item.sideA.reasons[currentLang].map(r => `<li class="leading-relaxed">${r}</li>`).join('')}
-                </ul>
-              </div>
-
-              <!-- B 진영 -->
-              <div class="bg-[#0e1117] border border-rose-900/40 rounded-xl p-3 space-y-1.5">
-                <div class="flex items-center justify-between text-xs font-bold text-rose-400">
+                </button>
+                <button onclick="event.stopPropagation(); toggleVote('${item.id}', 'B')" class="flex-1 py-1.5 px-2 rounded-lg border transition text-center truncate ${userVoted === 'B' ? 'bg-rose-600 border-rose-500 text-white font-bold shadow-md shadow-rose-500/30' : 'bg-slate-800 border-slate-700 text-slate-300 hover:border-rose-500 hover:text-rose-400'}">
                   <span>🔴 ${item.sideB.label[currentLang]}</span>
-                  <span class="font-mono text-[11px]">${pctB}%</span>
-                </div>
-                <ul class="text-[11px] text-slate-300 space-y-1 list-disc list-inside">
-                  ${item.sideB.reasons[currentLang].map(r => `<li class="leading-relaxed">${r}</li>`).join('')}
-                </ul>
+                </button>
               </div>
-            </div>
-
-            <!-- 현실 종결 기준 박스 -->
-            <div class="bg-gradient-to-r from-violet-950/20 to-indigo-950/10 border border-violet-500/20 rounded-xl p-2.5">
-              <p class="text-xs text-violet-200/90 leading-relaxed">
-                <strong class="text-violet-400 font-extrabold mr-1 whitespace-nowrap">${t.ruleTitle}</strong>${item.practicalVerdict[currentLang]}
-              </p>
+              ${userVoted ? `<div class="text-center text-[10px] font-mono text-violet-400">✓ ${t.votedBadge}</div>` : ''}
             </div>
           </div>
-
-          <!-- 4. 실시간 양자택일 투표 인터랙션 바 -->
-          <div class="px-4 py-3 bg-slate-900/60 border-t border-slate-800/80 space-y-2">
-            <!-- 투표 게이지 바 -->
-            <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden flex">
-              <div style="width: ${pctA}%" class="bg-blue-500 transition-all duration-500"></div>
-              <div style="width: ${pctB}%" class="bg-rose-500 transition-all duration-500"></div>
-            </div>
-
-            <!-- 투표 버튼 2지선다 -->
-            <div class="flex items-center justify-between gap-2 text-xs pt-1">
-              <button onclick="toggleVote('${item.id}', 'A')" class="flex-1 py-1.5 px-2 rounded-lg border transition text-center truncate ${userVoted === 'A' ? 'bg-blue-600 border-blue-500 text-white font-bold shadow-md shadow-blue-500/30' : 'bg-slate-800 border-slate-700 text-slate-300 hover:border-blue-500 hover:text-blue-400'}">
-                <span>🔵 ${item.sideA.label[currentLang]}</span>
-              </button>
-              <button onclick="toggleVote('${item.id}', 'B')" class="flex-1 py-1.5 px-2 rounded-lg border transition text-center truncate ${userVoted === 'B' ? 'bg-rose-600 border-rose-500 text-white font-bold shadow-md shadow-rose-500/30' : 'bg-slate-800 border-slate-700 text-slate-300 hover:border-rose-500 hover:text-rose-400'}">
-                <span>🔴 ${item.sideB.label[currentLang]}</span>
-              </button>
-            </div>
-            ${userVoted ? `<div class="text-center text-[10px] font-mono text-violet-400">✓ ${t.votedBadge}</div>` : ''}
-          </div>
+          ` : ''}
         `;
         container.appendChild(card);
       });
@@ -293,7 +308,8 @@
     fetch('./posts.json')
       .then(res => res.json())
       .then(data => {
-        POSTS = data.posts;
+        POSTS = [...data.posts].reverse();
+        expandedId = POSTS.length ? POSTS[0].id : null;
         renderFeed(currentFilter);
       })
       .catch(err => {
