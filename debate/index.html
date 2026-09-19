@@ -182,6 +182,7 @@
                 <span class="text-[10px] font-bold px-1.5 py-0.5 rounded border whitespace-nowrap ${item.statusColor}">${item.statusBadge[currentLang]}</span>
               </div>
               <h2 class="text-sm font-extrabold text-white leading-snug ${isExpanded ? '' : 'line-clamp-2'}">${item.title[currentLang]}</h2>
+              ${!isExpanded ? `<div class="text-[11px] text-violet-300/90 truncate mt-0.5">→ ${item.practicalVerdict[currentLang]}</div>` : ''}
             </div>
             <span class="text-slate-500 text-xs shrink-0 transition-transform duration-200 ${isExpanded ? 'rotate-180 text-violet-400' : ''}">▼</span>
           </div>
@@ -309,7 +310,6 @@
       .then(res => res.json())
       .then(data => {
         POSTS = [...data.posts].reverse();
-        expandedId = POSTS.length ? POSTS[0].id : null;
         renderFeed(currentFilter);
       })
       .catch(err => {
