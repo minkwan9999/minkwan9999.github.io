@@ -1,0 +1,41 @@
+name: Fix Duplicate IDs (Manual)
+
+on:
+  workflow_dispatch:
+    inputs:
+      app:
+        description: '어느 앱을 고칠지 (named / justice / debate)'
+        required: true
+        default: 'named'
+        type: choice
+        options:
+          - named
+          - justice
+          - debate
+
+permissions:
+  contents: write
+
+jobs:
+  fix-ids:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 저장소 체크아웃
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT_TOKEN }}
+
+      - name: Python 세팅
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: 중복 id 수정 실행
+        run: python scripts/fix_duplicate_ids.py ${{ github.event.inputs.app }}
+
+      - name: 자동 커밋 및 푸시
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add ${{ github.event.inputs.app }}/posts.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "fix: deduplicate ids in ${{ github.event.inputs.app }}/posts.json" && git push)
