@@ -1,7 +1,8 @@
-# [Version 1.0] - named 앱과 동일한 posts.json 직접 조작 방식.
+# [Version 1.1] - id 충돌 방지(밀리초+랜덤 접미사)로 개선.
 import os
 import json
 import time
+import random
 import sys
 import datetime
 from datetime import timezone, timedelta
@@ -27,8 +28,16 @@ def main():
     kst = timezone(timedelta(hours=9))
     now_kst = datetime.datetime.now(kst)
 
+    with open(posts_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    existing_ids = {p.get("id") for p in data["posts"]}
+
     picked = pool.pop(0)
-    picked["id"] = f"j_auto_{int(time.time())}"
+    new_id = f"j_auto_{int(time.time() * 1000)}_{random.randint(1000, 9999)}"
+    while new_id in existing_ids:
+        new_id = f"j_auto_{int(time.time() * 1000)}_{random.randint(1000, 9999)}"
+    picked["id"] = new_id
     picked["addedAt"] = now_kst.strftime("%Y-%m-%d")
     remaining = len(pool)
 
@@ -36,9 +45,6 @@ def main():
     print(f"[INFO] 남은 글감 풀 개수: {remaining}개")
     if remaining <= 3:
         print(f"[WARN] 글감 풀이 {remaining}개밖에 안 남았습니다. 곧 채워주세요.")
-
-    with open(posts_path, "r", encoding="utf-8") as f:
-        data = json.load(f)
 
     data["posts"].append(picked)
 
