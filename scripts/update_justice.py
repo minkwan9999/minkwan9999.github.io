@@ -24,8 +24,12 @@ def main():
         print("[WARN] scripts/justice_pool.json에 새 사건을 채워주세요.")
         sys.exit(0)
 
+    kst = timezone(timedelta(hours=9))
+    now_kst = datetime.datetime.now(kst)
+
     picked = pool.pop(0)
     picked["id"] = f"j_auto_{int(time.time())}"
+    picked["addedAt"] = now_kst.strftime("%Y-%m-%d")
     remaining = len(pool)
 
     print(f"[INFO] 이번에 사용한 사건: {picked['title']['ko']}")
@@ -38,8 +42,7 @@ def main():
 
     data["posts"].append(picked)
 
-    kst = timezone(timedelta(hours=9))
-    data["lastUpdated"] = datetime.datetime.now(kst).strftime("%Y.%m.%d %H:%M")
+    data["lastUpdated"] = now_kst.strftime("%Y.%m.%d %H:%M")
 
     with open(posts_path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
