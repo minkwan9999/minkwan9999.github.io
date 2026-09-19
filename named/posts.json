@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.09.18 14:22",
+  "lastUpdated": "2026.09.19 14:15",
   "posts": [
     {
       "id": "p1",
@@ -969,6 +969,64 @@
       "upvotes": 0,
       "disagrees": 0,
       "id": "p_auto_1789708978"
+    },
+    {
+      "cardType": "LESSON",
+      "eraTag": {
+        "ko": "1876 · 전화 발명 직후",
+        "en": "1876 · Right After the Telephone"
+      },
+      "statusBadge": {
+        "ko": "완전히 틀림 ✗",
+        "en": "Fully Wrong ✗"
+      },
+      "statusColor": "bg-rose-500/10 text-rose-400 border-rose-500/20",
+      "author": {
+        "ko": "윌리엄 프리스",
+        "en": "William Preece"
+      },
+      "authorTitle": {
+        "ko": "영국 체신청(Post Office) 수석기술자",
+        "en": "Chief Engineer, British Post Office"
+      },
+      "avatar": "📮",
+      "imageBeforeUrl": "https://images.unsplash.com/photo-1520923642038-b4259acecbd7?w=800&auto=format&fit=crop&q=80",
+      "imageCaption": {
+        "ko": "1870년대 영국 체신청",
+        "en": "The British Post Office in the 1870s"
+      },
+      "title": {
+        "ko": "미국엔 전화가 필요해도 영국엔 사환이 많아 필요 없다",
+        "en": "The Americans have need of the telephone, but we do not, we have plenty of messenger boys"
+      },
+      "quoteSource": {
+        "ko": "1876년, 영국 의회 발언",
+        "en": "1876, remarks before the British Parliament"
+      },
+      "quoteText": {
+        "ko": "미국인들은 전화가 필요할지 몰라도, 우리는 아닙니다. 사환 소년들이 충분히 있으니까요.",
+        "en": "The Americans have need of the telephone, but we do not. We have plenty of messenger boys."
+      },
+      "timelineLabel": {
+        "ko": "📜 이미 역사가 심판 완료",
+        "en": "📜 History Has Already Judged"
+      },
+      "realityStat": {
+        "ko": "영국도 결국 전화 보급률 세계 최상위권 국가로",
+        "en": "Britain itself later became one of the highest telephone-penetration countries"
+      },
+      "realityText": {
+        "ko": "기존 인프라(사환 체계)가 잘 작동한다는 이유로 신기술의 필요성을 부정한 대표적 사례로 남았습니다.",
+        "en": "It became a textbook example of dismissing a new technology just because the old system 'worked fine'."
+      },
+      "actionHighlight": {
+        "ko": "기존 시스템이 잘 돌아간다는 사실이, 신기술이 필요 없다는 증거가 되지는 않습니다.",
+        "en": "An old system working fine is not proof that a new technology is unnecessary."
+      },
+      "upvotes": 0,
+      "disagrees": 0,
+      "id": "p_auto_1789794932206_9407",
+      "addedAt": "2026-09-19"
     }
   ]
 }
