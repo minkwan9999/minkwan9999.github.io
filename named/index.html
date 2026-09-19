@@ -36,7 +36,6 @@
               <span class="font-extrabold text-white text-sm tracking-tight truncate" id="ui-subname">상해버린 예측들</span>
               <span class="text-[10px] bg-orange-500/20 text-orange-400 font-bold px-1.5 py-0.5 rounded border border-orange-500/30 shrink-0" id="ui-subtag">성지순례</span>
             </div>
-            <p class="text-[11px] text-slate-400 truncate" id="ui-subtitle">대가의 오판 교훈 & 빅마우스 성적표</p>
           </div>
         </div>
 
@@ -50,11 +49,10 @@
         </div>
       </div>
 
-      <!-- 4개 카테고리 필터 버튼 바 -->
+      <!-- 3개 카테고리 필터 버튼 바 -->
       <div class="flex items-center gap-1.5 pt-2 border-t border-slate-800/80 text-xs font-semibold overflow-x-auto whitespace-nowrap">
         <button onclick="filterType('ALL')" class="filter-btn active px-3 py-1 rounded-lg bg-orange-500 text-white transition" data-type="ALL" id="filter-all">전체 피드</button>
-        <button onclick="filterType('LESSON')" class="filter-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition" data-type="LESSON" id="filter-lesson">참교육</button>
-        <button onclick="filterType('TRACK')" class="filter-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition" data-type="TRACK" id="filter-track">성적표</button>
+        <button onclick="filterType('RESOLVED')" class="filter-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition" data-type="RESOLVED" id="filter-resolved">판정 완료</button>
         <button onclick="filterType('ONGOING')" class="filter-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition" data-type="ONGOING" id="filter-ongoing">최신발언</button>
       </div>
     </header>
@@ -100,21 +98,16 @@
       ko: {
         subname: "상해버린 예측들",
         subtag: "성지순례",
-        subtitle: "대가의 오판 교훈 & 빅마우스 성적표",
         home: "홈",
         filterAll: "전체 피드",
-        filterLesson: "참교육",
-        filterTrack: "성적표",
+        filterResolved: "성적표",
         filterOngoing: "최신발언",
-        tagLesson: "🏛️ 역사의 참교육",
-        tagTrack: "📈 빅마우스 성적표",
+        tagResolved: "📈 성적표",
         tagOngoing: "⏳ 현재 진행형 예측",
         quoteLabel: "📌 당시 발언",
-        historyTitle: "⚖️ 역사의 실제 판결",
-        marketTitle: "📊 실제 시장 성적표",
+        outcomeTitleResolved: "📊 실제 결과",
         ongoingTitle: "⏳ 현재 진행 상황",
-        takeawayLesson: "💡 우리가 배울 점:",
-        takeawayTrack: "💡 복기 인사이트:",
+        takeawayResolved: "💡 배울 점:",
         takeawayOngoing: "💡 관전 포인트:",
         voteFail: "🔥 역대급 헛소리",
         votePass: "🤔 이번엔 진짜다",
@@ -131,21 +124,16 @@
       en: {
         subname: "Aged Like Milk",
         subtag: "RealityCheck",
-        subtitle: "Historic blunders & big-mouth track records",
         home: "Home",
         filterAll: "All Feeds",
-        filterLesson: "Blunders",
-        filterTrack: "Track Record",
+        filterResolved: "Track Record",
         filterOngoing: "Latest Bets",
-        tagLesson: "🏛️ Historic Blunder",
-        tagTrack: "📈 Track Record",
+        tagResolved: "📈 Track Record",
         tagOngoing: "⏳ Ongoing Bet",
         quoteLabel: "📌 Recorded Quote",
-        historyTitle: "⚖️ Verdict of History",
-        marketTitle: "📊 Real Market Outcome",
+        outcomeTitleResolved: "📊 The Actual Outcome",
         ongoingTitle: "⏳ Current Status",
-        takeawayLesson: "💡 Takeaway Lesson:",
-        takeawayTrack: "💡 Retrospective Insight:",
+        takeawayResolved: "💡 Takeaway:",
         takeawayOngoing: "💡 Key Watchpoint:",
         voteFail: "🔥 Aged Like Milk",
         votePass: "🤔 Might Be Right",
@@ -165,11 +153,9 @@
       const t = I18N[currentLang];
       document.getElementById('ui-subname').innerText = t.subname;
       document.getElementById('ui-subtag').innerText = t.subtag;
-      document.getElementById('ui-subtitle').innerText = t.subtitle;
       document.getElementById('ui-home').innerText = t.home;
       document.getElementById('filter-all').innerText = t.filterAll;
-      document.getElementById('filter-lesson').innerText = t.filterLesson;
-      document.getElementById('filter-track').innerText = t.filterTrack;
+      document.getElementById('filter-resolved').innerText = t.filterResolved;
       document.getElementById('filter-ongoing').innerText = t.filterOngoing;
       document.getElementById('ui-footer-note').innerText = t.footerNote;
 
@@ -194,7 +180,14 @@
       container.innerHTML = '';
       const t = I18N[currentLang];
 
-      const filtered = filter === 'ALL' ? POSTS : POSTS.filter(item => item.cardType === filter);
+      let filtered;
+      if (filter === 'ALL') {
+        filtered = POSTS;
+      } else if (filter === 'RESOLVED') {
+        filtered = POSTS.filter(item => item.cardType !== 'ONGOING');
+      } else {
+        filtered = POSTS.filter(item => item.cardType === filter);
+      }
 
       filtered.forEach(item => {
         const isExpanded = expandedId === item.id;
@@ -204,18 +197,14 @@
         let outcomeTitle = '';
         let takeawayTitle = '';
 
-        if (item.cardType === 'LESSON') {
-          typeHeaderTag = `<span class="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/30">${t.tagLesson}</span>`;
-          outcomeTitle = t.historyTitle;
-          takeawayTitle = t.takeawayLesson;
-        } else if (item.cardType === 'TRACK') {
-          typeHeaderTag = `<span class="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-500/10 text-blue-300 border border-blue-500/30">${t.tagTrack}</span>`;
-          outcomeTitle = t.marketTitle;
-          takeawayTitle = t.takeawayTrack;
-        } else {
+        if (item.cardType === 'ONGOING') {
           typeHeaderTag = `<span class="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-300 border border-emerald-500/30">${t.tagOngoing}</span>`;
           outcomeTitle = t.ongoingTitle;
           takeawayTitle = t.takeawayOngoing;
+        } else {
+          typeHeaderTag = `<span class="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/30">${t.tagResolved}</span>`;
+          outcomeTitle = t.outcomeTitleResolved;
+          takeawayTitle = t.takeawayResolved;
         }
 
         const outcomeBadge = getOutcomeBadge(item, t);
