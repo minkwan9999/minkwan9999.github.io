@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
@@ -86,6 +86,16 @@
       return daysSince >= 0 && daysSince <= NEW_BADGE_DAYS;
     }
 
+    function getOutcomeBadge(item, t) {
+      if (item.cardType === 'ONGOING') {
+        return { label: t.badgeOngoing, colorClass: 'bg-amber-500/10 text-amber-300 border-amber-500/30' };
+      }
+      const isCorrect = /emerald|cyan/.test(item.statusColor || '');
+      return isCorrect
+        ? { label: t.badgeCorrect, colorClass: 'bg-emerald-500/10 text-emerald-300 border-emerald-500/30' }
+        : { label: t.badgeWrong, colorClass: 'bg-rose-500/10 text-rose-300 border-rose-500/30' };
+    }
+
     const I18N = {
       ko: {
         subname: "상해버린 예측들",
@@ -110,6 +120,11 @@
         votePass: "🤔 이번엔 진짜다",
         votedBadge: "성지순례 완료",
         newBadge: "NEW",
+        badgeWrong: "예측 틀림 ✗",
+        badgeCorrect: "예측 맞음 ✓",
+        badgeOngoing: "진행중 ⏳",
+        predictionLabel: "예측:",
+        nowLabel: "지금은:",
         loadError: "데이터를 불러오지 못했습니다.",
         footerNote: "역사적 문헌 아카이브, 보도 사진 및 시장 지표를 기반으로 기록되었습니다."
       },
@@ -136,6 +151,11 @@
         votePass: "🤔 Might Be Right",
         votedBadge: "Verified",
         newBadge: "NEW",
+        badgeWrong: "Wrong Prediction ✗",
+        badgeCorrect: "Correct Prediction ✓",
+        badgeOngoing: "In Progress ⏳",
+        predictionLabel: "Prediction:",
+        nowLabel: "Now:",
         loadError: "Failed to load data.",
         footerNote: "Documented based on historical photo archives, news records, and market data."
       }
@@ -198,6 +218,8 @@
           takeawayTitle = t.takeawayOngoing;
         }
 
+        const outcomeBadge = getOutcomeBadge(item, t);
+
         const card = document.createElement('article');
         card.className = `border rounded-2xl overflow-hidden shadow-xl transition ${isExpanded ? 'bg-[#161b22] border-orange-500/50' : 'bg-[#161b22]/80 border-slate-800 hover:border-slate-700'}`;
 
@@ -211,13 +233,13 @@
                   <span class="font-bold text-slate-200 text-sm truncate">${item.author[currentLang]}</span>
                   ${isNew ? `<span class="text-[9px] font-black px-1.5 py-0.5 rounded bg-rose-500 text-white shrink-0 animate-pulse">${t.newBadge}</span>` : ''}
                 </div>
-                <div class="text-[11px] text-slate-400 truncate">${item.authorTitle[currentLang]} · ${item.eraTag[currentLang]}</div>
-                <div class="text-[11px] text-orange-300/90 truncate mt-0.5">→ 지금은: ${item.realityStat[currentLang]}</div>
+                <div class="text-[11px] text-slate-400 truncate">${t.predictionLabel} ${item.title[currentLang]}</div>
+                <div class="text-[11px] text-orange-300/90 truncate mt-0.5">→ ${t.nowLabel} ${item.realityStat[currentLang]}</div>
               </div>
             </div>
             <div class="flex items-center gap-1.5 shrink-0">
-              <span class="text-[10px] font-bold px-2 py-0.5 rounded border whitespace-nowrap ${item.statusColor}">
-                ${item.statusBadge[currentLang]}
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded border whitespace-nowrap ${outcomeBadge.colorClass}">
+                ${outcomeBadge.label}
               </span>
               <span class="text-slate-500 text-xs transition-transform duration-200 ${isExpanded ? 'rotate-180 text-orange-400' : ''}">▼</span>
             </div>
@@ -239,6 +261,7 @@
               <div class="flex items-center gap-1.5">
                 ${typeHeaderTag}
               </div>
+              <div class="text-[11px] text-slate-400">${item.authorTitle[currentLang]} · ${item.eraTag[currentLang]}</div>
               <h2 class="text-base font-extrabold text-white leading-snug tracking-tight">
                 ${item.title[currentLang]}
               </h2>
