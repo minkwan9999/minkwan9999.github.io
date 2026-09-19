@@ -1,0 +1,31 @@
+name: Interleave Named Pool (One-time Manual)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  interleave:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 저장소 체크아웃
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT_TOKEN }}
+
+      - name: Python 세팅
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: pool 인터리빙 실행
+        run: python scripts/interleave_named_pool.py
+
+      - name: 자동 커밋 및 푸시
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add scripts/named_pool.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: interleave named_pool.json by cardType" && git push)
