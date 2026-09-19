@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
@@ -177,8 +177,6 @@
       const filtered = filter === 'ALL' ? POSTS : POSTS.filter(item => item.cardType === filter);
 
       filtered.forEach(item => {
-        const votedKey = `voted_${item.id}`;
-        const userVoted = localStorage.getItem(votedKey);
         const isExpanded = expandedId === item.id;
         const isNew = isNewItem(item);
 
@@ -214,7 +212,7 @@
                   ${isNew ? `<span class="text-[9px] font-black px-1.5 py-0.5 rounded bg-rose-500 text-white shrink-0 animate-pulse">${t.newBadge}</span>` : ''}
                 </div>
                 <div class="text-[11px] text-slate-400 truncate">${item.authorTitle[currentLang]} · ${item.eraTag[currentLang]}</div>
-                <div class="text-[11px] text-orange-300/90 truncate mt-0.5">→ ${item.realityStat[currentLang]}</div>
+                <div class="text-[11px] text-orange-300/90 truncate mt-0.5">→ 지금은: ${item.realityStat[currentLang]}</div>
               </div>
             </div>
             <div class="flex items-center gap-1.5 shrink-0">
@@ -283,38 +281,11 @@
                 </p>
               </div>
             </div>
-
-            <!-- 1클릭 토글 투표 인터랙션 바 -->
-            <div class="px-4 py-2.5 bg-slate-900/60 border-t border-slate-800/80 flex items-center justify-between text-xs">
-              <div class="flex items-center gap-2">
-                <button onclick="event.stopPropagation(); toggleVote('${item.id}', 'up')" class="vote-btn flex items-center gap-1.5 px-3 py-1.5 rounded-lg border transition whitespace-nowrap ${userVoted === 'up' ? 'bg-orange-500 text-white font-bold border-orange-500 shadow-md shadow-orange-500/30' : 'bg-slate-800/80 text-slate-300 border-slate-700 hover:border-orange-500 hover:text-orange-400'}">
-                  <span>${t.voteFail}</span>
-                  <span class="font-mono font-bold">${item.upvotes + (userVoted === 'up' ? 1 : 0)}</span>
-                </button>
-                <button onclick="event.stopPropagation(); toggleVote('${item.id}', 'down')" class="vote-btn flex items-center gap-1.5 px-3 py-1.5 rounded-lg border transition whitespace-nowrap ${userVoted === 'down' ? 'bg-slate-700 text-white font-bold border-slate-600 shadow-md' : 'bg-slate-800/80 text-slate-400 border-slate-700 hover:border-slate-500 hover:text-white'}">
-                  <span>${t.votePass}</span>
-                  <span class="font-mono">${item.disagrees + (userVoted === 'down' ? 1 : 0)}</span>
-                </button>
-              </div>
-              <span class="text-[11px] text-slate-500 font-mono whitespace-nowrap">${userVoted ? t.votedBadge : ''}</span>
-            </div>
           </div>
           ` : ''}
         `;
         container.appendChild(card);
       });
-    }
-
-    function toggleVote(id, type) {
-      const votedKey = `voted_${id}`;
-      const prev = localStorage.getItem(votedKey);
-
-      if (prev === type) {
-        localStorage.removeItem(votedKey);
-      } else {
-        localStorage.setItem(votedKey, type);
-      }
-      renderFeed(currentFilter);
     }
 
     function filterType(type) {
