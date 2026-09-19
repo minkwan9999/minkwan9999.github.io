@@ -1,58 +1,5 @@
 [
   {
-    "cardType": "PARKING",
-    "isOngoing": false,
-    "categoryName": {
-      "ko": "주차 분쟁",
-      "en": "Parking Dispute"
-    },
-    "statusBadge": {
-      "ko": "행정 개입 엔딩 ✓",
-      "en": "Government Intervention ✓"
-    },
-    "statusColor": "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
-    "target": {
-      "ko": "화순 주차장 알박기 부부",
-      "en": "Hwasun Parking Lot Squatter Couple"
-    },
-    "location": {
-      "ko": "전남 화순",
-      "en": "Hwasun, Jeollanam-do"
-    },
-    "avatar": "🚙",
-    "imageBeforeUrl": "https://images.unsplash.com/photo-1627638154017-056df3e16eef?w=800&auto=format&fit=crop&q=80",
-    "imageCaption": {
-      "ko": "아파트 단지 야외 주차장",
-      "en": "An apartment complex outdoor parking lot"
-    },
-    "title": {
-      "ko": "국화축제 갔다온 사이 남의 차 막아놓고 잠적한 부부, 나중엔 주차장까지 사유화 시도",
-      "en": "Couple blocked a stranger's car during a local festival, later tried to privatize the shared lot"
-    },
-    "incidentDetail": {
-      "ko": "2019년 11월, 국화축제를 보러 나간 사이 자신의 차가 세워진 자리 앞을 싼타페로 막아놓은 이웃. 연락처도 남기지 않아 피해자는 발이 묶였고, 항의하자 부부는 잠적. 여론이 잠잠해지자 이번엔 공용주차장 진입로에 문을 달고 CCTV와 촬영금지 경고문까지 붙여 아예 자기 땅처럼 사유화하려 함.",
-      "en": "In Nov 2019, while out at a local festival, a couple blocked in a neighbor's car with their Santa Fe and left no contact info. When confronted, they went silent. Once the outrage faded, they later tried to fence off and privatize the shared parking lot with a gate, CCTV, and 'no photography' signage."
-    },
-    "timelineLabel": {
-      "ko": "⏳ 누리꾼 차막이 응징 및 군청 개입",
-      "en": "⏳ Netizen Retaliation & County Government Steps In"
-    },
-    "realityStat": {
-      "ko": "군청이 나서 사유화 시도 저지, 공용주차장 원상 복구",
-      "en": "County office intervened to block privatization, restored public access"
-    },
-    "verdictDetail": {
-      "ko": "분노한 누리꾼들이 자신의 차로 부부의 차량을 둘러싸는 '차막이'로 응징했고, 부부는 결국 사과하며 통로를 열었다. 하지만 여론이 가라앉자 다시 문을 걸어 잠그고 CCTV를 설치해 주차장을 사유화하려는 정황이 포착됐고, 이 사실이 재차 알려지자 화순군청이 개입해 공용 주차장 지위를 재확인시켰다.",
-      "en": "Angry netizens retaliated by boxing in the couple's cars with their own, forcing an apology and reopening the road. But once outrage faded, the couple quietly locked the gate again and installed CCTV to privatize the lot — until the follow-up story went viral again and the county government stepped in to reaffirm it as public parking."
-    },
-    "actionHighlight": {
-      "ko": "한 번 여론의 힘으로 문제가 해결된 것처럼 보여도, 시간이 지나 잠잠해지면 같은 시도가 반복될 수 있습니다. 사유화 시도의 재발을 막으려면 관할 행정기관에 공용시설 지위를 명문화해 등록해두는 것이 확실합니다.",
-      "en": "Even after public pressure resolves an issue once, the same behavior can quietly resurface once attention fades. Registering a shared facility's public status with the local authority is the surest way to prevent repeat privatization attempts."
-    },
-    "upvotes": 512,
-    "disagrees": 27
-  },
-  {
     "cardType": "WORK",
     "isOngoing": false,
     "categoryName": {
