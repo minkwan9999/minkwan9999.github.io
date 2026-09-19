@@ -214,6 +214,7 @@
                   ${isNew ? `<span class="text-[9px] font-black px-1.5 py-0.5 rounded bg-rose-500 text-white shrink-0 animate-pulse">${t.newBadge}</span>` : ''}
                 </div>
                 <div class="text-[11px] text-slate-400 truncate">${item.authorTitle[currentLang]} · ${item.eraTag[currentLang]}</div>
+                <div class="text-[11px] text-orange-300/90 truncate mt-0.5">→ ${item.realityStat[currentLang]}</div>
               </div>
             </div>
             <div class="flex items-center gap-1.5 shrink-0">
@@ -350,7 +351,6 @@
       .then(res => res.json())
       .then(data => {
         POSTS = [...(data.posts || [])].reverse();
-        expandedId = POSTS.length ? POSTS[0].id : null;
         renderFeed(currentFilter);
       })
       .catch(err => {
