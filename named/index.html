@@ -60,7 +60,9 @@
     </header>
 
     <!-- 피드 리스트 컨테이너 -->
-    <div id="feed-container" class="space-y-4"></div>
+    <div id="feed-container" class="space-y-4">
+      <p class="text-center text-slate-500 py-10 text-sm">불러오는 중...</p>
+    </div>
 
     <!-- 하단 푸터 -->
     <footer class="pt-4 pb-6 text-center text-xs text-slate-500 space-y-1">
@@ -72,6 +74,17 @@
   <script>
     let currentLang = 'ko';
     let currentFilter = 'ALL';
+    let POSTS = [];
+    let expandedId = null;
+
+    const NEW_BADGE_DAYS = 3;
+    function isNewItem(item) {
+      if (!item.addedAt) return false;
+      const addedMs = new Date(item.addedAt).getTime();
+      if (isNaN(addedMs)) return false;
+      const daysSince = (Date.now() - addedMs) / 86400000;
+      return daysSince >= 0 && daysSince <= NEW_BADGE_DAYS;
+    }
 
     const I18N = {
       ko: {
@@ -96,6 +109,8 @@
         voteFail: "🔥 역대급 헛소리",
         votePass: "🤔 이번엔 진짜다",
         votedBadge: "성지순례 완료",
+        newBadge: "NEW",
+        loadError: "데이터를 불러오지 못했습니다.",
         footerNote: "역사적 문헌 아카이브, 보도 사진 및 시장 지표를 기반으로 기록되었습니다."
       },
       en: {
@@ -120,11 +135,11 @@
         voteFail: "🔥 Aged Like Milk",
         votePass: "🤔 Might Be Right",
         votedBadge: "Verified",
+        newBadge: "NEW",
+        loadError: "Failed to load data.",
         footerNote: "Documented based on historical photo archives, news records, and market data."
       }
     };
-
-    let POSTS = [];
 
     function updateUiLabels() {
       const t = I18N[currentLang];
@@ -149,6 +164,11 @@
       }
     }
 
+    function toggleExpand(id) {
+      expandedId = expandedId === id ? null : id;
+      renderFeed(currentFilter);
+    }
+
     function renderFeed(filter = 'ALL') {
       const container = document.getElementById('feed-container');
       container.innerHTML = '';
@@ -159,6 +179,8 @@
       filtered.forEach(item => {
         const votedKey = `voted_${item.id}`;
         const userVoted = localStorage.getItem(votedKey);
+        const isExpanded = expandedId === item.id;
+        const isNew = isNewItem(item);
 
         let typeHeaderTag = '';
         let outcomeTitle = '';
@@ -179,97 +201,104 @@
         }
 
         const card = document.createElement('article');
-        card.className = "bg-[#161b22] border border-slate-800 rounded-2xl overflow-hidden shadow-xl";
+        card.className = `border rounded-2xl overflow-hidden shadow-xl transition ${isExpanded ? 'bg-[#161b22] border-orange-500/50' : 'bg-[#161b22]/80 border-slate-800 hover:border-slate-700'}`;
 
         card.innerHTML = `
-          <!-- 1. 헤더 -->
-          <div class="p-3 pb-2 flex items-center justify-between border-b border-slate-800/60 bg-slate-900/40 text-xs">
-            <div class="flex items-center gap-1.5 min-w-0 pr-2">
-              <span class="text-base shrink-0">${item.avatar}</span>
-              <div class="truncate">
-                <span class="font-bold text-slate-200">${item.author[currentLang]}</span>
-                <span class="text-[11px] text-slate-400">· ${item.authorTitle[currentLang]}</span>
+          <!-- 요약 행 (탭하면 펼쳐짐) -->
+          <div onclick="toggleExpand('${item.id}')" class="p-3 flex items-center justify-between gap-2 cursor-pointer select-none">
+            <div class="flex items-center gap-2 min-w-0 pr-2">
+              <span class="text-lg shrink-0">${item.avatar}</span>
+              <div class="min-w-0">
+                <div class="flex items-center gap-1.5 flex-wrap">
+                  <span class="font-bold text-slate-200 text-sm truncate">${item.author[currentLang]}</span>
+                  ${isNew ? `<span class="text-[9px] font-black px-1.5 py-0.5 rounded bg-rose-500 text-white shrink-0 animate-pulse">${t.newBadge}</span>` : ''}
+                </div>
+                <div class="text-[11px] text-slate-400 truncate">${item.authorTitle[currentLang]} · ${item.eraTag[currentLang]}</div>
               </div>
             </div>
-            <div class="flex items-center gap-1.5 shrink-0 whitespace-nowrap">
-              ${typeHeaderTag}
-              <span class="text-[10px] font-mono text-slate-400">${item.eraTag[currentLang]}</span>
+            <div class="flex items-center gap-1.5 shrink-0">
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded border whitespace-nowrap ${item.statusColor}">
+                ${item.statusBadge[currentLang]}
+              </span>
+              <span class="text-slate-500 text-xs transition-transform duration-200 ${isExpanded ? 'rotate-180 text-orange-400' : ''}">▼</span>
             </div>
           </div>
 
-          <!-- 2. 상단 사진 -->
-          <div class="relative w-full h-40 bg-slate-950 overflow-hidden border-b border-slate-800">
-            <img src="${item.imageBeforeUrl}" alt="${item.author[currentLang]}" class="w-full h-full object-cover object-center filter grayscale contrast-110 hover:grayscale-0 transition duration-500" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-[#161b22] via-transparent to-black/30"></div>
-            <span class="absolute bottom-2 left-3 text-[10px] font-mono text-slate-300 bg-black/60 px-2 py-0.5 rounded backdrop-blur border border-white/10 truncate max-w-[85%]">
-              📷 ${item.imageCaption[currentLang]}
-            </span>
-          </div>
+          ${isExpanded ? `
+          <div class="border-t border-slate-800/80">
+            <!-- 상단 사진 -->
+            <div class="relative w-full h-40 bg-slate-950 overflow-hidden border-b border-slate-800">
+              <img src="${item.imageBeforeUrl}" alt="${item.author[currentLang]}" class="w-full h-full object-cover object-center filter grayscale contrast-110 hover:grayscale-0 transition duration-500" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#161b22] via-transparent to-black/30"></div>
+              <span class="absolute bottom-2 left-3 text-[10px] font-mono text-slate-300 bg-black/60 px-2 py-0.5 rounded backdrop-blur border border-white/10 truncate max-w-[85%]">
+                📷 ${item.imageCaption[currentLang]}
+              </span>
+            </div>
 
-          <!-- 3. 카드 본문 -->
-          <div class="p-4 space-y-3">
-            <div class="flex items-start justify-between gap-2">
+            <!-- 카드 본문 -->
+            <div class="p-4 space-y-3">
+              <div class="flex items-center gap-1.5">
+                ${typeHeaderTag}
+              </div>
               <h2 class="text-base font-extrabold text-white leading-snug tracking-tight">
                 ${item.title[currentLang]}
               </h2>
-              <span class="text-[10px] font-bold px-2 py-0.5 rounded whitespace-nowrap border shrink-0 ${item.statusColor}">
-                ${item.statusBadge[currentLang]}
-              </span>
-            </div>
 
-            <!-- 발언 인용구 박스 -->
-            <div class="bg-[#1c2128] border-l-4 border-amber-500/80 rounded-r-xl p-3 space-y-1 shadow-inner">
-              <div class="flex items-center justify-between text-[11px] text-amber-400 font-mono font-bold whitespace-nowrap">
-                <span>${t.quoteLabel}</span>
-                <span class="text-slate-500 truncate ml-2 text-[10px]">${item.quoteSource[currentLang]}</span>
+              <!-- 발언 인용구 박스 -->
+              <div class="bg-[#1c2128] border-l-4 border-amber-500/80 rounded-r-xl p-3 space-y-1 shadow-inner">
+                <div class="flex items-center justify-between text-[11px] text-amber-400 font-mono font-bold whitespace-nowrap">
+                  <span>${t.quoteLabel}</span>
+                  <span class="text-slate-500 truncate ml-2 text-[10px]">${item.quoteSource[currentLang]}</span>
+                </div>
+                <p class="text-xs sm:text-sm text-slate-300 italic leading-relaxed">
+                  "${item.quoteText[currentLang]}"
+                </p>
               </div>
-              <p class="text-xs sm:text-sm text-slate-300 italic leading-relaxed">
-                "${item.quoteText[currentLang]}"
-              </p>
-            </div>
 
-            <!-- 대비 화살표 -->
-            <div class="relative flex py-0.5 items-center justify-center">
-              <div class="flex-grow border-t border-slate-800"></div>
-              <span class="flex-shrink mx-2 text-[10px] font-mono font-bold text-slate-400 bg-[#161b22] px-2 py-0.5 rounded border border-slate-800 whitespace-nowrap">
-                ${item.timelineLabel[currentLang]}
-              </span>
-              <div class="flex-grow border-t border-slate-800"></div>
-            </div>
-
-            <!-- 결과 박스 -->
-            <div class="bg-[#0e1117] border border-slate-800 rounded-xl p-3 space-y-1">
-              <div class="flex items-center justify-between text-[11px] font-bold text-emerald-400 whitespace-nowrap">
-                <span>${outcomeTitle}</span>
-                <span class="text-[10px] text-slate-400 font-mono truncate ml-2">${item.realityStat[currentLang]}</span>
+              <!-- 대비 화살표 -->
+              <div class="relative flex py-0.5 items-center justify-center">
+                <div class="flex-grow border-t border-slate-800"></div>
+                <span class="flex-shrink mx-2 text-[10px] font-mono font-bold text-slate-400 bg-[#161b22] px-2 py-0.5 rounded border border-slate-800 whitespace-nowrap">
+                  ${item.timelineLabel[currentLang]}
+                </span>
+                <div class="flex-grow border-t border-slate-800"></div>
               </div>
-              <p class="text-xs text-slate-300 leading-relaxed font-medium">
-                ${item.realityText[currentLang]}
-              </p>
+
+              <!-- 결과 박스 -->
+              <div class="bg-[#0e1117] border border-slate-800 rounded-xl p-3 space-y-1">
+                <div class="flex items-center justify-between text-[11px] font-bold text-emerald-400 whitespace-nowrap">
+                  <span>${outcomeTitle}</span>
+                  <span class="text-[10px] text-slate-400 font-mono truncate ml-2">${item.realityStat[currentLang]}</span>
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed font-medium">
+                  ${item.realityText[currentLang]}
+                </p>
+              </div>
+
+              <!-- 실전 교훈 박스 -->
+              <div class="bg-gradient-to-r from-orange-950/20 to-amber-950/10 border border-orange-500/20 rounded-xl p-2.5">
+                <p class="text-xs text-orange-200/90 leading-relaxed">
+                  <strong class="text-orange-400 font-extrabold mr-1 whitespace-nowrap">${takeawayTitle}</strong>${item.actionHighlight[currentLang]}
+                </p>
+              </div>
             </div>
 
-            <!-- 실전 교훈 박스 -->
-            <div class="bg-gradient-to-r from-orange-950/20 to-amber-950/10 border border-orange-500/20 rounded-xl p-2.5">
-              <p class="text-xs text-orange-200/90 leading-relaxed">
-                <strong class="text-orange-400 font-extrabold mr-1 whitespace-nowrap">${takeawayTitle}</strong>${item.actionHighlight[currentLang]}
-              </p>
+            <!-- 1클릭 토글 투표 인터랙션 바 -->
+            <div class="px-4 py-2.5 bg-slate-900/60 border-t border-slate-800/80 flex items-center justify-between text-xs">
+              <div class="flex items-center gap-2">
+                <button onclick="event.stopPropagation(); toggleVote('${item.id}', 'up')" class="vote-btn flex items-center gap-1.5 px-3 py-1.5 rounded-lg border transition whitespace-nowrap ${userVoted === 'up' ? 'bg-orange-500 text-white font-bold border-orange-500 shadow-md shadow-orange-500/30' : 'bg-slate-800/80 text-slate-300 border-slate-700 hover:border-orange-500 hover:text-orange-400'}">
+                  <span>${t.voteFail}</span>
+                  <span class="font-mono font-bold">${item.upvotes + (userVoted === 'up' ? 1 : 0)}</span>
+                </button>
+                <button onclick="event.stopPropagation(); toggleVote('${item.id}', 'down')" class="vote-btn flex items-center gap-1.5 px-3 py-1.5 rounded-lg border transition whitespace-nowrap ${userVoted === 'down' ? 'bg-slate-700 text-white font-bold border-slate-600 shadow-md' : 'bg-slate-800/80 text-slate-400 border-slate-700 hover:border-slate-500 hover:text-white'}">
+                  <span>${t.votePass}</span>
+                  <span class="font-mono">${item.disagrees + (userVoted === 'down' ? 1 : 0)}</span>
+                </button>
+              </div>
+              <span class="text-[11px] text-slate-500 font-mono whitespace-nowrap">${userVoted ? t.votedBadge : ''}</span>
             </div>
           </div>
-
-          <!-- 4. 1클릭 토글 투표 인터랙션 바 -->
-          <div class="px-4 py-2.5 bg-slate-900/60 border-t border-slate-800/80 flex items-center justify-between text-xs">
-            <div class="flex items-center gap-2">
-              <button onclick="toggleVote('${item.id}', 'up')" class="vote-btn flex items-center gap-1.5 px-3 py-1.5 rounded-lg border transition whitespace-nowrap ${userVoted === 'up' ? 'bg-orange-500 text-white font-bold border-orange-500 shadow-md shadow-orange-500/30' : 'bg-slate-800/80 text-slate-300 border-slate-700 hover:border-orange-500 hover:text-orange-400'}">
-                <span>${t.voteFail}</span>
-                <span class="font-mono font-bold">${item.upvotes + (userVoted === 'up' ? 1 : 0)}</span>
-              </button>
-              <button onclick="toggleVote('${item.id}', 'down')" class="vote-btn flex items-center gap-1.5 px-3 py-1.5 rounded-lg border transition whitespace-nowrap ${userVoted === 'down' ? 'bg-slate-700 text-white font-bold border-slate-600 shadow-md' : 'bg-slate-800/80 text-slate-400 border-slate-700 hover:border-slate-500 hover:text-white'}">
-                <span>${t.votePass}</span>
-                <span class="font-mono">${item.disagrees + (userVoted === 'down' ? 1 : 0)}</span>
-              </button>
-            </div>
-            <span class="text-[11px] text-slate-500 font-mono whitespace-nowrap">${userVoted ? t.votedBadge : ''}</span>
-          </div>
+          ` : ''}
         `;
         container.appendChild(card);
       });
@@ -320,13 +349,14 @@
     fetch('./posts.json')
       .then(res => res.json())
       .then(data => {
-        POSTS = data.posts || [];
-        renderFeed();
+        POSTS = [...(data.posts || [])].reverse();
+        expandedId = POSTS.length ? POSTS[0].id : null;
+        renderFeed(currentFilter);
       })
       .catch(err => {
         console.error('Failed to load posts.json', err);
         const c = document.getElementById('feed-container');
-        if (c) c.innerHTML = '<p class="text-center text-slate-500 py-10">데이터를 불러오지 못했습니다.</p>';
+        if (c) c.innerHTML = `<p class="text-center text-slate-500 py-10">${I18N[currentLang].loadError}</p>`;
       });
   </script>
 </body>
