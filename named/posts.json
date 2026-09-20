@@ -93,7 +93,7 @@
         "en": "The New York Times Column (1998)"
       },
       "quoteText": {
-        "ko": "2005년경이 되면, 경제에 미친 인터넷의 영향력은 팩스 기기보다 크지 않았다는 사실이 만천하에 드러날 것이다. 사람들은 서로에게 할 말이 그리 많지 않다.",
+        "ko": "2005년경이 되면, 경제에 미친 인터넷의 영향력은 팩스 기기보다 크지 않았다는 사실이 모든 사람에게 드러날 것이다. 사람들은 서로에게 할 말이 그리 많지 않다.",
         "en": "By 2005 or so, it will become clear that the Internet's impact on the economy has been no greater than the fax machine's. People have nothing much to say."
       },
       "timelineLabel": {
@@ -105,7 +105,7 @@
         "en": "Tech firms dominate Global Top 10 Market Cap"
       },
       "realityText": {
-        "ko": "인터넷은 통신 도구를 넘어 인류의 삶과 금융을 완전히 집어삼켰습니다. 노벨상 석학조차 기하급수적 '네트워크 효과'를 기존 전통 산업의 잣대로만 재단하다 평생의 흑역사를 남겼습니다.",
+        "ko": "인터넷은 통신 도구를 넘어 인류의 삶과 금융을 완전히 집어삼켰습니다. 노벨상 석학조차 기하급수적으로 커지는 '네트워크 효과'를 기존 전통 산업의 기준으로만 판단하다 평생의 흑역사를 남겼습니다.",
         "en": "The Internet reshaped human life and global finance. Even a Nobel laureate dismissed the exponential power of network effects."
       },
       "actionHighlight": {
@@ -219,7 +219,7 @@
         "en": "Dominance with GPT-4o and o1 reasoning models"
       },
       "realityText": {
-        "ko": "이 겸손한 발언 직후 복합 추론 모델들을 쏟아내며 시장을 장악했습니다. 업계에서는 독점 비판과 정부 규제를 피하기 위해 일부러 눈높이를 낮춘 정무적 전략으로 평가합니다.",
+        "ko": "이 겸손한 발언 직후 복합 추론 모델들을 쏟아내며 시장을 장악했습니다. 업계에서는 독점 비판과 정부 규제를 피하기 위해 일부러 눈높이를 낮춘 정치적 전략으로 평가합니다.",
         "en": "Immediately after, OpenAI rolled out aggressive reasoning models, securing market leadership. Analysts view this as deliberate regulatory sandbagging."
       },
       "actionHighlight": {
@@ -430,7 +430,7 @@
         "en": "I think there is a world market for maybe five computers"
       },
       "quoteSource": {
-        "ko": "1943년 IBM 내부 발언(전언)",
+        "ko": "1943년 IBM 내부 발언(출처 불확실)",
         "en": "1943 attributed IBM remark"
       },
       "quoteText": {
@@ -996,7 +996,7 @@
         "en": "The British Post Office in the 1870s"
       },
       "title": {
-        "ko": "미국엔 전화가 필요해도 영국엔 사환이 많아 필요 없다",
+        "ko": "미국엔 전화가 필요해도 영국엔 심부름꾼이 많아 필요 없다",
         "en": "The Americans have need of the telephone, but we do not, we have plenty of messenger boys"
       },
       "quoteSource": {
@@ -1004,7 +1004,7 @@
         "en": "1876, remarks before the British Parliament"
       },
       "quoteText": {
-        "ko": "미국인들은 전화가 필요할지 몰라도, 우리는 아닙니다. 사환 소년들이 충분히 있으니까요.",
+        "ko": "미국인들은 전화가 필요할지 몰라도, 우리는 아닙니다. 심부름꾼이 충분히 있으니까요.",
         "en": "The Americans have need of the telephone, but we do not. We have plenty of messenger boys."
       },
       "timelineLabel": {
@@ -1016,7 +1016,7 @@
         "en": "Britain itself later became one of the highest telephone-penetration countries"
       },
       "realityText": {
-        "ko": "기존 인프라(사환 체계)가 잘 작동한다는 이유로 신기술의 필요성을 부정한 대표적 사례로 남았습니다.",
+        "ko": "기존 인프라(심부름 체계)가 잘 작동한다는 이유로 신기술의 필요성을 부정한 대표적 사례로 남았습니다.",
         "en": "It became a textbook example of dismissing a new technology just because the old system 'worked fine'."
       },
       "actionHighlight": {
