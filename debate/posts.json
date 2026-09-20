@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.09.19 15:50",
+  "lastUpdated": "2026.09.20 16:14",
   "posts": [
     {
       "id": "d1",
@@ -346,6 +346,76 @@
       "votesB": 671,
       "id": "d_auto_1789800607364_7844",
       "addedAt": "2026-09-19"
+    },
+    {
+      "cardType": "WORK",
+      "tag": {
+        "ko": "회식 문화",
+        "en": "Company Dinner Culture"
+      },
+      "statusBadge": {
+        "ko": "회식 잔혹사 🍺",
+        "en": "Dinner Dilemma 🍺"
+      },
+      "statusColor": "bg-amber-500/10 text-amber-400 border-amber-500/20",
+      "avatar": "🍖",
+      "imageBeforeUrl": "https://images.unsplash.com/photo-1709433420601-6e473136571b?w=800&auto=format&fit=crop&q=80",
+      "imageCaption": {
+        "ko": "회식 자리 고기 굽는 모습",
+        "en": "Grilling meat at a company dinner"
+      },
+      "title": {
+        "ko": "팀 회식 불참 시 인사평가 불이익, 정당한가?",
+        "en": "Is it fair to penalize performance reviews for skipping team dinners?"
+      },
+      "contextText": {
+        "ko": "저녁 시간과 개인 스케줄을 희생해야 하는 회식 문화에, '팀워크 다지는 자리니 참석은 최소한의 예의'라는 기성세대와 '업무 외 시간에 대한 강요는 갑질'이라는 신세대가 정면 충돌.",
+        "en": "Company dinners that eat into personal evening time pit an older-generation view of team bonding as basic courtesy against a younger view that it's coercion outside work hours."
+      },
+      "sideA": {
+        "label": {
+          "ko": "참석이 최소한의 예의 (팀워크)",
+          "en": "Attendance Is Basic Courtesy (Teamwork)"
+        },
+        "reasons": {
+          "ko": [
+            "회식은 업무 시간 외 친목 도모 자리이기 이전에 팀의 결속력과 협업 분위기를 다지는 중요한 자리임",
+            "매번 개인 사정으로 빠지면서 팀에 녹아들 노력을 안 하는 것도 결국 본인의 사회생활 손해로 돌아옴",
+            "1차 식사만이라도 참석하는 최소한의 성의는 조직 생활에서 당연히 기대되는 부분임"
+          ],
+          "en": [
+            "Beyond socializing, dinners build team cohesion and a collaborative atmosphere.",
+            "Constantly opting out to avoid bonding eventually hurts your own standing at work.",
+            "Attending at least the first round is a reasonable baseline expectation in office life."
+          ]
+        }
+      },
+      "sideB": {
+        "label": {
+          "ko": "업무 외 강요는 부당 (개인 시간)",
+          "en": "Coercing Off-Hours Time Is Unfair (Personal Time)"
+        },
+        "reasons": {
+          "ko": [
+            "법적으로 회식은 근무시간이 아니므로 불참을 이유로 인사평가에 불이익을 주는 것은 명백한 직장 내 괴롭힘에 해당함",
+            "육아, 간병 등 개인 사정이 있는 직원에게 참석을 강요하면 실질적인 차별로 작용함",
+            "친목은 업무 성과와 별개인데 이를 평가 항목에 연결하는 것 자체가 평가 제도의 공정성을 해침"
+          ],
+          "en": [
+            "Legally, dinners aren't work hours, so penalizing absences in reviews constitutes workplace harassment.",
+            "Forcing attendance on employees with childcare or caregiving duties amounts to real discrimination.",
+            "Tying social bonding to performance scores undermines the fairness of the evaluation system itself."
+          ]
+        }
+      },
+      "practicalVerdict": {
+        "ko": "고용노동부 지침상 회식 불참을 이유로 한 불이익 처우는 명백히 위법. 다만 팀 화합을 위해 월 1회 정도의 부담 없는 회식(음주 강요 없는 저녁식사)으로 합의하는 조직이 늘고 있습니다.",
+        "en": "Ministry of Employment guidelines make it clearly illegal to penalize employees for skipping dinners. Still, more organizations are settling on a low-pressure monthly dinner (no forced drinking) as a workable compromise."
+      },
+      "votesA": 245,
+      "votesB": 738,
+      "id": "d_auto_1789888495350_5708",
+      "addedAt": "2026-09-20"
     }
   ]
 }
