@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.09.19 15:09",
+  "lastUpdated": "2026.09.20 15:33",
   "posts": [
     {
       "id": "j_on1",
@@ -325,6 +325,61 @@
       "disagrees": 27,
       "id": "j_auto_1789798156845_6715",
       "addedAt": "2026-09-19"
+    },
+    {
+      "cardType": "WORK",
+      "isOngoing": false,
+      "categoryName": {
+        "ko": "직장 갑질",
+        "en": "Workplace Harassment"
+      },
+      "statusBadge": {
+        "ko": "대법원 해고 확정 ✓",
+        "en": "Supreme Court Confirmed ✓"
+      },
+      "statusColor": "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
+      "target": {
+        "ko": "사내 폭행 후 해고 불복 소송낸 직원",
+        "en": "Employee Who Assaulted Coworkers, Then Fought His Firing"
+      },
+      "location": {
+        "ko": "부산 르노삼성자동차 공장",
+        "en": "Renault Samsung Motors Plant, Busan"
+      },
+      "avatar": "🔧",
+      "imageBeforeUrl": "https://images.unsplash.com/photo-1643700973089-baa86a1ab9ee?w=800&auto=format&fit=crop&q=80",
+      "imageCaption": {
+        "ko": "자동차 정비 작업장",
+        "en": "An auto repair workshop"
+      },
+      "title": {
+        "ko": "동료들 보는 앞에서 상급자·동료 폭행하고도 '부당해고'라며 소송 건 직원의 최후",
+        "en": "Assaulted a superior and coworker in front of everyone, then sued the company for 'unfair dismissal'"
+      },
+      "incidentDetail": {
+        "ko": "자동차 정비 라인에서 근무하던 직원이 동료들이 지켜보는 가운데 상급자와 동료를 폭행. 회사는 사내폭행을 취업규칙상 대표적 징계사유로 규정하고 있어 해당 직원을 즉시 해고했다. 직원은 이에 불복해 노동위원회에 부당해고 구제신청을 냈다.",
+        "en": "While coworkers watched, an employee at an auto-repair line assaulted both a supervisor and a colleague. The company, which classifies workplace assault as grounds for immediate dismissal, fired him on the spot. He challenged the firing before the labor relations commission."
+      },
+      "timelineLabel": {
+        "ko": "⏳ 노동위원회 → 법원 항소심까지 이어진 공방",
+        "en": "⏳ From the Labor Commission to the Court of Appeals"
+      },
+      "realityStat": {
+        "ko": "항소심 및 대법원 모두 해고 정당 확정",
+        "en": "Both the appellate court and Supreme Court upheld the dismissal"
+      },
+      "verdictDetail": {
+        "ko": "항소심 재판부는 '동료들이 보는 앞에서 상급자와 동료를 폭행한 행위는 회사의 인적 화합과 위계질서를 근본적으로 훼손한 것'이라며 해고가 정당하다고 판단했다. 중앙노동위원회가 상고했지만 대법원은 심리불속행으로 상고를 기각해 해고가 최종 확정됐다.",
+        "en": "The appellate court ruled that assaulting a superior and coworker in front of others 'fundamentally undermined workplace harmony and order,' upholding the dismissal. The Central Labor Relations Commission appealed further, but the Supreme Court dismissed it without full review, finalizing the termination."
+      },
+      "actionHighlight": {
+        "ko": "직장 내 폭력은 설령 상대방에게 잘못이 있었다 해도 정당화되지 않으며, 특히 목격자가 있는 상황에서의 폭행은 해고 사유로 매우 강하게 인정됩니다. 억울함이 있다면 폭력이 아니라 사내 신고 절차나 노동청을 통해 해결해야 합니다.",
+        "en": "Workplace violence is rarely justified even if the other party was at fault, and assault witnessed by others is treated as strong grounds for dismissal. Grievances should go through internal reporting channels or the labor authority, not physical confrontation."
+      },
+      "upvotes": 468,
+      "disagrees": 19,
+      "id": "j_auto_1789886009763_5158",
+      "addedAt": "2026-09-20"
     }
   ]
 }
