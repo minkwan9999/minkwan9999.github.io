@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.09.19 14:15",
+  "lastUpdated": "2026.09.20 14:31",
   "posts": [
     {
       "id": "p1",
@@ -1027,6 +1027,64 @@
       "disagrees": 0,
       "id": "p_auto_1789794932206_9407",
       "addedAt": "2026-09-19"
+    },
+    {
+      "cardType": "ONGOING",
+      "eraTag": {
+        "ko": "2025 · AI 음악 생성 붐",
+        "en": "2025 · AI Music Generation Boom"
+      },
+      "statusBadge": {
+        "ko": "판결 진행중 ⏳",
+        "en": "In Progress ⏳"
+      },
+      "statusColor": "bg-amber-500/10 text-amber-400 border-amber-500/20",
+      "author": {
+        "ko": "마이키 슐먼",
+        "en": "Mikey Shulman"
+      },
+      "authorTitle": {
+        "ko": "Suno(AI 음악 생성 앱) CEO",
+        "en": "CEO of Suno (AI music generation app)"
+      },
+      "avatar": "🎧",
+      "imageBeforeUrl": "https://images.unsplash.com/photo-1615554851544-e6249b92a492?w=800&auto=format&fit=crop&q=80",
+      "imageCaption": {
+        "ko": "AI 음악 생성 서비스 화면",
+        "en": "An AI music generation app interface"
+      },
+      "title": {
+        "ko": "사람들은 음악을 만드는 과정 자체를 즐기지 않는다",
+        "en": "People don't actually enjoy making music"
+      },
+      "quoteSource": {
+        "ko": "2025년 팟캐스트 인터뷰",
+        "en": "2025 podcast interview"
+      },
+      "quoteText": {
+        "ko": "사람들은 음악 만들기를 즐기지 않습니다. 악기도, 프로듀싱 소프트웨어도 잘 다루려면 시간과 연습이 너무 많이 필요하니까요.",
+        "en": "People don't enjoy making music. It takes a lot of time and practice to get good at an instrument or production software."
+      },
+      "timelineLabel": {
+        "ko": "⏳ 2026년 실시간 검증 중",
+        "en": "⏳ Real-Time Tracker 2026"
+      },
+      "realityStat": {
+        "ko": "취미 음악 창작 커뮤니티/악기 판매는 여전히 견조",
+        "en": "Hobbyist music-making communities and instrument sales remain robust"
+      },
+      "realityText": {
+        "ko": "AI 생성 음악의 편의성은 커지고 있지만, 창작 행위 자체를 즐기는 인구는 줄지 않고 있다는 반론이 꾸준히 제기됩니다.",
+        "en": "AI music generation keeps getting easier, but critics counter that the number of people who genuinely enjoy the creative process hasn't shrunk."
+      },
+      "actionHighlight": {
+        "ko": "도구가 대체할 수 있는 '결과물'과, 사람들이 실제로 원하는 '경험'을 혼동하면 시장을 잘못 읽게 됩니다.",
+        "en": "Confusing the output a tool can replace with the experience people actually seek can lead to reading the market wrong."
+      },
+      "upvotes": 0,
+      "disagrees": 0,
+      "id": "p_auto_1789882295085_6547",
+      "addedAt": "2026-09-20"
     }
   ]
 }
