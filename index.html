@@ -3,44 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Minkwan Lab - 실전 금융 툴 & 인사이트 아카이브</title>
-  <meta name="description" content="실전 금융·절세 계산기 허브 머니랩(MoneyLab)과 역사적 오판, 참교육, 논쟁, 트렌드 랭킹을 복기하는 인사이트랩(InsightLab)">
+  <title>오패금융연구소 - 실전 절세·재테크 계산기</title>
+  <meta name="description" content="대출 상환, 위스키 관세, 퇴직금 절세, ISA 만기 전환까지. 증권사·포털이 안 알려주는 실질 손익을 숫자로 검증하는 계산기 모음, 오패금융연구소.">
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1957248819245044" crossorigin="anonymous"></script>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-[#0e1117] text-slate-200 antialiased min-h-screen py-8 px-4 flex flex-col items-center selection:bg-orange-500 selection:text-white">
+<body class="bg-[#0e1117] text-slate-200 antialiased min-h-screen py-8 px-4 flex flex-col items-center selection:bg-blue-500 selection:text-white">
 
   <main class="w-full max-w-lg space-y-6">
     <!-- 메인 타이틀 헤더 -->
     <header class="text-center space-y-2">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-xs text-slate-400 font-mono">
-        <span>⚡ Minkwan Hub Portal</span>
+        <span>📊 오패금융연구소</span>
       </div>
       <h1 class="text-2xl sm:text-3xl font-black text-white tracking-tight">
-        실전 도구 & 데이터 아카이브
+        숫자로 검증하는 실전 절세 계산기
       </h1>
       <p class="text-xs sm:text-sm text-slate-400">
-        숫자로 검증하는 계산기부터 과거 오판을 복기하는 인사이트까지
+        증권사·포털이 안 알려주는 실질 손익을 직접 계산해보세요
       </p>
     </header>
 
-    <!-- 상위 대분류 선택 탭 (머니랩 vs 인사이트랩) -->
-    <nav class="grid grid-cols-2 p-1.5 bg-[#161b22] border border-slate-800 rounded-2xl gap-1.5 shadow-lg">
-      <button onclick="switchTab('money')" id="tab-money" class="flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl font-extrabold text-sm transition bg-blue-600 text-white shadow-md">
-        <span>📊 머니랩</span>
-        <span class="text-[10px] bg-black/30 px-1.5 py-0.5 rounded-full font-mono">4</span>
-      </button>
-      <button onclick="switchTab('insight')" id="tab-insight" class="flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl font-extrabold text-sm transition text-slate-400 hover:text-white">
-        <span>💡 인사이트랩</span>
-        <span class="text-[10px] bg-slate-800 px-1.5 py-0.5 rounded-full font-mono text-orange-400">4</span>
-      </button>
-    </nav>
-
-    <!-- [1] 머니랩 하위 4개 도구 패널 -->
-    <section id="panel-money" class="space-y-3">
+    <!-- 계산기 4종 -->
+    <section class="space-y-3">
       <div class="flex items-center justify-between px-1">
-        <span class="text-xs font-bold text-slate-400">머니랩 실전 계산기 라인업</span>
+        <span class="text-xs font-bold text-slate-400">실전 계산기 라인업</span>
         <span class="text-[11px] text-blue-400 font-mono">Data Tools</span>
       </div>
 
@@ -104,121 +92,13 @@
       </a>
     </section>
 
-    <!-- [2] 인사이트랩 하위 4개 아카이브 패널 (기본 숨김/토글) -->
-    <section id="panel-insight" class="space-y-3 hidden">
-      <div class="flex items-center justify-between px-1">
-        <span class="text-xs font-bold text-slate-400">인사이트랩 아카이브 라인업</span>
-        <span class="text-[11px] text-orange-400 font-mono">Insight Archives</span>
-      </div>
-
-      <!-- 1. 상해버린 예측들 -->
-      <a href="/named/" class="block p-4 rounded-2xl bg-[#161b22] border border-slate-800 hover:border-orange-500 transition group shadow-md">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center gap-3">
-            <span class="text-2xl p-2 rounded-xl bg-slate-900 border border-slate-800">🥛</span>
-            <div>
-              <div class="flex items-center gap-2">
-                <h2 class="text-sm font-extrabold text-white group-hover:text-orange-400 transition">상해버린 예측들 (Aged Like Milk)</h2>
-                <span class="text-[10px] px-1.5 py-0.5 rounded bg-orange-500/20 text-orange-400 border border-orange-500/30 font-bold">성지순례</span>
-              </div>
-              <p class="text-xs text-slate-400 mt-0.5">역사적 대가의 오판 참교육부터 2026 빅마우스 성적표까지</p>
-              <span id="named-update-badge" class="inline-block mt-2 text-[10px] font-mono text-slate-500 bg-slate-900 px-2 py-0.5 rounded border border-slate-800">최종 갱신: 불러오는 중...</span>
-            </div>
-          </div>
-          <span class="text-slate-600 group-hover:text-orange-400 transition text-sm font-bold">→</span>
-        </div>
-      </a>
-
-      <!-- 2. 사이다·참교육 명예의 전당 -->
-      <a href="/justice/" class="block p-4 rounded-2xl bg-[#161b22] border border-slate-800 hover:border-cyan-500 transition group shadow-md">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center gap-3">
-            <span class="text-2xl p-2 rounded-xl bg-slate-900 border border-slate-800">⚖️</span>
-            <div>
-              <div class="flex items-center gap-2">
-                <h2 class="text-sm font-extrabold text-white group-hover:text-cyan-400 transition">사이다·참교육 명예의 전당</h2>
-                <span class="text-[10px] px-1.5 py-0.5 rounded bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 font-bold">실화박제</span>
-              </div>
-              <p class="text-xs text-slate-400 mt-0.5">선 넘은 빌런들의 인과응보 결말 & 실전 법적 대응 수칙</p>
-              <span class="inline-block mt-2 text-[10px] font-mono text-slate-500 bg-slate-900 px-2 py-0.5 rounded border border-slate-800">최종 갱신: 2026.09.10 14:20</span>
-            </div>
-          </div>
-          <span class="text-slate-600 group-hover:text-cyan-400 transition text-sm font-bold">→</span>
-        </div>
-      </a>
-
-      <!-- 3. 역대 논쟁 종결 백과 -->
-      <a href="/debate/" class="block p-4 rounded-2xl bg-[#161b22] border border-slate-800 hover:border-violet-500 transition group shadow-md">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center gap-3">
-            <span class="text-2xl p-2 rounded-xl bg-slate-900 border border-slate-800">🥊</span>
-            <div>
-              <div class="flex items-center gap-2">
-                <h2 class="text-sm font-extrabold text-white group-hover:text-violet-400 transition">역대 논쟁 종결 백과</h2>
-                <span class="text-[10px] px-1.5 py-0.5 rounded bg-violet-500/20 text-violet-400 border border-violet-500/30 font-bold">실시간판결</span>
-              </div>
-              <p class="text-xs text-slate-400 mt-0.5">직장 AI 표기부터 호텔 축의금까지 양측 논리 3줄 요약 & 투표</p>
-              <span class="inline-block mt-2 text-[10px] font-mono text-slate-500 bg-slate-900 px-2 py-0.5 rounded border border-slate-800">최종 갱신: 2026.09.12 09:15</span>
-            </div>
-          </div>
-          <span class="text-slate-600 group-hover:text-violet-400 transition text-sm font-bold">→</span>
-        </div>
-      </a>
-
-      <!-- 4. 소셜 트렌드 순위표 -->
-      <a href="/rank/" class="block p-4 rounded-2xl bg-[#161b22] border border-slate-800 hover:border-amber-500 transition group shadow-md">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center gap-3">
-            <span class="text-2xl p-2 rounded-xl bg-slate-900 border border-slate-800">🏆</span>
-            <div>
-              <div class="flex items-center gap-2">
-                <h2 class="text-sm font-extrabold text-white group-hover:text-amber-400 transition">소셜 트렌드 순위표</h2>
-                <span class="text-[10px] px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-400 border border-amber-500/30 font-bold">TOP 5</span>
-              </div>
-              <p class="text-xs text-slate-400 mt-0.5">유튜브·틱톡·스레드·인스타·X 주간 떡상 크리에이터 리더보드</p>
-              <span class="inline-block mt-2 text-[10px] font-mono text-slate-500 bg-slate-900 px-2 py-0.5 rounded border border-slate-800">최종 갱신: 2026.09.16 08:00</span>
-            </div>
-          </div>
-          <span class="text-slate-600 group-hover:text-amber-400 transition text-sm font-bold">→</span>
-        </div>
-      </a>
-    </section>
-
     <!-- 푸터 -->
-    <footer class="pt-6 pb-4 text-center text-xs text-slate-500 space-y-1">
-      <p>단순하고 검증된 도구와 아카이브를 제공합니다.</p>
-      <p>© 2026 Minkwan Lab · All Rights Reserved.</p>
+    <footer class="pt-6 pb-4 text-center text-xs text-slate-500 space-y-2">
+      <p>단순하고 검증된 계산기만 제공합니다.</p>
+      <p>© 2026 오패금융연구소 · All Rights Reserved.</p>
+      <p><a href="/hub/" class="text-slate-600 hover:text-slate-400 transition underline underline-offset-2">만든이의 다른 프로젝트 보기 →</a></p>
     </footer>
   </main>
 
-  <script>
-    function switchTab(tab) {
-      const panelMoney = document.getElementById('panel-money');
-      const panelInsight = document.getElementById('panel-insight');
-      const tabMoney = document.getElementById('tab-money');
-      const tabInsight = document.getElementById('tab-insight');
-
-      if (tab === 'money') {
-        panelMoney.classList.remove('hidden');
-        panelInsight.classList.add('hidden');
-
-        tabMoney.className = "flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl font-extrabold text-sm transition bg-blue-600 text-white shadow-md";
-        tabInsight.className = "flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl font-extrabold text-sm transition text-slate-400 hover:text-white";
-      } else {
-        panelInsight.classList.remove('hidden');
-        panelMoney.classList.add('hidden');
-
-        tabInsight.className = "flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl font-extrabold text-sm transition bg-orange-500 text-white shadow-md";
-        tabMoney.className = "flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl font-extrabold text-sm transition text-slate-400 hover:text-white";
-      }
-    }
-    fetch('./named/posts.json')
-  .then(res => res.json())
-  .then(data => {
-    const badge = document.getElementById('named-update-badge');
-    if (badge && data.lastUpdated) badge.textContent = `최종 갱신: ${data.lastUpdated}`;
-  })
-  .catch(() => {});
-  </script>
 </body>
 </html>
