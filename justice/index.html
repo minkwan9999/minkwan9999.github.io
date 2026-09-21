@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>인사이트랩 - 사이다·참교육 명예의 전당 (Justice Served)</title>
-  <meta name="description" content="보배드림, 블라인드 등 인터넷을 달군 역대급 빌런과 사이다 참교육 실화 아카이브. 현실 법률/대응 팁까지 정리합니다.">
-  <meta property="og:title" content="인사이트랩: 사이다·참교육 명예의 전당">
-  <meta property="og:description" content="선 넘은 빌런들의 결말과 실전 법적 대응 인사이트">
+  <title>인사이트랩 - 생활법률 판례 아카이브 (Legal Case Archive)</title>
+  <meta name="description" content="실제 언론에 보도된 판결·기소 사례를 출처와 함께 정리한 생활법률 아카이브입니다.">
+  <meta property="og:title" content="인사이트랩: 생활법률 판례 아카이브">
+  <meta property="og:description" content="실제 보도된 사건과 판결 결과, 법적 대응 포인트를 정리합니다">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-[#0e1117] text-slate-200 antialiased min-h-screen py-5 px-3 flex flex-col items-center selection:bg-cyan-500 selection:text-white">
@@ -21,10 +21,10 @@
           </div>
           <div class="min-w-0">
             <div class="flex items-center gap-1.5">
-              <span class="font-extrabold text-white text-sm tracking-tight truncate" id="ui-subname">사이다 참교육 전당</span>
-              <span class="text-[10px] bg-cyan-500/20 text-cyan-400 font-bold px-1.5 py-0.5 rounded border border-cyan-500/30 shrink-0" id="ui-subtag">실화박제</span>
+              <span class="font-extrabold text-white text-sm tracking-tight truncate" id="ui-subname">생활법률 판례 아카이브</span>
+              <span class="text-[10px] bg-cyan-500/20 text-cyan-400 font-bold px-1.5 py-0.5 rounded border border-cyan-500/30 shrink-0" id="ui-subtag">실화 보도 기반</span>
             </div>
-            <p class="text-[11px] text-slate-400 truncate" id="ui-subtitle">레전드 참교육 사건 & 실전 법적 대응 수칙</p>
+            <p class="text-[11px] text-slate-400 truncate" id="ui-subtitle">실제 판결·기소 사례 & 법적 대응 포인트</p>
           </div>
         </div>
 
@@ -55,7 +55,7 @@
 
     <!-- 하단 푸터 -->
     <footer class="pt-4 pb-6 text-center text-xs text-slate-500 space-y-1">
-      <p id="ui-footer-note">실제 언론 보도 및 판례 아카이브를 바탕으로 재구성되었습니다.</p>
+      <p id="ui-footer-note">실제 언론 보도를 출처와 함께 정리한 아카이브입니다.</p>
       <p>© 2026 인사이트랩 (InsightLab) · Justice Served Edition</p>
     </footer>
   </main>
@@ -77,46 +77,46 @@
 
     const I18N = {
       ko: {
-        subname: "사이다 참교육 전당",
-        subtag: "실화박제",
-        subtitle: "레전드 참교육 사건 & 실전 법적 대응 수칙",
+        subname: "생활법률 판례 아카이브",
+        subtag: "실화 보도 기반",
+        subtitle: "실제 판결·기소 사례 & 법적 대응 포인트",
         home: "홈",
         filterAll: "전체 피드",
         filterOngoing: "진행형 ⏳",
         filterParking: "주차·교통",
         filterWork: "직장·갑질",
         filterCommerce: "사기·상거래",
-        incidentLabel: "🚨 사건 발단 및 만행",
-        verdictTitleResolved: "⚖️ 인과응보 사이다 결말",
-        verdictTitleOngoing: "⏳ 현재 수사·재판 공방 현황",
+        incidentLabel: "🚨 사건 개요",
+        verdictTitleResolved: "⚖️ 판결·처분 결과",
+        verdictTitleOngoing: "⏳ 수사·재판 진행 상황",
         takeawayTitle: "💡 실전 대처·법적 팁:",
-        voteAwesome: "⚡ 속이 뻥 뚫림",
-        voteWeak: "🤔 처벌이 약함",
-        voteOngoingGuilty: "🔥 구속/실형 각",
-        voteOngoingFlee: "🤔 솜방망이 우려",
+        voteAwesome: "⚡ 참고가 됐어요",
+        voteWeak: "🤔 처벌이 약하다고 봄",
+        voteOngoingGuilty: "🔥 실형 예상",
+        voteOngoingFlee: "🤔 가벼운 처벌 우려",
         votedBadge: "열람 완료",
         newBadge: "NEW",
-        footerNote: "실제 언론 보도 및 판례 아카이브를 바탕으로 재구성되었습니다.",
+        footerNote: "실제 언론 보도를 출처와 함께 정리한 아카이브입니다.",
         loadError: "데이터를 불러오지 못했습니다."
       },
       en: {
-        subname: "Justice Served",
-        subtag: "True Stories",
-        subtitle: "Legendary instant karma & practical legal tips",
+        subname: "Legal Case Archive",
+        subtag: "Reported Cases",
+        subtitle: "Real rulings & indictments, with practical legal takeaways",
         home: "Home",
         filterAll: "All Feeds",
         filterOngoing: "In Progress ⏳",
         filterParking: "Traffic & Parking",
         filterWork: "Workplace",
         filterCommerce: "Scams & Fraud",
-        incidentLabel: "🚨 The Audacity / Incident",
-        verdictTitleResolved: "⚖️ The Sweet Karma Outcome",
+        incidentLabel: "🚨 Case Summary",
+        verdictTitleResolved: "⚖️ Ruling / Outcome",
         verdictTitleOngoing: "⏳ Current Legal Proceeding",
         takeawayTitle: "💡 Practical Legal Advice:",
-        voteAwesome: "⚡ Pure Catharsis",
-        voteWeak: "🤔 Too Lenient",
-        voteOngoingGuilty: "🔥 Jail Time Bound",
-        voteOngoingFlee: "🤔 Soft Penalty Fear",
+        voteAwesome: "⚡ Found this useful",
+        voteWeak: "🤔 Sentence too light",
+        voteOngoingGuilty: "🔥 Expecting conviction",
+        voteOngoingFlee: "🤔 Risk of light penalty",
         votedBadge: "Verified",
         newBadge: "NEW",
         footerNote: "Compiled based on verified news reports and legal precedent archives.",
@@ -246,6 +246,7 @@
                 <p class="text-xs text-slate-300 leading-relaxed font-medium">
                   ${item.verdictDetail[currentLang]}
                 </p>
+                ${item.sourceRef ? `<p class="text-[10px] text-slate-500 font-mono pt-1 border-t border-slate-800/60">📰 ${item.sourceRef[currentLang]}</p>` : ''}
               </div>
 
               <!-- 실전 법적 대응 수칙 박스 -->
