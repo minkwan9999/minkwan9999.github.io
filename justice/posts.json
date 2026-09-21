@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.09.20 19:03",
+  "lastUpdated": "2026.09.21 15:40",
   "posts": [
     {
       "cardType": "COMMERCE",
@@ -177,6 +177,61 @@
       },
       "id": "j_auto_1789898606598_8075",
       "addedAt": "2026-09-20"
+    },
+    {
+      "cardType": "COMMERCE",
+      "isOngoing": false,
+      "categoryName": {
+        "ko": "중고 사기",
+        "en": "Secondhand Fraud"
+      },
+      "statusBadge": {
+        "ko": "실형 확정 ✓",
+        "en": "Prison Sentence ✓"
+      },
+      "statusColor": "bg-rose-500/10 text-rose-400 border-rose-500/20",
+      "target": {
+        "ko": "중고거래 사기 조직 자금세탁책 일당",
+        "en": "Money Launderers for a Secondhand Marketplace Scam Ring"
+      },
+      "location": {
+        "ko": "부산지방법원",
+        "en": "Busan District Court"
+      },
+      "avatar": "📦",
+      "imageBeforeUrl": "https://images.unsplash.com/photo-1624137527136-66e631bdaa0e?w=800&auto=format&fit=crop&q=80",
+      "imageCaption": {
+        "ko": "택배 상자",
+        "en": "A shipping box"
+      },
+      "title": {
+        "ko": "당근마켓서 98명 속인 사기 조직, 돈세탁까지 해준 일당도 결국 실형",
+        "en": "Ring scammed 98 secondhand marketplace buyers — even the money launderers who helped got prison time"
+      },
+      "incidentDetail": {
+        "ko": "텔레그램에서 만난 인터넷 물품 사기 조직으로부터 '계좌에 들어온 돈을 가상화폐로 바꿔 해외 지갑으로 보내면 하루 40만 원을 주겠다'는 제안을 받고 자금세탁책 역할을 맡은 일당. 당근마켓 등에 허위 판매 글을 올려 98명의 피해자에게서 가로챈 약 5천만 원을 테더(USDT) 등 가상자산으로 세탁해 해외로 빼돌렸다.",
+        "en": "After being recruited via Telegram with an offer of 400,000 won a day, the group laundered roughly 50 million won stolen from 98 victims of a secondhand-marketplace scam, converting it to Tether (USDT) and funneling it overseas."
+      },
+      "timelineLabel": {
+        "ko": "⏳ 부산지법 형사6단독 선고",
+        "en": "⏳ Sentencing at Busan District Court"
+      },
+      "realityStat": {
+        "ko": "주범 징역 1년, 공범들 징역 6~8개월 실형 선고",
+        "en": "Ringleader sentenced to 1 year, accomplices to 6-8 months in prison"
+      },
+      "verdictDetail": {
+        "ko": "부산지법은 사기 및 범죄수익은닉규제법 위반 혐의로 기소된 이들에게 실형을 선고했다. 재판부는 '인터넷 물품 사기는 전자상거래 질서를 훼손하고 피해 회복도 쉽지 않다'며 가담 기간이 짧고 이익이 적은 점을 참작하고도 실형이 불가피하다고 밝혔다.",
+        "en": "The Busan District Court sentenced the group on charges of fraud and violating the Act on Regulation of Money Laundering. The court stated that internet marketplace fraud 'undermines e-commerce order and is difficult for victims to recover from,' making prison time unavoidable despite the short duration and modest profit."
+      },
+      "actionHighlight": {
+        "ko": "단순히 '계좌만 빌려주고 심부름만 했다'는 항변은 통하지 않습니다. 사기 피해금인 걸 알면서 가상자산으로 세탁을 도운 것만으로도 범죄수익은닉규제법 위반으로 실형까지 가능합니다. 고수익 아르바이트 제안은 대부분 이런 자금세탁 가담을 노린 것이니 응하지 마세요.",
+        "en": "Claiming you 'just lent your account and ran errands' won't hold up in court. Even helping launder funds you knew were fraud proceeds can lead to real prison time. Suspiciously high-paying 'part-time' offers online are almost always attempts to recruit money-laundering mules — never accept them."
+      },
+      "upvotes": 389,
+      "disagrees": 8,
+      "id": "j_auto_1789972814417_9352",
+      "addedAt": "2026-09-21"
     }
   ]
 }
