@@ -3,222 +3,344 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Minkwan Lab - 실전 금융 툴 & 인사이트 아카이브</title>
-  <meta name="description" content="실전 금융·절세 계산기 허브 머니랩(MoneyLab)과 역사적 오판, 참교육, 논쟁, 트렌드 랭킹을 복기하는 인사이트랩(InsightLab)">
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1957248819245044" crossorigin="anonymous"></script>
+  <title>인사이트랩 - 상해버린 예측들 (Aged Like Milk)</title>
+  <meta name="description" content="산업혁명부터 닷컴, 스마트폰, AI 시대까지. 당대 최고 권위자들의 호언장담과 N년 뒤 참교육 성적표를 사진과 함께 박제합니다.">
+  <meta property="og:title" content="인사이트랩: 상해버린 예측들">
+  <meta property="og:description" content="사진으로 보는 과거 대가들의 오판 vs 냉정한 현실 성적표">
   <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-[#0e1117] text-slate-200 antialiased min-h-screen py-8 px-4 flex flex-col items-center selection:bg-orange-500 selection:text-white">
 
-  <main class="w-full max-w-lg space-y-6">
-    <!-- 메인 타이틀 헤더 -->
-    <header class="text-center space-y-2">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-xs text-slate-400 font-mono">
-        <span>⚡ Minkwan Hub Portal</span>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q543DWEBBW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-Q543DWEBBW');
+</script>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=pub-1957248819245044" crossorigin="anonymous"></script>
+
+</head>
+<body class="bg-[#0e1117] text-slate-200 antialiased min-h-screen py-5 px-3 flex flex-col items-center selection:bg-orange-500 selection:text-white">
+
+  <main class="w-full max-w-md space-y-4">
+    <!-- 상단 헤더 -->
+    <header class="bg-[#161b22] border border-slate-800 rounded-2xl p-3.5 shadow-lg space-y-2.5">
+      <div class="flex items-center justify-between gap-2">
+        <div class="flex items-center gap-2 min-w-0">
+          <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-orange-600 to-amber-500 flex items-center justify-center font-black text-white text-sm shadow shrink-0">
+            🥛
+          </div>
+          <div class="min-w-0">
+            <div class="flex items-center gap-1.5">
+              <span class="font-extrabold text-white text-sm tracking-tight truncate" id="ui-subname">상해버린 예측들</span>
+              <span class="text-[10px] bg-orange-500/20 text-orange-400 font-bold px-1.5 py-0.5 rounded border border-orange-500/30 shrink-0" id="ui-subtag">성지순례</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 언어 토글 & 홈 링크 -->
+        <div class="flex items-center gap-1.5 shrink-0">
+          <div class="flex items-center bg-slate-900 border border-slate-700 rounded-lg p-0.5 text-[11px] font-bold">
+            <button onclick="setLang('ko')" id="btn-ko" class="px-2 py-0.5 rounded bg-orange-500 text-white transition">KO</button>
+            <button onclick="setLang('en')" id="btn-en" class="px-2 py-0.5 rounded text-slate-400 hover:text-white transition">EN</button>
+          </div>
+          <a href="/" class="text-xs text-slate-400 hover:text-white px-1 whitespace-nowrap transition" id="ui-home">홈</a>
+        </div>
       </div>
-      <h1 class="text-2xl sm:text-3xl font-black text-white tracking-tight">
-        실전 도구 & 데이터 아카이브
-      </h1>
-      <p class="text-xs sm:text-sm text-slate-400">
-        숫자로 검증하는 계산기부터 과거 오판을 복기하는 인사이트까지
-      </p>
+
+      <!-- 3개 카테고리 필터 버튼 바 -->
+      <div class="flex items-center gap-1.5 pt-2 border-t border-slate-800/80 text-xs font-semibold overflow-x-auto whitespace-nowrap">
+        <button onclick="filterType('ALL')" class="filter-btn active px-3 py-1 rounded-lg bg-orange-500 text-white transition" data-type="ALL" id="filter-all">전체 피드</button>
+        <button onclick="filterType('RESOLVED')" class="filter-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition" data-type="RESOLVED" id="filter-resolved">판정 완료</button>
+        <button onclick="filterType('ONGOING')" class="filter-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition" data-type="ONGOING" id="filter-ongoing">최신발언</button>
+      </div>
     </header>
 
-    <!-- 상위 대분류 선택 탭 (머니랩 vs 인사이트랩) -->
-    <nav class="grid grid-cols-2 p-1.5 bg-[#161b22] border border-slate-800 rounded-2xl gap-1.5 shadow-lg">
-      <button onclick="switchTab('money')" id="tab-money" class="flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl font-extrabold text-sm transition bg-blue-600 text-white shadow-md">
-        <span>📊 머니랩</span>
-        <span class="text-[10px] bg-black/30 px-1.5 py-0.5 rounded-full font-mono">4</span>
-      </button>
-      <button onclick="switchTab('insight')" id="tab-insight" class="flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl font-extrabold text-sm transition text-slate-400 hover:text-white">
-        <span>💡 인사이트랩</span>
-        <span class="text-[10px] bg-slate-800 px-1.5 py-0.5 rounded-full font-mono text-orange-400">4</span>
-      </button>
-    </nav>
+    <!-- 피드 리스트 컨테이너 -->
+    <div id="feed-container" class="space-y-4">
+      <p class="text-center text-slate-500 py-10 text-sm">불러오는 중...</p>
+    </div>
 
-    <!-- [1] 머니랩 하위 4개 도구 패널 -->
-    <section id="panel-money" class="space-y-3">
-      <div class="flex items-center justify-between px-1">
-        <span class="text-xs font-bold text-slate-400">머니랩 실전 계산기 라인업</span>
-        <span class="text-[11px] text-blue-400 font-mono">Data Tools</span>
-      </div>
-
-      <!-- 1. 대출 계산기 -->
-      <a href="/loan/" class="block p-4 rounded-2xl bg-[#161b22] border border-slate-800 hover:border-blue-500/60 transition group shadow-md">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center gap-3">
-            <span class="text-2xl p-2 rounded-xl bg-slate-900 border border-slate-800">💰</span>
-            <div>
-              <h2 class="text-sm font-bold text-white group-hover:text-blue-400 transition">대출 상환 vs 투자 계산기</h2>
-              <p class="text-xs text-slate-400">원리금 조기상환 vs 미국주식·배당 투자 손익분기 역산</p>
-            </div>
-          </div>
-          <span class="text-slate-600 group-hover:text-blue-400 transition text-sm font-bold">→</span>
-        </div>
-      </a>
-
-      <!-- 2. 위스키 계산기 -->
-      <a href="/whisky/" class="block p-4 rounded-2xl bg-[#161b22] border border-slate-800 hover:border-blue-500/60 transition group shadow-md">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center gap-3">
-            <span class="text-2xl p-2 rounded-xl bg-slate-900 border border-slate-800">🥃</span>
-            <div>
-              <h2 class="text-sm font-bold text-white group-hover:text-blue-400 transition">위스키·주류 세금 계산기</h2>
-              <p class="text-xs text-slate-400">면세 범위 자동 판정 & 해외 직구 예상 관부가세 역산</p>
-            </div>
-          </div>
-          <span class="text-slate-600 group-hover:text-blue-400 transition text-sm font-bold">→</span>
-        </div>
-      </a>
-
-      <!-- 3. 퇴직금 계산기 -->
-      <a href="/retire/" class="block p-4 rounded-2xl bg-[#161b22] border border-slate-800 hover:border-blue-500/60 transition group shadow-md">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center gap-3">
-            <span class="text-2xl p-2 rounded-xl bg-slate-900 border border-slate-800">🛡️</span>
-            <div>
-              <h2 class="text-sm font-bold text-white group-hover:text-blue-400 transition">퇴직금 절세 비교기</h2>
-              <p class="text-xs text-slate-400">퇴직금 IRP 이전 vs 일시 수령 실질 수령액 및 절세율 비교</p>
-            </div>
-          </div>
-          <span class="text-slate-600 group-hover:text-blue-400 transition text-sm font-bold">→</span>
-        </div>
-      </a>
-
-      <!-- 4. ISA 만기 전환 계산기 -->
-      <a href="/isa/" class="block p-4 rounded-2xl bg-[#161b22] border border-slate-800 hover:border-blue-500/60 transition group shadow-md">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center gap-3">
-            <span class="text-2xl p-2 rounded-xl bg-slate-900 border border-slate-800">📈</span>
-            <div>
-              <div class="flex items-center gap-2">
-                <h2 class="text-sm font-bold text-white group-hover:text-blue-400 transition">ISA 만기 연금전환 시뮬레이터</h2>
-                <span class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-bold">절세</span>
-              </div>
-              <p class="text-xs text-slate-400">3년 만기 자금 연금계좌 전환 시 10% 추가 세액공제 최적화</p>
-            </div>
-          </div>
-          <span class="text-slate-600 group-hover:text-blue-400 transition text-sm font-bold">→</span>
-        </div>
-      </a>
-    </section>
-
-    <!-- [2] 인사이트랩 하위 4개 아카이브 패널 (기본 숨김/토글) -->
-    <section id="panel-insight" class="space-y-3 hidden">
-      <div class="flex items-center justify-between px-1">
-        <span class="text-xs font-bold text-slate-400">인사이트랩 아카이브 라인업</span>
-        <span class="text-[11px] text-orange-400 font-mono">Insight Archives</span>
-      </div>
-
-      <!-- 1. 상해버린 예측들 -->
-      <a href="/named/" class="block p-4 rounded-2xl bg-[#161b22] border border-slate-800 hover:border-orange-500 transition group shadow-md">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center gap-3">
-            <span class="text-2xl p-2 rounded-xl bg-slate-900 border border-slate-800">🥛</span>
-            <div>
-              <div class="flex items-center gap-2">
-                <h2 class="text-sm font-extrabold text-white group-hover:text-orange-400 transition">상해버린 예측들 (Aged Like Milk)</h2>
-                <span class="text-[10px] px-1.5 py-0.5 rounded bg-orange-500/20 text-orange-400 border border-orange-500/30 font-bold">성지순례</span>
-              </div>
-              <p class="text-xs text-slate-400 mt-0.5">역사적 대가의 오판 참교육부터 2026 빅마우스 성적표까지</p>
-              <span id="named-update-badge" class="inline-block mt-2 text-[10px] font-mono text-slate-500 bg-slate-900 px-2 py-0.5 rounded border border-slate-800">최종 갱신: 불러오는 중...</span>
-            </div>
-          </div>
-          <span class="text-slate-600 group-hover:text-orange-400 transition text-sm font-bold">→</span>
-        </div>
-      </a>
-
-      <!-- 2. 생활법률 판례 아카이브 (구 사이다·참교육 명예의 전당) -->
-      <a href="/justice/" class="block p-4 rounded-2xl bg-[#161b22] border border-slate-800 hover:border-cyan-500 transition group shadow-md">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center gap-3">
-            <span class="text-2xl p-2 rounded-xl bg-slate-900 border border-slate-800">⚖️</span>
-            <div>
-              <div class="flex items-center gap-2">
-                <h2 class="text-sm font-extrabold text-white group-hover:text-cyan-400 transition">생활법률 판례 아카이브</h2>
-                <span class="text-[10px] px-1.5 py-0.5 rounded bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 font-bold">실화 보도 기반</span>
-              </div>
-              <p class="text-xs text-slate-400 mt-0.5">실제 판결·기소 사례 & 법적 대응 포인트</p>
-              <span class="inline-block mt-2 text-[10px] font-mono text-slate-500 bg-slate-900 px-2 py-0.5 rounded border border-slate-800">최종 갱신: 2026.09.20</span>
-            </div>
-          </div>
-          <span class="text-slate-600 group-hover:text-cyan-400 transition text-sm font-bold">→</span>
-        </div>
-      </a>
-
-      <!-- 3. 역대 논쟁 종결 백과 -->
-      <a href="/debate/" class="block p-4 rounded-2xl bg-[#161b22] border border-slate-800 hover:border-violet-500 transition group shadow-md">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center gap-3">
-            <span class="text-2xl p-2 rounded-xl bg-slate-900 border border-slate-800">🥊</span>
-            <div>
-              <div class="flex items-center gap-2">
-                <h2 class="text-sm font-extrabold text-white group-hover:text-violet-400 transition">역대 논쟁 종결 백과</h2>
-                <span class="text-[10px] px-1.5 py-0.5 rounded bg-violet-500/20 text-violet-400 border border-violet-500/30 font-bold">실시간판결</span>
-              </div>
-              <p class="text-xs text-slate-400 mt-0.5">직장 AI 표기부터 호텔 축의금까지 양측 논리 3줄 요약 & 투표</p>
-              <span class="inline-block mt-2 text-[10px] font-mono text-slate-500 bg-slate-900 px-2 py-0.5 rounded border border-slate-800">최종 갱신: 2026.09.12 09:15</span>
-            </div>
-          </div>
-          <span class="text-slate-600 group-hover:text-violet-400 transition text-sm font-bold">→</span>
-        </div>
-      </a>
-
-      <!-- 4. 소셜 트렌드 순위표 -->
-      <a href="/rank/" class="block p-4 rounded-2xl bg-[#161b22] border border-slate-800 hover:border-amber-500 transition group shadow-md">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center gap-3">
-            <span class="text-2xl p-2 rounded-xl bg-slate-900 border border-slate-800">🏆</span>
-            <div>
-              <div class="flex items-center gap-2">
-                <h2 class="text-sm font-extrabold text-white group-hover:text-amber-400 transition">소셜 트렌드 순위표</h2>
-                <span class="text-[10px] px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-400 border border-amber-500/30 font-bold">TOP 5</span>
-              </div>
-              <p class="text-xs text-slate-400 mt-0.5">유튜브·틱톡·스레드·인스타·X 주간 떡상 크리에이터 리더보드</p>
-              <span class="inline-block mt-2 text-[10px] font-mono text-slate-500 bg-slate-900 px-2 py-0.5 rounded border border-slate-800">최종 갱신: 2026.09.16 08:00</span>
-            </div>
-          </div>
-          <span class="text-slate-600 group-hover:text-amber-400 transition text-sm font-bold">→</span>
-        </div>
-      </a>
-    </section>
-
-    <!-- 푸터 -->
-    <footer class="pt-6 pb-4 text-center text-xs text-slate-500 space-y-1">
-      <p>단순하고 검증된 도구와 아카이브를 제공합니다.</p>
-      <p>© 2026 Minkwan Lab · All Rights Reserved.</p>
+    <!-- 하단 푸터 -->
+    <footer class="pt-4 pb-6 text-center text-xs text-slate-500 space-y-1">
+      <p id="ui-footer-note">역사적 문헌 아카이브, 보도 사진 및 시장 지표를 기반으로 기록되었습니다.</p>
+      <p>© 2026 인사이트랩 (InsightLab) · Aged Like Milk Edition</p>
     </footer>
   </main>
 
   <script>
-    function switchTab(tab) {
-      const panelMoney = document.getElementById('panel-money');
-      const panelInsight = document.getElementById('panel-insight');
-      const tabMoney = document.getElementById('tab-money');
-      const tabInsight = document.getElementById('tab-insight');
+    let currentLang = 'ko';
+    let currentFilter = 'ALL';
+    let POSTS = [];
+    let expandedId = null;
 
-      if (tab === 'money') {
-        panelMoney.classList.remove('hidden');
-        panelInsight.classList.add('hidden');
+    const NEW_BADGE_DAYS = 3;
+    function isNewItem(item) {
+      if (!item.addedAt) return false;
+      const addedMs = new Date(item.addedAt).getTime();
+      if (isNaN(addedMs)) return false;
+      const daysSince = (Date.now() - addedMs) / 86400000;
+      return daysSince >= 0 && daysSince <= NEW_BADGE_DAYS;
+    }
 
-        tabMoney.className = "flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl font-extrabold text-sm transition bg-blue-600 text-white shadow-md";
-        tabInsight.className = "flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl font-extrabold text-sm transition text-slate-400 hover:text-white";
+    function getOutcomeBadge(item, t) {
+      if (item.cardType === 'ONGOING') {
+        return { label: t.badgeOngoing, colorClass: 'bg-amber-500/10 text-amber-300 border-amber-500/30' };
+      }
+      const isCorrect = /emerald|cyan/.test(item.statusColor || '');
+      return isCorrect
+        ? { label: t.badgeCorrect, colorClass: 'bg-emerald-500/10 text-emerald-300 border-emerald-500/30' }
+        : { label: t.badgeWrong, colorClass: 'bg-rose-500/10 text-rose-300 border-rose-500/30' };
+    }
+
+    const I18N = {
+      ko: {
+        subname: "상해버린 예측들",
+        subtag: "성지순례",
+        home: "홈",
+        filterAll: "전체 피드",
+        filterResolved: "성적표",
+        filterOngoing: "최신발언",
+        tagResolved: "📈 성적표",
+        tagOngoing: "⏳ 현재 진행형 예측",
+        quoteLabel: "📌 당시 발언",
+        outcomeTitleResolved: "📊 실제 결과",
+        ongoingTitle: "⏳ 현재 진행 상황",
+        takeawayResolved: "💡 배울 점:",
+        takeawayOngoing: "💡 관전 포인트:",
+        voteFail: "🔥 역대급 헛소리",
+        votePass: "🤔 이번엔 진짜다",
+        votedBadge: "성지순례 완료",
+        newBadge: "NEW",
+        badgeWrong: "예측 틀림 ✗",
+        badgeCorrect: "예측 맞음 ✓",
+        badgeOngoing: "진행중 ⏳",
+        predictionLabel: "예측:",
+        nowLabel: "지금은:",
+        loadError: "데이터를 불러오지 못했습니다.",
+        footerNote: "역사적 문헌 아카이브, 보도 사진 및 시장 지표를 기반으로 기록되었습니다."
+      },
+      en: {
+        subname: "Aged Like Milk",
+        subtag: "RealityCheck",
+        home: "Home",
+        filterAll: "All Feeds",
+        filterResolved: "Track Record",
+        filterOngoing: "Latest Bets",
+        tagResolved: "📈 Track Record",
+        tagOngoing: "⏳ Ongoing Bet",
+        quoteLabel: "📌 Recorded Quote",
+        outcomeTitleResolved: "📊 The Actual Outcome",
+        ongoingTitle: "⏳ Current Status",
+        takeawayResolved: "💡 Takeaway:",
+        takeawayOngoing: "💡 Key Watchpoint:",
+        voteFail: "🔥 Aged Like Milk",
+        votePass: "🤔 Might Be Right",
+        votedBadge: "Verified",
+        newBadge: "NEW",
+        badgeWrong: "Wrong Prediction ✗",
+        badgeCorrect: "Correct Prediction ✓",
+        badgeOngoing: "In Progress ⏳",
+        predictionLabel: "Prediction:",
+        nowLabel: "Now:",
+        loadError: "Failed to load data.",
+        footerNote: "Documented based on historical photo archives, news records, and market data."
+      }
+    };
+
+    function updateUiLabels() {
+      const t = I18N[currentLang];
+      document.getElementById('ui-subname').innerText = t.subname;
+      document.getElementById('ui-subtag').innerText = t.subtag;
+      document.getElementById('ui-home').innerText = t.home;
+      document.getElementById('filter-all').innerText = t.filterAll;
+      document.getElementById('filter-resolved').innerText = t.filterResolved;
+      document.getElementById('filter-ongoing').innerText = t.filterOngoing;
+      document.getElementById('ui-footer-note').innerText = t.footerNote;
+
+      const btnKo = document.getElementById('btn-ko');
+      const btnEn = document.getElementById('btn-en');
+      if (currentLang === 'ko') {
+        btnKo.className = "px-2 py-0.5 rounded bg-orange-500 text-white transition";
+        btnEn.className = "px-2 py-0.5 rounded text-slate-400 hover:text-white transition";
       } else {
-        panelInsight.classList.remove('hidden');
-        panelMoney.classList.add('hidden');
-
-        tabInsight.className = "flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl font-extrabold text-sm transition bg-orange-500 text-white shadow-md";
-        tabMoney.className = "flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl font-extrabold text-sm transition text-slate-400 hover:text-white";
+        btnEn.className = "px-2 py-0.5 rounded bg-orange-500 text-white transition";
+        btnKo.className = "px-2 py-0.5 rounded text-slate-400 hover:text-white transition";
       }
     }
-    fetch('./named/posts.json')
-  .then(res => res.json())
-  .then(data => {
-    const badge = document.getElementById('named-update-badge');
-    if (badge && data.lastUpdated) badge.textContent = `최종 갱신: ${data.lastUpdated}`;
-  })
-  .catch(() => {});
+
+    function toggleExpand(id) {
+      expandedId = expandedId === id ? null : id;
+      renderFeed(currentFilter);
+    }
+
+    function renderFeed(filter = 'ALL') {
+      const container = document.getElementById('feed-container');
+      container.innerHTML = '';
+      const t = I18N[currentLang];
+
+      let filtered;
+      if (filter === 'ALL') {
+        filtered = POSTS;
+      } else if (filter === 'RESOLVED') {
+        filtered = POSTS.filter(item => item.cardType !== 'ONGOING');
+      } else {
+        filtered = POSTS.filter(item => item.cardType === filter);
+      }
+
+      filtered.forEach(item => {
+        const isExpanded = expandedId === item.id;
+        const isNew = isNewItem(item);
+
+        let typeHeaderTag = '';
+        let outcomeTitle = '';
+        let takeawayTitle = '';
+
+        if (item.cardType === 'ONGOING') {
+          typeHeaderTag = `<span class="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-300 border border-emerald-500/30">${t.tagOngoing}</span>`;
+          outcomeTitle = t.ongoingTitle;
+          takeawayTitle = t.takeawayOngoing;
+        } else {
+          typeHeaderTag = `<span class="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/30">${t.tagResolved}</span>`;
+          outcomeTitle = t.outcomeTitleResolved;
+          takeawayTitle = t.takeawayResolved;
+        }
+
+        const outcomeBadge = getOutcomeBadge(item, t);
+
+        const card = document.createElement('article');
+        card.className = `border rounded-2xl overflow-hidden shadow-xl transition ${isExpanded ? 'bg-[#161b22] border-orange-500/50' : 'bg-[#161b22]/80 border-slate-800 hover:border-slate-700'}`;
+
+        card.innerHTML = `
+          <!-- 요약 행 (탭하면 펼쳐짐) -->
+          <div onclick="toggleExpand('${item.id}')" class="p-3 flex items-center justify-between gap-2 cursor-pointer select-none">
+            <div class="flex items-center gap-2 min-w-0 pr-2">
+              <span class="text-lg shrink-0">${item.avatar}</span>
+              <div class="min-w-0">
+                <div class="flex items-center gap-1.5 flex-wrap">
+                  <span class="font-bold text-slate-200 text-sm truncate">${item.author[currentLang]}</span>
+                  ${isNew ? `<span class="text-[9px] font-black px-1.5 py-0.5 rounded bg-rose-500 text-white shrink-0 animate-pulse">${t.newBadge}</span>` : ''}
+                </div>
+                <div class="text-[11px] text-slate-400 truncate">${t.predictionLabel} ${item.title[currentLang]}</div>
+                <div class="text-[11px] text-orange-300/90 truncate mt-0.5">→ ${t.nowLabel} ${item.realityStat[currentLang]}</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-1.5 shrink-0">
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded border whitespace-nowrap ${outcomeBadge.colorClass}">
+                ${outcomeBadge.label}
+              </span>
+              <span class="text-slate-500 text-xs transition-transform duration-200 ${isExpanded ? 'rotate-180 text-orange-400' : ''}">▼</span>
+            </div>
+          </div>
+
+          ${isExpanded ? `
+          <div class="border-t border-slate-800/80">
+            <!-- 상단 사진 -->
+            <div class="relative w-full h-40 bg-slate-950 overflow-hidden border-b border-slate-800">
+              <img src="${item.imageBeforeUrl}" alt="${item.author[currentLang]}" class="w-full h-full object-cover object-center filter grayscale contrast-110 hover:grayscale-0 transition duration-500" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#161b22] via-transparent to-black/30"></div>
+              <span class="absolute bottom-2 left-3 text-[10px] font-mono text-slate-300 bg-black/60 px-2 py-0.5 rounded backdrop-blur border border-white/10 truncate max-w-[85%]">
+                📷 ${item.imageCaption[currentLang]}
+              </span>
+            </div>
+
+            <!-- 카드 본문 -->
+            <div class="p-4 space-y-3">
+              <div class="flex items-center gap-1.5">
+                ${typeHeaderTag}
+              </div>
+              <div class="text-[11px] text-slate-400">${item.authorTitle[currentLang]} · ${item.eraTag[currentLang]}</div>
+              <h2 class="text-base font-extrabold text-white leading-snug tracking-tight">
+                ${item.title[currentLang]}
+              </h2>
+
+              <!-- 발언 인용구 박스 -->
+              <div class="bg-[#1c2128] border-l-4 border-amber-500/80 rounded-r-xl p-3 space-y-1 shadow-inner">
+                <div class="flex items-center justify-between text-[11px] text-amber-400 font-mono font-bold whitespace-nowrap">
+                  <span>${t.quoteLabel}</span>
+                  <span class="text-slate-500 truncate ml-2 text-[10px]">${item.quoteSource[currentLang]}</span>
+                </div>
+                <p class="text-xs sm:text-sm text-slate-300 italic leading-relaxed">
+                  "${item.quoteText[currentLang]}"
+                </p>
+              </div>
+
+              <!-- 대비 화살표 -->
+              <div class="relative flex py-0.5 items-center justify-center">
+                <div class="flex-grow border-t border-slate-800"></div>
+                <span class="flex-shrink mx-2 text-[10px] font-mono font-bold text-slate-400 bg-[#161b22] px-2 py-0.5 rounded border border-slate-800 whitespace-nowrap">
+                  ${item.timelineLabel[currentLang]}
+                </span>
+                <div class="flex-grow border-t border-slate-800"></div>
+              </div>
+
+              <!-- 결과 박스 -->
+              <div class="bg-[#0e1117] border border-slate-800 rounded-xl p-3 space-y-1">
+                <div class="flex items-center justify-between text-[11px] font-bold text-emerald-400 whitespace-nowrap">
+                  <span>${outcomeTitle}</span>
+                  <span class="text-[10px] text-slate-400 font-mono truncate ml-2">${item.realityStat[currentLang]}</span>
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed font-medium">
+                  ${item.realityText[currentLang]}
+                </p>
+              </div>
+
+              <!-- 실전 교훈 박스 -->
+              <div class="bg-gradient-to-r from-orange-950/20 to-amber-950/10 border border-orange-500/20 rounded-xl p-2.5">
+                <p class="text-xs text-orange-200/90 leading-relaxed">
+                  <strong class="text-orange-400 font-extrabold mr-1 whitespace-nowrap">${takeawayTitle}</strong>${item.actionHighlight[currentLang]}
+                </p>
+              </div>
+            </div>
+          </div>
+          ` : ''}
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function filterType(type) {
+      currentFilter = type;
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        if (btn.dataset.type === type) {
+          btn.className = "filter-btn active px-3 py-1 rounded-lg bg-orange-500 text-white font-bold transition";
+        } else {
+          btn.className = "filter-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition";
+        }
+      });
+      renderFeed(type);
+    }
+
+    function setLang(lang) {
+      currentLang = lang;
+      localStorage.setItem('user_lang', lang);
+      document.documentElement.lang = lang;
+      updateUiLabels();
+      renderFeed(currentFilter);
+    }
+
+    const savedLang = localStorage.getItem('user_lang');
+    if (savedLang) {
+      currentLang = savedLang;
+    } else if (!navigator.language.startsWith('ko')) {
+      currentLang = 'en';
+    }
+
+    document.documentElement.lang = currentLang;
+    updateUiLabels();
+
+    fetch('./posts.json')
+      .then(res => res.json())
+      .then(data => {
+        POSTS = [...(data.posts || [])].reverse();
+        renderFeed(currentFilter);
+      })
+      .catch(err => {
+        console.error('Failed to load posts.json', err);
+        const c = document.getElementById('feed-container');
+        if (c) c.innerHTML = `<p class="text-center text-slate-500 py-10">${I18N[currentLang].loadError}</p>`;
+      });
   </script>
 </body>
 </html>
