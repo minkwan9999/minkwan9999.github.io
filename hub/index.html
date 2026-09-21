@@ -3,10 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Minkwan Lab - 실전 금융 툴 & 인사이트 아카이브</title>
-  <meta name="description" content="실전 금융·절세 계산기 허브 머니랩(MoneyLab)과 역사적 오판, 참교육, 논쟁, 트렌드 랭킹을 복기하는 인사이트랩(InsightLab)">
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1957248819245044" crossorigin="anonymous"></script>
+  <title>Minkwan Hub - 개인 프로젝트 아카이브</title>
+  <meta name="description" content="삼국지영걸전 미니게임과 역사적 오판, 참교육, 논쟁, 트렌드 랭킹을 복기하는 인사이트랩(InsightLab)">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-[#0e1117] text-slate-200 antialiased min-h-screen py-8 px-4 flex flex-col items-center selection:bg-orange-500 selection:text-white">
@@ -18,18 +16,21 @@
         <span>⚡ Minkwan Hub Portal</span>
       </div>
       <h1 class="text-2xl sm:text-3xl font-black text-white tracking-tight">
-        실전 도구 & 데이터 아카이브
+        개인 프로젝트 아카이브
       </h1>
       <p class="text-xs sm:text-sm text-slate-400">
-        숫자로 검증하는 계산기부터 과거 오판을 복기하는 인사이트까지
+        만들어본 게임과 과거 오판을 복기하는 인사이트까지
+      </p>
+      <p class="text-[11px] text-slate-600">
+        절세·재테크 계산기는 <a href="/" class="text-blue-400 hover:underline">오패금융연구소</a>에 따로 있어요
       </p>
     </header>
 
-    <!-- 상위 대분류 선택 탭 (머니랩 vs 인사이트랩) -->
+    <!-- 상위 대분류 선택 탭 (미니게임 vs 인사이트랩) -->
     <nav class="grid grid-cols-2 p-1.5 bg-[#161b22] border border-slate-800 rounded-2xl gap-1.5 shadow-lg">
-      <button onclick="switchTab('money')" id="tab-money" class="flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl font-extrabold text-sm transition bg-blue-600 text-white shadow-md">
-        <span>📊 머니랩</span>
-        <span class="text-[10px] bg-black/30 px-1.5 py-0.5 rounded-full font-mono">4</span>
+      <button onclick="switchTab('game')" id="tab-game" class="flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl font-extrabold text-sm transition bg-blue-600 text-white shadow-md">
+        <span>🎮 미니게임</span>
+        <span class="text-[10px] bg-black/30 px-1.5 py-0.5 rounded-full font-mono">1</span>
       </button>
       <button onclick="switchTab('insight')" id="tab-insight" class="flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl font-extrabold text-sm transition text-slate-400 hover:text-white">
         <span>💡 인사이트랩</span>
@@ -37,66 +38,20 @@
       </button>
     </nav>
 
-    <!-- [1] 머니랩 하위 4개 도구 패널 -->
-    <section id="panel-money" class="space-y-3">
+    <!-- [1] 미니게임 패널 -->
+    <section id="panel-game" class="space-y-3">
       <div class="flex items-center justify-between px-1">
-        <span class="text-xs font-bold text-slate-400">머니랩 실전 계산기 라인업</span>
-        <span class="text-[11px] text-blue-400 font-mono">Data Tools</span>
+        <span class="text-xs font-bold text-slate-400">미니게임 라인업</span>
+        <span class="text-[11px] text-blue-400 font-mono">Game</span>
       </div>
 
-      <!-- 1. 대출 계산기 -->
-      <a href="/loan/" class="block p-4 rounded-2xl bg-[#161b22] border border-slate-800 hover:border-blue-500/60 transition group shadow-md">
+      <a href="/samguk/" class="block p-4 rounded-2xl bg-[#161b22] border border-slate-800 hover:border-blue-500/60 transition group shadow-md">
         <div class="flex items-center justify-between">
           <div class="flex items-center gap-3">
-            <span class="text-2xl p-2 rounded-xl bg-slate-900 border border-slate-800">💰</span>
+            <span class="text-2xl p-2 rounded-xl bg-slate-900 border border-slate-800">⚔️</span>
             <div>
-              <h2 class="text-sm font-bold text-white group-hover:text-blue-400 transition">대출 상환 vs 투자 계산기</h2>
-              <p class="text-xs text-slate-400">원리금 조기상환 vs 미국주식·배당 투자 손익분기 역산</p>
-            </div>
-          </div>
-          <span class="text-slate-600 group-hover:text-blue-400 transition text-sm font-bold">→</span>
-        </div>
-      </a>
-
-      <!-- 2. 위스키 계산기 -->
-      <a href="/whisky/" class="block p-4 rounded-2xl bg-[#161b22] border border-slate-800 hover:border-blue-500/60 transition group shadow-md">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center gap-3">
-            <span class="text-2xl p-2 rounded-xl bg-slate-900 border border-slate-800">🥃</span>
-            <div>
-              <h2 class="text-sm font-bold text-white group-hover:text-blue-400 transition">위스키·주류 세금 계산기</h2>
-              <p class="text-xs text-slate-400">면세 범위 자동 판정 & 해외 직구 예상 관부가세 역산</p>
-            </div>
-          </div>
-          <span class="text-slate-600 group-hover:text-blue-400 transition text-sm font-bold">→</span>
-        </div>
-      </a>
-
-      <!-- 3. 퇴직금 계산기 -->
-      <a href="/retire/" class="block p-4 rounded-2xl bg-[#161b22] border border-slate-800 hover:border-blue-500/60 transition group shadow-md">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center gap-3">
-            <span class="text-2xl p-2 rounded-xl bg-slate-900 border border-slate-800">🛡️</span>
-            <div>
-              <h2 class="text-sm font-bold text-white group-hover:text-blue-400 transition">퇴직금 절세 비교기</h2>
-              <p class="text-xs text-slate-400">퇴직금 IRP 이전 vs 일시 수령 실질 수령액 및 절세율 비교</p>
-            </div>
-          </div>
-          <span class="text-slate-600 group-hover:text-blue-400 transition text-sm font-bold">→</span>
-        </div>
-      </a>
-
-      <!-- 4. ISA 만기 전환 계산기 -->
-      <a href="/isa/" class="block p-4 rounded-2xl bg-[#161b22] border border-slate-800 hover:border-blue-500/60 transition group shadow-md">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center gap-3">
-            <span class="text-2xl p-2 rounded-xl bg-slate-900 border border-slate-800">📈</span>
-            <div>
-              <div class="flex items-center gap-2">
-                <h2 class="text-sm font-bold text-white group-hover:text-blue-400 transition">ISA 만기 연금전환 시뮬레이터</h2>
-                <span class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-bold">절세</span>
-              </div>
-              <p class="text-xs text-slate-400">3년 만기 자금 연금계좌 전환 시 10% 추가 세액공제 최적화</p>
+              <h2 class="text-sm font-bold text-white group-hover:text-blue-400 transition">삼국지영걸전</h2>
+              <p class="text-xs text-slate-400">삼국지영걸전 스타일 턴제 SRPG 미니게임</p>
             </div>
           </div>
           <span class="text-slate-600 group-hover:text-blue-400 transition text-sm font-bold">→</span>
@@ -129,18 +84,18 @@
         </div>
       </a>
 
-      <!-- 2. 사이다·참교육 명예의 전당 -->
+      <!-- 2. 생활법률 판례 아카이브 -->
       <a href="/justice/" class="block p-4 rounded-2xl bg-[#161b22] border border-slate-800 hover:border-cyan-500 transition group shadow-md">
         <div class="flex items-center justify-between">
           <div class="flex items-center gap-3">
             <span class="text-2xl p-2 rounded-xl bg-slate-900 border border-slate-800">⚖️</span>
             <div>
               <div class="flex items-center gap-2">
-                <h2 class="text-sm font-extrabold text-white group-hover:text-cyan-400 transition">사이다·참교육 명예의 전당</h2>
-                <span class="text-[10px] px-1.5 py-0.5 rounded bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 font-bold">실화박제</span>
+                <h2 class="text-sm font-extrabold text-white group-hover:text-cyan-400 transition">생활법률 판례 아카이브</h2>
+                <span class="text-[10px] px-1.5 py-0.5 rounded bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 font-bold">실화 보도 기반</span>
               </div>
-              <p class="text-xs text-slate-400 mt-0.5">선 넘은 빌런들의 인과응보 결말 & 실전 법적 대응 수칙</p>
-              <span class="inline-block mt-2 text-[10px] font-mono text-slate-500 bg-slate-900 px-2 py-0.5 rounded border border-slate-800">최종 갱신: 2026.09.10 14:20</span>
+              <p class="text-xs text-slate-400 mt-0.5">실제 판결·기소 사례 & 법적 대응 포인트</p>
+              <span class="inline-block mt-2 text-[10px] font-mono text-slate-500 bg-slate-900 px-2 py-0.5 rounded border border-slate-800">최종 갱신: 2026.09.20</span>
             </div>
           </div>
           <span class="text-slate-600 group-hover:text-cyan-400 transition text-sm font-bold">→</span>
@@ -186,39 +141,36 @@
 
     <!-- 푸터 -->
     <footer class="pt-6 pb-4 text-center text-xs text-slate-500 space-y-1">
-      <p>단순하고 검증된 도구와 아카이브를 제공합니다.</p>
-      <p>© 2026 Minkwan Lab · All Rights Reserved.</p>
+      <p>© 2026 Minkwan Hub · All Rights Reserved.</p>
     </footer>
   </main>
 
   <script>
     function switchTab(tab) {
-      const panelMoney = document.getElementById('panel-money');
+      const panelGame = document.getElementById('panel-game');
       const panelInsight = document.getElementById('panel-insight');
-      const tabMoney = document.getElementById('tab-money');
+      const tabGame = document.getElementById('tab-game');
       const tabInsight = document.getElementById('tab-insight');
 
-      if (tab === 'money') {
-        panelMoney.classList.remove('hidden');
+      if (tab === 'game') {
+        panelGame.classList.remove('hidden');
         panelInsight.classList.add('hidden');
-
-        tabMoney.className = "flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl font-extrabold text-sm transition bg-blue-600 text-white shadow-md";
+        tabGame.className = "flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl font-extrabold text-sm transition bg-blue-600 text-white shadow-md";
         tabInsight.className = "flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl font-extrabold text-sm transition text-slate-400 hover:text-white";
       } else {
         panelInsight.classList.remove('hidden');
-        panelMoney.classList.add('hidden');
-
+        panelGame.classList.add('hidden');
         tabInsight.className = "flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl font-extrabold text-sm transition bg-orange-500 text-white shadow-md";
-        tabMoney.className = "flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl font-extrabold text-sm transition text-slate-400 hover:text-white";
+        tabGame.className = "flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl font-extrabold text-sm transition text-slate-400 hover:text-white";
       }
     }
     fetch('/named/posts.json')
-  .then(res => res.json())
-  .then(data => {
-    const badge = document.getElementById('named-update-badge');
-    if (badge && data.lastUpdated) badge.textContent = `최종 갱신: ${data.lastUpdated}`;
-  })
-  .catch(() => {});
+      .then(res => res.json())
+      .then(data => {
+        const badge = document.getElementById('named-update-badge');
+        if (badge && data.lastUpdated) badge.textContent = `최종 갱신: ${data.lastUpdated}`;
+      })
+      .catch(() => {});
   </script>
 </body>
 </html>
