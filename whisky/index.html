@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>위스키·주류 해외직구 & 여행자 면세 세금 계산기</title>
-  <meta name="description" content="일본 여행, 해외직구 시 위스키와 와인 면세 한도(2병·2L·$400) 판정과 초과 시 관세, 주세, 교육세, 부가세를 자동 계산합니다.">
+  <meta name="description" content="일본 여행, 해외직구 시 위스키와 와인 면세 한도(2L·$400, 병 수 제한 없음) 판정과 초과 시 관세, 주세, 교육세, 부가세를 자동 계산합니다.">
   <meta property="og:title" content="위스키 면세 한도 & 해외직구 세금 최적화 계산기">
   <meta property="og:description" content="위스키 3병 사면 세금 폭탄일까? 최적 면세 조합과 예상 납부 세액을 3초 만에 확인하세요.">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -32,7 +32,7 @@
     <div class="border-b border-slate-700 pb-4 mb-5 text-center">
       <span class="text-[11px] font-bold tracking-wider px-3 py-1 bg-amber-500/20 text-amber-400 border border-amber-500/30 rounded-full">주류 관부가세 시뮬레이터</span>
       <h1 class="text-xl font-extrabold mt-2.5 text-white">위스키 면세 & 세금 계산기</h1>
-      <p class="text-xs text-slate-400 mt-1">여행자 휴대품(2병·2L·$400) 면세 판정 및 직구 세금 계산</p>
+      <p class="text-xs text-slate-400 mt-1">여행자 휴대품(2L·$400, 병 수 제한 없음) 면세 판정 및 직구 세금 계산</p>
     </div>
 
     <!-- 입력 폼 -->
@@ -146,9 +146,9 @@
       <h2 class="text-sm font-bold text-slate-100 mb-2">📌 위스키 면세 한도 & 주세법 FAQ</h2>
 
       <details class="bg-slate-900/70 border border-slate-700/80 rounded-lg p-3 cursor-pointer">
-        <summary class="font-semibold text-slate-200">여행자 휴대품 주류 면세 기준(2병, 2L, $400)이란?</summary>
+        <summary class="font-semibold text-slate-200">여행자 휴대품 주류 면세 기준(2L, $400)이란?</summary>
         <p class="mt-2 text-slate-400 leading-relaxed">
-          1인당 최대 2병, 합산 용량 2,000ml(2L) 이하, 합산 금액 미화 400달러 이하의 3가지 조건을 동시에 충족해야 관세와 주세가 100% 면제됩니다. 기본 여행자 면세 한도($800)와 별도로 추가 적용됩니다[span_5](start_span)[span_5](end_span).
+          2025년 3월부터 병 수 제한은 폐지되었고, 합산 용량 2,000ml(2L) 이하이면서 합산 금액 미화 400달러 이하인 두 조건을 동시에 충족해야 관세와 주세가 100% 면제됩니다. 둘 중 하나라도 초과하면, 두 조건을 동시에 만족하는 병 수까지만 면세되고 나머지 병에 대해서만 과세됩니다. 기본 여행자 면세 한도($800)와 별도로 추가 적용됩니다.
         </p>
       </details>
 
@@ -160,9 +160,9 @@
       </details>
 
       <details class="bg-slate-900/70 border border-slate-700/80 rounded-lg p-3 cursor-pointer">
-        <summary class="font-semibold text-slate-200">3병 구매 시 어떤 술을 면세로 빼야 유리한가요?</summary>
+        <summary class="font-semibold text-slate-200">여러 병 살 때 어떤 병을 면세로 빼야 유리한가요?</summary>
         <p class="mt-2 text-slate-400 leading-relaxed">
-          가격이 가장 비싸고 도수가 높은 위스키 2병을 면세($400 및 2L 한도 내)로 지정하고, 가격이 가장 저렴한 1병을 자진신고하여 과세하는 것이 총 납부 세금을 최소화하는 정석입니다.
+          병 수 제한이 없어졌으므로, 합산 용량 2L·합산 금액 $400을 동시에 넘지 않는 선까지는 몇 병이든 면세로 지정할 수 있습니다. 두 조건 중 하나라도 넘어서는 병이 생기면, 관세청은 세액이 최소가 되는 병(보통 가장 저렴한 병)부터 과세 대상으로 지정합니다.
         </p>
       </details>
     </section>
@@ -219,13 +219,27 @@
         rEdu = 0.10;
       }
 
-      // 면세 여부 판정 (여행자 휴대품: 2병 이하, 2000ml 이하, $400 이하)
-      let isExempt = false;
+      // 면세 여부 판정 (2025.3~ 병 수 제한 폐지: 총 용량 2000ml 이하 + 총 가격 $400 이하 두 조건만 적용)
+      // 조건 초과 시에도 전체가 과세되는 게 아니라, 두 조건을 동시에 만족하는 최대 병 수까지는 면세되고
+      // 나머지 병에 대해서만 과세됨 (관세청 확인: 세액이 최소가 되는 병부터 과세)
+      let exemptCount = count;
+      let taxableCount = 0;
+      let isExempt = true;
+
       if (importType === 'traveler') {
-        if (count <= 2 && totalVolume <= 2000 && totalUsdCost <= 400) {
-          isExempt = true;
-        }
+        const maxByVolume = volume > 0 ? Math.floor(2000 / volume) : count;
+        const maxByPrice = usdPerUnit > 0 ? Math.floor(400 / usdPerUnit) : count;
+        exemptCount = Math.min(count, maxByVolume, maxByPrice);
+        taxableCount = count - exemptCount;
+        isExempt = taxableCount === 0;
+      } else {
+        // 해외직구 등 여행자 휴대품이 아닌 경우 전량 과세
+        exemptCount = 0;
+        taxableCount = count;
+        isExempt = false;
       }
+
+      const taxableKrwCost = krwPerUnit * taxableCount;
 
       let customs = 0;
       let liquorTax = 0;
@@ -234,29 +248,32 @@
       let totalTax = 0;
 
       if (!isExempt) {
-        // 복리 종가세 계산 공식
-        customs = totalKrwCost * rCustoms;
-        liquorTax = (totalKrwCost + customs) * rLiquor;
+        // 복리 종가세 계산 공식 (과세 대상 병 수분에 대해서만 적용)
+        customs = taxableKrwCost * rCustoms;
+        liquorTax = (taxableKrwCost + customs) * rLiquor;
         eduTax = liquorTax * rEdu;
-        vat = (totalKrwCost + customs + liquorTax + eduTax) * 0.10;
+        vat = (taxableKrwCost + customs + liquorTax + eduTax) * 0.10;
         totalTax = customs + liquorTax + eduTax + vat;
       }
 
       const finalCost = totalKrwCost + totalTax;
-      const taxRatio = totalKrwCost > 0 ? (totalTax / totalKrwCost) * 100 : 0;
+      const taxRatio = taxableKrwCost > 0 ? (totalTax / taxableKrwCost) * 100 : 0;
 
       // 화면 반영
       const badge = document.getElementById('dutyBadge');
       if (isExempt) {
         badge.className = 'p-4 rounded-xl text-center font-extrabold text-base border bg-emerald-500/20 text-emerald-300 border-emerald-500/40';
         badge.innerHTML = `🎉 100% 면세 통과 (납부 세금 0원)`;
+      } else if (importType === 'traveler' && exemptCount > 0) {
+        badge.className = 'p-4 rounded-xl text-center font-extrabold text-base border bg-amber-500/20 text-amber-300 border-amber-500/40';
+        badge.innerHTML = `🔶 부분 면세 (${exemptCount}병 면세 + ${taxableCount}병 과세)`;
       } else {
         badge.className = 'p-4 rounded-xl text-center font-extrabold text-base border bg-rose-500/20 text-rose-300 border-rose-500/40';
         badge.innerHTML = `⚠️ 과세 대상 (총 ${count}병 / ${(totalVolume/1000).toFixed(1)}L / $${Math.round(totalUsdCost)})`;
       }
 
       document.getElementById('totalTaxHero').innerText = won(totalTax);
-      document.getElementById('taxRatioSub').innerText = isExempt ? "면세 조건 충족 ($400/2L/2병 이내)" : `물품 원가 대비 세금 비율: 약 ${taxRatio.toFixed(1)}%`;
+      document.getElementById('taxRatioSub').innerText = isExempt ? "면세 조건 충족 (총 2L·$400 이내, 병 수 제한 없음)" : `과세 대상 ${taxableCount}병 기준 세율 약 ${taxRatio.toFixed(1)}%`;
       document.getElementById('itemKrwCost').innerText = won(totalKrwCost);
       document.getElementById('customsDuty').innerText = won(customs);
       document.getElementById('liquorTax').innerText = won(liquorTax);
@@ -270,7 +287,7 @@
 - 물품 원가: ${won(totalKrwCost)} ($${Math.round(totalUsdCost)})
 - 예상 납부 세액: ${won(totalTax)} (관부가세 합산)
 - 최종 취득 원가: ${won(finalCost)}
-👉 판정: ${isExempt ? '완전 면세' : '과세 대상 (세율 약 ' + taxRatio.toFixed(1) + '%)'}
+👉 판정: ${isExempt ? '완전 면세' : (exemptCount > 0 ? `부분 면세 (${exemptCount}병 면세 + ${taxableCount}병 과세, 세율 약 ${taxRatio.toFixed(1)}%)` : '전량 과세 (세율 약 ' + taxRatio.toFixed(1) + '%)')}
 https://minkwan9999.github.io/whisky/`;
     }
 
