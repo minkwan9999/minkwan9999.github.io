@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.09.21 13:27",
+  "lastUpdated": "2026.09.22 13:24",
   "ranks": [
     {
       "id": "yt1",
@@ -8,28 +8,28 @@
       "platformBadge": "YouTube",
       "platformColor": "bg-red-500/10 text-red-400 border-red-500/30",
       "creatorName": {
-        "ko": "ROSÉ - Topic",
-        "en": "ROSÉ - Topic"
+        "ko": "QWER - Topic",
+        "en": "QWER - Topic"
       },
-      "handle": "@ROSÉ_-_Topic",
+      "handle": "@QWER_-_Topic",
       "categoryTag": {
         "ko": "주간 급상승",
         "en": "Trending"
       },
       "rankChange": "▲1",
       "followers": {
-        "ko": "62만 뷰",
-        "en": "620K views"
+        "ko": "20만 뷰",
+        "en": "207K views"
       },
       "weeklyGrowth": {
-        "ko": "+12만",
-        "en": "+120K"
+        "ko": "+4만",
+        "en": "+40K"
       },
       "headline": {
-        "ko": "new trick",
-        "en": "new trick"
+        "ko": "Dreamer",
+        "en": "Dreamer"
       },
-      "viralTopic": "#ROSÉ-Topic #인기급상승",
+      "viralTopic": "#QWER-Topic #인기급상승",
       "growthFactor": {
         "ko": "실시간 급상승 알고리즘 및 높은 완청률 기반 트래픽 폭발.",
         "en": "Surged via recommendation algorithms."
@@ -55,12 +55,12 @@
       },
       "rankChange": "▲2",
       "followers": {
-        "ko": "37만 뷰",
-        "en": "373K views"
+        "ko": "40만 뷰",
+        "en": "401K views"
       },
       "weeklyGrowth": {
-        "ko": "+7만",
-        "en": "+70K"
+        "ko": "+8만",
+        "en": "+80K"
       },
       "headline": {
         "ko": "정점을 향한 마지막 한 걸음 | [메이드 인 코리아 시즌2] 5-6회 예고편 | 디즈니+",
@@ -82,28 +82,28 @@
       "platformBadge": "YouTube",
       "platformColor": "bg-red-500/10 text-red-400 border-red-500/30",
       "creatorName": {
-        "ko": "저라뎃 JUSTLIKETHAT",
-        "en": "저라뎃 JUSTLIKETHAT"
+        "ko": "한국e스포츠협회",
+        "en": "한국e스포츠협회"
       },
-      "handle": "@저라뎃_JUSTLIKETHAT",
+      "handle": "@한국e스포츠협회",
       "categoryTag": {
         "ko": "주간 급상승",
         "en": "Trending"
       },
       "rankChange": "▲3",
       "followers": {
-        "ko": "80만 뷰",
-        "en": "802K views"
+        "ko": "95만 뷰",
+        "en": "951K views"
       },
       "weeklyGrowth": {
-        "ko": "+16만",
-        "en": "+160K"
+        "ko": "+19만",
+        "en": "+190K"
       },
       "headline": {
-        "ko": "\"방플해도 돼?\" 프로게이머의 방플 논란.. 그리고 크래프톤의 말도 안 되는 대응",
-        "en": "\"방플해도 돼?\" 프로게이머의 방플 논란.. 그리고 크래프톤의 말도 안 되는 대응"
+        "ko": "KOR vs VIE 2차전 하이라이트 | 한화생명 초청 리그 오브 레전드 국가대표 평가전",
+        "en": "KOR vs VIE 2차전 하이라이트 | 한화생명 초청 리그 오브 레전드 국가대표 평가전"
       },
-      "viralTopic": "#저라뎃JUSTLIKETHAT #인기급상승",
+      "viralTopic": "#한국e스포츠협회 #인기급상승",
       "growthFactor": {
         "ko": "실시간 급상승 알고리즘 및 높은 완청률 기반 트래픽 폭발.",
         "en": "Surged via recommendation algorithms."
@@ -119,28 +119,28 @@
       "platformBadge": "YouTube",
       "platformColor": "bg-red-500/10 text-red-400 border-red-500/30",
       "creatorName": {
-        "ko": "Release - Topic",
-        "en": "Release - Topic"
+        "ko": "THEBLACKLABEL",
+        "en": "THEBLACKLABEL"
       },
-      "handle": "@Release_-_Topic",
+      "handle": "@THEBLACKLABEL",
       "categoryTag": {
         "ko": "주간 급상승",
         "en": "Trending"
       },
       "rankChange": "▲4",
       "followers": {
-        "ko": "17만 뷰",
-        "en": "178K views"
+        "ko": "562만 뷰",
+        "en": "5629K views"
       },
       "weeklyGrowth": {
-        "ko": "+3만",
-        "en": "+30K"
+        "ko": "+112만",
+        "en": "+1120K"
       },
       "headline": {
-        "ko": "Focus On You",
-        "en": "Focus On You"
+        "ko": "ALLDAY PROJECT - ‘TALK’ M/V",
+        "en": "ALLDAY PROJECT - ‘TALK’ M/V"
       },
-      "viralTopic": "#Release-Topic #인기급상승",
+      "viralTopic": "#THEBLACKLABEL #인기급상승",
       "growthFactor": {
         "ko": "실시간 급상승 알고리즘 및 높은 완청률 기반 트래픽 폭발.",
         "en": "Surged via recommendation algorithms."
@@ -156,28 +156,28 @@
       "platformBadge": "YouTube",
       "platformColor": "bg-red-500/10 text-red-400 border-red-500/30",
       "creatorName": {
-        "ko": "한국e스포츠협회",
-        "en": "한국e스포츠협회"
+        "ko": "Netflix Korea 넷플릭스 코리아",
+        "en": "Netflix Korea 넷플릭스 코리아"
       },
-      "handle": "@한국e스포츠협회",
+      "handle": "@Netflix_Korea_넷플릭스_코",
       "categoryTag": {
         "ko": "주간 급상승",
         "en": "Trending"
       },
       "rankChange": "▲5",
       "followers": {
-        "ko": "35만 뷰",
-        "en": "354K views"
+        "ko": "5만 뷰",
+        "en": "56K views"
       },
       "weeklyGrowth": {
-        "ko": "+7만",
-        "en": "+70K"
+        "ko": "+1만",
+        "en": "+10K"
       },
       "headline": {
-        "ko": "KOR vs VIE 2차전 하이라이트 | 한화생명 초청 리그 오브 레전드 국가대표 평가전",
-        "en": "KOR vs VIE 2차전 하이라이트 | 한화생명 초청 리그 오브 레전드 국가대표 평가전"
+        "ko": "닥터X: 하얀 마피아의 시대 | 공식 티저 예고편 | 넷플릭스",
+        "en": "닥터X: 하얀 마피아의 시대 | 공식 티저 예고편 | 넷플릭스"
       },
-      "viralTopic": "#한국e스포츠협회 #인기급상승",
+      "viralTopic": "#NetflixKorea넷플릭 #인기급상승",
       "growthFactor": {
         "ko": "실시간 급상승 알고리즘 및 높은 완청률 기반 트래픽 폭발.",
         "en": "Surged via recommendation algorithms."
