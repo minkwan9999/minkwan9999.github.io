@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.09.21 14:37",
+  "lastUpdated": "2026.09.22 14:34",
   "posts": [
     {
       "id": "p1",
@@ -1143,6 +1143,64 @@
       "disagrees": 0,
       "id": "p_auto_1789969054887_9258",
       "addedAt": "2026-09-21"
+    },
+    {
+      "cardType": "LESSON",
+      "eraTag": {
+        "ko": "1998 · 닷컴 붐 초입",
+        "en": "1998 · Onset of the Dot-com Boom"
+      },
+      "statusBadge": {
+        "ko": "완전히 틀림 ✗",
+        "en": "Fully Wrong ✗"
+      },
+      "statusColor": "bg-rose-500/10 text-rose-400 border-rose-500/20",
+      "author": {
+        "ko": "폴 크루그먼",
+        "en": "Paul Krugman"
+      },
+      "authorTitle": {
+        "ko": "노벨경제학상 수상 경제학자",
+        "en": "Nobel Laureate Economist"
+      },
+      "avatar": "📉",
+      "imageBeforeUrl": "https://images.unsplash.com/photo-1677022725616-91e41d36db21?w=800&auto=format&fit=crop&q=80",
+      "imageCaption": {
+        "ko": "1990년대 후반 인터넷 붐",
+        "en": "The late-1990s internet boom"
+      },
+      "title": {
+        "ko": "인터넷이 경제에 미칠 영향은 팩스보다 크지 않을 것",
+        "en": "By 2005 or so, it will become clear that the Internet's impact on the economy has been no greater than the fax machine's"
+      },
+      "quoteSource": {
+        "ko": "1998년 타임지 칼럼",
+        "en": "1998 Time magazine column"
+      },
+      "quoteText": {
+        "ko": "2005년경이 되면, 경제에 미친 인터넷의 영향력은 팩스기 수준을 넘지 못했다는 게 분명해질 것입니다.",
+        "en": "By 2005 or so, it will become clear that the Internet's impact on the economy has been no greater than the fax machine's."
+      },
+      "timelineLabel": {
+        "ko": "📜 이미 역사가 심판 완료",
+        "en": "📜 History Has Already Judged"
+      },
+      "realityStat": {
+        "ko": "전세계 디지털 경제 규모 수십조 달러",
+        "en": "Global digital economy now measured in tens of trillions of dollars"
+      },
+      "realityText": {
+        "ko": "본인도 훗날 이 칼럼을 스스로 언급하며 완전히 틀린 예측이었다고 인정했습니다.",
+        "en": "He later referenced the column himself, acknowledging it was a completely wrong prediction."
+      },
+      "actionHighlight": {
+        "ko": "저명한 전문가의 권위도 새로운 기술의 파급력을 가늠하는 데는 종종 무력합니다.",
+        "en": "Even top-tier expert credentials are no guarantee against badly misjudging a new technology's reach."
+      },
+      "upvotes": 0,
+      "disagrees": 0,
+      "id": "p_auto_1790055287708_9209",
+      "addedAt": "2026-09-22"
     }
   ]
 }
