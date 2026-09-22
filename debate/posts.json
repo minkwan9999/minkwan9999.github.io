@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.09.21 16:24",
+  "lastUpdated": "2026.09.22 16:01",
   "posts": [
     {
       "id": "d1",
@@ -486,6 +486,76 @@
       "votesB": 487,
       "id": "d_auto_1789975448946_3056",
       "addedAt": "2026-09-21"
+    },
+    {
+      "cardType": "RELATION",
+      "tag": {
+        "ko": "명절 용돈",
+        "en": "Holiday Cash Gifts"
+      },
+      "statusBadge": {
+        "ko": "명절 단골 논쟁 🧧",
+        "en": "Holiday Classic 🧧"
+      },
+      "statusColor": "bg-amber-500/10 text-amber-400 border-amber-500/20",
+      "avatar": "🧧",
+      "imageBeforeUrl": "https://images.unsplash.com/photo-1593182440959-9d5165b29b59?w=800&auto=format&fit=crop&q=80",
+      "imageCaption": {
+        "ko": "현금 다발을 들고 있는 모습",
+        "en": "Holding a fan of cash"
+      },
+      "title": {
+        "ko": "취업 1년차, 명절에 부모님 용돈 얼마가 국룰인가?",
+        "en": "One year into your first job — what's the going rate for holiday cash to your parents?"
+      },
+      "contextText": {
+        "ko": "첫 명절 용돈 액수를 두고 '형편껏 내는 마음이 중요하다'는 온정파와 '사회 나온 자식이면 최소 금액은 지켜야 한다'는 기준파가 매년 명절마다 재점화.",
+        "en": "Every holiday season, opinions clash between those who say 'give what you can, the thought counts' and those who insist there's a minimum expected amount once you've started working."
+      },
+      "sideA": {
+        "label": {
+          "ko": "형편껏이 맞다 (마음이 우선)",
+          "en": "Give What You Can (Sincerity First)"
+        },
+        "reasons": {
+          "ko": [
+            "사회초년생은 월세, 학자금 대출 등 지출이 많아 무리한 액수를 드리면 오히려 본인 생활이 망가짐",
+            "부모님도 자식이 안정적으로 자리잡는 걸 더 원하지, 무리한 용돈을 바라는 경우는 드묾",
+            "금액보다 명절에 직접 찾아뵙고 시간을 보내는 것 자체가 더 큰 효도임"
+          ],
+          "en": [
+            "New workers already face rent and student loans; overspending here wrecks their own finances.",
+            "Most parents want financial stability for their child more than a big holiday gift.",
+            "Spending time together in person matters more than the amount given."
+          ]
+        }
+      },
+      "sideB": {
+        "label": {
+          "ko": "최소 기준은 있어야 (사회인의 도리)",
+          "en": "There's a Baseline (Adult Duty)"
+        },
+        "reasons": {
+          "ko": [
+            "취업했다는 걸 알면서 빈손이나 소액으로 가면 부모님 입장에서 서운함을 느낄 수밖에 없음",
+            "친척들 앞에서 다른 집 자녀와 비교당하는 상황을 피하려면 최소한의 체면치레 금액은 필요함",
+            "첫 월급 이후 첫 명절이라는 상징성이 있어 형편이 어려워도 성의 표시는 필수임"
+          ],
+          "en": [
+            "Showing up empty-handed after landing a job inevitably disappoints parents.",
+            "A baseline amount avoids awkward comparisons with relatives' children.",
+            "The symbolism of the first holiday after your first paycheck makes some gesture essential."
+          ]
+        }
+      },
+      "practicalVerdict": {
+        "ko": "사회초년생 첫 명절 용돈은 부모님 한 분당 10~20만원 선이 암묵적 평균으로 자리잡고 있으며, 형편이 어려우면 금액보다 편지나 선물로 마음을 전하는 것도 무리 없이 받아들여지는 분위기입니다.",
+        "en": "10-20만원 (roughly $70-150) per parent has become the informal average for a first-year worker's holiday gift. If money is tight, a letter or small gift instead is widely accepted."
+      },
+      "votesA": 356,
+      "votesB": 429,
+      "id": "d_auto_1790060504117_7363",
+      "addedAt": "2026-09-22"
     }
   ]
 }
