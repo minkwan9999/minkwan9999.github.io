@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.09.21 15:40",
+  "lastUpdated": "2026.09.22 15:28",
   "posts": [
     {
       "cardType": "COMMERCE",
@@ -232,6 +232,61 @@
       "disagrees": 8,
       "id": "j_auto_1789972814417_9352",
       "addedAt": "2026-09-21"
+    },
+    {
+      "cardType": "PARKING",
+      "isOngoing": false,
+      "categoryName": {
+        "ko": "주차 분쟁",
+        "en": "Parking Dispute"
+      },
+      "statusBadge": {
+        "ko": "벌금형 확정 ✓",
+        "en": "Fined by Court ✓"
+      },
+      "statusColor": "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
+      "target": {
+        "ko": "18시간 주차장 입구 가로막은 40대",
+        "en": "40-Something Who Blocked a Garage Entrance for 18 Hours"
+      },
+      "location": {
+        "ko": "대구",
+        "en": "Daegu"
+      },
+      "avatar": "🚧",
+      "imageBeforeUrl": "https://images.unsplash.com/photo-1765710475256-1708882da66e?w=800&auto=format&fit=crop&q=80",
+      "imageCaption": {
+        "ko": "차단봉이 설치된 주차장 입구",
+        "en": "A parking garage entrance with a barrier gate"
+      },
+      "title": {
+        "ko": "아파트 주차장 출입구 18시간 넘게 막아놓고 배째던 차주, 결국 벌금형",
+        "en": "Blocked an apartment garage entrance for over 18 hours, refused to move — fined by the court"
+      },
+      "incidentDetail": {
+        "ko": "아파트 단지 내 주차장 출입구에 자신의 차를 세워두고 18시간 넘게 방치, 다른 입주민들의 차량 출입을 전면 차단했다. 관리사무소와 입주민들의 항의에도 차를 빼지 않았다.",
+        "en": "Parked at the entrance of an apartment complex's parking garage and left it there for over 18 hours, completely blocking other residents from entering or exiting. Ignored complaints from the management office and neighbors."
+      },
+      "timelineLabel": {
+        "ko": "📊 업무방해 혐의로 정식 기소",
+        "en": "📊 Formally Charged with Obstruction of Business"
+      },
+      "realityStat": {
+        "ko": "대구지법, 업무방해죄로 벌금 200만원 선고",
+        "en": "Daegu District Court fined him 2 million won for obstruction"
+      },
+      "verdictDetail": {
+        "ko": "2024년 8월 대구지방법원은 고의로 18시간 넘게 주차장 출입구를 가로막아 관리사무소의 정상적인 관리 업무를 방해한 혐의(업무방해죄)를 인정해 해당 차주에게 벌금 200만원을 선고했다.",
+        "en": "In August 2024, the Daegu District Court found the driver guilty of obstruction of business for deliberately blocking the garage entrance for over 18 hours, fining him 2 million won."
+      },
+      "actionHighlight": {
+        "ko": "'사유지라 처벌 못 한다'는 인식과 달리, 장시간 고의적인 통행 방해는 업무방해죄로 형사처벌까지 이어질 수 있습니다. 2026년 8월부터는 개정 주차장법까지 시행되어 최대 500만원 과태료와 강제 견인도 가능해졌습니다.",
+        "en": "Contrary to the belief that private property is beyond the law's reach, deliberately blocking passage for hours can lead to criminal obstruction charges. Since August 2026, an amended Parking Lot Act also allows fines up to 5 million won and forced towing."
+      },
+      "upvotes": 445,
+      "disagrees": 21,
+      "id": "j_auto_1790058494435_6252",
+      "addedAt": "2026-09-22"
     }
   ]
 }
