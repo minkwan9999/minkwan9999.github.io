@@ -1,58 +1,5 @@
 [
   {
-    "cardType": "WORK",
-    "isOngoing": false,
-    "categoryName": {
-      "ko": "직장 갑질",
-      "en": "Workplace Harassment"
-    },
-    "statusBadge": {
-      "ko": "벌금형 선고 ✓",
-      "en": "Fined by Court ✓"
-    },
-    "statusColor": "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
-    "target": {
-      "ko": "2년간 단톡방서 직원 모욕한 대표·이사",
-      "en": "CEO and Director Who Insulted an Employee in a Group Chat for 2 Years"
-    },
-    "location": {
-      "ko": "울산",
-      "en": "Ulsan"
-    },
-    "avatar": "💬",
-    "imageBeforeUrl": "https://images.unsplash.com/photo-1689799514696-b16af9b53753?w=800&auto=format&fit=crop&q=80",
-    "imageCaption": {
-      "ko": "휴대폰을 들고 있는 모습",
-      "en": "Holding a smartphone"
-    },
-    "title": {
-      "ko": "\"돌대가리\" 2년간 단톡방서 욕설·비하하던 대표·이사, 결국 벌금형",
-      "en": "'Blockhead' — CEO and director insulted an employee in a group chat for 2 years, fined by the court"
-    },
-    "incidentDetail": {
-      "ko": "직원들이 참여한 단체 채팅방에서 대표와 이사가 특정 직원을 '돌대가리' 등으로 수십 차례 비하하고 욕설을 반복. 피해 직원은 약 2년간 이어진 모욕적인 발언을 견디다 결국 두 사람을 경찰에 고소했다.",
-      "en": "In a group chat that included multiple employees, the CEO and a director repeatedly insulted and cursed at a specific employee, calling them a 'blockhead' among other slurs, dozens of times. After enduring roughly two years of this, the employee filed a police complaint against both."
-    },
-    "timelineLabel": {
-      "ko": "📊 울산지법 형사9단독 선고",
-      "en": "📊 Sentencing at Ulsan District Court"
-    },
-    "realityStat": {
-      "ko": "대표·이사 각각 벌금 100만원 선고 (모욕죄)",
-      "en": "CEO and director each fined 1 million won for criminal insult"
-    },
-    "verdictDetail": {
-      "ko": "법원은 \"욕설의 내용과 범행 기간 등을 보면 죄질이 좋지 않고, 피해자도 상당한 정신적 고통을 겪은 것으로 보인다\"며 두 사람에게 각각 벌금 100만원을 선고했다. 다만 반성하는 점과 초범인 점은 유리하게 참작됐다.",
-      "en": "The court stated that 'given the content and duration of the abuse, the offense is serious, and the victim appears to have suffered considerable emotional distress,' fining both defendants 1 million won each. Their remorse and lack of prior record were considered mitigating factors."
-    },
-    "actionHighlight": {
-      "ko": "단체 채팅방에서의 모욕도 형법상 모욕죄(공연성 요건 충족)로 처벌 대상입니다. 캡처와 날짜별 기록을 꾸준히 모아두면 대표나 이사 같은 회사 최고 책임자라도 형사처벌을 피할 수 없습니다.",
-      "en": "Insults in a group chat can also constitute criminal defamation/insult under Korean law, since the 'publicness' requirement is met. Consistently saving dated screenshots means even a CEO or director can't escape criminal liability."
-    },
-    "upvotes": 398,
-    "disagrees": 14
-  },
-  {
     "cardType": "COMMERCE",
     "isOngoing": false,
     "categoryName": {
