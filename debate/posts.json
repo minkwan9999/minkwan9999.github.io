@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.09.22 16:01",
+  "lastUpdated": "2026.09.23 15:56",
   "posts": [
     {
       "id": "d1",
@@ -556,6 +556,76 @@
       "votesB": 429,
       "id": "d_auto_1790060504117_7363",
       "addedAt": "2026-09-22"
+    },
+    {
+      "cardType": "LIFE",
+      "tag": {
+        "ko": "무지출 챌린지",
+        "en": "No-Spend Challenge"
+      },
+      "statusBadge": {
+        "ko": "무지출 vs 플렉스 💸",
+        "en": "No-Spend vs Small Flex 💸"
+      },
+      "statusColor": "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
+      "avatar": "☕",
+      "imageBeforeUrl": "https://images.unsplash.com/photo-1699514834211-24b56949ef08?w=800&auto=format&fit=crop&q=80",
+      "imageCaption": {
+        "ko": "카페에서 커피를 즐기는 모습",
+        "en": "Enjoying coffee at a cafe"
+      },
+      "title": {
+        "ko": "무지출 챌린지 하면서 매일 아침 스타벅스 사 마시는 거, 모순인가 힐링인가?",
+        "en": "Doing a no-spend challenge but buying Starbucks every morning — contradiction or self-care?"
+      },
+      "contextText": {
+        "ko": "고금리·고물가 시대에 짠테크 열풍이 불면서, '무지출을 표방하며 커피는 산다'는 사람들을 향해 '그건 무지출이 아니다'는 원칙파와 '작은 사치 정도는 지속가능한 절약을 위해 필요하다'는 실용파가 갈립니다.",
+        "en": "Amid a frugal-living boom driven by high interest rates and inflation, purists argue that buying coffee disqualifies a 'no-spend challenge,' while pragmatists say a small daily indulgence keeps saving sustainable."
+      },
+      "sideA": {
+        "label": {
+          "ko": "명백한 모순이다 (원칙주의)",
+          "en": "Clear Contradiction (Purism)"
+        },
+        "reasons": {
+          "ko": [
+            "무지출이라는 이름을 붙였으면 정의 그대로 지출을 안 하는 게 맞지 예외를 두는 순간 그건 그냥 절약임",
+            "하루 5천원짜리 커피도 한 달이면 15만원, 1년이면 180만원인데 이걸 무시하는 건 숫자 감각이 없는 것",
+            "SNS에 무지출 인증하면서 커피 사진을 올리는 건 자기기만적이고 보여주기식 챌린지에 불과함"
+          ],
+          "en": [
+            "If you call it 'no-spend,' any exception just makes it regular frugality, not the real thing.",
+            "A 5,000-won coffee a day adds up to 150,000 won a month, 1.8 million a year — hard to ignore.",
+            "Posting a no-spend badge alongside a coffee photo is self-deception dressed up for social media."
+          ]
+        }
+      },
+      "sideB": {
+        "label": {
+          "ko": "지속가능한 절약이다 (실용주의)",
+          "en": "Sustainable Saving (Pragmatism)"
+        },
+        "reasons": {
+          "ko": [
+            "극단적으로 다 끊으면 며칠 못 가 요요처럼 폭식성 소비로 돌아오는 경우가 훨씬 많음",
+            "무지출의 진짜 목적은 충동구매나 불필요한 소비를 줄이는 것이지 모든 소비를 금지하는 고행이 아님",
+            "출근 전 커피 한 잔이 주는 정신적 안정과 생산성 효과를 고려하면 오히려 남는 장사임"
+          ],
+          "en": [
+            "Cutting everything cold-turkey usually backfires into binge spending within days.",
+            "The real point of no-spend is cutting impulse buys, not turning saving into total austerity.",
+            "The mental boost and productivity from a morning coffee often outweighs its cost."
+          ]
+        }
+      },
+      "practicalVerdict": {
+        "ko": "재테크 커뮤니티에서는 '무지출'을 하루 지출 0원이 아니라 '고정 소비 항목 외 충동구매 0원'으로 재정의해서 커피 같은 소액 습관 지출은 예외로 인정하는 방향으로 정착 중입니다.",
+        "en": "In personal-finance communities, 'no-spend' is increasingly redefined not as literally zero spending, but as zero impulse purchases beyond fixed habitual items like a daily coffee."
+      },
+      "votesA": 289,
+      "votesB": 604,
+      "id": "d_auto_1790146619683_3350",
+      "addedAt": "2026-09-23"
     }
   ]
 }
