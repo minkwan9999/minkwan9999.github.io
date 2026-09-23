@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.09.22 14:34",
+  "lastUpdated": "2026.09.23 14:21",
   "posts": [
     {
       "id": "p1",
@@ -1201,6 +1201,64 @@
       "disagrees": 0,
       "id": "p_auto_1790055287708_9209",
       "addedAt": "2026-09-22"
+    },
+    {
+      "cardType": "ONGOING",
+      "eraTag": {
+        "ko": "2026 · 테라노스 후일담",
+        "en": "2026 · The Theranos Aftermath"
+      },
+      "statusBadge": {
+        "ko": "판결 진행중 ⏳",
+        "en": "In Progress ⏳"
+      },
+      "statusColor": "bg-amber-500/10 text-amber-400 border-amber-500/20",
+      "author": {
+        "ko": "엘리자베스 홈즈",
+        "en": "Elizabeth Holmes"
+      },
+      "authorTitle": {
+        "ko": "테라노스 창업자 (사기 혐의 복역 중)",
+        "en": "Founder of Theranos (currently serving fraud sentence)"
+      },
+      "avatar": "🩸",
+      "imageBeforeUrl": "https://images.unsplash.com/photo-1579154341184-22069e4614d2?w=800&auto=format&fit=crop&q=80",
+      "imageCaption": {
+        "ko": "테라노스의 소량 혈액검사 키트",
+        "en": "Theranos' small-sample blood testing kit"
+      },
+      "title": {
+        "ko": "테라노스는 사기가 아니라 시대를 10년 앞선 것이었다",
+        "en": "Theranos was just 10 years ahead"
+      },
+      "quoteSource": {
+        "ko": "2026년 X(옛 트위터) 포스팅",
+        "en": "2026 post on X (formerly Twitter)"
+      },
+      "quoteText": {
+        "ko": "사람들이 우리가 한 걸 사기라고 생각한 건, 같은 걸 해내지 못했기 때문입니다. 알고보니 테라노스는 그냥 10년 앞서 있었을 뿐이에요.",
+        "en": "People thought what we were doing was fraud because they couldn't do the same. Turns out Theranos was just 10 years ahead."
+      },
+      "timelineLabel": {
+        "ko": "⏳ 2026년 실시간 검증 중",
+        "en": "⏳ Real-Time Tracker 2026"
+      },
+      "realityStat": {
+        "ko": "본인은 사기 혐의로 유죄 확정, 11년형 복역 중",
+        "en": "She was convicted of fraud and is serving an 11-year sentence"
+      },
+      "realityText": {
+        "ko": "실제 연방법원 유죄 판결과 스스로의 재해석 사이의 간극이 계속 화제가 되고 있습니다.",
+        "en": "The gap between the federal fraud conviction and her own reinterpretation keeps drawing public attention."
+      },
+      "actionHighlight": {
+        "ko": "법적 사실관계가 이미 확정된 사안도, 당사자의 재서사화 시도는 계속될 수 있습니다.",
+        "en": "Even after the legal facts are settled, the person involved may keep trying to rewrite the narrative."
+      },
+      "upvotes": 0,
+      "disagrees": 0,
+      "id": "p_auto_1790140908148_5321",
+      "addedAt": "2026-09-23"
     }
   ]
 }
