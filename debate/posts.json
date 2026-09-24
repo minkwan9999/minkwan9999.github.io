@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.09.23 15:56",
+  "lastUpdated": "2026.09.24 15:55",
   "posts": [
     {
       "id": "d1",
@@ -626,6 +626,76 @@
       "votesB": 604,
       "id": "d_auto_1790146619683_3350",
       "addedAt": "2026-09-23"
+    },
+    {
+      "cardType": "LIFE",
+      "tag": {
+        "ko": "신혼부부 재테크",
+        "en": "Newlywed Finances"
+      },
+      "statusBadge": {
+        "ko": "결혼 전 필수 논쟁 💰",
+        "en": "Pre-Wedding Must-Discuss 💰"
+      },
+      "statusColor": "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
+      "avatar": "🐷",
+      "imageBeforeUrl": "https://images.unsplash.com/photo-1607863680198-23d4b2565df0?w=800&auto=format&fit=crop&q=80",
+      "imageCaption": {
+        "ko": "저금통과 동전",
+        "en": "A piggy bank and coins"
+      },
+      "title": {
+        "ko": "신혼부부, 월급 통장 무조건 합쳐야 하나 각자 관리해도 되나?",
+        "en": "Should newlyweds always merge paychecks into one account, or is managing separately fine?"
+      },
+      "contextText": {
+        "ko": "결혼 전 재무 계획을 세울 때마다 '부부는 하나니까 통장부터 합쳐야 신뢰가 쌓인다'는 합계파와 '각자 벌어 각자 관리하며 생활비만 분담하면 된다'는 분리파가 팽팽하게 맞섭니다.",
+        "en": "When planning finances before marriage, couples clash between merging everything into one account for shared trust, and keeping separate accounts while splitting only living expenses."
+      },
+      "sideA": {
+        "label": {
+          "ko": "무조건 합쳐야 한다 (신뢰와 투명성)",
+          "en": "Must Merge (Trust & Transparency)"
+        },
+        "reasons": {
+          "ko": [
+            "돈 관리를 따로 하면 서로의 소비와 저축 현황을 모르게 되고, 이게 결혼생활 갈등의 가장 큰 원인 중 하나임",
+            "내 집 마련이나 노후 준비 같은 공동의 재무 목표는 통합 계좌로 관리해야 실행력과 저축률이 확실히 올라감",
+            "비상시 배우자 계좌에 접근이 안 되면 응급상황에서 오히려 곤란한 일이 생김"
+          ],
+          "en": [
+            "Managing money separately hides each other's spending and savings — a top source of marital conflict.",
+            "Shared goals like a home or retirement fund save faster and more reliably in one combined account.",
+            "In an emergency, not being able to access a spouse's account can cause real problems."
+          ]
+        }
+      },
+      "sideB": {
+        "label": {
+          "ko": "각자 관리해도 된다 (독립성 존중)",
+          "en": "Separate Is Fine (Respecting Independence)"
+        },
+        "reasons": {
+          "ko": [
+            "소비 습관과 금전 감각이 다른 두 사람을 억지로 하나의 통장에 묶으면 사소한 지출까지 서로 간섭하며 다투게 됨",
+            "생활비, 저축 목표 금액만 명확히 정해서 각자 계좌에서 이체하면 투명성은 충분히 확보됨",
+            "각자 커리어와 경제력을 유지하는 게 결혼 후에도 개인의 독립성과 자존감을 지키는 데 중요함"
+          ],
+          "en": [
+            "Forcing two people with different spending habits into one account leads to constant micromanaging fights.",
+            "Clearly agreed contributions to living costs and savings goals already provide enough transparency.",
+            "Maintaining individual career and financial standing after marriage matters for personal independence."
+          ]
+        }
+      },
+      "practicalVerdict": {
+        "ko": "재무설계사들이 가장 많이 권하는 방식은 '3통장 시스템' — 생활비 공동통장 하나에 각자 정해진 금액을 이체하고, 나머지는 개인 통장에서 자유롭게 관리하는 절충형이 실제로 가장 널리 정착되어 있습니다.",
+        "en": "The most commonly recommended approach by financial planners is the '3-account system': a shared account for living expenses that both partners contribute a fixed amount to, with the rest managed freely in personal accounts."
+      },
+      "votesA": 467,
+      "votesB": 398,
+      "id": "d_auto_1790232913488_4015",
+      "addedAt": "2026-09-24"
     }
   ]
 }
