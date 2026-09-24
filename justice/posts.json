@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.09.23 15:12",
+  "lastUpdated": "2026.09.24 15:22",
   "posts": [
     {
       "cardType": "COMMERCE",
@@ -342,6 +342,61 @@
       "disagrees": 14,
       "id": "j_auto_1790143958736_3447",
       "addedAt": "2026-09-23"
+    },
+    {
+      "cardType": "COMMERCE",
+      "isOngoing": false,
+      "categoryName": {
+        "ko": "중고 사기",
+        "en": "Secondhand Fraud"
+      },
+      "statusBadge": {
+        "ko": "실형 선고 ✓",
+        "en": "Prison Sentence ✓"
+      },
+      "statusColor": "bg-rose-500/10 text-rose-400 border-rose-500/20",
+      "target": {
+        "ko": "당근마켓 부동산 사기 후 협박한 일당",
+        "en": "Fake Rental Scammers Who Threatened Victims Demanding Refunds"
+      },
+      "location": {
+        "ko": "서울",
+        "en": "Seoul"
+      },
+      "avatar": "🏠",
+      "imageBeforeUrl": "https://images.unsplash.com/photo-1729505305192-610539203144?w=800&auto=format&fit=crop&q=80",
+      "imageCaption": {
+        "ko": "계산기 앞에 놓인 집 열쇠",
+        "en": "A house key placed in front of a calculator"
+      },
+      "title": {
+        "ko": "당근마켓에 가짜 매물 올려 3.5억 뜯고, 환불 요구하자 합성 음란사진으로 협박",
+        "en": "Scammed 350 million won with fake rental listings, then threatened refund-seeking victims with fake explicit photos"
+      },
+      "incidentDetail": {
+        "ko": "대포폰과 대포통장, 위조 신분증과 공인중개사 명함까지 준비해 공실 부동산을 실제 임대 매물처럼 꾸며 당근마켓에 허위 게시글을 올림. 계약금과 보증금 명목으로 여러 피해자에게서 총 3억5천만원을 가로챘고, 환불을 요구하는 피해자에게는 욕설과 함께 합성 음란사진으로 협박했다.",
+        "en": "Using burner phones, borrowed bank accounts, forged IDs, and fake real-estate agent business cards, the group posted fraudulent listings for vacant properties as if they were real rentals. They collected 350 million won in deposits from victims — and when victims demanded refunds, threatened them with fabricated explicit photos."
+      },
+      "timelineLabel": {
+        "ko": "📊 법원 선고",
+        "en": "📊 Court Sentencing"
+      },
+      "realityStat": {
+        "ko": "실형 선고 확정",
+        "en": "Prison sentence finalized"
+      },
+      "verdictDetail": {
+        "ko": "법원은 피해자들을 속여 거액을 가로챈 사기 혐의와 협박 혐의를 모두 유죄로 인정해 관련자들에게 실형을 선고했다.",
+        "en": "The court found the defendants guilty of both large-scale fraud and threats against victims, sentencing them to prison."
+      },
+      "actionHighlight": {
+        "ko": "부동산 매물은 등기부등본으로 실제 소유자와 임대인이 일치하는지 반드시 직접 확인하고, 집주인과의 직접 통화나 대면 없이 계약금부터 보내면 안 됩니다. 협박을 받았다면 절대 응하지 말고 즉시 캡처해 신고하세요.",
+        "en": "Always verify a property's actual owner against the land registry and never wire a deposit without speaking to or meeting the landlord directly. If threatened, never comply — screenshot everything and report immediately."
+      },
+      "upvotes": 512,
+      "disagrees": 9,
+      "id": "j_auto_1790230949036_8962",
+      "addedAt": "2026-09-24"
     }
   ]
 }
