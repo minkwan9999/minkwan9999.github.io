@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.09.24 14:37",
+  "lastUpdated": "2026.09.25 14:34",
   "posts": [
     {
       "id": "p1",
@@ -1317,6 +1317,64 @@
       "disagrees": 0,
       "id": "p_auto_1790228266137_6005",
       "addedAt": "2026-09-24"
+    },
+    {
+      "cardType": "LESSON",
+      "eraTag": {
+        "ko": "1903 · 자동차 여명기",
+        "en": "1903 · Dawn of the Automobile"
+      },
+      "statusBadge": {
+        "ko": "완전히 틀림 ✗",
+        "en": "Fully Wrong ✗"
+      },
+      "statusColor": "bg-rose-500/10 text-rose-400 border-rose-500/20",
+      "author": {
+        "ko": "미시간세이빙스은행장",
+        "en": "President of Michigan Savings Bank"
+      },
+      "authorTitle": {
+        "ko": "헨리 포드 변호사에게 한 조언",
+        "en": "Advice given to Henry Ford's lawyer"
+      },
+      "avatar": "🐎",
+      "imageBeforeUrl": "https://images.unsplash.com/photo-1590265034138-816f0bc9f62f?w=800&auto=format&fit=crop&q=80",
+      "imageCaption": {
+        "ko": "1900년대 초 마차와 자동차",
+        "en": "Horse carriages and early automobiles, 1900s"
+      },
+      "title": {
+        "ko": "자동차는 유행일 뿐, 말이 계속 대세일 것",
+        "en": "The horse is here to stay but the automobile is only a novelty"
+      },
+      "quoteSource": {
+        "ko": "1903년, 포드모터 투자 반대 조언",
+        "en": "1903, advice against investing in Ford Motor Co."
+      },
+      "quoteText": {
+        "ko": "자동차는 유행이자 신기함일 뿐입니다. 말은 계속 대세로 남을 것입니다.",
+        "en": "The automobile is a fad, a novelty. Horses are here to stay."
+      },
+      "timelineLabel": {
+        "ko": "📜 이미 역사가 심판 완료",
+        "en": "📜 History Has Already Judged"
+      },
+      "realityStat": {
+        "ko": "전세계 자동차 등록 대수 15억 대 이상",
+        "en": "1.5+ billion registered vehicles worldwide"
+      },
+      "realityText": {
+        "ko": "이 조언 때문에 헨리 포드의 변호사는 포드모터 초기 투자를 포기할 뻔했습니다.",
+        "en": "This advice nearly convinced Henry Ford's lawyer to pass on an early investment in Ford Motor Co."
+      },
+      "actionHighlight": {
+        "ko": "'과도기 신기술'과 '유행'을 혼동하면 역사에 남을 투자 기회를 놓칩니다.",
+        "en": "Confusing a transitional new technology with a passing fad can cost you a legendary investment."
+      },
+      "upvotes": 0,
+      "disagrees": 0,
+      "id": "p_auto_1790314490611_6719",
+      "addedAt": "2026-09-25"
     }
   ]
 }
