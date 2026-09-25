@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.09.24 15:55",
+  "lastUpdated": "2026.09.25 15:49",
   "posts": [
     {
       "id": "d1",
@@ -696,6 +696,76 @@
       "votesB": 398,
       "id": "d_auto_1790232913488_4015",
       "addedAt": "2026-09-24"
+    },
+    {
+      "cardType": "WORK",
+      "tag": {
+        "ko": "복장 규정",
+        "en": "Dress Code"
+      },
+      "statusBadge": {
+        "ko": "복장 자유화 논쟁 👔",
+        "en": "Dress Code Debate 👔"
+      },
+      "statusColor": "bg-violet-500/10 text-violet-400 border-violet-500/20",
+      "avatar": "👔",
+      "imageBeforeUrl": "https://images.unsplash.com/photo-1611095790444-1dfa35e37b52?w=800&auto=format&fit=crop&q=80",
+      "imageCaption": {
+        "ko": "사무실 복장을 갖춰 입은 동료들",
+        "en": "Colleagues in office attire"
+      },
+      "title": {
+        "ko": "사무실 복장 완전 자율화, 생산성 오르나 프로 의식 흐려지나?",
+        "en": "Fully free office dress code — does it boost productivity or erode professionalism?"
+      },
+      "contextText": {
+        "ko": "실리콘밸리식 자율복장 문화가 국내 기업에도 퍼지면서, '편한 복장이 곧 성과'라는 자율파와 '옷차림이 곧 프로 의식이자 고객 신뢰'라는 격식파가 부딪힙니다.",
+        "en": "As Silicon-Valley-style casual dress spreads to Korean companies, those who see comfort as boosting performance clash with those who see attire as core to professionalism and client trust."
+      },
+      "sideA": {
+        "label": {
+          "ko": "완전 자율이 맞다 (편안함이 성과)",
+          "en": "Full Freedom (Comfort Drives Performance)"
+        },
+        "reasons": {
+          "ko": [
+            "옷차림에 신경 쓰는 시간과 스트레스가 줄어야 정작 업무에 집중할 에너지가 늘어남",
+            "실력과 성과는 옷이 아니라 결과물로 증명되는 것이지 정장을 입는다고 일을 더 잘하는 게 아님",
+            "요즘 우수 인재들은 자유로운 근무 환경을 중요한 채용 조건으로 여기는 추세임"
+          ],
+          "en": [
+            "Less time and stress on dressing means more energy left for actual work.",
+            "Skill shows in output, not outfit — a suit doesn't make someone better at their job.",
+            "Top talent increasingly treats a relaxed dress culture as a key hiring factor."
+          ]
+        }
+      },
+      "sideB": {
+        "label": {
+          "ko": "최소한의 격식은 필요 (프로 의식)",
+          "en": "Some Formality Needed (Professionalism)"
+        },
+        "reasons": {
+          "ko": [
+            "고객이나 거래처를 상대하는 직군은 옷차림 자체가 회사의 신뢰도를 대변하는 요소임",
+            "복장이 지나치게 흐트러지면 태도와 마인드셋도 함께 느슨해지는 경향이 실제로 나타남",
+            "완전 자율화는 결국 눈치 게임이 되어 오히려 옷 고르는 데 더 신경 쓰게 만드는 역설이 생김"
+          ],
+          "en": [
+            "For client-facing roles, attire itself signals the company's credibility.",
+            "Overly loose dress codes tend to correlate with looser attitudes and mindsets.",
+            "Total freedom paradoxically creates more anxiety over what's 'appropriate' to wear."
+          ]
+        }
+      },
+      "practicalVerdict": {
+        "ko": "대부분의 기업은 '고객 미팅이 있는 날만 비즈니스 캐주얼 이상'이라는 조건부 자율화로 절충하는 추세이며, 완전 무제한 자율복장은 스타트업 등 일부 업종에 국한되어 있습니다.",
+        "en": "Most companies settle on conditional freedom — business casual or above only on client-meeting days — while fully unrestricted dress remains limited to certain industries like startups."
+      },
+      "votesA": 478,
+      "votesB": 356,
+      "id": "d_auto_1790318990829_5952",
+      "addedAt": "2026-09-25"
     }
   ]
 }
