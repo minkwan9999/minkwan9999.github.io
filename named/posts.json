@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.09.25 14:34",
+  "lastUpdated": "2026.09.26 14:40",
   "posts": [
     {
       "id": "p1",
@@ -1375,6 +1375,64 @@
       "disagrees": 0,
       "id": "p_auto_1790314490611_6719",
       "addedAt": "2026-09-25"
+    },
+    {
+      "cardType": "ONGOING",
+      "eraTag": {
+        "ko": "2025~2026 · 휴머노이드 로봇 붐",
+        "en": "2025-2026 · The Humanoid Robot Boom"
+      },
+      "statusBadge": {
+        "ko": "판결 진행중 ⏳",
+        "en": "In Progress ⏳"
+      },
+      "statusColor": "bg-amber-500/10 text-amber-400 border-amber-500/20",
+      "author": {
+        "ko": "일론 머스크",
+        "en": "Elon Musk"
+      },
+      "authorTitle": {
+        "ko": "테슬라 · 스페이스X CEO",
+        "en": "CEO of Tesla & SpaceX"
+      },
+      "avatar": "🤖",
+      "imageBeforeUrl": "https://images.unsplash.com/photo-1737644467636-6b0053476bb2?w=800&auto=format&fit=crop&q=80",
+      "imageCaption": {
+        "ko": "흰색 휴머노이드 로봇",
+        "en": "A white humanoid robot"
+      },
+      "title": {
+        "ko": "\"옵티머스가 테슬라 미래 가치의 80%를 차지할 것\"",
+        "en": "80% of Tesla's future value will come from Optimus, not cars"
+      },
+      "quoteSource": {
+        "ko": "2025년 9월 발언 (다수 매체 재인용)",
+        "en": "September 2025 remark, widely re-quoted"
+      },
+      "quoteText": {
+        "ko": "테슬라 미래 가치의 80%는 자동차가 아니라 옵티머스와 AI에서 나올 것입니다.",
+        "en": "80% of Tesla's future value will come from Optimus and AI — not cars."
+      },
+      "timelineLabel": {
+        "ko": "⏳ 2026년 실시간 검증 중",
+        "en": "⏳ Real-Time Tracker 2026"
+      },
+      "realityStat": {
+        "ko": "연산 100만대 생산 목표 vs 2025년 실제 생산량 수백 대 수준",
+        "en": "Target: 1M units/year vs. actual 2025 production in the hundreds"
+      },
+      "realityText": {
+        "ko": "테슬라는 2026년 말까지 연간 100만 대 생산라인을 목표로 내걸었지만, 2025년 실제 생산량은 수백~수천 대 수준에 그쳤고 본격 양산 시점은 계속 뒤로 밀리고 있습니다.",
+        "en": "Tesla has set a goal of a 1-million-unit annual production line by the end of 2026, but actual 2025 production remained in the hundreds to low thousands, with full-scale manufacturing repeatedly pushed back."
+      },
+      "actionHighlight": {
+        "ko": "자동차 생산라인까지 멈추고 로봇에 올인하는 베팅이 옳았는지는, 실제 양산 대수가 나와야 알 수 있습니다.",
+        "en": "Whether halting car production lines to bet everything on robots was the right call will only be clear once real production numbers arrive."
+      },
+      "upvotes": 0,
+      "disagrees": 0,
+      "id": "p_auto_1790401256588_2827",
+      "addedAt": "2026-09-26"
     }
   ]
 }
