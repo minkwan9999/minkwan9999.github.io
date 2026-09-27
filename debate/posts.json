@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.09.26 15:50",
+  "lastUpdated": "2026.09.27 16:18",
   "posts": [
     {
       "id": "d1",
@@ -836,6 +836,76 @@
       "votesB": 612,
       "id": "d_auto_1790405400147_6865",
       "addedAt": "2026-09-26"
+    },
+    {
+      "cardType": "RELATION",
+      "tag": {
+        "ko": "커플 여행 경비",
+        "en": "Couple Travel Costs"
+      },
+      "statusBadge": {
+        "ko": "여행 경비 분담 ✈️",
+        "en": "Trip Cost Split ✈️"
+      },
+      "statusColor": "bg-rose-500/10 text-rose-400 border-rose-500/20",
+      "avatar": "🧳",
+      "imageBeforeUrl": "https://images.unsplash.com/photo-1666238855001-d11112be431f?w=800&auto=format&fit=crop&q=80",
+      "imageCaption": {
+        "ko": "나란히 놓인 여행 가방",
+        "en": "Luggage bags side by side"
+      },
+      "title": {
+        "ko": "커플 여행, 숙소는 남자가 항공권은 여자가 vs 무조건 반반 정산?",
+        "en": "Couple trips: he books lodging, she books flights — or split everything evenly?"
+      },
+      "contextText": {
+        "ko": "여행 경비가 클수록 정산 방식에 대한 온도차가 커지는데, '역할 분담이 더 합리적'이라는 실용파와 '한 항목이라도 불균형하면 결국 다투게 된다'는 정확파가 맞섭니다.",
+        "en": "As trip costs grow, opinions diverge between those who prefer splitting by category (lodging vs. flights) and those who insist on exact even splits to avoid future disputes."
+      },
+      "sideA": {
+        "label": {
+          "ko": "역할 분담이 합리적 (편의성)",
+          "en": "Split by Category (Convenience)"
+        },
+        "reasons": {
+          "ko": [
+            "매번 영수증 모아서 반반 계산하는 것 자체가 번거롭고 여행 분위기를 깨뜨림",
+            "누가 항공권을 예약하고 누가 숙소를 예약할지 역할을 나누면 각자 책임감 있게 준비하게 됨",
+            "장기적으로 보면 큰 항목끼리 서로 맞바꾸는 방식이 결국 총액에서는 비슷하게 수렴함"
+          ],
+          "en": [
+            "Collecting receipts for a 50/50 split every time is tedious and kills the trip vibe.",
+            "Dividing responsibilities (who books what) makes each person prepare more carefully.",
+            "Over time, swapping big-ticket categories tends to even out to similar totals anyway."
+          ]
+        }
+      },
+      "sideB": {
+        "label": {
+          "ko": "정확히 반반이 안전하다 (형평성)",
+          "en": "Exact 50/50 Is Safest (Fairness)"
+        },
+        "reasons": {
+          "ko": [
+            "항공권과 숙소 가격 차이가 클 경우 한쪽이 은근히 손해 보는 구조가 생길 수 있음",
+            "정확한 정산 앱으로 매번 나누면 감정적 소모 없이 깔끔하게 관계를 유지할 수 있음",
+            "역할 분담 방식은 물가나 시기에 따라 매번 유불리가 달라져 결국 누군가는 불만이 쌓임"
+          ],
+          "en": [
+            "If flight and lodging costs differ significantly, one person quietly ends up paying more overall.",
+            "Splitting exactly via an app avoids emotional friction and keeps things clean.",
+            "Category-based splitting shifts unfairly with prices and timing, building resentment over time."
+          ]
+        }
+      },
+      "practicalVerdict": {
+        "ko": "정산 앱으로 총액을 합산해 여행 끝에 한 번에 반반 정산하는 방식이 가장 뒷말 없는 방법으로 자리잡고 있으며, 역할 분담은 신뢰가 충분히 쌓인 커플에게만 권장되는 편입니다.",
+        "en": "Totaling everything and splitting once at the end via an app has become the least contentious method; role-based splitting is generally recommended only for couples with well-established trust."
+      },
+      "votesA": 401,
+      "votesB": 487,
+      "id": "d_auto_1790493528787_8399",
+      "addedAt": "2026-09-27"
     }
   ]
 }
