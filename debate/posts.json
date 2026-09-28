@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.09.27 16:18",
+  "lastUpdated": "2026.09.28 16:55",
   "posts": [
     {
       "id": "d1",
@@ -906,6 +906,76 @@
       "votesB": 487,
       "id": "d_auto_1790493528787_8399",
       "addedAt": "2026-09-27"
+    },
+    {
+      "cardType": "RELATION",
+      "tag": {
+        "ko": "친구 축의금",
+        "en": "Friend's Wedding Gift"
+      },
+      "statusBadge": {
+        "ko": "친밀도별 논쟁 💌",
+        "en": "By-Closeness Debate 💌"
+      },
+      "statusColor": "bg-amber-500/10 text-amber-400 border-amber-500/20",
+      "avatar": "💌",
+      "imageBeforeUrl": "https://images.unsplash.com/photo-1627618998627-70a92a874cc2?w=800&auto=format&fit=crop&q=80",
+      "imageCaption": {
+        "ko": "편지와 봉투",
+        "en": "A letter and envelope"
+      },
+      "title": {
+        "ko": "연락 뜸했던 대학 동창 결혼식, 축의금 5만원이면 충분한가?",
+        "en": "For a college friend you've fallen out of touch with, is a 50,000-won wedding gift enough?"
+      },
+      "contextText": {
+        "ko": "청첩장을 받고 '얼마를 내야 하나' 고민할 때, '친밀도에 비례해서 내는 게 맞다'는 현실파와 '동창이면 예전 정을 생각해서 최소 10만원은 해야 한다'는 의리파가 갈립니다.",
+        "en": "Upon receiving a wedding invitation, people split between those who scale the gift to current closeness and those who insist old friendship warrants at least 100,000 won."
+      },
+      "sideA": {
+        "label": {
+          "ko": "친밀도에 비례해야 한다 (현실적 기준)",
+          "en": "Scale by Closeness (Realistic Standard)"
+        },
+        "reasons": {
+          "ko": [
+            "몇 년째 연락도 안 하다가 청첩장 올 때만 연락 오는 관계라면 형식적인 5만원으로 충분함",
+            "과거의 친분만으로 현재의 지출을 정당화하는 건 비합리적인 인정에 기댄 소비임",
+            "정말 소중한 친구라면 애초에 평소에도 연락을 유지했을 것이므로 지금의 거리감이 곧 답임"
+          ],
+          "en": [
+            "If contact only happens when the invitation arrives, a standard 50,000 won is enough.",
+            "Justifying spending based purely on past closeness is irrational, sentiment-driven spending.",
+            "A truly valued friend would have stayed in touch — the current distance already answers the question."
+          ]
+        }
+      },
+      "sideB": {
+        "label": {
+          "ko": "동창의 의리는 지켜야 한다 (관계 유지)",
+          "en": "Honor Old Ties (Maintaining Relationships)"
+        },
+        "reasons": {
+          "ko": [
+            "연락이 뜸했던 것도 서로 바빠서였을 뿐 우정 자체가 사라진 건 아니므로 성의는 갖춰야 함",
+            "5만원은 식대도 못 채우는 액수라 참석할 거면 최소 10만원 정도는 예의상 필요함",
+            "훗날 다시 가까워질 수도 있는 관계인데 이런 순간에 인색하게 굴면 관계 회복이 더 어려워짐"
+          ],
+          "en": [
+            "Infrequent contact often just reflects busy lives, not the end of a friendship — some gesture matters.",
+            "50,000 won doesn't even cover the meal cost, so attending calls for at least 100,000 as basic courtesy.",
+            "Being stingy at a moment like this can make it harder to reconnect down the road."
+          ]
+        }
+      },
+      "practicalVerdict": {
+        "ko": "최근 몇 년간 연락이 없었고 참석도 안 할 관계라면 5만원 축의금만 송금하는 것이 무난한 국룰로 자리잡았으며, 직접 참석할 경우엔 최소 10만원이 암묵적 기준입니다.",
+        "en": "For relationships with years of no contact and no plans to attend, sending 50,000 won alone has become the accepted norm; attending in person implies a 100,000-won baseline."
+      },
+      "votesA": 534,
+      "votesB": 402,
+      "id": "d_auto_1790582153760_8692",
+      "addedAt": "2026-09-28"
     }
   ]
 }
