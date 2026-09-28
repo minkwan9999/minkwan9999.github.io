@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.09.27 14:57",
+  "lastUpdated": "2026.09.28 15:05",
   "posts": [
     {
       "id": "p1",
@@ -1491,6 +1491,64 @@
       "disagrees": 0,
       "id": "p_auto_1790488635799_6314",
       "addedAt": "2026-09-27"
+    },
+    {
+      "cardType": "LESSON",
+      "eraTag": {
+        "ko": "1996 · 애플 암흑기",
+        "en": "1996 · Apple's Dark Age"
+      },
+      "statusBadge": {
+        "ko": "완전히 틀림 ✗",
+        "en": "Fully Wrong ✗"
+      },
+      "statusColor": "bg-rose-500/10 text-rose-400 border-rose-500/20",
+      "author": {
+        "ko": "마이클 S. 말론",
+        "en": "Michael S. Malone"
+      },
+      "authorTitle": {
+        "ko": "저널리스트 · 'Infinite Loop' 저자",
+        "en": "Journalist, Author of 'Infinite Loop'"
+      },
+      "avatar": "📉",
+      "imageBeforeUrl": "https://images.unsplash.com/photo-1714251033127-9401d0adaaac?w=800&auto=format&fit=crop&q=80",
+      "imageCaption": {
+        "ko": "1996년 위기의 애플",
+        "en": "Apple in crisis, 1996"
+      },
+      "title": {
+        "ko": "잡스의 모든 성공은 애플 장기 몰락을 잠시 늦춘 것에 불과했다",
+        "en": "All Steve Jobs had really accomplished was a temporary pause in Apple's long-term decline"
+      },
+      "quoteSource": {
+        "ko": "1996년 저서 'Infinite Loop'",
+        "en": "1996 book 'Infinite Loop'"
+      },
+      "quoteText": {
+        "ko": "그가 이룬 모든 성공은, 애플의 장기적 몰락을 잠시 멈춰둔 것에 불과했습니다.",
+        "en": "All of his success had really accomplished was a temporary pause in Apple's long-term decline."
+      },
+      "timelineLabel": {
+        "ko": "📜 이미 역사가 심판 완료",
+        "en": "📜 History Has Already Judged"
+      },
+      "realityStat": {
+        "ko": "이듬해 잡스 복귀 후 애플 시가총액 3조 달러 돌파",
+        "en": "After Jobs' return the next year, Apple's market cap eventually topped $3 trillion"
+      },
+      "realityText": {
+        "ko": "책이 출간된 바로 다음 해 잡스가 애플에 복귀하며 이 결론은 정반대로 뒤집혔습니다.",
+        "en": "The very next year, Jobs returned to Apple and completely reversed this conclusion."
+      },
+      "actionHighlight": {
+        "ko": "위기의 최저점을 '장기 추세'로 단정하면 반전의 신호를 놓칩니다.",
+        "en": "Mistaking a crisis's lowest point for the permanent long-term trend can blind you to a coming reversal."
+      },
+      "upvotes": 0,
+      "disagrees": 0,
+      "id": "p_auto_1790575501688_6829",
+      "addedAt": "2026-09-28"
     }
   ]
 }
