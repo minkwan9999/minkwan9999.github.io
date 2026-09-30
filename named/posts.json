@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.09.29 15:23",
+  "lastUpdated": "2026.09.30 15:07",
   "posts": [
     {
       "id": "p1",
@@ -1607,6 +1607,64 @@
       "disagrees": 0,
       "id": "p_auto_1790662995770_6779",
       "addedAt": "2026-09-29"
+    },
+    {
+      "cardType": "TRACK",
+      "eraTag": {
+        "ko": "2005 · DVD 배송 전성기",
+        "en": "2005 · The Peak of DVD-by-Mail"
+      },
+      "statusBadge": {
+        "ko": "성적표 ✓",
+        "en": "Track Record ✓"
+      },
+      "statusColor": "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
+      "author": {
+        "ko": "리드 헤이스팅스",
+        "en": "Reed Hastings"
+      },
+      "authorTitle": {
+        "ko": "넷플릭스 공동창업자 · 전 CEO",
+        "en": "Co-founder & Former CEO of Netflix"
+      },
+      "avatar": "🎬",
+      "imageBeforeUrl": "https://images.unsplash.com/photo-1560169897-fc0cdbdfa4d5?w=800&auto=format&fit=crop&q=80",
+      "imageCaption": {
+        "ko": "켜져 있는 평면 TV",
+        "en": "A turned-on flat screen television"
+      },
+      "title": {
+        "ko": "\"인터넷으로 보는 영화가 큰 사업이 될 것\"이라 내다본 넷플릭스",
+        "en": "Movies over the internet are coming, and at some point it will become big business"
+      },
+      "quoteSource": {
+        "ko": "2005년 Inc. 매거진 인터뷰",
+        "en": "2005 Inc. magazine interview"
+      },
+      "quoteText": {
+        "ko": "인터넷으로 영화를 보는 시대가 오고 있고, 언젠가 그건 큰 사업이 될 것입니다.",
+        "en": "Movies over the internet are coming, and at some point it will become big business."
+      },
+      "timelineLabel": {
+        "ko": "📊 20년 뒤 실제 성적표",
+        "en": "📊 The Report Card, 20 Years Later"
+      },
+      "realityStat": {
+        "ko": "넷플릭스 기업가치 3천억 달러 이상, 전세계 스트리밍 시장 표준",
+        "en": "Netflix's valuation exceeds $300 billion; streaming is now the global media standard"
+      },
+      "realityText": {
+        "ko": "실제로 회사명을 'DVD 배송'이 아니라 '넷플릭스'로 지은 이유도 이 미래를 준비하기 위해서였고, 2007년 스트리밍을 시작한 뒤 약 20년 만에 전세계 미디어 소비의 표준이 되었습니다.",
+        "en": "The company was named 'Netflix' rather than 'DVD-by-mail' precisely to prepare for this future. It launched streaming in 2007, and within roughly two decades became the global standard for media consumption."
+      },
+      "actionHighlight": {
+        "ko": "DVD 사업이 한창 잘 되던 시점에 스스로 그 사업을 대체할 다음 기술에 베팅한 것이 오히려 회사를 살렸습니다.",
+        "en": "Betting on the very technology that would replace its own thriving DVD business — while that business was still booming — is what ultimately saved the company."
+      },
+      "upvotes": 0,
+      "disagrees": 0,
+      "id": "p_auto_1790748465192_8870",
+      "addedAt": "2026-09-30"
     }
   ]
 }
