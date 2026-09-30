@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.09.29 14:19",
+  "lastUpdated": "2026.09.30 14:06",
   "ranks": [
     {
       "id": "yt1",
@@ -18,12 +18,12 @@
       },
       "rankChange": "▲1",
       "followers": {
-        "ko": "536만 뷰",
-        "en": "5364K views"
+        "ko": "1109만 뷰",
+        "en": "11090K views"
       },
       "weeklyGrowth": {
-        "ko": "+107만",
-        "en": "+1070K"
+        "ko": "+221만",
+        "en": "+2210K"
       },
       "headline": {
         "ko": "ALLDAY PROJECT - ‘CRASH’ M/V",
@@ -45,28 +45,28 @@
       "platformBadge": "YouTube",
       "platformColor": "bg-red-500/10 text-red-400 border-red-500/30",
       "creatorName": {
-        "ko": "Netflix Korea 넷플릭스 코리아",
-        "en": "Netflix Korea 넷플릭스 코리아"
+        "ko": "The Witcher",
+        "en": "The Witcher"
       },
-      "handle": "@Netflix_Korea_넷플릭스_코",
+      "handle": "@The_Witcher",
       "categoryTag": {
         "ko": "주간 급상승",
         "en": "Trending"
       },
       "rankChange": "▲2",
       "followers": {
-        "ko": "8만 뷰",
-        "en": "87K views"
+        "ko": "267만 뷰",
+        "en": "2678K views"
       },
       "weeklyGrowth": {
-        "ko": "+1만",
-        "en": "+10K"
+        "ko": "+53만",
+        "en": "+530K"
       },
       "headline": {
-        "ko": "나를 충전해줘 | 공식 예고편 | 넷플릭스",
-        "en": "나를 충전해줘 | 공식 예고편 | 넷플릭스"
+        "ko": "The Witcher 3: Wild Hunt — Remastered | Official Launch Trailer",
+        "en": "The Witcher 3: Wild Hunt — Remastered | Official Launch Trailer"
       },
-      "viralTopic": "#NetflixKorea넷플릭 #인기급상승",
+      "viralTopic": "#TheWitcher #인기급상승",
       "growthFactor": {
         "ko": "실시간 급상승 알고리즘 및 높은 완청률 기반 트래픽 폭발.",
         "en": "Surged via recommendation algorithms."
@@ -82,28 +82,28 @@
       "platformBadge": "YouTube",
       "platformColor": "bg-red-500/10 text-red-400 border-red-500/30",
       "creatorName": {
-        "ko": "동수칸TV",
-        "en": "동수칸TV"
+        "ko": "[ALTUBE] 김성현TV",
+        "en": "[ALTUBE] 김성현TV"
       },
-      "handle": "@동수칸TV",
+      "handle": "@[ALTUBE]_김성현TV",
       "categoryTag": {
         "ko": "주간 급상승",
         "en": "Trending"
       },
       "rankChange": "▲3",
       "followers": {
-        "ko": "37만 뷰",
-        "en": "376K views"
+        "ko": "54만 뷰",
+        "en": "546K views"
       },
       "weeklyGrowth": {
-        "ko": "+7만",
-        "en": "+70K"
+        "ko": "+10만",
+        "en": "+100K"
       },
       "headline": {
-        "ko": "돈 버리는 게임 *심약자 시청 금지..*",
-        "en": "돈 버리는 게임 *심약자 시청 금지..*"
+        "ko": "슈퍼 AI 플루토 마저도 당황하게 만든 알파고 김성현의 신의 한 수, 과연 그 전략은?",
+        "en": "슈퍼 AI 플루토 마저도 당황하게 만든 알파고 김성현의 신의 한 수, 과연 그 전략은?"
       },
-      "viralTopic": "#동수칸TV #인기급상승",
+      "viralTopic": "#[ALTUBE]김성현TV #인기급상승",
       "growthFactor": {
         "ko": "실시간 급상승 알고리즘 및 높은 완청률 기반 트래픽 폭발.",
         "en": "Surged via recommendation algorithms."
@@ -129,12 +129,12 @@
       },
       "rankChange": "▲4",
       "followers": {
-        "ko": "11만 뷰",
-        "en": "114K views"
+        "ko": "34만 뷰",
+        "en": "343K views"
       },
       "weeklyGrowth": {
-        "ko": "+2만",
-        "en": "+20K"
+        "ko": "+6만",
+        "en": "+60K"
       },
       "headline": {
         "ko": "CRASH",
@@ -156,28 +156,28 @@
       "platformBadge": "YouTube",
       "platformColor": "bg-red-500/10 text-red-400 border-red-500/30",
       "creatorName": {
-        "ko": "뜨뜨뜨뜨",
-        "en": "뜨뜨뜨뜨"
+        "ko": "Netflix Korea 넷플릭스 코리아",
+        "en": "Netflix Korea 넷플릭스 코리아"
       },
-      "handle": "@뜨뜨뜨뜨",
+      "handle": "@Netflix_Korea_넷플릭스_코",
       "categoryTag": {
         "ko": "주간 급상승",
         "en": "Trending"
       },
       "rankChange": "▲5",
       "followers": {
-        "ko": "29만 뷰",
-        "en": "295K views"
+        "ko": "10만 뷰",
+        "en": "104K views"
       },
       "weeklyGrowth": {
-        "ko": "+5만",
-        "en": "+50K"
+        "ko": "+2만",
+        "en": "+20K"
       },
       "headline": {
-        "ko": "개가 된 이유",
-        "en": "개가 된 이유"
+        "ko": "100일의 거짓말 | 공식 예고편 | 넷플릭스",
+        "en": "100일의 거짓말 | 공식 예고편 | 넷플릭스"
       },
-      "viralTopic": "#뜨뜨뜨뜨 #인기급상승",
+      "viralTopic": "#NetflixKorea넷플릭 #인기급상승",
       "growthFactor": {
         "ko": "실시간 급상승 알고리즘 및 높은 완청률 기반 트래픽 폭발.",
         "en": "Surged via recommendation algorithms."
