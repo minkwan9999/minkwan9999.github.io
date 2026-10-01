@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.09.30 15:07",
+  "lastUpdated": "2026.10.01 15:40",
   "posts": [
     {
       "id": "p1",
@@ -1665,6 +1665,64 @@
       "disagrees": 0,
       "id": "p_auto_1790748465192_8870",
       "addedAt": "2026-09-30"
+    },
+    {
+      "cardType": "LESSON",
+      "eraTag": {
+        "ko": "1998 · 아이맥 출시",
+        "en": "1998 · iMac Launch"
+      },
+      "statusBadge": {
+        "ko": "완전히 틀림 ✗",
+        "en": "Fully Wrong ✗"
+      },
+      "statusColor": "bg-rose-500/10 text-rose-400 border-rose-500/20",
+      "author": {
+        "ko": "보스턴 글로브",
+        "en": "The Boston Globe"
+      },
+      "authorTitle": {
+        "ko": "미국 일간지",
+        "en": "American daily newspaper"
+      },
+      "avatar": "🍎",
+      "imageBeforeUrl": "https://images.unsplash.com/photo-1554921027-b91f0beeb07d?w=800&auto=format&fit=crop&q=80",
+      "imageCaption": {
+        "ko": "1998년 출시 초기 아이맥",
+        "en": "The original 1998 iMac"
+      },
+      "title": {
+        "ko": "깔끔하고 우아하지만... 이미 죽은 제품",
+        "en": "Clean, elegant, floppy-free — and doomed"
+      },
+      "quoteSource": {
+        "ko": "1998년 5월 아이맥 리뷰 기사",
+        "en": "May 14, 1998 iMac review"
+      },
+      "quoteText": {
+        "ko": "깔끔하고 우아하며, 플로피 드라이브도 없습니다. 그리고 이미 죽은 제품입니다.",
+        "en": "It's clean, elegant, floppy-free—and doomed."
+      },
+      "timelineLabel": {
+        "ko": "📜 이미 역사가 심판 완료",
+        "en": "📜 History Has Already Judged"
+      },
+      "realityStat": {
+        "ko": "아이맥, 출시 첫 6주 만에 27만 대 이상 판매",
+        "en": "The iMac sold over 270,000 units in its first six weeks"
+      },
+      "realityText": {
+        "ko": "아이맥은 애플을 파산 위기에서 구해낸 상징적 제품이자, 이후 애플 부활의 출발점이 됐습니다.",
+        "en": "The iMac became the symbolic product that pulled Apple back from the brink and kicked off its revival."
+      },
+      "actionHighlight": {
+        "ko": "디자인의 대담한 단순화(플로피 제거)를 '결함'으로만 해석하면 혁신의 신호를 놓칩니다.",
+        "en": "Reading a bold design simplification as a mere 'flaw' can mean missing a signal of real innovation."
+      },
+      "upvotes": 0,
+      "disagrees": 0,
+      "id": "p_auto_1790836815431_9312",
+      "addedAt": "2026-10-01"
     }
   ]
 }
