@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.10.01 15:40",
+  "lastUpdated": "2026.10.02 15:24",
   "posts": [
     {
       "id": "p1",
@@ -1723,6 +1723,64 @@
       "disagrees": 0,
       "id": "p_auto_1790836815431_9312",
       "addedAt": "2026-10-01"
+    },
+    {
+      "cardType": "LESSON",
+      "eraTag": {
+        "ko": "1902 · 라이트 형제 비행 직전",
+        "en": "1902 · Just Before the Wright Brothers"
+      },
+      "statusBadge": {
+        "ko": "완전히 틀림 ✗",
+        "en": "Fully Wrong ✗"
+      },
+      "statusColor": "bg-rose-500/10 text-rose-400 border-rose-500/20",
+      "author": {
+        "ko": "사이먼 뉴컴",
+        "en": "Simon Newcomb"
+      },
+      "authorTitle": {
+        "ko": "천문학자 · 존스홉킨스대 교수",
+        "en": "Astronomer, Johns Hopkins University"
+      },
+      "avatar": "✈️",
+      "imageBeforeUrl": "https://images.unsplash.com/photo-1541726156-b8aff4dcce65?w=800&auto=format&fit=crop&q=80",
+      "imageCaption": {
+        "ko": "1900년대 초 초기 비행기",
+        "en": "Early 1900s aircraft"
+      },
+      "title": {
+        "ko": "동력 비행기는 실용적으로도 의미상으로도 불가능하다",
+        "en": "Flight by machines heavier than air is unpractical and insignificant, if not utterly impossible"
+      },
+      "quoteSource": {
+        "ko": "1901년 매클루어스 매거진 기고",
+        "en": "1901 McClure's Magazine article"
+      },
+      "quoteText": {
+        "ko": "중량이 공기보다 무거운 기계로 나는 비행은 실용적이지도 않고 의미도 없으며, 사실상 완전히 불가능하다.",
+        "en": "Flight by machines heavier than air is unpractical and insignificant, if not utterly impossible."
+      },
+      "timelineLabel": {
+        "ko": "📜 이미 역사가 심판 완료",
+        "en": "📜 History Has Already Judged"
+      },
+      "realityStat": {
+        "ko": "전세계 항공 여객 연간 45억 명 이상",
+        "en": "4.5+ billion annual air passengers worldwide"
+      },
+      "realityText": {
+        "ko": "이 글이 나온 지 불과 2년 뒤인 1903년, 라이트 형제가 키티호크에서 최초의 동력 비행에 성공했습니다.",
+        "en": "Just two years after this was published, the Wright brothers achieved the first powered flight at Kitty Hawk in 1903."
+      },
+      "actionHighlight": {
+        "ko": "당대 최고의 과학자라는 권위도 눈앞에 닥친 돌파구를 못 알아보게 만들 수 있습니다.",
+        "en": "Even the authority of a leading scientist can blind you to a breakthrough that's right around the corner."
+      },
+      "upvotes": 0,
+      "disagrees": 0,
+      "id": "p_auto_1790922275573_7988",
+      "addedAt": "2026-10-02"
     }
   ]
 }
