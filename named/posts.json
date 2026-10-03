@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.10.02 15:24",
+  "lastUpdated": "2026.10.03 14:53",
   "posts": [
     {
       "id": "p1",
@@ -1781,6 +1781,64 @@
       "disagrees": 0,
       "id": "p_auto_1790922275573_7988",
       "addedAt": "2026-10-02"
+    },
+    {
+      "cardType": "LESSON",
+      "eraTag": {
+        "ko": "1911 · 제1차 세계대전 직전",
+        "en": "1911 · Just Before WWI"
+      },
+      "statusBadge": {
+        "ko": "완전히 틀림 ✗",
+        "en": "Fully Wrong ✗"
+      },
+      "statusColor": "bg-rose-500/10 text-rose-400 border-rose-500/20",
+      "author": {
+        "ko": "페르디낭 포슈",
+        "en": "Ferdinand Foch"
+      },
+      "authorTitle": {
+        "ko": "프랑스 육군 원수(훗날 연합군 총사령관)",
+        "en": "French Marshal (later Allied Supreme Commander)"
+      },
+      "avatar": "🎖️",
+      "imageBeforeUrl": "https://images.unsplash.com/photo-1517341392804-5f6daad2d02d?w=800&auto=format&fit=crop&q=80",
+      "imageCaption": {
+        "ko": "1910년대 초기 비행기",
+        "en": "1910s-era biplanes"
+      },
+      "title": {
+        "ko": "비행기는 흥미로운 장난감일 뿐, 군사적 가치는 없다",
+        "en": "Airplanes are interesting toys but of no military value"
+      },
+      "quoteSource": {
+        "ko": "1911년, 프랑스 육군사관학교 강연",
+        "en": "1911 lecture at École Supérieure de Guerre"
+      },
+      "quoteText": {
+        "ko": "비행기는 흥미로운 장난감이지만 군사적으로는 아무런 가치가 없다.",
+        "en": "Airplanes are interesting toys but of no military value."
+      },
+      "timelineLabel": {
+        "ko": "📜 이미 역사가 심판 완료",
+        "en": "📜 History Has Already Judged"
+      },
+      "realityStat": {
+        "ko": "제1차 세계대전 중 공중전은 핵심 전술로 부상",
+        "en": "Aerial combat became a core tactic within WWI itself"
+      },
+      "realityText": {
+        "ko": "발언 3년 뒤 발발한 1차대전에서 항공기는 정찰·폭격의 핵심 수단이 되었고, 본인도 이 변화를 지켜보며 태도를 바꿨습니다.",
+        "en": "Just three years later, in WWI, aircraft became central to reconnaissance and bombing — and Foch himself later changed his view."
+      },
+      "actionHighlight": {
+        "ko": "새로운 무기 체계의 잠재력은 그것이 아직 서툴러 보일 때 가장 쉽게 무시됩니다.",
+        "en": "A new weapon's potential is easiest to dismiss while it still looks clumsy."
+      },
+      "upvotes": 0,
+      "disagrees": 0,
+      "id": "p_auto_1791006800643_6890",
+      "addedAt": "2026-10-03"
     }
   ]
 }
