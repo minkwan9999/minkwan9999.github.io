@@ -2,62 +2,6 @@
   {
     "cardType": "LESSON",
     "eraTag": {
-      "ko": "1920 · 로켓공학 태동기",
-      "en": "1920 · Dawn of Rocketry"
-    },
-    "statusBadge": {
-      "ko": "완전히 틀림 ✗",
-      "en": "Fully Wrong ✗"
-    },
-    "statusColor": "bg-rose-500/10 text-rose-400 border-rose-500/20",
-    "author": {
-      "ko": "뉴욕타임스 (사설)",
-      "en": "The New York Times (editorial)"
-    },
-    "authorTitle": {
-      "ko": "미국 일간지",
-      "en": "American daily newspaper"
-    },
-    "avatar": "🚀",
-    "imageBeforeUrl": "https://images.unsplash.com/photo-1517976487492-5750f3195933?w=800&auto=format&fit=crop&q=80",
-    "imageCaption": {
-      "ko": "로켓 발사 장면",
-      "en": "A rocket launch"
-    },
-    "title": {
-      "ko": "고다드 교수는 로켓이 진공에서 못 나간다는 기초 물리도 모른다",
-      "en": "Professor Goddard does not know the relation of action and reaction"
-    },
-    "quoteSource": {
-      "ko": "1920년 1월 13일 뉴욕타임스 사설",
-      "en": "New York Times editorial, January 13, 1920"
-    },
-    "quoteText": {
-      "ko": "고다드 교수는 작용과 반작용의 관계를 모르는 듯하다. 로켓은 진공 상태인 우주에서는 추진력을 낼 매질이 없어 작동할 수 없다.",
-      "en": "Professor Goddard does not know the relation of action and reaction... Rockets cannot function in the vacuum of space."
-    },
-    "timelineLabel": {
-      "ko": "📜 49년 뒤 신문사가 직접 정정",
-      "en": "📜 The Paper Corrected Itself 49 Years Later"
-    },
-    "realityStat": {
-      "ko": "아폴로 11호 발사 다음날 뉴욕타임스 정정 보도",
-      "en": "NYT ran a correction the day after Apollo 11 launched"
-    },
-    "realityText": {
-      "ko": "1969년 아폴로 11호 발사 다음날, 뉴욕타임스는 짧은 정정문을 내고 '로켓은 진공에서도 작동하며, 신문사가 유감을 표한다'고 밝혔습니다.",
-      "en": "The day after Apollo 11 launched in 1969, the NYT published a brief correction stating rockets do work in a vacuum and that the paper regretted the error."
-    },
-    "actionHighlight": {
-      "ko": "권위 있는 언론조차 새로운 과학을 '상식'만으로 재단하면 반세기 뒤에 정정문을 써야 할 수도 있습니다.",
-      "en": "Even an authoritative newspaper can end up writing a correction decades later if it judges new science by 'common sense' alone."
-    },
-    "upvotes": 0,
-    "disagrees": 0
-  },
-  {
-    "cardType": "LESSON",
-    "eraTag": {
       "ko": "1920년대 · 라디오 방송 태동기",
       "en": "1920s · Dawn of Radio Broadcasting"
     },
