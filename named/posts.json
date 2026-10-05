@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.10.04 15:30",
+  "lastUpdated": "2026.10.05 15:23",
   "posts": [
     {
       "id": "p1",
@@ -1897,6 +1897,64 @@
       "disagrees": 0,
       "id": "p_auto_1791095427933_5238",
       "addedAt": "2026-10-04"
+    },
+    {
+      "cardType": "LESSON",
+      "eraTag": {
+        "ko": "1920년대 · 라디오 방송 태동기",
+        "en": "1920s · Dawn of Radio Broadcasting"
+      },
+      "statusBadge": {
+        "ko": "완전히 틀림 ✗",
+        "en": "Fully Wrong ✗"
+      },
+      "statusColor": "bg-rose-500/10 text-rose-400 border-rose-500/20",
+      "author": {
+        "ko": "데이비드 사노프의 동료들",
+        "en": "David Sarnoff's associates"
+      },
+      "authorTitle": {
+        "ko": "RCA 투자 검토 관계자들",
+        "en": "Investment reviewers at RCA"
+      },
+      "avatar": "📻",
+      "imageBeforeUrl": "https://images.unsplash.com/photo-1584541728894-dbcae08f94ac?w=800&auto=format&fit=crop&q=80",
+      "imageCaption": {
+        "ko": "1920년대 초기 라디오 수신기",
+        "en": "A 1920s-era radio receiver"
+      },
+      "title": {
+        "ko": "무선 음악 상자는 상업적 가치가 전혀 없다",
+        "en": "The wireless music box has no imaginable commercial value"
+      },
+      "quoteSource": {
+        "ko": "데이비드 사노프의 후일 회고",
+        "en": "From David Sarnoff's later recollections"
+      },
+      "quoteText": {
+        "ko": "무선 음악 상자는 상상할 수 있는 상업적 가치가 전혀 없다. 특정 수신자 없이 보내는 메시지에 누가 돈을 내겠는가?",
+        "en": "The wireless music box has no imaginable commercial value. Who would pay for a message sent to nobody in particular?"
+      },
+      "timelineLabel": {
+        "ko": "📜 이미 역사가 심판 완료",
+        "en": "📜 History Has Already Judged"
+      },
+      "realityStat": {
+        "ko": "글로벌 라디오·오디오 방송 산업 연 수백억 달러 규모",
+        "en": "Global radio/audio broadcasting industry now worth tens of billions annually"
+      },
+      "realityText": {
+        "ko": "사노프는 이 회의적 반응에도 투자를 밀어붙였고, RCA는 훗날 라디오 방송 산업의 최대 기업으로 성장했습니다.",
+        "en": "Sarnoff pushed the investment through despite the skepticism, and RCA went on to become the dominant force in radio broadcasting."
+      },
+      "actionHighlight": {
+        "ko": "'누구에게 파는지 모르겠다'는 반응은 새로운 대중 매체 초기에 거의 항상 나오는 반응입니다.",
+        "en": "\"I don't see who'd buy this\" is almost always the first reaction to a new mass medium."
+      },
+      "upvotes": 0,
+      "disagrees": 0,
+      "id": "p_auto_1791181437279_8837",
+      "addedAt": "2026-10-05"
     }
   ]
 }
