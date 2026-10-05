@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.10.04 14:24",
+  "lastUpdated": "2026.10.05 14:08",
   "ranks": [
     {
       "id": "yt1",
@@ -18,12 +18,12 @@
       },
       "rankChange": "▲1",
       "followers": {
-        "ko": "33만 뷰",
-        "en": "334K views"
+        "ko": "42만 뷰",
+        "en": "424K views"
       },
       "weeklyGrowth": {
-        "ko": "+6만",
-        "en": "+60K"
+        "ko": "+8만",
+        "en": "+80K"
       },
       "headline": {
         "ko": "Call Me",
@@ -55,12 +55,12 @@
       },
       "rankChange": "▲2",
       "followers": {
-        "ko": "81만 뷰",
-        "en": "810K views"
+        "ko": "107만 뷰",
+        "en": "1076K views"
       },
       "weeklyGrowth": {
-        "ko": "+16만",
-        "en": "+160K"
+        "ko": "+21만",
+        "en": "+210K"
       },
       "headline": {
         "ko": "[비전퀘스트] 메인 예고편",
@@ -82,28 +82,28 @@
       "platformBadge": "YouTube",
       "platformColor": "bg-red-500/10 text-red-400 border-red-500/30",
       "creatorName": {
-        "ko": "튜브김민교",
-        "en": "튜브김민교"
+        "ko": "괴물쥐 유튜브",
+        "en": "괴물쥐 유튜브"
       },
-      "handle": "@튜브김민교",
+      "handle": "@괴물쥐_유튜브",
       "categoryTag": {
         "ko": "주간 급상승",
         "en": "Trending"
       },
       "rankChange": "▲3",
       "followers": {
-        "ko": "43만 뷰",
-        "en": "434K views"
+        "ko": "45만 뷰",
+        "en": "450K views"
       },
       "weeklyGrowth": {
-        "ko": "+8만",
-        "en": "+80K"
+        "ko": "+9만",
+        "en": "+90K"
       },
       "headline": {
-        "ko": "끝날때까지 예측 불가능한 넥서스 피1 사건ㅋㅋㅋㅋㅋ",
-        "en": "끝날때까지 예측 불가능한 넥서스 피1 사건ㅋㅋㅋㅋㅋ"
+        "ko": "사람 미치게 하는 노인",
+        "en": "사람 미치게 하는 노인"
       },
-      "viralTopic": "#튜브김민교 #인기급상승",
+      "viralTopic": "#괴물쥐유튜브 #인기급상승",
       "growthFactor": {
         "ko": "실시간 급상승 알고리즘 및 높은 완청률 기반 트래픽 폭발.",
         "en": "Surged via recommendation algorithms."
@@ -129,12 +129,12 @@
       },
       "rankChange": "▲4",
       "followers": {
-        "ko": "12만 뷰",
-        "en": "129K views"
+        "ko": "16만 뷰",
+        "en": "166K views"
       },
       "weeklyGrowth": {
-        "ko": "+2만",
-        "en": "+20K"
+        "ko": "+3만",
+        "en": "+30K"
       },
       "headline": {
         "ko": "Dime Girl",
@@ -156,28 +156,28 @@
       "platformBadge": "YouTube",
       "platformColor": "bg-red-500/10 text-red-400 border-red-500/30",
       "creatorName": {
-        "ko": "Dramatic Drama",
-        "en": "Dramatic Drama"
+        "ko": "[ALTUBE] 김성현TV",
+        "en": "[ALTUBE] 김성현TV"
       },
-      "handle": "@Dramatic_Drama",
+      "handle": "@[ALTUBE]_김성현TV",
       "categoryTag": {
         "ko": "주간 급상승",
         "en": "Trending"
       },
       "rankChange": "▲5",
       "followers": {
-        "ko": "1만 뷰",
-        "en": "15K views"
+        "ko": "56만 뷰",
+        "en": "564K views"
       },
       "weeklyGrowth": {
-        "ko": "+1만",
-        "en": "+10K"
+        "ko": "+11만",
+        "en": "+110K"
       },
       "headline": {
-        "ko": "[포핸즈|최종화 예고]죄책감의 고리를 끊는 마지막 한 수! 낙원상가 창고에서 완성될 '포핸즈'의 소름 돋는 반전 결말 #tvN #포핸즈#송강 #이준영",
-        "en": "[포핸즈|최종화 예고]죄책감의 고리를 끊는 마지막 한 수! 낙원상가 창고에서 완성될 '포핸즈'의 소름 돋는 반전 결말 #tvN #포핸즈#송강 #이준영"
+        "ko": "플루토와 플루토가 싸우면 어떤 종족이 최강일까?",
+        "en": "플루토와 플루토가 싸우면 어떤 종족이 최강일까?"
       },
-      "viralTopic": "#DramaticDrama #인기급상승",
+      "viralTopic": "#[ALTUBE]김성현TV #인기급상승",
       "growthFactor": {
         "ko": "실시간 급상승 알고리즘 및 높은 완청률 기반 트래픽 폭발.",
         "en": "Surged via recommendation algorithms."
