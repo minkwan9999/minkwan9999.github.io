@@ -2,62 +2,6 @@
   {
     "cardType": "LESSON",
     "eraTag": {
-      "ko": "1946 · TV 방송 초창기",
-      "en": "1946 · Early Television Broadcasting"
-    },
-    "statusBadge": {
-      "ko": "완전히 틀림 ✗",
-      "en": "Fully Wrong ✗"
-    },
-    "statusColor": "bg-rose-500/10 text-rose-400 border-rose-500/20",
-    "author": {
-      "ko": "대릴 재넉",
-      "en": "Darryl F. Zanuck"
-    },
-    "authorTitle": {
-      "ko": "20세기폭스 공동창업자",
-      "en": "Co-founder of 20th Century Fox"
-    },
-    "avatar": "📺",
-    "imageBeforeUrl": "https://images.unsplash.com/photo-1633294666093-ab54f43a947a?w=800&auto=format&fit=crop&q=80",
-    "imageCaption": {
-      "ko": "초창기 방송 수신기들",
-      "en": "Early broadcast-era receivers"
-    },
-    "title": {
-      "ko": "TV는 6개월만 지나면 아무도 안 볼 유행일 뿐",
-      "en": "Television won't be able to hold on to any market it captures after the first six months"
-    },
-    "quoteSource": {
-      "ko": "1946년 발언 (다수 매체 재인용)",
-      "en": "1946 remark, widely re-quoted"
-    },
-    "quoteText": {
-      "ko": "TV는 잡은 시장을 첫 6개월 이후로는 유지하지 못할 것이다. 사람들은 매일 밤 합판 상자를 쳐다보는 데 곧 질릴 것이다.",
-      "en": "Television won't be able to hold on to any market it captures after the first six months. People will soon get tired of staring at a plywood box every night."
-    },
-    "timelineLabel": {
-      "ko": "📜 이미 역사가 심판 완료",
-      "en": "📜 History Has Already Judged"
-    },
-    "realityStat": {
-      "ko": "전세계 TV 보유 가구 15억 이상",
-      "en": "1.5+ billion TV-owning households worldwide"
-    },
-    "realityText": {
-      "ko": "TV는 이후 수십 년간 가정의 중심 매체로 자리잡았고, 정작 재넉이 몸담은 영화 산업이 TV와의 경쟁 속에서 변화를 겪었습니다.",
-      "en": "Television became the central home medium for decades, while the film industry Zanuck belonged to had to adapt to compete with it."
-    },
-    "actionHighlight": {
-      "ko": "경쟁 매체를 '금방 질릴 유행'으로 치부하는 반응은 흔히 자기 업계를 지키려는 방어 심리에서 나옵니다.",
-      "en": "Dismissing a rival medium as a fad people will soon tire of often comes from a defensive instinct to protect one's own industry."
-    },
-    "upvotes": 0,
-    "disagrees": 0
-  },
-  {
-    "cardType": "LESSON",
-    "eraTag": {
       "ko": "1962 · 브리티시 인베이전 직전",
       "en": "1962 · Just Before the British Invasion"
     },
