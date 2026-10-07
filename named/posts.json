@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.10.06 15:59",
+  "lastUpdated": "2026.10.07 15:40",
   "posts": [
     {
       "id": "p1",
@@ -2013,6 +2013,64 @@
       "disagrees": 0,
       "id": "p_auto_1791269992413_1554",
       "addedAt": "2026-10-06"
+    },
+    {
+      "cardType": "LESSON",
+      "eraTag": {
+        "ko": "1962 · 브리티시 인베이전 직전",
+        "en": "1962 · Just Before the British Invasion"
+      },
+      "statusBadge": {
+        "ko": "완전히 틀림 ✗",
+        "en": "Fully Wrong ✗"
+      },
+      "statusColor": "bg-rose-500/10 text-rose-400 border-rose-500/20",
+      "author": {
+        "ko": "데카 레코드",
+        "en": "Decca Records"
+      },
+      "authorTitle": {
+        "ko": "영국 음반사 오디션 심사단",
+        "en": "British record label audition panel"
+      },
+      "avatar": "🎸",
+      "imageBeforeUrl": "https://images.unsplash.com/photo-1588523900549-d60e602ced7c?w=800&auto=format&fit=crop&q=80",
+      "imageCaption": {
+        "ko": "1960년대 음악 재생 기기",
+        "en": "A 1960s-era music player"
+      },
+      "title": {
+        "ko": "기타 밴드 사운드는 이제 한물갔다며 비틀즈를 거절하다",
+        "en": "We don't like their sound, and guitar music is on the way out"
+      },
+      "quoteSource": {
+        "ko": "1962년 1월, 비틀즈 오디션 거절 사유",
+        "en": "January 1962, reason given for rejecting the Beatles' audition"
+      },
+      "quoteText": {
+        "ko": "우리는 그들의 사운드가 마음에 들지 않고, 기타 음악은 이제 한물갔습니다.",
+        "en": "We don't like their sound, and guitar music is on the way out."
+      },
+      "timelineLabel": {
+        "ko": "📜 이미 역사가 심판 완료",
+        "en": "📜 History Has Already Judged"
+      },
+      "realityStat": {
+        "ko": "비틀즈 앨범 누적 판매량 6억 장 이상",
+        "en": "600+ million Beatles albums sold worldwide"
+      },
+      "realityText": {
+        "ko": "몇 달 뒤 EMI 산하 팔로폰이 비틀즈와 계약했고, 비틀즈는 대중음악 역사상 가장 상업적으로 성공한 밴드가 되었습니다.",
+        "en": "Months later, EMI's Parlophone signed the Beatles, who went on to become the best-selling band in popular music history."
+      },
+      "actionHighlight": {
+        "ko": "'이 스타일은 끝났다'는 단정은 다음 유행의 시작을 코앞에서 놓치게 만들 수 있습니다.",
+        "en": "Declaring a style 'over' can mean missing the very next wave as it's forming."
+      },
+      "upvotes": 0,
+      "disagrees": 0,
+      "id": "p_auto_1791355224178_6759",
+      "addedAt": "2026-10-07"
     }
   ]
 }
