@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.10.07 15:40",
+  "lastUpdated": "2026.10.08 15:47",
   "posts": [
     {
       "id": "p1",
@@ -2071,6 +2071,64 @@
       "disagrees": 0,
       "id": "p_auto_1791355224178_6759",
       "addedAt": "2026-10-07"
+    },
+    {
+      "cardType": "LESSON",
+      "eraTag": {
+        "ko": "1889 · 전류 전쟁 시기",
+        "en": "1889 · The War of Currents"
+      },
+      "statusBadge": {
+        "ko": "완전히 틀림 ✗",
+        "en": "Fully Wrong ✗"
+      },
+      "statusColor": "bg-rose-500/10 text-rose-400 border-rose-500/20",
+      "author": {
+        "ko": "토마스 에디슨",
+        "en": "Thomas Edison"
+      },
+      "authorTitle": {
+        "ko": "발명가 · 제너럴일렉트릭 설립자",
+        "en": "Inventor, Founder of General Electric"
+      },
+      "avatar": "⚡",
+      "imageBeforeUrl": "https://images.unsplash.com/photo-1534224039826-c7a0eda0e6b3?w=800&auto=format&fit=crop&q=80",
+      "imageCaption": {
+        "ko": "전기 스파크 이미지",
+        "en": "An electrical spark"
+      },
+      "title": {
+        "ko": "교류(AC)는 시간 낭비일 뿐, 아무도 안 쓸 것",
+        "en": "Fooling around with alternating current is just a waste of time"
+      },
+      "quoteSource": {
+        "ko": "1889년, 교류 반대 캠페인 중 발언",
+        "en": "1889, during his anti-AC campaign"
+      },
+      "quoteText": {
+        "ko": "교류(AC)를 가지고 노는 건 그저 시간 낭비다. 앞으로도 아무도 쓰지 않을 것이다.",
+        "en": "Fooling around with alternating current is just a waste of time. Nobody will use it, ever."
+      },
+      "timelineLabel": {
+        "ko": "📜 이미 역사가 심판 완료",
+        "en": "📜 History Has Already Judged"
+      },
+      "realityStat": {
+        "ko": "현재 전세계 전력망의 사실상 표준은 교류(AC)",
+        "en": "AC is the de facto global standard for power transmission today"
+      },
+      "realityText": {
+        "ko": "에디슨은 자신이 만든 직류(DC) 사업을 지키기 위해 교류를 공격했지만, 장거리 송전에 유리한 교류가 결국 표준으로 자리잡았습니다.",
+        "en": "Edison attacked AC to protect his own DC business, but AC's advantages for long-distance transmission made it the eventual standard."
+      },
+      "actionHighlight": {
+        "ko": "자신이 만든 기존 표준을 지키려는 이해관계는 더 나은 대안을 인정하지 못하게 만들 수 있습니다.",
+        "en": "A vested interest in defending your own existing standard can keep you from admitting a better alternative has won."
+      },
+      "upvotes": 0,
+      "disagrees": 0,
+      "id": "p_auto_1791442044036_1163",
+      "addedAt": "2026-10-08"
     }
   ]
 }
