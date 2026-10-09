@@ -2,62 +2,6 @@
   {
     "cardType": "LESSON",
     "eraTag": {
-      "ko": "1949 · 진공관 컴퓨터 시대",
-      "en": "1949 · The Vacuum-Tube Computer Era"
-    },
-    "statusBadge": {
-      "ko": "완전히 틀림 ✗",
-      "en": "Fully Wrong ✗"
-    },
-    "statusColor": "bg-rose-500/10 text-rose-400 border-rose-500/20",
-    "author": {
-      "ko": "파퓰러 메카닉스",
-      "en": "Popular Mechanics"
-    },
-    "authorTitle": {
-      "ko": "미국 과학기술 대중지",
-      "en": "American popular science magazine"
-    },
-    "avatar": "🖥️",
-    "imageBeforeUrl": "https://images.unsplash.com/photo-1711346105258-bbb9136592d7?w=800&auto=format&fit=crop&q=80",
-    "imageCaption": {
-      "ko": "초기 컴퓨터",
-      "en": "An early computer"
-    },
-    "title": {
-      "ko": "미래의 컴퓨터는 무게가 1.5톤까지 가벼워질 것",
-      "en": "Computers in the future may weigh no more than 1.5 tons"
-    },
-    "quoteSource": {
-      "ko": "1949년 3월호 기사",
-      "en": "March 1949 issue"
-    },
-    "quoteText": {
-      "ko": "미래의 컴퓨터는 진공관을 1,000개만 쓰고 무게도 1.5톤 정도로 가벼워질 수 있다.",
-      "en": "Computers in the future may have only 1,000 vacuum tubes and perhaps only weigh 1½ tons."
-    },
-    "timelineLabel": {
-      "ko": "📜 이미 역사가 심판 완료",
-      "en": "📜 History Has Already Judged"
-    },
-    "realityStat": {
-      "ko": "현재 스마트폰 한 대 무게 200g 이하",
-      "en": "Today's smartphones weigh under 200g"
-    },
-    "realityText": {
-      "ko": "당시로선 파격적인 소형화 예측이었지만, 트랜지스터와 반도체의 등장은 이 예측조차 무색하게 만들 정도로 컴퓨터를 작게 만들었습니다.",
-      "en": "It was a bold miniaturization prediction for its time, but transistors and semiconductors shrank computers far beyond even this forecast."
-    },
-    "actionHighlight": {
-      "ko": "과감해 보이는 미래 예측도 기술 발전의 실제 속도 앞에서는 보수적인 추정으로 판명나곤 합니다.",
-      "en": "Even a bold-sounding forecast can turn out to be conservative once the real pace of technological change kicks in."
-    },
-    "upvotes": 0,
-    "disagrees": 0
-  },
-  {
-    "cardType": "LESSON",
-    "eraTag": {
       "ko": "1929 · 대공황 직전",
       "en": "1929 · Just Before the Great Crash"
     },
