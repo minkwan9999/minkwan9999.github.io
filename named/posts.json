@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.10.09 15:55",
+  "lastUpdated": "2026.10.10 15:31",
   "posts": [
     {
       "id": "p1",
@@ -2187,6 +2187,64 @@
       "disagrees": 0,
       "id": "p_auto_1791528956872_6833",
       "addedAt": "2026-10-09"
+    },
+    {
+      "cardType": "LESSON",
+      "eraTag": {
+        "ko": "1929 · 대공황 직전",
+        "en": "1929 · Just Before the Great Crash"
+      },
+      "statusBadge": {
+        "ko": "완전히 틀림 ✗",
+        "en": "Fully Wrong ✗"
+      },
+      "statusColor": "bg-rose-500/10 text-rose-400 border-rose-500/20",
+      "author": {
+        "ko": "어빙 피셔",
+        "en": "Irving Fisher"
+      },
+      "authorTitle": {
+        "ko": "예일대 경제학 교수",
+        "en": "Professor of Economics, Yale University"
+      },
+      "avatar": "📉",
+      "imageBeforeUrl": "https://images.unsplash.com/photo-1523995462485-3d171b5c8fa9?w=800&auto=format&fit=crop&q=80",
+      "imageCaption": {
+        "ko": "1920년대 신문 더미",
+        "en": "A stack of 1920s-era newspapers"
+      },
+      "title": {
+        "ko": "주가는 영구적으로 높은 고원에 도달했다",
+        "en": "Stock prices have reached what looks like a permanently high plateau"
+      },
+      "quoteSource": {
+        "ko": "1929년 10월 15일 발언",
+        "en": "Remark made October 15, 1929"
+      },
+      "quoteText": {
+        "ko": "주가는 영구적으로 높은 고원에 도달한 것으로 보인다.",
+        "en": "Stock prices have reached what looks like a permanently high plateau."
+      },
+      "timelineLabel": {
+        "ko": "📜 발언 9일 뒤 대폭락",
+        "en": "📜 The Crash Came 9 Days Later"
+      },
+      "realityStat": {
+        "ko": "1929년 10월 대폭락으로 다우지수 약 90% 폭락",
+        "en": "The October 1929 crash wiped out ~90% of Dow value"
+      },
+      "realityText": {
+        "ko": "이 발언 이후 9일 만에 '검은 목요일'이 시작되며 역사상 최악의 주식시장 붕괴가 벌어졌고, 피셔 본인도 전 재산을 잃었습니다.",
+        "en": "Nine days after this remark, Black Thursday hit and the worst stock market crash in history began — Fisher himself lost his entire fortune."
+      },
+      "actionHighlight": {
+        "ko": "당대 최고의 경제학자도 시장이 정점에 있을 때는 하락 가능성을 가장 과소평가하는 사람이 될 수 있습니다.",
+        "en": "Even the leading economist of his era can be the one most blind to a downturn right when the market is peaking."
+      },
+      "upvotes": 0,
+      "disagrees": 0,
+      "id": "p_auto_1791613868780_2639",
+      "addedAt": "2026-10-10"
     }
   ]
 }
