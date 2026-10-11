@@ -2,62 +2,6 @@
   {
     "cardType": "LESSON",
     "eraTag": {
-      "ko": "1932 · 핵물리학 태동기",
-      "en": "1932 · Dawn of Nuclear Physics"
-    },
-    "statusBadge": {
-      "ko": "완전히 틀림 ✗",
-      "en": "Fully Wrong ✗"
-    },
-    "statusColor": "bg-rose-500/10 text-rose-400 border-rose-500/20",
-    "author": {
-      "ko": "알베르트 아인슈타인",
-      "en": "Albert Einstein"
-    },
-    "authorTitle": {
-      "ko": "물리학자 · 노벨 물리학상 수상자",
-      "en": "Physicist, Nobel Laureate"
-    },
-    "avatar": "⚛️",
-    "imageBeforeUrl": "https://images.unsplash.com/photo-1758685734643-db77920292bc?w=800&auto=format&fit=crop&q=80",
-    "imageCaption": {
-      "ko": "물리학 수식이 적힌 칠판",
-      "en": "A blackboard covered in physics equations"
-    },
-    "title": {
-      "ko": "핵에너지는 절대 얻을 수 없다고 단언한 아인슈타인",
-      "en": "There is not the slightest indication that nuclear energy will ever be obtainable"
-    },
-    "quoteSource": {
-      "ko": "1932년 발언 (다수 매체 재인용)",
-      "en": "1932 remark, widely re-quoted"
-    },
-    "quoteText": {
-      "ko": "핵에너지를 얻을 수 있으리라는 조짐은 조금도 없다. 그러려면 원자를 마음대로 쪼갤 수 있어야 하는데, 그건 불가능하다.",
-      "en": "There is not the slightest indication that nuclear energy will ever be obtainable. It would mean that the atom would have to be shattered at will."
-    },
-    "timelineLabel": {
-      "ko": "📜 이미 역사가 심판 완료",
-      "en": "📜 History Has Already Judged"
-    },
-    "realityStat": {
-      "ko": "현재 전세계 전력의 약 9%를 원자력발전이 공급",
-      "en": "Nuclear power currently supplies roughly 9% of global electricity"
-    },
-    "realityText": {
-      "ko": "발언 후 불과 몇 년 뒤 핵분열이 발견되었고, 아인슈타인 본인도 이후 미국 정부에 원자폭탄 개발 가능성을 알리는 편지에 서명하게 됩니다.",
-      "en": "Nuclear fission was discovered just a few years later, and Einstein himself went on to sign the letter warning the U.S. government of the atomic bomb's feasibility."
-    },
-    "actionHighlight": {
-      "ko": "역사상 가장 뛰어난 물리학자조차 자신의 전공 분야에서 코앞의 돌파구를 완전히 놓칠 수 있습니다.",
-      "en": "Even history's greatest physicist can completely miss a breakthrough right in his own field, just around the corner."
-    },
-    "upvotes": 0,
-    "disagrees": 0
-  },
-  {
-    "cardType": "LESSON",
-    "eraTag": {
       "ko": "1900 · 20세기 문턱",
       "en": "1900 · The Turn of the Century"
     },
