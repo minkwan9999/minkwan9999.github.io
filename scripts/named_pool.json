@@ -2,62 +2,6 @@
   {
     "cardType": "LESSON",
     "eraTag": {
-      "ko": "1900 · 20세기 문턱",
-      "en": "1900 · The Turn of the Century"
-    },
-    "statusBadge": {
-      "ko": "완전히 틀림 ✗",
-      "en": "Fully Wrong ✗"
-    },
-    "statusColor": "bg-rose-500/10 text-rose-400 border-rose-500/20",
-    "author": {
-      "ko": "윌리엄 톰슨 (켈빈 경)",
-      "en": "William Thomson (Lord Kelvin)"
-    },
-    "authorTitle": {
-      "ko": "물리학자 · 영국왕립학회 회장",
-      "en": "Physicist, President of the Royal Society"
-    },
-    "avatar": "🧊",
-    "imageBeforeUrl": "https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?w=800&auto=format&fit=crop&q=80",
-    "imageCaption": {
-      "ko": "수식이 적힌 칠판",
-      "en": "A chalkboard covered in equations"
-    },
-    "title": {
-      "ko": "물리학에서 더 이상 새로 발견할 것은 없다",
-      "en": "There is nothing new to be discovered in physics now"
-    },
-    "quoteSource": {
-      "ko": "1900년경 발언 (다수 매체 재인용)",
-      "en": "Remark attributed to around 1900, widely re-quoted"
-    },
-    "quoteText": {
-      "ko": "물리학에서 더 이상 새로 발견할 것은 없다. 남은 것은 더욱더 정밀한 측정뿐이다.",
-      "en": "There is nothing new to be discovered in physics now. All that remains is more and more precise measurement."
-    },
-    "timelineLabel": {
-      "ko": "📜 이미 역사가 심판 완료",
-      "en": "📜 History Has Already Judged"
-    },
-    "realityStat": {
-      "ko": "이후 상대성이론과 양자역학이 물리학 전체를 새로 씀",
-      "en": "Relativity and quantum mechanics rewrote physics entirely soon after"
-    },
-    "realityText": {
-      "ko": "이 발언 직후 X선, 방사능, 전자가 잇따라 발견되었고, 곧이어 아인슈타인의 상대성이론과 양자역학이 물리학의 기초를 완전히 뒤흔들었습니다.",
-      "en": "Soon after, X-rays, radioactivity, and the electron were discovered, and Einstein's relativity and quantum mechanics upended the foundations of physics."
-    },
-    "actionHighlight": {
-      "ko": "한 분야의 최고 권위자가 '더 알아낼 게 없다'고 말할 때가 오히려 가장 큰 혁명 직전일 수 있습니다.",
-      "en": "When the top authority in a field says there's nothing left to discover, that's often exactly when the biggest revolution is about to hit."
-    },
-    "upvotes": 0,
-    "disagrees": 0
-  },
-  {
-    "cardType": "LESSON",
-    "eraTag": {
       "ko": "1933 · 핵분열 발견 직전",
       "en": "1933 · Just Before Nuclear Fission"
     },
