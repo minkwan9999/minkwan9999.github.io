@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.10.12 15:43",
+  "lastUpdated": "2026.10.13 16:12",
   "posts": [
     {
       "id": "p1",
@@ -2361,6 +2361,64 @@
       "disagrees": 0,
       "id": "p_auto_1791787407125_3239",
       "addedAt": "2026-10-12"
+    },
+    {
+      "cardType": "LESSON",
+      "eraTag": {
+        "ko": "1933 · 핵분열 발견 직전",
+        "en": "1933 · Just Before Nuclear Fission"
+      },
+      "statusBadge": {
+        "ko": "완전히 틀림 ✗",
+        "en": "Fully Wrong ✗"
+      },
+      "statusColor": "bg-rose-500/10 text-rose-400 border-rose-500/20",
+      "author": {
+        "ko": "어니스트 러더퍼드",
+        "en": "Ernest Rutherford"
+      },
+      "authorTitle": {
+        "ko": "물리학자 · 노벨 화학상 수상자 · '핵물리학의 아버지'",
+        "en": "Physicist, Nobel Laureate, 'Father of Nuclear Physics'"
+      },
+      "avatar": "☢️",
+      "imageBeforeUrl": "https://images.unsplash.com/photo-1758685848095-249ad965f4f3?w=800&auto=format&fit=crop&q=80",
+      "imageCaption": {
+        "ko": "칠판에 수식을 쓰는 모습",
+        "en": "Writing formulas on a chalkboard"
+      },
+      "title": {
+        "ko": "원자에서 에너지를 뽑아낸다는 건 헛소리다",
+        "en": "Anyone who expects a source of power from the transformation of these atoms is talking moonshine"
+      },
+      "quoteSource": {
+        "ko": "1933년 9월, 영국과학진흥협회 연설",
+        "en": "September 1933, British Association for the Advancement of Science"
+      },
+      "quoteText": {
+        "ko": "원자 에너지는 보잘것없는 것이다. 원자의 변환에서 동력원을 기대하는 사람은 헛소리를 하고 있는 것이다.",
+        "en": "The energy produced by the atom is a poor kind of thing. Anyone who expects a source of power from the transformation of these atoms is talking moonshine."
+      },
+      "timelineLabel": {
+        "ko": "📜 발언 몇 달 뒤 핵분열 이론적 토대 마련",
+        "en": "📜 The Groundwork for Fission Came Just Months Later"
+      },
+      "realityStat": {
+        "ko": "현재 전세계 전력의 약 9%를 원자력발전이 공급",
+        "en": "Nuclear power currently supplies roughly 9% of global electricity"
+      },
+      "realityText": {
+        "ko": "이 발언 직후 동료 물리학자 레오 실라르드가 핵연쇄반응 개념을 떠올렸고, 수년 뒤 실제 핵분열이 발견되며 원자력 시대가 열렸습니다.",
+        "en": "Shortly after, physicist Leo Szilard conceived the nuclear chain reaction, and nuclear fission was discovered just years later, ushering in the atomic age."
+      },
+      "actionHighlight": {
+        "ko": "그 분야를 만든 창시자조차, 자신이 닦아놓은 토대 위에서 일어날 다음 도약은 못 볼 수 있습니다.",
+        "en": "Even the founder of a field can fail to see the next leap that will be built on the very foundation they laid."
+      },
+      "upvotes": 0,
+      "disagrees": 0,
+      "id": "p_auto_1791875527319_5772",
+      "addedAt": "2026-10-13"
     }
   ]
 }
