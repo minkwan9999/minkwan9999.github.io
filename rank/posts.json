@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.10.13 15:26",
+  "lastUpdated": "2026.10.14 13:28",
   "ranks": [
     {
       "id": "yt1",
@@ -8,28 +8,28 @@
       "platformBadge": "YouTube",
       "platformColor": "bg-red-500/10 text-red-400 border-red-500/30",
       "creatorName": {
-        "ko": "PLAVE 플레이브",
-        "en": "PLAVE 플레이브"
+        "ko": "Release - Topic",
+        "en": "Release - Topic"
       },
-      "handle": "@PLAVE_플레이브",
+      "handle": "@Release_-_Topic",
       "categoryTag": {
         "ko": "주간 급상승",
         "en": "Trending"
       },
       "rankChange": "▲1",
       "followers": {
-        "ko": "43만 뷰",
-        "en": "432K views"
+        "ko": "30만 뷰",
+        "en": "303K views"
       },
       "weeklyGrowth": {
-        "ko": "+8만",
-        "en": "+80K"
+        "ko": "+6만",
+        "en": "+60K"
       },
       "headline": {
-        "ko": "PLAVE 'Star Trace' M/V",
-        "en": "PLAVE 'Star Trace' M/V"
+        "ko": "NEON",
+        "en": "NEON"
       },
-      "viralTopic": "#PLAVE플레이브 #인기급상승",
+      "viralTopic": "#Release-Topic #인기급상승",
       "growthFactor": {
         "ko": "실시간 급상승 알고리즘 및 높은 완청률 기반 트래픽 폭발.",
         "en": "Surged via recommendation algorithms."
@@ -45,28 +45,28 @@
       "platformBadge": "YouTube",
       "platformColor": "bg-red-500/10 text-red-400 border-red-500/30",
       "creatorName": {
-        "ko": "GamersPrey",
-        "en": "GamersPrey"
+        "ko": "Netflix Korea 넷플릭스 코리아",
+        "en": "Netflix Korea 넷플릭스 코리아"
       },
-      "handle": "@GamersPrey",
+      "handle": "@Netflix_Korea_넷플릭스_코",
       "categoryTag": {
         "ko": "주간 급상승",
         "en": "Trending"
       },
       "rankChange": "▲2",
       "followers": {
-        "ko": "147만 뷰",
-        "en": "1477K views"
+        "ko": "43만 뷰",
+        "en": "433K views"
       },
       "weeklyGrowth": {
-        "ko": "+29만",
-        "en": "+290K"
+        "ko": "+8만",
+        "en": "+80K"
       },
       "headline": {
-        "ko": "Tekken 8 Yujiro Reveal Trailer | EVO France 2026",
-        "en": "Tekken 8 Yujiro Reveal Trailer | EVO France 2026"
+        "ko": "데블스 플랜: 데드 어게인 | 공식 티저 예고편 | 넷플릭스",
+        "en": "데블스 플랜: 데드 어게인 | 공식 티저 예고편 | 넷플릭스"
       },
-      "viralTopic": "#GamersPrey #인기급상승",
+      "viralTopic": "#NetflixKorea넷플릭 #인기급상승",
       "growthFactor": {
         "ko": "실시간 급상승 알고리즘 및 높은 완청률 기반 트래픽 폭발.",
         "en": "Surged via recommendation algorithms."
@@ -82,28 +82,28 @@
       "platformBadge": "YouTube",
       "platformColor": "bg-red-500/10 text-red-400 border-red-500/30",
       "creatorName": {
-        "ko": "PAKA",
-        "en": "PAKA"
+        "ko": "감스트GAMST",
+        "en": "감스트GAMST"
       },
-      "handle": "@PAKA",
+      "handle": "@감스트GAMST",
       "categoryTag": {
         "ko": "주간 급상승",
         "en": "Trending"
       },
       "rankChange": "▲3",
       "followers": {
-        "ko": "44만 뷰",
-        "en": "449K views"
+        "ko": "65만 뷰",
+        "en": "654K views"
       },
       "weeklyGrowth": {
-        "ko": "+8만",
-        "en": "+80K"
+        "ko": "+13만",
+        "en": "+130K"
       },
       "headline": {
-        "ko": "응수 전문가",
-        "en": "응수 전문가"
+        "ko": "감스트 본캐 UC호날두11카 영입!! 진짜 개사기입니다...FC온라인",
+        "en": "감스트 본캐 UC호날두11카 영입!! 진짜 개사기입니다...FC온라인"
       },
-      "viralTopic": "#PAKA #인기급상승",
+      "viralTopic": "#감스트GAMST #인기급상승",
       "growthFactor": {
         "ko": "실시간 급상승 알고리즘 및 높은 완청률 기반 트래픽 폭발.",
         "en": "Surged via recommendation algorithms."
@@ -119,28 +119,28 @@
       "platformBadge": "YouTube",
       "platformColor": "bg-red-500/10 text-red-400 border-red-500/30",
       "creatorName": {
-        "ko": "SMTOWN",
-        "en": "SMTOWN"
+        "ko": "Epik High - Topic",
+        "en": "Epik High - Topic"
       },
-      "handle": "@SMTOWN",
+      "handle": "@Epik_High_-_Topic",
       "categoryTag": {
         "ko": "주간 급상승",
         "en": "Trending"
       },
       "rankChange": "▲4",
       "followers": {
-        "ko": "228만 뷰",
-        "en": "2284K views"
+        "ko": "24만 뷰",
+        "en": "240K views"
       },
       "weeklyGrowth": {
-        "ko": "+45만",
-        "en": "+450K"
+        "ko": "+4만",
+        "en": "+40K"
       },
       "headline": {
-        "ko": "NCT WISH 엔시티 위시 'I SPY' MV",
-        "en": "NCT WISH 엔시티 위시 'I SPY' MV"
+        "ko": "Mise en scène",
+        "en": "Mise en scène"
       },
-      "viralTopic": "#SMTOWN #인기급상승",
+      "viralTopic": "#EpikHigh-Topic #인기급상승",
       "growthFactor": {
         "ko": "실시간 급상승 알고리즘 및 높은 완청률 기반 트래픽 폭발.",
         "en": "Surged via recommendation algorithms."
@@ -156,28 +156,28 @@
       "platformBadge": "YouTube",
       "platformColor": "bg-red-500/10 text-red-400 border-red-500/30",
       "creatorName": {
-        "ko": "근가놈",
-        "en": "근가놈"
+        "ko": "마인드마크",
+        "en": "마인드마크"
       },
-      "handle": "@근가놈",
+      "handle": "@마인드마크",
       "categoryTag": {
         "ko": "주간 급상승",
         "en": "Trending"
       },
       "rankChange": "▲5",
       "followers": {
-        "ko": "50만 뷰",
-        "en": "500K views"
+        "ko": "11만 뷰",
+        "en": "112K views"
       },
       "weeklyGrowth": {
-        "ko": "+10만",
-        "en": "+100K"
+        "ko": "+2만",
+        "en": "+20K"
       },
       "headline": {
-        "ko": "쉬어가는 타입  : 강철타입 하트골드【포켓몬 모든타입 깨기】#1",
-        "en": "쉬어가는 타입  : 강철타입 하트골드【포켓몬 모든타입 깨기】#1"
+        "ko": "[슬픈 열대] 티저 예고편",
+        "en": "[슬픈 열대] 티저 예고편"
       },
-      "viralTopic": "#근가놈 #인기급상승",
+      "viralTopic": "#마인드마크 #인기급상승",
       "growthFactor": {
         "ko": "실시간 급상승 알고리즘 및 높은 완청률 기반 트래픽 폭발.",
         "en": "Surged via recommendation algorithms."
