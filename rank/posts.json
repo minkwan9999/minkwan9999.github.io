@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.10.17 12:56",
+  "lastUpdated": "2026.10.18 13:03",
   "ranks": [
     {
       "id": "yt1",
@@ -18,12 +18,12 @@
       },
       "rankChange": "▲1",
       "followers": {
-        "ko": "495만 뷰",
-        "en": "4957K views"
+        "ko": "669만 뷰",
+        "en": "6699K views"
       },
       "weeklyGrowth": {
-        "ko": "+99만",
-        "en": "+990K"
+        "ko": "+133만",
+        "en": "+1330K"
       },
       "headline": {
         "ko": "NEON",
@@ -45,28 +45,28 @@
       "platformBadge": "YouTube",
       "platformColor": "bg-red-500/10 text-red-400 border-red-500/30",
       "creatorName": {
-        "ko": "Rockstar Games",
-        "en": "Rockstar Games"
+        "ko": "Netflix Korea 넷플릭스 코리아",
+        "en": "Netflix Korea 넷플릭스 코리아"
       },
-      "handle": "@Rockstar_Games",
+      "handle": "@Netflix_Korea_넷플릭스_코",
       "categoryTag": {
         "ko": "주간 급상승",
         "en": "Trending"
       },
       "rankChange": "▲2",
       "followers": {
-        "ko": "3111만 뷰",
-        "en": "31119K views"
+        "ko": "70만 뷰",
+        "en": "701K views"
       },
       "weeklyGrowth": {
-        "ko": "+622만",
-        "en": "+6220K"
+        "ko": "+14만",
+        "en": "+140K"
       },
       "headline": {
-        "ko": "Grand Theft Auto VI Launch Trailer",
-        "en": "Grand Theft Auto VI Launch Trailer"
+        "ko": "꿀알바 | 공식 예고편 | 넷플릭스",
+        "en": "꿀알바 | 공식 예고편 | 넷플릭스"
       },
-      "viralTopic": "#RockstarGames #인기급상승",
+      "viralTopic": "#NetflixKorea넷플릭 #인기급상승",
       "growthFactor": {
         "ko": "실시간 급상승 알고리즘 및 높은 완청률 기반 트래픽 폭발.",
         "en": "Surged via recommendation algorithms."
@@ -92,12 +92,12 @@
       },
       "rankChange": "▲3",
       "followers": {
-        "ko": "52만 뷰",
-        "en": "524K views"
+        "ko": "98만 뷰",
+        "en": "988K views"
       },
       "weeklyGrowth": {
-        "ko": "+10만",
-        "en": "+100K"
+        "ko": "+19만",
+        "en": "+190K"
       },
       "headline": {
         "ko": "안 들리고 + 안 보이고 + 말을 못하는 ㅁㅣ친 협동게임ㅋㅋㅋㅋㅋㅋㅋㅋ(※30분 순삭)",
@@ -119,28 +119,28 @@
       "platformBadge": "YouTube",
       "platformColor": "bg-red-500/10 text-red-400 border-red-500/30",
       "creatorName": {
-        "ko": "Epik High - Topic",
-        "en": "Epik High - Topic"
+        "ko": "D.O. - Topic",
+        "en": "D.O. - Topic"
       },
-      "handle": "@Epik_High_-_Topic",
+      "handle": "@D.O._-_Topic",
       "categoryTag": {
         "ko": "주간 급상승",
         "en": "Trending"
       },
       "rankChange": "▲4",
       "followers": {
-        "ko": "148만 뷰",
-        "en": "1482K views"
+        "ko": "43만 뷰",
+        "en": "433K views"
       },
       "weeklyGrowth": {
-        "ko": "+29만",
-        "en": "+290K"
+        "ko": "+8만",
+        "en": "+80K"
       },
       "headline": {
-        "ko": "Mise en scène",
-        "en": "Mise en scène"
+        "ko": "Every Moment Of You",
+        "en": "Every Moment Of You"
       },
-      "viralTopic": "#EpikHigh-Topic #인기급상승",
+      "viralTopic": "#D.O.-Topic #인기급상승",
       "growthFactor": {
         "ko": "실시간 급상승 알고리즘 및 높은 완청률 기반 트래픽 폭발.",
         "en": "Surged via recommendation algorithms."
@@ -156,28 +156,28 @@
       "platformBadge": "YouTube",
       "platformColor": "bg-red-500/10 text-red-400 border-red-500/30",
       "creatorName": {
-        "ko": "Netflix Korea 넷플릭스 코리아",
-        "en": "Netflix Korea 넷플릭스 코리아"
+        "ko": "Rockstar Games",
+        "en": "Rockstar Games"
       },
-      "handle": "@Netflix_Korea_넷플릭스_코",
+      "handle": "@Rockstar_Games",
       "categoryTag": {
         "ko": "주간 급상승",
         "en": "Trending"
       },
       "rankChange": "▲5",
       "followers": {
-        "ko": "43만 뷰",
-        "en": "433K views"
+        "ko": "3895만 뷰",
+        "en": "38950K views"
       },
       "weeklyGrowth": {
-        "ko": "+8만",
-        "en": "+80K"
+        "ko": "+779만",
+        "en": "+7790K"
       },
       "headline": {
-        "ko": "꿀알바 | 공식 예고편 | 넷플릭스",
-        "en": "꿀알바 | 공식 예고편 | 넷플릭스"
+        "ko": "Grand Theft Auto VI Launch Trailer",
+        "en": "Grand Theft Auto VI Launch Trailer"
       },
-      "viralTopic": "#NetflixKorea넷플릭 #인기급상승",
+      "viralTopic": "#RockstarGames #인기급상승",
       "growthFactor": {
         "ko": "실시간 급상승 알고리즘 및 높은 완청률 기반 트래픽 폭발.",
         "en": "Surged via recommendation algorithms."
