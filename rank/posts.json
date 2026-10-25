@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.10.24 13:09",
+  "lastUpdated": "2026.10.25 13:12",
   "ranks": [
     {
       "id": "yt1",
@@ -18,12 +18,12 @@
       },
       "rankChange": "▲1",
       "followers": {
-        "ko": "527만 뷰",
-        "en": "5275K views"
+        "ko": "909만 뷰",
+        "en": "9092K views"
       },
       "weeklyGrowth": {
-        "ko": "+105만",
-        "en": "+1050K"
+        "ko": "+181만",
+        "en": "+1810K"
       },
       "headline": {
         "ko": "ATEEZ(에이티즈) - 'Drip' Official MV",
@@ -55,12 +55,12 @@
       },
       "rankChange": "▲2",
       "followers": {
-        "ko": "79만 뷰",
-        "en": "792K views"
+        "ko": "91만 뷰",
+        "en": "912K views"
       },
       "weeklyGrowth": {
-        "ko": "+15만",
-        "en": "+150K"
+        "ko": "+18만",
+        "en": "+180K"
       },
       "headline": {
         "ko": "RESCENE [PULSE] Concept Trailer",
@@ -92,16 +92,16 @@
       },
       "rankChange": "▲3",
       "followers": {
-        "ko": "19만 뷰",
-        "en": "197K views"
+        "ko": "247만 뷰",
+        "en": "2474K views"
       },
       "weeklyGrowth": {
-        "ko": "+3만",
-        "en": "+30K"
+        "ko": "+49만",
+        "en": "+490K"
       },
       "headline": {
-        "ko": "TES vs HLE 매치 하이라이트 | 스위스 Day1 | 2026 월드 챔피언십",
-        "en": "TES vs HLE 매치 하이라이트 | 스위스 Day1 | 2026 월드 챔피언십"
+        "ko": "스위스 스테이지 Day 2 | 2026 월드 챔피언십",
+        "en": "스위스 스테이지 Day 2 | 2026 월드 챔피언십"
       },
       "viralTopic": "#LCK #인기급상승",
       "growthFactor": {
@@ -129,12 +129,12 @@
       },
       "rankChange": "▲4",
       "followers": {
-        "ko": "67만 뷰",
-        "en": "672K views"
+        "ko": "90만 뷰",
+        "en": "908K views"
       },
       "weeklyGrowth": {
-        "ko": "+13만",
-        "en": "+130K"
+        "ko": "+18만",
+        "en": "+180K"
       },
       "headline": {
         "ko": "삐그덕 (seesaw)",
@@ -156,28 +156,28 @@
       "platformBadge": "YouTube",
       "platformColor": "bg-red-500/10 text-red-400 border-red-500/30",
       "creatorName": {
-        "ko": "명작맛집",
-        "en": "명작맛집"
+        "ko": "Marvel Entertainment",
+        "en": "Marvel Entertainment"
       },
-      "handle": "@명작맛집",
+      "handle": "@Marvel_Entertainment",
       "categoryTag": {
         "ko": "주간 급상승",
         "en": "Trending"
       },
       "rankChange": "▲5",
       "followers": {
-        "ko": "35만 뷰",
-        "en": "355K views"
+        "ko": "202만 뷰",
+        "en": "2023K views"
       },
       "weeklyGrowth": {
-        "ko": "+7만",
-        "en": "+70K"
+        "ko": "+40만",
+        "en": "+400K"
       },
       "headline": {
-        "ko": "닥터X | 계수정 피흘리는 예고씬 분석! 장소장 사람들이 가져온 결정적 증거! [명작맛집]",
-        "en": "닥터X | 계수정 피흘리는 예고씬 분석! 장소장 사람들이 가져온 결정적 증거! [명작맛집]"
+        "ko": "Avengers: Doomsday | In Theaters December 18",
+        "en": "Avengers: Doomsday | In Theaters December 18"
       },
-      "viralTopic": "#명작맛집 #인기급상승",
+      "viralTopic": "#MarvelEntertain #인기급상승",
       "growthFactor": {
         "ko": "실시간 급상승 알고리즘 및 높은 완청률 기반 트래픽 폭발.",
         "en": "Surged via recommendation algorithms."
