@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.10.30 14:19",
+  "lastUpdated": "2026.10.31 14:02",
   "ranks": [
     {
       "id": "yt1",
@@ -8,28 +8,28 @@
       "platformBadge": "YouTube",
       "platformColor": "bg-red-500/10 text-red-400 border-red-500/30",
       "creatorName": {
-        "ko": "ILLIT - Topic",
-        "en": "ILLIT - Topic"
+        "ko": "JISOO - Topic",
+        "en": "JISOO - Topic"
       },
-      "handle": "@ILLIT_-_Topic",
+      "handle": "@JISOO_-_Topic",
       "categoryTag": {
         "ko": "주간 급상승",
         "en": "Trending"
       },
       "rankChange": "▲1",
       "followers": {
-        "ko": "221만 뷰",
-        "en": "2212K views"
+        "ko": "50만 뷰",
+        "en": "505K views"
       },
       "weeklyGrowth": {
-        "ko": "+44만",
-        "en": "+440K"
+        "ko": "+10만",
+        "en": "+100K"
       },
       "headline": {
-        "ko": "You’re Under Arrest",
-        "en": "You’re Under Arrest"
+        "ko": "ADDICTED",
+        "en": "ADDICTED"
       },
-      "viralTopic": "#ILLIT-Topic #인기급상승",
+      "viralTopic": "#JISOO-Topic #인기급상승",
       "growthFactor": {
         "ko": "실시간 급상승 알고리즘 및 높은 완청률 기반 트래픽 폭발.",
         "en": "Surged via recommendation algorithms."
@@ -45,28 +45,28 @@
       "platformBadge": "YouTube",
       "platformColor": "bg-red-500/10 text-red-400 border-red-500/30",
       "creatorName": {
-        "ko": "Warner Bros. Korea",
-        "en": "Warner Bros. Korea"
+        "ko": "NCT WISH",
+        "en": "NCT WISH"
       },
-      "handle": "@Warner_Bros._Korea",
+      "handle": "@NCT_WISH",
       "categoryTag": {
         "ko": "주간 급상승",
         "en": "Trending"
       },
       "rankChange": "▲2",
       "followers": {
-        "ko": "139만 뷰",
-        "en": "1396K views"
+        "ko": "6만 뷰",
+        "en": "64K views"
       },
       "weeklyGrowth": {
-        "ko": "+27만",
-        "en": "+270K"
+        "ko": "+1만",
+        "en": "+10K"
       },
       "headline": {
-        "ko": "[듄: 파트 3] 3차 예고편",
-        "en": "[듄: 파트 3] 3차 예고편"
+        "ko": "너란 에너지가 궁금해🌎💭 | ‘I SPY’ Trailer Behind the Scenes",
+        "en": "너란 에너지가 궁금해🌎💭 | ‘I SPY’ Trailer Behind the Scenes"
       },
-      "viralTopic": "#WarnerBros.Kore #인기급상승",
+      "viralTopic": "#NCTWISH #인기급상승",
       "growthFactor": {
         "ko": "실시간 급상승 알고리즘 및 높은 완청률 기반 트래픽 폭발.",
         "en": "Surged via recommendation algorithms."
@@ -92,16 +92,16 @@
       },
       "rankChange": "▲3",
       "followers": {
-        "ko": "177만 뷰",
-        "en": "1771K views"
+        "ko": "192만 뷰",
+        "en": "1924K views"
       },
       "weeklyGrowth": {
-        "ko": "+35만",
-        "en": "+350K"
+        "ko": "+38만",
+        "en": "+380K"
       },
       "headline": {
-        "ko": "스위스 스테이지 Day 6 | 2026 월드 챔피언십",
-        "en": "스위스 스테이지 Day 6 | 2026 월드 챔피언십"
+        "ko": "스위스 스테이지 Day 7 | 2026 월드 챔피언십",
+        "en": "스위스 스테이지 Day 7 | 2026 월드 챔피언십"
       },
       "viralTopic": "#LCK #인기급상승",
       "growthFactor": {
@@ -129,12 +129,12 @@
       },
       "rankChange": "▲4",
       "followers": {
-        "ko": "5만 뷰",
-        "en": "51K views"
+        "ko": "12만 뷰",
+        "en": "120K views"
       },
       "weeklyGrowth": {
-        "ko": "+1만",
-        "en": "+10K"
+        "ko": "+2만",
+        "en": "+20K"
       },
       "headline": {
         "ko": "Drunk (Feat. Coogie)",
@@ -166,12 +166,12 @@
       },
       "rankChange": "▲5",
       "followers": {
-        "ko": "17만 뷰",
-        "en": "179K views"
+        "ko": "24만 뷰",
+        "en": "244K views"
       },
       "weeklyGrowth": {
-        "ko": "+3만",
-        "en": "+30K"
+        "ko": "+4만",
+        "en": "+40K"
       },
       "headline": {
         "ko": "\"예상을 깨부순다..💥\" 《듄: 파트 3》 파이널 예고편 나노분석, 숨겨진 떡밥 총정리!",
