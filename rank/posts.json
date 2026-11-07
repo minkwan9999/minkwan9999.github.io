@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.11.06 15:02",
+  "lastUpdated": "2026.11.07 14:34",
   "ranks": [
     {
       "id": "yt1",
@@ -18,12 +18,12 @@
       },
       "rankChange": "▲1",
       "followers": {
-        "ko": "265만 뷰",
-        "en": "2654K views"
+        "ko": "328만 뷰",
+        "en": "3288K views"
       },
       "weeklyGrowth": {
-        "ko": "+53만",
-        "en": "+530K"
+        "ko": "+65만",
+        "en": "+650K"
       },
       "headline": {
         "ko": "With",
@@ -55,12 +55,12 @@
       },
       "rankChange": "▲2",
       "followers": {
-        "ko": "40만 뷰",
-        "en": "405K views"
+        "ko": "66만 뷰",
+        "en": "667K views"
       },
       "weeklyGrowth": {
-        "ko": "+8만",
-        "en": "+80K"
+        "ko": "+13만",
+        "en": "+130K"
       },
       "headline": {
         "ko": "푸른길 | 공식 예고편 | 넷플릭스",
@@ -92,16 +92,16 @@
       },
       "rankChange": "▲3",
       "followers": {
-        "ko": "185만 뷰",
-        "en": "1854K views"
+        "ko": "331만 뷰",
+        "en": "3311K views"
       },
       "weeklyGrowth": {
-        "ko": "+37만",
-        "en": "+370K"
+        "ko": "+66만",
+        "en": "+660K"
       },
       "headline": {
-        "ko": "DK vs BLG | 녹아웃 스테이지 8강 Day3 | 2026 월드 챔피언십",
-        "en": "DK vs BLG | 녹아웃 스테이지 8강 Day3 | 2026 월드 챔피언십"
+        "ko": "T1 vs KC - 시크릿보드룸 4강 분석 | 녹아웃 스테이지 8강 Day4 | 2026 월드 챔피언십",
+        "en": "T1 vs KC - 시크릿보드룸 4강 분석 | 녹아웃 스테이지 8강 Day4 | 2026 월드 챔피언십"
       },
       "viralTopic": "#LCK #인기급상승",
       "growthFactor": {
@@ -129,12 +129,12 @@
       },
       "rankChange": "▲4",
       "followers": {
-        "ko": "8만 뷰",
-        "en": "87K views"
+        "ko": "16만 뷰",
+        "en": "163K views"
       },
       "weeklyGrowth": {
-        "ko": "+1만",
-        "en": "+10K"
+        "ko": "+3만",
+        "en": "+30K"
       },
       "headline": {
         "ko": "Question Mark",
@@ -156,28 +156,28 @@
       "platformBadge": "YouTube",
       "platformColor": "bg-red-500/10 text-red-400 border-red-500/30",
       "creatorName": {
-        "ko": "SHIFT UP Official Channel",
-        "en": "SHIFT UP Official Channel"
+        "ko": "젊은할배 59TV",
+        "en": "젊은할배 59TV"
       },
-      "handle": "@SHIFT_UP_Official_Ch",
+      "handle": "@젊은할배_59TV",
       "categoryTag": {
         "ko": "주간 급상승",
         "en": "Trending"
       },
       "rankChange": "▲5",
       "followers": {
-        "ko": "139만 뷰",
-        "en": "1395K views"
+        "ko": "1만 뷰",
+        "en": "17K views"
       },
       "weeklyGrowth": {
-        "ko": "+27만",
-        "en": "+270K"
+        "ko": "+1만",
+        "en": "+10K"
       },
       "headline": {
-        "ko": "Stellar Blade - Live Action Launch Trailer - Nintendo Switch 2",
-        "en": "Stellar Blade - Live Action Launch Trailer - Nintendo Switch 2"
+        "ko": "임영웅 영화 예고편 공개! 팬들 댓글에 감동 폭발…세 번째 영화 흥행 신기록 세울까?",
+        "en": "임영웅 영화 예고편 공개! 팬들 댓글에 감동 폭발…세 번째 영화 흥행 신기록 세울까?"
       },
-      "viralTopic": "#SHIFTUPOfficial #인기급상승",
+      "viralTopic": "#젊은할배59TV #인기급상승",
       "growthFactor": {
         "ko": "실시간 급상승 알고리즘 및 높은 완청률 기반 트래픽 폭발.",
         "en": "Surged via recommendation algorithms."
