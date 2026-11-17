@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.11.16 14:54",
+  "lastUpdated": "2026.11.17 16:31",
   "ranks": [
     {
       "id": "yt1",
@@ -8,28 +8,28 @@
       "platformBadge": "YouTube",
       "platformColor": "bg-red-500/10 text-red-400 border-red-500/30",
       "creatorName": {
-        "ko": "dahee - Topic",
-        "en": "dahee - Topic"
+        "ko": "HYBE LABELS",
+        "en": "HYBE LABELS"
       },
-      "handle": "@dahee_-_Topic",
+      "handle": "@HYBE_LABELS",
       "categoryTag": {
         "ko": "주간 급상승",
         "en": "Trending"
       },
       "rankChange": "▲1",
       "followers": {
-        "ko": "2만 뷰",
-        "en": "21K views"
+        "ko": "428만 뷰",
+        "en": "4280K views"
       },
       "weeklyGrowth": {
-        "ko": "+1만",
-        "en": "+10K"
+        "ko": "+85만",
+        "en": "+850K"
       },
       "headline": {
-        "ko": "좋아하니까",
-        "en": "좋아하니까"
+        "ko": "TXT (투모로우바이투게더) 'Angel Bite' Official MV",
+        "en": "TXT (투모로우바이투게더) 'Angel Bite' Official MV"
       },
-      "viralTopic": "#dahee-Topic #인기급상승",
+      "viralTopic": "#HYBELABELS #인기급상승",
       "growthFactor": {
         "ko": "실시간 급상승 알고리즘 및 높은 완청률 기반 트래픽 폭발.",
         "en": "Surged via recommendation algorithms."
@@ -55,12 +55,12 @@
       },
       "rankChange": "▲2",
       "followers": {
-        "ko": "214만 뷰",
-        "en": "2145K views"
+        "ko": "230만 뷰",
+        "en": "2301K views"
       },
       "weeklyGrowth": {
-        "ko": "+42만",
-        "en": "+420K"
+        "ko": "+46만",
+        "en": "+460K"
       },
       "headline": {
         "ko": "천천히 강렬하게 | 공식 티저 예고편 | 넷플릭스",
@@ -92,8 +92,8 @@
       },
       "rankChange": "▲3",
       "followers": {
-        "ko": "462만 뷰",
-        "en": "4621K views"
+        "ko": "464만 뷰",
+        "en": "4642K views"
       },
       "weeklyGrowth": {
         "ko": "+92만",
@@ -119,28 +119,28 @@
       "platformBadge": "YouTube",
       "platformColor": "bg-red-500/10 text-red-400 border-red-500/30",
       "creatorName": {
-        "ko": "NCT WISH",
-        "en": "NCT WISH"
+        "ko": "TOMORROW BY TOGETHER - Topic",
+        "en": "TOMORROW BY TOGETHER - Topic"
       },
-      "handle": "@NCT_WISH",
+      "handle": "@TOMORROW_BY_TOGETHER",
       "categoryTag": {
         "ko": "주간 급상승",
         "en": "Trending"
       },
       "rankChange": "▲4",
       "followers": {
-        "ko": "15만 뷰",
-        "en": "153K views"
+        "ko": "26만 뷰",
+        "en": "263K views"
       },
       "weeklyGrowth": {
-        "ko": "+3만",
-        "en": "+30K"
+        "ko": "+5만",
+        "en": "+50K"
       },
       "headline": {
-        "ko": "NCT WISH 엔시티 위시 '1000' Special Video",
-        "en": "NCT WISH 엔시티 위시 '1000' Special Video"
+        "ko": "Angel Bite",
+        "en": "Angel Bite"
       },
-      "viralTopic": "#NCTWISH #인기급상승",
+      "viralTopic": "#TOMORROWBYTOGET #인기급상승",
       "growthFactor": {
         "ko": "실시간 급상승 알고리즘 및 높은 완청률 기반 트래픽 폭발.",
         "en": "Surged via recommendation algorithms."
@@ -167,15 +167,15 @@
       "rankChange": "▲5",
       "followers": {
         "ko": "16만 뷰",
-        "en": "163K views"
+        "en": "164K views"
       },
       "weeklyGrowth": {
         "ko": "+3만",
         "en": "+30K"
       },
       "headline": {
-        "ko": "[최종회 예고] ＂이제 의사 안 하실 거잖아요＂ 폐원 위기에 놓인 구서대학병원과 환자의 수술을 중단한 김지원?! | 닥터X : 하얀 마피아의 시대 | SBS",
-        "en": "[최종회 예고] ＂이제 의사 안 하실 거잖아요＂ 폐원 위기에 놓인 구서대학병원과 환자의 수술을 중단한 김지원?! | 닥터X : 하얀 마피아의 시대 | SBS"
+        "ko": "[최종회 예고] \"이제 의사 안 하실 거잖아요\" 폐원 위기에 놓인 구서대학병원과 환자의 수술을 중단한 김지원?! | 닥터X : 하얀 마피아의 시대 | SBS",
+        "en": "[최종회 예고] \"이제 의사 안 하실 거잖아요\" 폐원 위기에 놓인 구서대학병원과 환자의 수술을 중단한 김지원?! | 닥터X : 하얀 마피아의 시대 | SBS"
       },
       "viralTopic": "#SBS #인기급상승",
       "growthFactor": {
